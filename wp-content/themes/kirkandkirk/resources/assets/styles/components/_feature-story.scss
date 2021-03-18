@@ -1,0 +1,121 @@
+.feature-story {
+	padding: 0;
+
+	&.bg-color-brown {
+		background-color: #d8cfbe;
+	}
+
+  // &__inner {
+	// 	@include inner;
+  // }
+
+	&__row {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@include breakpoint(medium) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__col {
+		width: 100%;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+
+		@include breakpoint(medium) {
+			width: 40%;
+		}
+
+		&:last-of-type {
+			width: 100%;
+
+		@include breakpoint(medium) {
+			width: 60%;
+		}
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__item {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+    align-items: flex-start;
+		justify-content: center;
+		min-height: 114px;
+		background-size: cover;
+		background-position: 50%;
+		position: relative;
+		flex-direction: row;
+		order: 2;
+
+		@include breakpoint(medium) {
+			width: 50%;
+			height: auto;
+			order: initial;
+		}
+
+		&:nth-child(even) {
+			order: 1;
+			@include breakpoint(medium) {
+				order: initial;
+			}
+		}
+	}
+
+	&__image {
+		padding: 10% 5%;
+
+		img {
+			height: auto;
+    	max-height: 70vh;
+    	width: auto;
+		}
+	}
+
+	&__inner {
+    padding: 10% 10%;
+		height: calc(100% - 20%);
+	}
+
+	h2 {
+		@include title($brand--primary);
+
+		margin: 0 60px 0 0;
+	}
+
+	h3 {
+		font-family: $font--body;
+		font-size: 16px;
+		color: $brand--primary;
+		letter-spacing: 3.03px;
+		font-weight: 100;
+		margin-top: 0;
+	}
+
+	h4 {
+		@include subtitle($brand--primary);
+	}
+
+	a {
+		color: $brand--primary;
+		font-size: 16px;
+		letter-spacing: 1.7px;
+		text-align: left;
+		line-height: 22px;
+		position: absolute;
+    bottom: 60px;
+	}
+}

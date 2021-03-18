@@ -1,0 +1,92 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $bg;
+  font-family: $font--body;
+
+  &.home {
+    // background:
+    //   url("../images/bg-triangle-alt.svg") 0 100%,
+    //   url("../images/bg-triangle-alt.svg") 91px 100%, $brand--primary;
+  }
+}
+
+p {
+  color: $brand--primary;
+  font-size: 16px;
+  letter-spacing: 1.7px;
+  text-align: left;
+  line-height: 22px;
+}
+
+.about,
+.home {
+  .wrap {
+    padding: 0 0 0 0;
+  }
+}
+
+.wrap {
+  flex: 1 0 auto;
+  padding: 100px 0 0 0;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+
+  @include breakpoint(medium) {
+    padding: 170px 0 0 0;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.ico-search {
+  display: block;
+  background: url("../images/ico-search.svg");
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.ico-heart {
+  display: block;
+  background: url("../images/ico-heart.svg");
+  background-size: 24px;
+  width: 24px;
+  height: 22px;
+}
+
+.ico-account {
+  display: block;
+  background: url("../images/ico-account.svg");
+  background-size: 16px;
+  width: 16px;
+  height: 15px;
+}
+
+.ico-basket {
+  display: block;
+  background: url("../images/ico-basket.svg");
+  background-size: 20px;
+  width: 20px;
+  height: 15px;
+}
+
+.bg-color {
+  &__blue {
+    background-color: #daeaff;
+
+    &--alt {
+      background-color: #eaf3ff;
+    }
+  }
+}

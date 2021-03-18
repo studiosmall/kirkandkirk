@@ -1,7 +1,428 @@
-.banner .nav li {
-  @extend .nav-item;
+@mixin banner-title($color) {
+  font-family: $font--body;
+	color: $color;
+  font-size: 16px;
+  letter-spacing: 0.6px;
+
+  @include breakpoint(medium) {
+    font-size: 16px;
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: $bg;
+  // transition: $transition;
+
+	@include breakpoint(medium) {
+		&.small {
+			.header__logo-container {
+				padding: 0 0 20px 0;
+			}
+
+			.header__inner {
+				padding: 23px 50px 15px 50px;
+		  }
+
+			.header__logo {
+				width: 170px;
+			}
+		}
+	}
+
+	&.hide {
+		top: -80px;
+		@include breakpoint(medium) {
+			top: -134px;
+		}
+	}
+
+	&__inner {
+		@include inner;
+
+		max-width: $content-width;
+    padding: 23px 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		// transition: $transition;
+		background-color: $bg;
+    opacity: 0.99;
+
+		@include breakpoint(medium) {
+      padding: 23px 50px;
+		}
+  }
+
+  &__banner {
+    background-color: $brand--secondary;
+    padding: 10px 0;
+
+    &--inner {
+			@include inner;
+
+      max-width: $content-width;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    a {
+      @include hoverline($brand--primary);
+    }
+  }
+
+  .announcement {
+    text-transform: uppercase;
+		width: 60%;
+		letter-spacing: 2.25px;
+		font-size: 18px;
+  }
+
+	&__currency {
+		width: 20%;
+
+		@include banner-title($brand--primary);
+	}
+
+	&__find {
+		width: 20%;
+		text-align: right;
+
+		@include banner-title($brand--primary);
+	}
+
+  &__logo-container {
+    width: 100%;
+    padding: 0 0 37px 0;
+		transition: 0.2s all ease;
+  }
+
+	&__left {
+		width: calc((100%) / 2);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		@include breakpoint(medium) {
+			width: calc((100%) / 2);
+		}
+
+		ul {
+			margin: 0;
+			li {
+				margin-right: 26px;
+			}
+		}
+	}
+
+	&__logo {
+		transition: 0.2s all ease;
+		width: 234px;
+		height: auto;
+		margin: 0;
+
+		// svg {
+		// 	width: 66px;
+		// 	height: auto;
+
+		// 	@include breakpoint(medium) {
+		// 		height: 66px;
+		// 		width: auto;
+		// 	}
+		// }
+	}
+
+	&__right {
+		width: calc((100% - 150px) / 2);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+		@include breakpoint(medium) {
+			width: calc((100% - 156px) / 2);
+		}
+		ul {
+			margin: 0;
+			li {
+				margin-left: 26px;
+			}
+		}
+	}
+
+	&__mobile-menu {
+		@include hoverline($brand--secondary);
+
+		background: none;
+		border: 0;
+		padding: 0;
+		font-family: $font--body;
+		color: $brand--secondary;
+		text-decoration: none;
+		font-size: 16px;
+		display: inline-block;
+
+		@include breakpoint(medium) {
+			display: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__hamburger {
+	  margin: 0;
+	  padding: 0;
+	  color: $brand--primary;
+	  background: transparent;
+	  border: 0;
+	  cursor: pointer;
+	  height: 15px;
+	  margin-right: 0;
+	  margin-top:-5px;
+
+	  &:focus {
+	    outline: 0;
+	  }
+
+	  @mixin line {
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 20px;
+	    height: 2px;
+	    background: $brand--primary;
+	    border-radius: 0;
+	    transition: 0.2s;
+
+	    @include breakpoint(medium) {
+	    	width:32px;
+	    	height:3px;
+	    }
+	  }
+
+	  .lines {
+	    //create middle line
+      @include line;
+
+	    position: relative;
+
+      &::before,
+      &::after {
+        @include line;
+
+	        position: absolute;
+	        content: "";
+	        transform-origin: 35px/14 center;
+	        left: 0;
+        }
+
+	      &::before {
+	        top: 7px;
+	        @include breakpoint(medium) {
+	        	top: 8px;
+	        }
+        }
+
+	      &::after {
+	        top: -7px;
+	        @include breakpoint(medium) {
+	        	top:-8px;
+	        }
+	      }
+	  }
+
+	  .lines-button:hover {
+	    opacity: 1;
+	  }
+
+	  &.active {
+	    .lines {
+	      background: transparent;
+	      border: 0;
+
+        &::before,
+        &::after {
+	        transform-origin: 50% 50%;
+	        top: 0;
+	        width: 20px;
+	        @include breakpoint(medium) {
+	        	width: 30px;
+	        }
+	      }
+
+	      &::before {
+	        transform: rotate3d(0, 0, 1, 45deg);
+        }
+
+	      &::after {
+	        transform: rotate3d(0, 0, 1, -45deg);
+	      }
+	    }
+	  }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      margin: 0 0 0 15px;
+    }
+  }
+
+	&__nav {
+		display: none;
+
+		@include breakpoint(medium) {
+			display: inline-block;
+		}
+
+		ul {
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			&#menu-navigation-right {
+				display: inline-flex;
+
+				li:first-of-type {
+					display: none;
+					@include breakpoint(medium) {
+						display: inline-flex;
+					}
+				}
+			}
+
+			// &:hover > li a {
+			// 	color: rgba(255, 255, 255, 0.7);
+			// }
+
+			// &:hover > li a:hover {
+			// 	opacity: 1;
+			// }
+
+			&#menu-navigation-left {
+				display: none;
+				@include breakpoint(medium) {
+					display: inline-flex;
+				}
+			}
+
+			li {
+				list-style: none;
+
+				&.current_page_item {
+					a {
+						&::after {
+							transform: scaleX(1);
+							transform-origin: bottom;
+						}
+					}
+				}
+
+				a {
+          @include hoverline($brand--secondary);
+
+					color: $brand--primary;
+          text-decoration: none;
+					font-family: $font--heading;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 15px;
+					line-height: 24px;
+					transition: $transition;
+
+					&:hover {
+						color: $brand--secondary;
+					}
+				}
+			}
+		}
+	}
+
+	&__menu-container {
+		display: block;
+    padding: 0;
+    cursor: pointer;
+	}
+
+	&__hamburger {
+	  margin: -14px 2px 0 0;
+	  padding: 0;
+	  color: #fff;
+	  background: transparent;
+	  border: 0;
+	  height: 24px;
+	  display: block;
+
+	  &:focus {
+	    outline:0;
+	  }
+
+	  @mixin line {
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 23px;
+	    height: 2px;
+	    background: $brand--primary;
+	    border-radius: 0;
+	    transition: 0.2s;
+	  }
+
+	  .lines {
+
+	    //create middle line
+	    @include line;
+	    position: relative;
+
+      &::before,
+      &::after {
+        @include line;
+          position: absolute;
+          content: "";
+          transform-origin: 35px/14 center;
+          left:0;
+        }
+        &::before {
+          top: 7px;
+        }
+        &::after {
+          top: -7px;
+        }
+	  }
+
+	  .lines-button:hover {
+	    opacity: 1;
+	  }
+
+	  &.active {
+	    .lines {
+	      background: transparent;
+	      border:0;
+
+        &::before,
+        &::after {
+	        transform-origin: 50% 50%;
+	        top:0;
+	        width: 20px;
+	      }
+
+	      &::before {
+	        transform: rotate3d(0, 0, 1, 45deg);
+        }
+
+	      &::after {
+	        transform: rotate3d(0, 0, 1, -45deg);
+	      }
+	    }
+	  }
+	}
 }

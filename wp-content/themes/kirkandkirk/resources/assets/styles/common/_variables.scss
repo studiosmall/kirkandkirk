@@ -1,10 +1,24 @@
-/** Import Bootstrap functions */
-@import "~bootstrap/scss/functions";
+/** Colors */
+$brand--primary: #000;
+$brand--secondary: #c0c7c2;
+$brand--yellow: #f2ff78;
+$brand--white: #fff;
+$brand--border: #c0c7c2;
+$bg: #fffaf5;
 
-$theme-colors: (
-  primary: #525ddc
+$border: 1px solid $brand--border;
+
+$transition: 0.3s all ease;
+
+// 1. Global
+$content-width: 1440px;
+
+$breakpoints: (
+  small: 0,
+  medium: 900px,
+  large: 1300px,
+  xlarge: 1800px,
 );
 
-/** Bootstrap navbar fix (https://git.io/fADqW) */
-$navbar-dark-toggler-icon-bg: none;
-$navbar-light-toggler-icon-bg: none;
+$font--heading: "reader", arial, sans-serif;
+$font--body: "reader", arial, sans-serif;

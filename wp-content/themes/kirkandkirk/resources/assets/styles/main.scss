@@ -1,4 +1,7 @@
 @import "common/variables";
+@import "common/normalize";
+@import "common/fonts";
+@import "common/mixins";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -10,6 +13,8 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+$aos-distance: 10px;
+@import "~aos/src/sass/aos";
 
 /** Import theme styles */
 @import "common/global";
@@ -17,6 +22,13 @@
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
+@import "components/announcement";
+@import "components/fullwidth-image";
+@import "components/feature-collection";
+@import "components/cta-image";
+@import "components/spotify";
+@import "components/feature-story";
+@import "components/featured-products";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

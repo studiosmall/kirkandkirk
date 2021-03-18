@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "reader";
+  src: url("../fonts/reader-regular.eot");
+  src: url("../fonts/reader-regular.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/reader-regular.woff2") format("woff2"),
+       url("../fonts/reader-regular.woff") format("woff"),
+       url("../fonts/reader-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "reader";
+  src: url("../fonts/reader-medium.eot");
+  src: url("../fonts/reader-medium.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/reader-medium.woff2") format("woff2"),
+       url("../fonts/reader-medium.woff") format("woff"),
+       url("../fonts/reader-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "reader";
+  src: url("../fonts/reader-italic.eot");
+  src: url("../fonts/reader-italic.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/reader-italic.woff2") format("woff2"),
+       url("../fonts/reader-italic.woff") format("woff"),
+       url("../fonts/reader-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}

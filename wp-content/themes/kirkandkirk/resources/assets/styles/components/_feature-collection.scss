@@ -1,0 +1,97 @@
+.feature-collection {
+  background-size: cover;
+	background-position: 50%;
+	width: 100%;
+	height: 86.5vh;
+	text-align: center;
+	position: relative;
+	transition: all ease 0.6s;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: "";
+	//	background: rgba(0, 0, 0, 0.55);
+	}
+
+  @include breakpoint(medium) {
+		height: 90vh;
+	}
+
+	&__link {
+		width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+		&:hover {
+				.feature-collection__bottom a::after {
+					@include breakpoint(medium) {
+						transform: scaleX(1);
+						transform-origin: bottom;
+					}
+				}
+
+			// .feature-collection.grow {
+			// 	transition: all 0.2s ease-in-out;
+
+			// 	&:hover {
+			// 		transform: scale(1.5);
+			// 	}
+			// }
+		}
+	}
+
+  &__inner {
+		@include inner;
+
+		position: relative;
+		display: flex;
+		justify-content: start;
+		align-items: flex-end;
+		height: 100%;
+		// min-height: 86.5vh;
+    text-align: initial;
+		flex-wrap: wrap;
+
+		@include breakpoint(medium) {
+			// min-height: 100vh;
+			position: relative;
+			flex-wrap: nowrap;
+			align-items: center;
+		}
+  }
+
+  &__bottom {
+		position: relative;
+		bottom: initial;
+		width: 100%;
+		display: flex;
+    justify-content: flex-start;
+    align-items: center;
+		z-index: 3;
+
+		@include breakpoint(medium) {
+			position: absolute;
+			bottom: 33px;
+			width: calc(100% - 70px);
+		}
+
+    h3 {
+			@include title(#093ffd);
+
+			margin: 0 60px 0 0;
+    }
+
+		a {
+			@include hoverline(#093ffd);
+
+			@include subtitle(#093ffd);
+		}
+  }
+}

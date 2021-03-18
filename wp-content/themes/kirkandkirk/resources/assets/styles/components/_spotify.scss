@@ -1,0 +1,77 @@
+.spotify {
+	@include section;
+
+	&.bg-color-brown {
+		background-color: #d8cfbe;
+	}
+
+  &__inner {
+		@include inner;
+  }
+
+	&__row {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		@include breakpoint(medium) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__col {
+		width: 100%;
+
+		@include breakpoint(medium) {
+			width: 40%;
+		}
+
+		&:last-of-type {
+			width: 100%;
+
+		@include breakpoint(medium) {
+			width: 60%;
+		}
+		}
+	}
+
+	&__code {
+		mix-blend-mode: multiply;
+		max-width: 468px;
+		padding: 44px 0 0 0;
+
+		@include breakpoint(medium) {
+			padding: 0;
+		}
+	}
+
+	&__quote {
+		p,
+		span {
+			font-family: $font--body;
+			font-size: 24px;
+			color: $brand--primary;
+			letter-spacing: 0.9px;
+			line-height: 31px;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&__info {
+		display: flex;
+    justify-content: flex-start;
+    align-items: center;
+		padding: 44px 0 0 0;
+	}
+
+	h3 {
+		@include title($brand--primary);
+
+		margin: 0 60px 0 0;
+	}
+
+	h4 {
+		@include subtitle($brand--primary);
+	}
+}

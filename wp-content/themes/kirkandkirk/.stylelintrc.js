@@ -3,6 +3,17 @@ module.exports = {
   'rules': {
     'no-empty-source': null,
     'string-quotes': 'double',
+    'declaration-colon-newline-after': null,
+    'value-list-comma-newline-after': null,
+    'no-empty-source': null,
+    'no-descending-specificity': null,
+    'at-rule-empty-line-before': null,
+    'font-family-no-duplicate-names' : null,
+    'indentation' : null,
+    'rule-empty-line-before' : null,
+    'declaration-colon-space-after' : null,
+    'declaration-empty-line-before' : null,
+    'no-duplicate-selectors' : null,
     'at-rule-no-unknown': [
       true,
       {
