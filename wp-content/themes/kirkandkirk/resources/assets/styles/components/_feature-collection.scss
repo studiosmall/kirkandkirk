@@ -83,15 +83,15 @@
 		}
 
     h3 {
-			@include title(#093ffd);
+			@include title($brand--primary);
 
 			margin: 0 60px 0 0;
     }
 
 		a {
-			@include hoverline(#093ffd);
+			@include hoverline($brand--primary);
 
-			@include subtitle(#093ffd);
+			@include subtitle($brand--primary);
 		}
   }
 }

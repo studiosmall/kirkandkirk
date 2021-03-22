@@ -3182,7 +3182,7 @@ img {
 
 .feature-collection__bottom h3 {
   font-family: "reader", arial, sans-serif;
-  color: #093ffd;
+  color: #000;
   font-size: 18px;
   letter-spacing: 3.33px;
   text-transform: uppercase;
@@ -3204,11 +3204,11 @@ img {
 .feature-collection__bottom a {
   display: inline-block;
   position: relative;
-  color: #093ffd;
+  color: #000;
   line-height: 15px;
   text-decoration: none;
   font-family: "reader", arial, sans-serif;
-  color: #093ffd;
+  color: #000;
   font-weight: 100;
   font-size: 14px;
   letter-spacing: 0.75px;
@@ -3228,7 +3228,7 @@ img {
   height: 1px;
   bottom: -3px;
   left: 0;
-  background-color: #093ffd;
+  background-color: #000;
   -webkit-transform-origin: bottom;
        -o-transform-origin: bottom;
           transform-origin: bottom;
@@ -3824,7 +3824,7 @@ img {
   /* line 83, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story__image img {
-    width: auto;
+    width: 80%;
   }
 }
 
