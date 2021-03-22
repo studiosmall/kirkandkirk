@@ -2929,7 +2929,7 @@ img {
 .fullwidth-image__bottom p {
   color: #fff;
   font-family: "reader", arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.75px;
   text-align: center;
@@ -2940,7 +2940,7 @@ img {
   /* line 92, resources/assets/styles/components/_fullwidth-image.scss */
 
   .fullwidth-image__bottom p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 31px;
   }
 }
