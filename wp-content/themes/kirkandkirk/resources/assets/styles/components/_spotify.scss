@@ -50,7 +50,7 @@
 		span {
 			font-style: italic;
 			font-family: $font--body;
-			font-size: 18px;
+			font-size: 14px;
 			color: $brand--primary;
 			letter-spacing: 0.9px;
 			line-height: 31px;
@@ -58,7 +58,7 @@
 			padding: 0;
 
 			@include breakpoint(medium) {
-				font-size: 20px;
+				font-size: 16px;
 			}
 		}
 

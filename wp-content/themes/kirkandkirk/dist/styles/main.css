@@ -3575,7 +3575,7 @@ img {
 .spotify__quote span {
   font-style: italic;
   font-family: "reader", arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   color: #000;
   letter-spacing: 0.9px;
   line-height: 31px;
@@ -3588,7 +3588,7 @@ img {
 
   .spotify__quote p,
   .spotify__quote span {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
