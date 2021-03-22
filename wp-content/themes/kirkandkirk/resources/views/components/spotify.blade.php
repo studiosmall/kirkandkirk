@@ -18,7 +18,7 @@
 
     </div>
 
-    <div class="spotify__info" data-aos="slide-right">
+    <div class="spotify__info" data-aos="slide-up">
       <h3>Spotify</h3>
       <h4>{{ $c['playlist_name'] }}</h4>
     </div>

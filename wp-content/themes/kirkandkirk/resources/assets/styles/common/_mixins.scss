@@ -20,7 +20,11 @@
 }
 
 @mixin section {
-  padding: 70px 0;
+  padding: 35px 0;
+
+  @include breakpoint(medium) {
+    padding: 70px 0;
+  }
 }
 
 @mixin hoverline($color) {
@@ -100,15 +104,15 @@
 @mixin title($color) {
   font-family: $font--heading;
   color: $color;
-  font-size: 25px;
+  font-size: 18px;
   letter-spacing: 3.33px;
   // line-height: 33px;
   text-transform: uppercase;
   padding: 0;
-  font-weight: 100;
+  font-weight: 500;
 
   @include breakpoint(medium) {
-    font-size: 25px;
+    font-size: 20px;
     // line-height: 24px;
   }
 }
@@ -117,13 +121,13 @@
   font-family: $font--heading;
   color: $color;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 14px;
   letter-spacing: 0.75px;
   margin: 0;
   padding: 0;
 
   @include breakpoint(medium) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 

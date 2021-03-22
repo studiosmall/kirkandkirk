@@ -5,7 +5,7 @@
   </div>
 
   <div class="cta-image__inner">
-    <div class="cta-image__bottom" data-aos="slide-right">
+    <div class="cta-image__bottom" data-aos="slide-up">
 
       <h3>{!! $c['title'] !!}</h3>
       <a href="{{ $c['link_url'] }}">{{ $c['link_text'] }}</a>

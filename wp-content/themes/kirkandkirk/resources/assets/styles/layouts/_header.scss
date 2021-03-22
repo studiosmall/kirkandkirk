@@ -1,11 +1,11 @@
 @mixin banner-title($color) {
   font-family: $font--body;
 	color: $color;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.6px;
 
   @include breakpoint(medium) {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -14,7 +14,7 @@
 	top: 0;
 	width: 100%;
 	z-index: 100;
-	background-color: $bg;
+	background-color: $brand--white;
   // transition: $transition;
 
 	@include breakpoint(medium) {
@@ -44,17 +44,18 @@
 		@include inner;
 
 		max-width: $content-width;
-    padding: 23px 0;
+		padding: 23px 20px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
 		// transition: $transition;
-		background-color: $bg;
+		background-color: $brand--white;
     opacity: 0.99;
 
 		@include breakpoint(medium) {
-      padding: 23px 50px;
+      // padding: 23px 50px;
+			padding: 23px 50px 15px 50px;
 		}
   }
 
@@ -80,27 +81,43 @@
 
   .announcement {
     text-transform: uppercase;
-		width: 60%;
+		width: 100%;
 		letter-spacing: 2.25px;
-		font-size: 18px;
+		font-size: 14px;
+
+		@include breakpoint(medium) {
+			width: 60%;
+			font-size: 16px;
+		}
   }
 
 	&__currency {
 		width: 20%;
+		display: none;
 
 		@include banner-title($brand--primary);
+
+		@include breakpoint(medium) {
+			display: initial;
+		}
 	}
 
 	&__find {
 		width: 20%;
 		text-align: right;
+		display: none;
 
 		@include banner-title($brand--primary);
+
+		@include breakpoint(medium) {
+			display: initial;
+		}
 	}
 
   &__logo-container {
     width: 100%;
-    padding: 0 0 37px 0;
+    //padding: 0 0 37px 0;
+		padding: 0 0 20px 0;
 		transition: 0.2s all ease;
   }
 
@@ -123,7 +140,7 @@
 
 	&__logo {
 		transition: 0.2s all ease;
-		width: 234px;
+		width: 170px;
 		height: auto;
 		margin: 0;
 

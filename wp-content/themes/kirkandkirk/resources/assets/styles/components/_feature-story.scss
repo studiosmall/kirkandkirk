@@ -1,5 +1,6 @@
 .feature-story {
 	padding: 0;
+	overflow: hidden;
 
 	&.bg-color-brown {
 		background-color: #d8cfbe;
@@ -77,17 +78,27 @@
 
 	&__image {
 		padding: 10% 5%;
+		text-align: center;
 
 		img {
 			height: auto;
     	max-height: 70vh;
-    	width: auto;
+			width: 80%;
+
+			@include breakpoint(medium) {
+				width: auto;
+			}
 		}
 	}
 
 	&__inner {
-    padding: 10% 10%;
-		height: calc(100% - 20%);
+		padding: 35px 20px;
+		height: 100%;
+
+		@include breakpoint(medium) {
+			padding: 10% 10%;
+			height: calc(100% - 20%);
+		}
 	}
 
 	h2 {
@@ -98,11 +109,15 @@
 
 	h3 {
 		font-family: $font--body;
-		font-size: 16px;
 		color: $brand--primary;
 		letter-spacing: 3.03px;
 		font-weight: 100;
 		margin-top: 0;
+		font-size: 14px;
+
+		@include breakpoint(medium) {
+			font-size: 16px;
+		}
 	}
 
 	h4 {
@@ -115,7 +130,16 @@
 		letter-spacing: 1.7px;
 		text-align: left;
 		line-height: 22px;
-		position: absolute;
-    bottom: 60px;
+		position: relative;
+		bottom: initial;
+		display: inline-block;
+		margin: 20px 0 0 0;
+
+		@include breakpoint(medium) {
+			position: absolute;
+			display: initial;
+    	bottom: 60px;
+			margin: 0;
+		}
 	}
 }

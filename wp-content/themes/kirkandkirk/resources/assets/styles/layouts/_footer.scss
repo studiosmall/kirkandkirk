@@ -2,7 +2,7 @@
   flex-shrink: 0;
   padding: 45px 0 35px 0;
   position: relative;
-  background-color: #c2d0fd;
+  background-color: #c1cfd8;
 
   @include breakpoint(medium) {
     padding: 45px 0 35px 0;
@@ -16,7 +16,7 @@
     }
 
     font-family: $font--body;
-    font-size: 20px;
+    font-size: 16px;
     color: $brand--primary;
     line-height: 28px;
   }
@@ -26,34 +26,67 @@
   }
 
   &__newsletter {
-    padding: 0 0 80px 0;
+    padding: 0 0 40px 0;
+
+    @include breakpoint(medium) {
+      padding: 0 0 80px 0;
+    }
   }
 
   &__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+      flex-wrap: nowrap;
+    }
 
     &--col {
-      width: 25%;
+      width: 50%;
+
+      @include breakpoint(medium) {
+        width: 25%;
+      }
+
+      &:first-of-type {
+        width: 100%;
+        margin: 0 0 30px 0;
+
+        @include breakpoint(medium) {
+          width: 25%;
+          margin: 0;
+        }
+      }
     }
   }
 
   &__mark {
-    width: 25%;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      width: 25%;
+    }
   }
 
   p {
     font-family: $font--body;
-    font-size: 20px;
+    font-size: 16px;
     color: $brand--primary;
     line-height: 28px;
     letter-spacing: 0;
+    margin: 0;
   }
 
   &__copyright {
     width: 75%;
     opacity: 0.2;
     color: #000;
+    margin: 30px 0 0 0;
+
+    @include breakpoint(medium) {
+      margin: 0;
+    }
 
     a {
       @include hoverline($brand--primary);
@@ -75,12 +108,15 @@
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 30px 0;
+
+    @include breakpoint(medium) {
+      margin: 0;
+    }
 
     li {
       color: $brand--primary;
       font-family: $font--body;
-      margin: 0 0 60px 0;
       width: 100%;
 
       @include breakpoint(medium) {

@@ -31,7 +31,7 @@
       @endforeach
     </div>
 
-    <div class="featured-products__bottom" data-aos="slide-right">
+    <div class="featured-products__bottom" data-aos="slide-up">
       <h3>{!! $c['collection_title'] !!}</h3>
       <a href="{{ $c['collection_link'] }}">View Collection</a>
     </div>

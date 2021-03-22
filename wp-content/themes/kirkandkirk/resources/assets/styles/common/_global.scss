@@ -83,10 +83,10 @@ img {
 
 .bg-color {
   &__blue {
-    background-color: #daeaff;
+    background-color: $brand--secondary;
 
     &--alt {
-      background-color: #eaf3ff;
+      background-color: #d7dfe9;
     }
   }
 }
