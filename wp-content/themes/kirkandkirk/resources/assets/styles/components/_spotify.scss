@@ -1,6 +1,10 @@
 .spotify {
 	@include section;
 
+	@include breakpoint(medium) {
+		padding: 35px 0;
+	}
+
 	&.bg-color-brown {
 		background-color: #f5f1cc;
 	}
@@ -37,7 +41,7 @@
 
 	&__code {
 		mix-blend-mode: multiply;
-		max-width: 468px;
+		max-width: 368px;
 		padding: 0 0 44px 0;
 
 		@include breakpoint(medium) {
@@ -52,8 +56,8 @@
 			font-family: $font--body;
 			font-size: 14px;
 			color: $brand--primary;
-			letter-spacing: 0.9px;
-			line-height: 31px;
+			letter-spacing: 0.75px;
+			line-height: 22px;
 			margin: 0;
 			padding: 0;
 

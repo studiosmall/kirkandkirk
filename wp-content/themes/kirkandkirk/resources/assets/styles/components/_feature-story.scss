@@ -83,10 +83,10 @@
 		img {
 			height: auto;
     	max-height: 70vh;
-			width: 80%;
+			width: auto;
 
 			@include breakpoint(medium) {
-				width: 80%;
+				width: auto;
 			}
 		}
 	}
@@ -127,7 +127,7 @@
 	a {
 		color: $brand--primary;
 		font-size: 16px;
-		letter-spacing: 1.7px;
+		letter-spacing: 0.75px;
 		text-align: left;
 		line-height: 22px;
 		position: relative;

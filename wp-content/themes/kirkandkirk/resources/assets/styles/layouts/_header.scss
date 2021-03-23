@@ -1,11 +1,11 @@
 @mixin banner-title($color) {
   font-family: $font--body;
 	color: $color;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.6px;
 
   @include breakpoint(medium) {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -61,7 +61,7 @@
 
   &__banner {
     background-color: $brand--secondary;
-    padding: 10px 0;
+    padding: 9px 0;
 
     &--inner {
 			@include inner;
@@ -83,11 +83,11 @@
     text-transform: uppercase;
 		width: 100%;
 		letter-spacing: 2.25px;
-		font-size: 14px;
+		font-size: 12px;
 
 		@include breakpoint(medium) {
 			width: 60%;
-			font-size: 16px;
+			font-size: 14px;
 		}
   }
 

@@ -5,7 +5,7 @@
       <div class="header__currency">
         Currency (£ GBP)
       </div>
-      
+
       {{-- <div class="announcement">
           @if($options['message']['banner_message'] == 'enable')
             <span>{!! $options['message']['message'] !!}</span>
@@ -18,7 +18,7 @@
               <span>{!! $options['message']['message'] !!}</span>
             @endif
           </div>
-        
+
           <div class="announcement__item">
             @if($options['message']['banner_message'] == 'enable')
               <span>{!! $options['message']['secondary_message'] !!}</span>

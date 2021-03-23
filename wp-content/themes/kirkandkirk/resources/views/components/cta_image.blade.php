@@ -1,7 +1,9 @@
 <section class="cta-image">
 
   <div class="cta-image__center" data-aos="fade-up">
-    <img src="{{ $c['image']['url'] }}" alt="{{ $c['image']['alt'] }}">
+    <div class="cta-image__container">
+      <img src="{{ $c['image']['url'] }}" alt="{{ $c['image']['alt'] }}">
+    </div>
   </div>
 
   <div class="cta-image__inner">

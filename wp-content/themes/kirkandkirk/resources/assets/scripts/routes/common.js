@@ -1,4 +1,5 @@
 import AOS from 'aos';
+import 'slick-carousel';
 
 export default {
   init() {
@@ -11,7 +12,7 @@ export default {
 
     AOS.init({
       duration: 1000, // values from 0 to 3000, with step 50ms
-      offset: 0,
+      offset: -40,
     });
 
     window.addEventListener('load', AOS.refresh);
@@ -37,43 +38,99 @@ export default {
         i++
       }
       aniAnn()
-     let interval = setInterval(aniAnn, 3000); // eslint-disable-line no-unused-vars
 
+      let interval = setInterval(aniAnn, 3000); // eslint-disable-line no-unused-vars
 
     }
 
+    // let onScroll = function() {
+    //   let navbarHeight = $('.header').outerHeight();
+    //   let st = $(this).scrollTop();
+    //   // let navbarHeight = $('.header').outerHeight();
+    //   //if (st > lastScrollTop && st >= navbarHeight ){
+    //   if (st >= navbarHeight ){
+    //     // downscroll code
+    //     $('.header').addClass('small');
 
-    let onScroll = function() {
-      let navbarHeight = $('.header').outerHeight();
-      let st = $(this).scrollTop();
-      // let navbarHeight = $('.header').outerHeight();
-      //if (st > lastScrollTop && st >= navbarHeight ){
-      if (st >= navbarHeight ){
-        // downscroll code
-        $('.header').addClass('small');
-        
-      } else {
-        // upscroll code
-        $('.header').removeClass('small');
-      }
-      // if (popup === null && $('.home .articles').length) {
-      //   let latestNews = $('.home .articles').offset().top
-      //   if (st > latestNews) {
-      //     $('.newsletter-popup').fadeIn();
-      //     popup = true;
-      //   }
-      // }
-      //lastScrollTop = st;
-      if (st > $(window).innerHeight()) {
-        $('.header').addClass('scrolled');
-      } else {
-        $('.header').removeClass('scrolled');
-      }
-    }
-    onScroll();
-    $(window).scroll(onScroll);
+    //   } else {
+    //     // upscroll code
+    //     $('.header').removeClass('small');
+    //   }
+    //   // if (popup === null && $('.home .articles').length) {
+    //   //   let latestNews = $('.home .articles').offset().top
+    //   //   if (st > latestNews) {
+    //   //     $('.newsletter-popup').fadeIn();
+    //   //     popup = true;
+    //   //   }
+    //   // }
+    //   //lastScrollTop = st;
+    //   if (st > $(window).innerHeight()) {
+    //     $('.header').addClass('scrolled');
+    //   } else {
+    //     $('.header').removeClass('scrolled');
+    //   }
+    // }
+    // onScroll();
+    // $(window).scroll(onScroll);
 
 
-    
+
+
+  //
+  // Product Slider
+  function productSlider() {
+    let $gallerySlider = $('.slider');
+    $gallerySlider.each(function() {
+      $(this).slick({
+        autoplay: false,
+        dots: true,
+        arrows: true,
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: false,
+        centerMode: false,
+        initialSlide: 0,
+        centerPadding: '10%',
+        responsive: [
+          {
+            breakpoint: 812,
+            settings: {
+              centerPadding: '10%',
+              slidesToShow: 1.4,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              centerPadding: '10%',
+              slidesToShow: 1.4,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              centerPadding: '10px',
+              slidesToShow: 1.4,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              centerPadding: '10px',
+              slidesToShow: 1.4,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    });
+  }
+
+  productSlider();
+
   },
 };
