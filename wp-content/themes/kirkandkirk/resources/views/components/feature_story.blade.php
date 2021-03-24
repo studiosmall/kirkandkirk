@@ -23,13 +23,13 @@
 
         <div class="feature-story__item  bg-color__{{ $colour }}--alt">
 
-          <div class="feature-story__inner" data-aos="fade-up">
+          <div class="feature-story__inner">
             <h3>MEET</h3>
             <h2>{{ $title }}</h2>
 
             {!! $textarea !!}
 
-            <a href="/stories">Read more stories</a>
+            <a href="#">Read more stories</a>
 
           </div>
 

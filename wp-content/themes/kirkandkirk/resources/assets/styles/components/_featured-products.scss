@@ -24,17 +24,18 @@
 	}
 
   &__inner {
-		@include inner;
+		//@include inner;
   }
 
 	&__products {
-		display: flex;
-    justify-content: space-between;
-		flex-wrap: wrap;
+		// display: flex;
+    // justify-content: space-between;
+		// flex-wrap: wrap;
 
-		@include breakpoint(medium) {
-			flex-wrap: nowrap;
-		}
+		// @include breakpoint(medium) {
+		// 	flex-wrap: nowrap;
+		// }
+    cursor: grab;
 
 		a {
 			outline: none;
@@ -46,8 +47,10 @@
 	}
 
 	&__product {
-		width: 100%;
+		width: 31%;
 		position: relative;
+		padding: 0 20px;
+		cursor: grab;
 
 		@include breakpoint(medium) {
 			width: 31%;
@@ -67,6 +70,7 @@
 			top: 0;
 			left: 0;
 			z-index: 2;
+			cursor: grab;
 		}
 	}
 
@@ -102,10 +106,15 @@
 
   &__bottom {
 		width: 100%;
-		display: flex;
-    justify-content: flex-start;
-    align-items: center;
 		padding: 60px 0 0 0;
+
+		&--inner {
+			@include inner;
+
+			display: flex;
+    	justify-content: flex-start;
+    	align-items: center;
+		}
 
     h3 {
 			@include title($brand--primary);

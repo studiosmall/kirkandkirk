@@ -32,6 +32,8 @@
 
 		&:last-of-type {
 			width: 100%;
+			display: flex;
+			align-items: center;
 
 		@include breakpoint(medium) {
 			width: 60%;

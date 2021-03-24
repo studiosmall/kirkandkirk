@@ -5,7 +5,7 @@
     <div class="featured-products__products slider">
       @foreach($c['products'] as $product)
 
-        <div class="featured-products__product" data-aos="slide-up">
+        <div class="featured-products__product">
           @php
 
             $image 		= get_the_post_thumbnail_url($product, 'large');
@@ -18,7 +18,8 @@
 
           @endphp
 
-          <a class="link" href="{{ $link }}"></a>
+          <a class="link" href="#"></a>
+          {{-- <a class="link" href="{{ $link }}"></a> --}}
           <img src="{{ $image }}"  alt="{{ $title }}">
 
           <div class="featured-products__meta" style="border-color:{{ $colour }};">
@@ -30,9 +31,12 @@
       @endforeach
     </div>
 
-    <div class="featured-products__bottom" data-aos="slide-up">
+    <div class="featured-products__bottom" data-aos="fade-up">
+      <div class="featured-products__bottom--inner">
       <h3>{!! $c['collection_title'] !!}</h3>
-      <a href="{{ $c['collection_link'] }}">View Collection</a>
+      <a href="#">View Collection</a>
+      {{-- <a href="{{ $c['collection_link'] }}">View Collection</a> --}}
+      </div>
     </div>
 
   </div>

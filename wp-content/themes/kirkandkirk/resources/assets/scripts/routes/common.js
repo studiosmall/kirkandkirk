@@ -1,5 +1,6 @@
 import AOS from 'aos';
 import 'slick-carousel';
+import Flickity from 'flickity';
 
 export default {
   init() {
@@ -78,59 +79,68 @@ export default {
 
   //
   // Product Slider
-  function productSlider() {
-    let $gallerySlider = $('.slider');
-    $gallerySlider.each(function() {
-      $(this).slick({
-        autoplay: false,
-        dots: true,
-        arrows: true,
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        adaptiveHeight: false,
-        centerMode: false,
-        initialSlide: 0,
-        centerPadding: '10%',
-        responsive: [
-          {
-            breakpoint: 812,
-            settings: {
-              centerPadding: '10%',
-              slidesToShow: 1.4,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              centerPadding: '10%',
-              slidesToShow: 1.4,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 600,
-            settings: {
-              centerPadding: '10px',
-              slidesToShow: 1.4,
-              slidesToScroll: 1,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              centerPadding: '10px',
-              slidesToShow: 1.4,
-              slidesToScroll: 1,
-            },
-          },
-        ],
-      });
-    });
-  }
+  // function productSlider() {
+  //   let $gallerySlider = $('.slider');
+  //   $gallerySlider.each(function() {
+  //     $(this).slick({
+  //       autoplay: false,
+  //       dots: true,
+  //       arrows: true,
+  //       infinite: false,
+  //       slidesToShow: 3,
+  //       slidesToScroll: 1,
+  //       adaptiveHeight: false,
+  //       centerMode: false,
+  //       initialSlide: 0,
+  //       centerPadding: '10%',
+  //       responsive: [
+  //         {
+  //           breakpoint: 812,
+  //           settings: {
+  //             centerPadding: '10%',
+  //             slidesToShow: 1.4,
+  //             slidesToScroll: 1,
+  //           },
+  //         },
+  //         {
+  //           breakpoint: 768,
+  //           settings: {
+  //             centerPadding: '10%',
+  //             slidesToShow: 1.4,
+  //             slidesToScroll: 1,
+  //           },
+  //         },
+  //         {
+  //           breakpoint: 600,
+  //           settings: {
+  //             centerPadding: '10px',
+  //             slidesToShow: 1.4,
+  //             slidesToScroll: 1,
+  //           },
+  //         },
+  //         {
+  //           breakpoint: 480,
+  //           settings: {
+  //             centerPadding: '10px',
+  //             slidesToShow: 1.4,
+  //             slidesToScroll: 1,
+  //           },
+  //         },
+  //       ],
+  //     });
+  //   });
+  // }
 
-  productSlider();
+  //productSlider();
+
+  var flky = new Flickity( '.slider', {  // eslint-disable-line no-unused-vars
+    // disable previous & next buttons and dots
+    prevNextButtons: false,
+    pageDots: false,
+    wrapAround: true,
+    freeScroll: true,
+  });
+
 
   },
 };

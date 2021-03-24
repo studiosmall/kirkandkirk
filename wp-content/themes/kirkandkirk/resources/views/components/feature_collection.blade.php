@@ -3,10 +3,11 @@
   <a class="feature-collection__link" href="/shop/{{ $c['featured_collection']->slug }}"></a>
 
   <div class="feature-collection__inner">
-    <div class="feature-collection__bottom" data-aos="slide-up">
+    <div class="feature-collection__bottom" data-aos="fade-up">
 
       <h3>{!! $c['featured_collection']->name  !!}</h3>
-      <a href="/shop/{{ $c['featured_collection']->slug }}">View Collection</a>
+      <a href="#">View Collection</a>
+      {{-- <a href="/shop/{{ $c['featured_collection']->slug }}">View Collection</a> --}}
 
     </div>
   </div>
