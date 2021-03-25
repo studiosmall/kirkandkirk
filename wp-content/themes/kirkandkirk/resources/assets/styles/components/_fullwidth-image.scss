@@ -92,6 +92,19 @@
 			width: 100%;
 		}
 
+    &.left {
+      justify-content: flex-start;
+
+      p {
+        text-align: left;
+        max-width: 100%;
+
+        @include breakpoint(medium) {
+          max-width: 65%;
+        }
+      }
+    }
+
     p {
       max-width: 800px;
       width: 100%;

@@ -61,12 +61,30 @@
 
 <div class="off-canvas">
 	<div class="off-canvas__inner">
-    @if (has_nav_menu('main_navigation'))
+    @if (has_nav_menu('left_navigation'))
       {!! wp_nav_menu(
-        ['theme_location' => 'main_navigation',
+        ['theme_location' => 'left_navigation',
         'menu_class' => 'nav',
-        'items_wrap' => '<ul>%3$s<li><a href="/get-a-quote/">Quick Quote</a></li></ul>',
+        'items_wrap' => '<ul>%3$s</ul>',
         ]) !!}
     @endif
+
+    @if (has_nav_menu('center_navigation'))
+    {!! wp_nav_menu(
+      ['theme_location' => 'center_navigation',
+      'menu_class' => 'nav',
+      'items_wrap' => '<ul>%3$s</ul>',
+      ]) !!}
+    @endif
+
+    @if (has_nav_menu('right_navigation'))
+    {!! wp_nav_menu(
+      ['theme_location' => 'right_navigation',
+      'menu_class' => 'nav',
+      'items_wrap' => '<ul>%3$s</ul>',
+      ]) !!}
+    @endif
+
+
   </div>
 </div>

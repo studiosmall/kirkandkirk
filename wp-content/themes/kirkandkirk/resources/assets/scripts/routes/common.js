@@ -44,6 +44,12 @@ export default {
 
     }
 
+    $('.header__hamburger').on('click', function(e){
+      e.preventDefault();
+      $(this).toggleClass('active');
+      $('.off-canvas, body').toggleClass('active');
+    });
+
     // let onScroll = function() {
     //   let navbarHeight = $('.header').outerHeight();
     //   let st = $(this).scrollTop();

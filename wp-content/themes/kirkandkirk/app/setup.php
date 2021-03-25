@@ -44,7 +44,9 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation'        => __('Primary Navigation', 'sage'),
+        'left_navigation'           => __('Main Left Navigation', 'sage'),
+        'center_navigation'         => __('Main Center Navigation', 'sage'),
+        'right_navigation'          => __('Main Right Navigation', 'sage'),
         'footer_left_navigation'    => __('Footer Left Navigation', 'sage'),
         'footer_center_navigation'  => __('Footer Center Navigation', 'sage'),
         'footer_right_navigation'   => __('Footer Right Navigation', 'sage'),

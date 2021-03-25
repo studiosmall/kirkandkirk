@@ -1,0 +1,130 @@
+.off-canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+	background: $brand--secondary;
+	z-index: 5;
+	width: 100vw;
+	height: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: all ease 0.3s;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	// scrollbar-width: none;  /* Firefox */
+	// &::-webkit-scrollbar {
+	// 	display: none;
+	// }
+
+	@include breakpoint(medium) {
+		width: 100vw;
+	}
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+	&__inner {
+		display: flex;
+    justify-content: start;
+		padding: 180px 20px 10px 20px;
+
+		@include breakpoint(medium) {
+			padding: 170px 46px 10px 46px;
+		}
+	}
+
+	.menu-main-menu-left-container,
+	.menu-main-menu-center-container,
+	.menu-main-menu-right-container {
+		margin: 0 5% 0 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			font-size: 24px;
+			line-height: 1;
+			margin: 0 0 32px;
+			width: 100%;
+			text-align: center;
+
+			@include breakpoint(medium) {
+				text-align: left;
+				margin: 0 0 17px;
+			}
+
+			a {
+				@include hoverline($brand--primary);
+
+				font-family: $font--heading;
+				font-size: 14px;
+				text-decoration: none;
+				color: $brand--primary;
+				letter-spacing: 0.75px;
+				text-align: left;
+
+				&::after {
+					height: 1px;
+				}
+
+				@include breakpoint(medium) {
+					font-size: 16px;
+				}
+			}
+
+			ul.sub-menu {
+				padding: 0;
+
+				li {
+					margin: 0 0 1px 0;
+
+					a {
+						@include hoverline($brand--primary);
+
+						&::after {
+							height: 1px;
+						}
+
+						@include breakpoint(medium) {
+							font-size: 16px;
+							line-height: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#menu-mobile-navigation {
+		display: block;
+
+		@include breakpoint(medium) {
+			display: none;
+		}
+
+		li {
+			> ul.sub-menu {
+				display: none;
+				transition: $transition;
+
+				// a {
+				// 	@include hoverline($brand--secondary);
+				// }
+
+				&.active {
+					display: block;
+				}
+
+				ul.sub-menu {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
