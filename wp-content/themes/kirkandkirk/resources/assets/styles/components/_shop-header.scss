@@ -1,0 +1,14 @@
+.shop-header {
+  &__inner {
+		@include inner;
+  }
+
+	.woocommerce-breadcrumb {
+		a {
+			@include hoverline($brand--primary);
+			@include subtitle($brand--primary);
+
+			text-transform: uppercase;
+		}
+	}
+}

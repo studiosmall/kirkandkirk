@@ -134,4 +134,12 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+
+     /**
+     * Add Woocommerce Support
+     */
+    add_theme_support('woocommerce', array(
+        'thumbnail_image_width' => 415,
+    ));
 });
+

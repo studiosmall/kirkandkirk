@@ -1,0 +1,28 @@
+.single-product {
+	background-color: #fff;
+
+  &__inner {
+		@include inner;
+  }
+
+	.product {
+		display: flex;
+		flex-wrap: wrap;
+
+		.woocommerce-product-gallery {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 50%;
+			}
+		}
+
+		.summary {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 50%;
+			}
+		}
+	}
+}
