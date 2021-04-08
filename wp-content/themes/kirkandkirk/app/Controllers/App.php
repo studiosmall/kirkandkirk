@@ -35,9 +35,9 @@ class App extends Controller
     function options(){
 
         global $post;
-    
+
         $options = get_fields('option');
-    
+
         return $options;
     }
 }

@@ -15,6 +15,10 @@ body {
     //   url("../images/bg-triangle-alt.svg") 0 100%,
     //   url("../images/bg-triangle-alt.svg") 91px 100%, $brand--primary;
   }
+
+  &.archive {
+    background-color: $brand--white;
+  }
 }
 
 p {
@@ -23,6 +27,7 @@ p {
   letter-spacing: 0.75px;
   text-align: left;
   line-height: 22px;
+  margin-top: 0;
 }
 
 .about,
@@ -40,7 +45,7 @@ p {
   width: 100%;
 
   @include breakpoint(medium) {
-    padding: 170px 0 0 0;
+    padding: 139px 0 0 0;
   }
 }
 
@@ -87,6 +92,22 @@ img {
 
     &--alt {
       background-color: #d7dfe9;
+    }
+  }
+}
+
+.alert {
+  padding: 60px 0;
+
+  &__inner {
+    @include inner;
+  }
+}
+
+.about-page {
+  .section {
+    &:nth-of-type(2n) {
+      padding-top: 0;
     }
   }
 }

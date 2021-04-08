@@ -1,0 +1,127 @@
+.form {
+    @include section;
+
+    &__inner {
+        @include inner;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container {
+        margin: 0 auto;
+    }
+
+    &__message {
+        width: 50%;
+        padding: 40px 0 80px 0;
+        margin: 0 auto;
+    }
+
+    .gform_wrapper {
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+
+        .validation_message {
+            padding: 15px 0 0 0;
+            font-style: italic;
+        }
+
+        .validation_error {
+            padding: 15px 0;
+            font-style: italic;
+        }
+
+        .gform_heading {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0 0 40px 0;
+
+            span {
+                font-family: $font--body;
+                font-weight: 100;
+                font-size: 16px;
+                color: $brand--primary;
+                letter-spacing: 0.6px;
+                text-align: center;
+            }
+        }
+
+        .gform_body {
+            text-align: center;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    padding: 0 0 20px 0;
+                }
+            }
+
+            label {
+                @include subtitle($brand--primary);
+
+                text-transform: uppercase;
+                margin: 0 0 10px 0;
+                display: block;
+
+                .gfield_required {
+                    color: $brand--primary;
+                }
+            }
+
+            input {
+                @include input;
+
+                width: calc(100% - 8px);
+                padding: 10px 10px !important;
+                border: 0 !important;
+                background-color: #e1e1e1;
+            }
+
+            textarea {
+                @include input;
+
+                width: calc(100% - 8px);
+                padding: 10px 10px !important;
+                border: 0 !important;
+                background-color: #e1e1e1;
+            }
+
+            .ginput_container_fileupload {
+                width: 225px;
+                margin: 15px auto;
+            }
+
+            .gfield_checkbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 15px 0 0 0;
+
+                li {
+                    margin: 0 20px;
+
+                    label {
+                        display: inline-block;
+                        margin: 0 0 0 5px;
+                    }
+
+                    input {
+                        margin: 0 !important;
+                        display: inline-block;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .gform_footer {
+            .gform_button {
+                @include button;
+            }
+        }
+    }
+}

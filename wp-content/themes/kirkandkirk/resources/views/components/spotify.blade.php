@@ -1,10 +1,10 @@
 <section class="spotify bg-color-{!! $c['background_image'] !!}">
   <div class="spotify__inner">
-    
+
     <div class="spotify__row">
 
       <div class="spotify__col">
-      
+
         <img class="spotify__code" src="{{ $c['spotify_link_image']['url'] }}" alt="Spotify – Kirk & Kirk">
 
         <div class="spotify__info" data-aos="fade-up">

@@ -54,18 +54,7 @@
 	&__quote {
 		p,
 		span {
-			font-style: italic;
-			font-family: $font--body;
-			font-size: 14px;
-			color: $brand--primary;
-			letter-spacing: 0.75px;
-			line-height: 22px;
-			margin: 0;
-			padding: 0;
-
-			@include breakpoint(medium) {
-				font-size: 16px;
-			}
+			@include quote;
 		}
 
 		span {

@@ -1,3 +1,5 @@
 <div class="page-header">
-  <h1>{!! App::title() !!}</h1>
+  <div class="page-header__inner">
+    <h1>{!! App::title() !!}</h1>
+  </div>
 </div>

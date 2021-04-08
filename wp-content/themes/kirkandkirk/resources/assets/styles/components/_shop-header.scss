@@ -1,14 +1,42 @@
+.archive #main {
+	@include inner;
+
+	.woocommerce-breadcrumb {
+		display: none;
+	}
+}
+
+.woocommerce-products-header {
+	padding: 20px 0;
+
+	&__title {
+		@include subtitle($brand--primary);
+
+		text-transform: uppercase;
+	}
+}
+
 .shop-header {
   &__inner {
 		@include inner;
   }
+}
 
-	.woocommerce-breadcrumb {
-		a {
-			@include hoverline($brand--primary);
-			@include subtitle($brand--primary);
+.woocommerce-breadcrumb {
+	@include subtitle($brand--primary);
 
-			text-transform: uppercase;
-		}
+	text-transform: uppercase;
+
+	a {
+		@include hoverline($brand--primary);
+		@include subtitle($brand--primary);
+
+		text-transform: uppercase;
 	}
+}
+
+// TEMP REMOVE FILTERS
+.woocommerce-result-count,
+.woocommerce-ordering {
+	display: none;
 }

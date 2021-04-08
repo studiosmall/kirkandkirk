@@ -27,6 +27,8 @@
 		transform: translateY(0);
 	}
 	&__inner {
+		@include inner;
+
 		display: flex;
     justify-content: start;
 		padding: 180px 20px 10px 20px;
@@ -58,6 +60,15 @@
 				margin: 0 0 17px;
 			}
 
+			&.current-menu-item {
+				a {
+					&::after {
+						transform: scaleX(1);
+						transform-origin: bottom;
+					}
+				}
+			}
+
 			a {
 				@include hoverline($brand--primary);
 
@@ -82,6 +93,15 @@
 
 				li {
 					margin: 0 0 1px 0;
+
+					&.current-menu-item {
+						a {
+							&::after {
+								transform: scaleX(1);
+								transform-origin: bottom;
+							}
+						}
+					}
 
 					a {
 						@include hoverline($brand--primary);

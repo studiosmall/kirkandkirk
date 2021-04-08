@@ -1,6 +1,11 @@
 import AOS from 'aos';
 import 'slick-carousel';
 import Flickity from 'flickity';
+import Plyr from 'plyr';
+import 'jquery-visible';
+
+//import '../vendor/masonry.pkgd.js';
+import 'masonry-layout/dist/masonry.pkgd.min.js';
 
 export default {
   init() {
@@ -82,71 +87,113 @@ export default {
 
 
 
+  // Review Slider
+  function reviewSlider() {
+    let $gallerySlider = $('.slider-review');
+    $gallerySlider.each(function() {
+      $(this).slick({
+        autoplay: true,
+        dots: false,
+        arrows: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        centerMode: false,
+        initialSlide: 0,
+        centerPadding: '10%',
+        responsive: [
+          {
+            breakpoint: 812,
+            settings: {
+              centerPadding: '10%',
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              centerPadding: '10%',
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              centerPadding: '10px',
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              centerPadding: '10px',
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    });
+  }
 
-  //
-  // Product Slider
-  // function productSlider() {
-  //   let $gallerySlider = $('.slider');
-  //   $gallerySlider.each(function() {
-  //     $(this).slick({
-  //       autoplay: false,
-  //       dots: true,
-  //       arrows: true,
-  //       infinite: false,
-  //       slidesToShow: 3,
-  //       slidesToScroll: 1,
-  //       adaptiveHeight: false,
-  //       centerMode: false,
-  //       initialSlide: 0,
-  //       centerPadding: '10%',
-  //       responsive: [
-  //         {
-  //           breakpoint: 812,
-  //           settings: {
-  //             centerPadding: '10%',
-  //             slidesToShow: 1.4,
-  //             slidesToScroll: 1,
-  //           },
-  //         },
-  //         {
-  //           breakpoint: 768,
-  //           settings: {
-  //             centerPadding: '10%',
-  //             slidesToShow: 1.4,
-  //             slidesToScroll: 1,
-  //           },
-  //         },
-  //         {
-  //           breakpoint: 600,
-  //           settings: {
-  //             centerPadding: '10px',
-  //             slidesToShow: 1.4,
-  //             slidesToScroll: 1,
-  //           },
-  //         },
-  //         {
-  //           breakpoint: 480,
-  //           settings: {
-  //             centerPadding: '10px',
-  //             slidesToShow: 1.4,
-  //             slidesToScroll: 1,
-  //           },
-  //         },
-  //       ],
-  //     });
-  //   });
-  // }
+  reviewSlider();
 
-  //productSlider();
 
-  var flky = new Flickity( '.slider', {  // eslint-disable-line no-unused-vars
-    // disable previous & next buttons and dots
-    prevNextButtons: false,
-    pageDots: false,
-    wrapAround: true,
-    freeScroll: true,
+  // creates a node list of all carousels on the same page
+  const carousels = document.querySelectorAll('.slider');
+
+  carousels.forEach(carousel => {
+    new Flickity(carousel, {
+      prevNextButtons: false,
+      pageDots: false,
+      wrapAround: true,
+      freeScroll: true,
+    });
   });
 
+
+    //
+    // Video
+    if($('.video').length ) {
+      const player 	= new Plyr('#player', { // eslint-disable-line no-unused-vars
+				muted: true,
+			});
+
+
+      //auto play video on scroll
+      $(document).on( 'scroll', function(){
+        if ($('.plyr__video-embed').visible(true)) {
+          // The element is visible, do something
+         player.play(); // eslint-disable-line no-undef
+
+        } else {
+          player.pause();
+        }
+      })
+    }
+
+    if($('.articles__items').length) {
+      var $grid = $('.articles__items');
+      // var $grid = $('.articles__items').imagesLoaded( function() {
+        $grid.masonry({
+          itemSelector: '.articles__card',
+          percentPosition: true,
+          columnWidth: '.articles__sizer',
+          gutter: 40,
+        });
+      // });
+    }
+
+    if($('.wc360').length) {
+      setTimeout(
+        function() {
+          $('.product-images__360').fadeIn();
+        }, 1000);
+    }
 
   },
 };

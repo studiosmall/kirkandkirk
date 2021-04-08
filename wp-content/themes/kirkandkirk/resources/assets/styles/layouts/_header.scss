@@ -291,6 +291,19 @@
 
     a {
       margin: 0 0 0 15px;
+
+			&.cart-customlocation {
+				display: flex;
+				color: $brand--primary;
+				text-decoration: none;
+				font-size: 15px;
+
+				span {
+					&:last-of-type {
+						margin: 0 0 0 3px;
+					}
+				}
+			}
     }
   }
 

@@ -50,6 +50,7 @@ add_action('after_setup_theme', function () {
         'footer_left_navigation'    => __('Footer Left Navigation', 'sage'),
         'footer_center_navigation'  => __('Footer Center Navigation', 'sage'),
         'footer_right_navigation'   => __('Footer Right Navigation', 'sage'),
+        'about_navigation'          => __('About Navigation', 'sage'),
     ]);
 
     /**
@@ -143,3 +144,15 @@ add_action('after_setup_theme', function () {
     ));
 });
 
+
+/**
+ * Remove default gravity forms styles
+ */
+add_action('gform_enqueue_scripts', function (){
+    wp_deregister_style("gforms_formsmain_css");
+    wp_deregister_style("gforms_reset_css");
+    wp_deregister_style("gforms_ready_class_css");
+    wp_deregister_style("gforms_browsers_css");
+});
+
+add_filter('gform_init_scripts_footer', '__return_true');

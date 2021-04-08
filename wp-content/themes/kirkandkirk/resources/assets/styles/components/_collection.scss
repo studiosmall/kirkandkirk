@@ -1,0 +1,24 @@
+.products {
+	padding: 0;
+	list-style: none;
+	display: grid; /* 1 */
+  grid-template-columns: repeat(3, 1fr); /* 2 */
+  grid-gap: 1rem; /* 3 */
+	gap: 30px;
+  justify-content: space-between; /* 4 */
+
+	li {
+		cursor: initial;
+    padding: 0;
+		width: 100%;
+    // margin: 0 30px;
+
+		// @include breakpoint(medium) {
+		// 	width: 30%;
+		// }
+	}
+}
+
+.woocommerce-info {
+	padding: 60px 0 120px 0;
+}

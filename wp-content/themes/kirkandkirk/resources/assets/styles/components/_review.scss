@@ -1,0 +1,108 @@
+.review {
+	@include section;
+
+	text-align: center;
+	background-color: #d8c5f8;
+
+	&__inner {
+		@include inner;
+	}
+
+	.review-slider {
+		display: flex;
+
+		&__col {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 40%;
+			}
+
+			&:last-of-type {
+				width: 100%;
+				display: flex;
+				align-items: center;
+
+				@include breakpoint(medium) {
+					width: 60%;
+				}
+			}
+		}
+
+		&__stars {
+			display: flex;
+    	justify-content: center;
+    	align-items: center;
+			height: 100%;
+		}
+
+		&__quote {
+			width: 80%;
+		}
+	}
+
+	.slider-review {
+		.slick-next {
+			opacity: 1;
+			display: block;
+			background-size: 17px;
+			width: 17px;
+			height: 30px;
+			background-image: url("../images/ico-arrow-right.svg");
+			transition: $transition;
+
+			&::before {
+				content: " ";
+			}
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+
+		.slick-prev {
+			opacity: 1;
+			display: block;
+			background-size: 17px;
+			width: 17px;
+			height: 30px;
+			background-image: url("../images/ico-arrow-left.svg");
+			transition: $transition;
+
+			&::before {
+				content: " ";
+			}
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+
+.star {
+	display: block;
+  background-size: 145px;
+  width: 145px;
+  height: 25px;
+
+	&__one {
+		background: url("../images/1-stars.svg");
+	}
+
+	&__two {
+		background: url("../images/2-stars.svg");
+	}
+
+	&__three {
+		background: url("../images/3-stars.svg");
+	}
+
+	&__four {
+		background: url("../images/4-stars.svg");
+	}
+
+	&__five {
+		background: url("../images/5-stars.svg");
+	}
+}

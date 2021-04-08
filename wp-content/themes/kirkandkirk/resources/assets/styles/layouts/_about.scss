@@ -1,0 +1,41 @@
+.about-nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      &.current-menu-item {
+        a {
+          color: #595959;
+        }
+      }
+
+      a {
+        @include hoverline($brand--primary);
+
+        font-family: $font--body;
+        font-size: 18px;
+        color: $brand--primary;
+        letter-spacing: 1.87px;
+        text-transform: uppercase;
+      }
+
+      &::after {
+        content: "—";
+        margin: 0 10px;
+        color: #595959;
+      }
+
+      &:last-of-type {
+        &::after {
+          content: "";
+        }
+      }
+    }
+  }
+}

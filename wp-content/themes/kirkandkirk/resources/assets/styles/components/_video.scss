@@ -1,0 +1,67 @@
+.video {
+    @include section;
+
+    &__inner {
+        @include inner;
+    }
+
+	.plyr--full-ui.plyr--video .plyr__control--overlaid {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	}
+
+	.plyr__control--overlaid {
+    background: var(--plyr-video-control-background-hover, var(--plyr-color-main, var(--plyr-color-main, #000)));
+    border: 0;
+    border-radius: 100%;
+    color: var(--plyr-video-control-color, #fff);
+    display: none;
+    left: 50%;
+    opacity: 0.9;
+    padding: calc(var(--plyr-control-spacing, 10px) * 1.5);
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    z-index: 2;
+	}
+
+	.plyr--video .plyr__control.plyr__tab-focus,
+    .plyr--video .plyr__control:hover,
+    .plyr--video .plyr__control[aria-expanded="true"] {
+    background: var(--plyr-video-control-background-hover, var(--plyr-color-main, var(--plyr-color-main, #cec5be)));
+    color: var(--plyr-video-control-color-hover, #fff);
+	}
+
+    // Hide controls
+    .plyr--video.plyr--hide-controls .plyr__controls {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0%);
+
+        @include breakpoint(medium) {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(100%);
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .plyr .plyr__controls button[data-plyr=pip],
+    .plyr .plyr__controls button[data-plyr=mute],
+    .plyr .plyr__controls button[data-plyr=volume] {
+        display: block;
+    }
+    .plyr--video.plyr--hide-controls .plyr__controls {
+        opacity: 1;
+        pointer-events: none;
+    }
+}

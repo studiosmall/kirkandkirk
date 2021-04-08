@@ -51,9 +51,10 @@
     <div class="header__right">
 	    <div class="header__buttons">
         <a href="#"><span class="ico-search"></span></a>
-        <a href="#"><span class="ico-heart"></span></a>
-        <a href="#"><span class="ico-account"></span></a>
-        <a href="#"><span class="ico-basket"></span></a>
+        <a href="/account"><span class="ico-heart"></span></a>
+        <a href="/account"><span class="ico-account"></span></a>
+        {{-- <a href="/cart"><span class="ico-basket"></span></a> --}}
+        <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><span class="ico-basket"></span><span><?php echo sprintf ( _n('(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
 	    </div>
 	  </div>
   </div>

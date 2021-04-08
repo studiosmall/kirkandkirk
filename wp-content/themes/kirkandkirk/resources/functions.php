@@ -106,3 +106,142 @@ function jk_woocommerce_breadcrumbs() {
             'home'        => _x( '', 'breadcrumb', 'woocommerce' ),
         );
 }
+
+add_filter('woocommerce_get_breadcrumb', 'remove_shop_crumb', 20, 2);
+function remove_shop_crumb($crumbs, $breadcrumb)
+{
+    $new_crumbs = array();
+    foreach ($crumbs as $key => $crumb) {
+        if ($crumb[0] !== __('Shop', 'Woocommerce')) {
+            $new_crumbs[] = $crumb;
+        }
+    }
+    return $new_crumbs;
+}
+
+
+// =========================================================================
+// REMOVE ADDITIONAL INFORMATION TAB
+// =========================================================================
+add_filter( 'woocommerce_product_tabs', 'remove_additional_information_tab', 100, 1 );
+function remove_additional_information_tab( $tabs ) {
+    unset($tabs['additional_information']);
+
+    return $tabs;
+}
+
+// =========================================================================
+// ADD ADDITIONAL INFORMATION AFTER ADD TO CART
+// =========================================================================
+add_action( 'woocommerce_before_add_to_cart_button', 'additional_info_under_add_to_cart', 35 );
+function additional_info_under_add_to_cart() {
+    global $product;
+
+    if ( $product && ( $product->has_attributes() || apply_filters( 'wc_product_enable_dimensions_display', $product->has_weight() || $product->has_dimensions() ) ) ) {
+        wc_display_product_attributes( $product );
+    }
+}
+
+
+// add_filter( 'wc360_image_output', 'wcs_360_image_output', 35 );
+// function wcs_360_image_output( $content ) {
+
+//     // echo '<div class="">';
+//     //     echo $content;
+//     // echo '</div>';
+
+//     //return $content = "<div class='myclass'>" . $content . "</div>";
+//     return '<div class="custom_class">Whatever goes inside</div>'. $content;
+// }
+
+
+add_filter( 'wc360_output_image_size', 'wcs_360_image_size_output' );
+function wcs_360_image_size_output() {
+    return 'shop_single';
+}
+
+/**
+ * @snippet       [recently_viewed_products] Shortcode - WooCommerce
+ * @compatible    WooCommerce 3.6.2
+ */
+
+add_shortcode( 'recently_viewed_products', 'bbloomer_recently_viewed_shortcode' );
+
+function bbloomer_recently_viewed_shortcode() {
+   $viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', wp_unslash( $_COOKIE['woocommerce_recently_viewed'] ) ) : array();
+   $viewed_products = array_reverse( array_filter( array_map( 'absint', $viewed_products ) ) );
+
+   if ( empty( $viewed_products ) ) return;
+//    $title = '<div class="title__inner"><h2>Recently Viewed</h2></div>';
+   $product_ids = implode( ",", $viewed_products );
+   return do_shortcode("$product_ids");
+}
+
+
+
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+function my_toolbars( $toolbars )
+{
+	// Uncomment to view format of $toolbars
+
+	// echo '<pre>';
+	// 	print_r($toolbars);
+	// echo '</pre>';
+	// die;
+
+
+	// Add a new toolbar called "Very Simple"
+	// - this toolbar has only 1 row of buttons
+	$toolbars['Very Simple' ] = array();
+	$toolbars['Very Simple' ][1] = array('formatselect', 'bold' , 'italic' , 'underline' );
+
+	// Edit the "Full" toolbar and remove 'code'
+	// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
+	if( ($key = array_search('code' , $toolbars['Full' ][2])) !== false )
+	{
+	    unset( $toolbars['Full' ][2][$key] );
+	}
+
+	// remove the 'Basic' toolbar completely
+	unset( $toolbars['Basic' ] );
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}
+
+add_action( 'init', 'ns_change_post_object' );
+// Change dashboard Posts to News
+function ns_change_post_object() {
+   $get_post_type = get_post_type_object('post');
+    $labels = $get_post_type->labels;
+    $labels->name = 'Stories';
+    $labels->singular_name = 'Story';
+    $labels->add_new = 'Add Story';
+    $labels->add_new_item = 'Add Story';
+    $labels->edit_item = 'Edit Story';
+    $labels->new_item = 'Story';
+    $labels->view_item = 'View Stories';
+    $labels->search_items = 'Search Stories';
+    $labels->not_found = 'No Stories found';
+    $labels->not_found_in_trash = 'No Stories found in Trash';
+    $labels->all_items = 'All Stories';
+    $labels->menu_name = 'Stories';
+    $labels->name_admin_bar = 'Stories';
+}
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><span class="ico-basket"></span><span><?php echo sprintf(_n('(%d)', '(%d)', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?></span></a>
+	<?php
+	$fragments['a.cart-customlocation'] = ob_get_clean();
+	return $fragments;
+}

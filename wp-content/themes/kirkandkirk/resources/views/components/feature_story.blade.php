@@ -29,7 +29,7 @@
 
             {!! $textarea !!}
 
-            <a href="#">Read more stories</a>
+            <a href="/stories">Read more stories</a>
 
           </div>
 

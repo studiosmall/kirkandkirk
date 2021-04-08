@@ -18,8 +18,7 @@
 
           @endphp
 
-          <a class="link" href="#"></a>
-          {{-- <a class="link" href="{{ $link }}"></a> --}}
+          <a class="link" href="{{ $link }}"></a>
           <img src="{{ $image }}"  alt="{{ $title }}">
 
           <div class="featured-products__meta" style="border-color:{{ $colour }};">
@@ -34,8 +33,7 @@
     <div class="featured-products__bottom" data-aos="fade-up">
       <div class="featured-products__bottom--inner">
       <h3>{!! $c['collection_title'] !!}</h3>
-      <a href="#">View Collection</a>
-      {{-- <a href="{{ $c['collection_link'] }}">View Collection</a> --}}
+      <a href="{{ $c['collection_link'] }}">View Collection</a>
       </div>
     </div>
 

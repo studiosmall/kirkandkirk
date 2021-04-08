@@ -38,8 +38,6 @@ if( function_exists('acf_add_options_page') ) {
         'icon_url'      => 'dashicons-hammer'
       )
     );
-  
+
     // Replace icons to add in above - https://developer.wordpress.org/resource/dashicons/#media-interactive
-  
-  }
-  
+}

@@ -1,0 +1,84 @@
+.two-column {
+	@include section;
+
+	&__inner {
+		@include inner;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		@include breakpoint(medium) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__col {
+		width: 100%;
+
+		@include breakpoint(medium) {
+			width: 45%;
+		}
+	}
+
+	&__textarea {
+
+		&.textarea-left {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 85%;
+			}
+		}
+
+			h1 {
+				display: inline-block;
+				font-family: $font--heading;
+				font-weight: 100;
+				font-size: 18px;
+				letter-spacing: 2.73px;
+			}
+
+			h2 {
+				display: inline-block;
+				font-size: 17px;
+				font-weight: 100;
+			}
+	}
+
+	&__top-image {
+		padding: 0 0 70px 0;
+	}
+
+	&__bottom-container {
+    display: flex;
+
+		&.right {
+			justify-content: flex-end;
+		}
+
+		&.left {
+			justify-content: flex-start;
+		}
+
+		&.center {
+			height: 100%;
+			justify-content: center;
+			vertical-align: middle;
+
+			img {
+				align-self: center;
+			}
+		}
+
+		img {
+			max-width: 100%;
+			width: 100%;
+			padding: 70px 0;
+
+			@include breakpoint(medium) {
+				max-width: 60%;
+			}
+		}
+	}
+}

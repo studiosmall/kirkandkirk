@@ -1,0 +1,98 @@
+.articles {
+	@include section;
+
+	background-color: $bg-alt;
+
+	&__inner {
+		@include inner;
+	}
+
+	&__more {
+		display: flex;
+		justify-content: center;
+		padding: 30px 0;
+
+		a {
+			@include hoverline($brand--primary);
+
+			font-family: $font--body;
+			font-size: 18px;
+			letter-spacing: 0.86px;
+		}
+	}
+
+	&__line {
+		display: inline-block;
+		width: 100%;
+		border-top: 6px solid #000;
+		margin: 0 0 20px 0;
+	}
+
+	/* clear fix */
+	&::after {
+			content: "";
+			display: block;
+			clear: both;
+	}
+
+	&__sizer,
+	&__card {
+		width: calc((100% - 40px) / 2);
+		padding: 0 0 35px 0;
+
+		@include breakpoint(medium) {
+			width: calc((100% - 100px) / 3);
+		}
+	}
+
+	&__card {
+		float: left;
+		padding: 500px 0 0 0;
+
+		&:nth-child(2) {
+			padding: 0;
+		}
+
+		&:nth-child(4n) {
+			padding: 0;
+		}
+
+		h2 {
+			@include title($brand--primary);
+		}
+
+		h3 {
+			font-family: $font--body;
+			color: $brand--primary;
+			letter-spacing: 3.03px;
+			font-weight: 100;
+			margin-top: 0;
+			font-size: 14px;
+
+			@include breakpoint(medium) {
+				font-size: 16px;
+			}
+		}
+
+		p {
+			font-family: $font--body;
+			font-size: 14px;
+			letter-spacing: 1.7px;
+			text-align: left;
+			line-height: 22px;
+		}
+	}
+
+	&__image {
+		margin: 0 0 35px 0;
+
+		&.border {
+			padding: 0 53px 0 53px;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}

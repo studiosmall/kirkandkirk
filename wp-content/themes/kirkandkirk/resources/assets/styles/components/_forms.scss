@@ -1,19 +1,60 @@
-// /** Search form */
-// .search-form {
-//   @extend .form-inline;
-// }
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+ -webkit-box-shadow: 0 0 0 30px #e1e1e1 inset !important;
+}
 
-// .search-form label {
-//   @extend .form-group;
+@mixin button {
+  @include subtitle($brand--primary);
 
-//   font-weight: normal;
-// }
+  padding: 15px 10px;
+  background: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  font-family: $font--body;
+  color: $brand--primary;
+  text-align: center;
+  width: 220px;
+  transition: $transition;
+  text-transform: uppercase;
+  cursor: pointer;
 
-// .search-form .search-field {
-//   @extend .form-control;
-// }
+  &:hover {
+    border: 1px solid #e1e1e1;
+    background: $brand--secondary;
+    color: $brand--primary;
+  }
 
-// .search-form .search-submit {
-//   @extend .btn;
-//   @extend .btn-secondary;
-// }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin input {
+  input {
+    width: 90%;
+    border: 0;
+    background-color: $bg-alt;
+    padding: 10px 10px;
+
+    @include breakpoint(medium) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+  }
+}
+
+label {
+  @include subtitle($brand--primary);
+
+  text-transform: uppercase;
+}
+
+input {
+  @include input;
+}

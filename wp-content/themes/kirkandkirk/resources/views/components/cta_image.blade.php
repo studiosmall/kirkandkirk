@@ -10,8 +10,7 @@
     <div class="cta-image__bottom" data-aos="fade-up">
 
       <h3>{!! $c['title'] !!}</h3>
-      <a href="#">{{ $c['link_text'] }}</a>
-      {{-- <a href="{{ $c['link_url'] }}">{{ $c['link_text'] }}</a> --}}
+      <a href="{{ $c['link_url'] }}">{{ $c['link_text'] }}</a>
 
     </div>
   </div>

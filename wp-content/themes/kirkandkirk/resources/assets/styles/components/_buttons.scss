@@ -1,0 +1,46 @@
+/**
+ * Button
+ */
+
+ @mixin btn($color) {
+    color: $brand--white;
+    line-height: 1;
+    background: $color;
+    border: 1px solid $color;
+    overflow: hidden;
+    padding: 12px 21px;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    font-family: $font--body;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index:-1;
+      width: 0%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: $brand--white;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color;
+    }
+
+    &:hover::after,
+    &:active::after {
+      width: 100%;
+    }
+ }

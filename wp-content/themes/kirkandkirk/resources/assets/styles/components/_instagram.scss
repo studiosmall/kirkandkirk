@@ -1,0 +1,28 @@
+.instagram {
+	@include section;
+
+	text-align: center;
+	background-color: #bbb2c9;
+
+	&__inner {
+		@include inner;
+	}
+
+	h3 {
+		@include subtitle($brand--primary);
+
+		text-align: left;
+		text-transform: initial;
+		padding: 0 0 32px 0;
+	}
+
+	.feed {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		&__item {
+			width: 23%;
+		}
+	}
+}

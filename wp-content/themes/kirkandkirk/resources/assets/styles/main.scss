@@ -19,6 +19,7 @@
 $aos-distance: 10px;
 @import "~aos/src/sass/aos";
 @import "~flickity/css/flickity.css";
+@import "~plyr/src/sass/plyr";
 
 /** Import theme styles */
 @import "common/global";
@@ -34,11 +35,23 @@ $aos-distance: 10px;
 @import "components/spotify";
 @import "components/feature-story";
 @import "components/featured-products";
+@import "components/collection-products";
 @import "components/shop-header";
 @import "components/single-product";
+@import "components/collection";
+@import "components/video";
+@import "components/form";
+@import "components/review";
+@import "components/instagram";
+@import "components/two-column";
+@import "components/articles";
 @import "layouts/header";
+@import "layouts/page-header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
+@import "layouts/about";
+@import "layouts/account";
+@import "layouts/cart";
 @import "layouts/posts";
 @import "layouts/tinymce";

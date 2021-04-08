@@ -1,4 +1,5 @@
 module.exports = {
+  "ignoreFiles": "./static/components/**",
   'extends': 'stylelint-config-standard',
   'rules': {
     'no-empty-source': null,
@@ -14,6 +15,17 @@ module.exports = {
     'declaration-colon-space-after' : null,
     'declaration-empty-line-before' : null,
     'no-duplicate-selectors' : null,
+    'selector-type-case' : null,
+    'no-eol-whitespace' : null,
+    'selector-list-comma-newline-after' : null,
+    'declaration-block-no-duplicate-properties' : null,
+    'declaration-block-single-line-max-declarations' : null,
+    'number-leading-zero' : null,
+    'declaration-block-semicolon-space-after' : null,
+    'block-opening-brace-newline-after' : null,
+    'block-closing-brace-empty-line-before' : null,
+    'color-hex-case' : null,
+    'string-quotes' : null,
     'at-rule-no-unknown': [
       true,
       {

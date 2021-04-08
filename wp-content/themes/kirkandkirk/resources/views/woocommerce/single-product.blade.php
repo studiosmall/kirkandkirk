@@ -28,11 +28,13 @@ the readme will list any important changes.
   </div>
 
   @while(have_posts())
+    <div class="single-product__inner">
     @php
       the_post();
       do_action('woocommerce_shop_loop');
       wc_get_template_part('content', 'single-product');
     @endphp
+    </div>
   @endwhile
 
   @php
