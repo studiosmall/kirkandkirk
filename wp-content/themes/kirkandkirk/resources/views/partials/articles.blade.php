@@ -37,7 +37,7 @@
 		</div>
 
 		<div class="articles__more">
-			<a href="#" class="btn more-articles">Load More</a>
+			{{-- <a href="#" class="btn more-articles">Load More</a> --}}
 		</div>
 
 	</div>
