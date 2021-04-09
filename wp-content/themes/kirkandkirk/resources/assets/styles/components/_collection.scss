@@ -1,5 +1,6 @@
 .products {
 	padding: 0;
+	padding-bottom: 120px;
 	list-style: none;
 	display: grid; /* 1 */
   grid-template-columns: repeat(3, 1fr); /* 2 */
