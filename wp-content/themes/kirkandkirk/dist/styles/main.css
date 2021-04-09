@@ -8338,6 +8338,7 @@ input input:focus {
 
 .products {
   padding: 0;
+  padding-bottom: 120px;
   list-style: none;
   display: grid;
   /* 1 */
@@ -8352,7 +8353,7 @@ input input:focus {
   /* 4 */
 }
 
-/* line 10, resources/assets/styles/components/_collection.scss */
+/* line 11, resources/assets/styles/components/_collection.scss */
 
 .products li {
   cursor: initial;
@@ -8360,7 +8361,7 @@ input input:focus {
   width: 100%;
 }
 
-/* line 22, resources/assets/styles/components/_collection.scss */
+/* line 23, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info {
   padding: 60px 0 120px 0;
