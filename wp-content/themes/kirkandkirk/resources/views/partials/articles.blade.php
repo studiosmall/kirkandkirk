@@ -27,7 +27,6 @@
 						<div class="articles__text">
 							{!! $article['textarea'] !!}
 						</div>
-
 					</div>
 
 				@endforeach
