@@ -1,0 +1,164 @@
+.stockist {
+	@include section;
+
+	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+		color: $brand--primary;
+		opacity: 1; /* Firefox */
+	}
+	
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: $brand--primary;
+	}
+	
+	::-ms-input-placeholder { /* Microsoft Edge */
+		color: $brand--primary;
+	}
+
+	&__inner {
+		@include inner;
+	}
+
+	#wpsl-stores, 
+	#wpsl-direction-details, 
+	#wpsl-gmap {
+    height: 500px !important;
+	}
+
+	#wpsl-wrap {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		@include breakpoint(medium) {
+			flex-wrap: nowrap;
+		}
+
+		#wpsl-result-list {
+			ul {
+				li {
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+
+	.wpsl-search {
+		margin-bottom: 40px;
+    padding: 0;
+    background: transparent;
+
+		.wpsl-input {
+			width: 100%;
+			overflow: hidden;
+
+			label {
+				display: none !important;
+			}
+
+			#wpsl-search-input {
+				@include input;
+
+				width: 100%;
+				background-color: #e1dfd6;
+				border-radius: 0;
+				border: 0;
+				padding: 10px 10px;
+				text-transform: uppercase;
+
+				&:focus {
+					outline: none;
+					border: 0;
+				}
+			}
+		}
+
+		#wpsl-search-wrap {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 80%;
+			}
+
+			.wpsl-dropdown {
+				float: right;
+				margin: 0;
+				padding: 5px 5px;
+				width: 120px;
+				background-color: #e1dfd6;
+				border: 0;
+				border-radius: 0;
+
+				&:focus,
+				&:hover {
+					outline: none;
+					border: 0;
+					box-shadow: none;
+				}
+			}
+
+			.wpsl-active {
+				z-index: 999;
+			}
+
+			.wpsl-select-wrap {
+				width: 100%;
+			}
+
+			#wpsl-radius {
+				width: 100%;
+				margin: 10px 0;
+			}
+			
+			#wpsl-results {
+				width: 100%;
+			}
+
+			div label {
+				float: left;
+				margin-right: 0;
+				line-height: 32px;
+				width: 50%;
+			}
+		}
+
+		.wpsl-radius,
+		.wpsl-results {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	#wpsl-search-btn {
+		@include btn($brand--primary);
+
+		border-radius: 0;
+
+		&:hover {
+			color: $brand--white;
+		}
+	}
+
+	#wpsl-result-list {
+		width: 100%;
+	}
+
+	#wpsl-gmap {
+		width: 100%;
+	}
+
+	&__col {
+		width: 100%;
+
+		@include breakpoint(medium) {
+			width: 60%;
+		}
+
+		&:first-of-type {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 40%;
+			}
+		}
+	}
+}

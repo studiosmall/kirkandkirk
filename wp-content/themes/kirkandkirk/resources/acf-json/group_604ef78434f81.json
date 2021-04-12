@@ -665,6 +665,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6073c92eba2ef": {
+                    "key": "layout_6073c92eba2ef",
+                    "name": "store_locator",
+                    "label": "Store Locator",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6073c946ba2f0",
+                            "label": "Map Short Code",
+                            "name": "map_shortcode",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "[wpsl]",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Layout",
@@ -707,5 +736,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617847379
+    "modified": 1618201000
 }

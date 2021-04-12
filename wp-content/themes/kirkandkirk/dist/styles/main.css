@@ -9413,6 +9413,351 @@ input input:focus {
   width: 100%;
 }
 
+/* line 1, resources/assets/styles/components/_store-locator.scss */
+
+.stockist {
+  padding: 35px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 1, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist {
+    padding: 35px 0;
+  }
+}
+
+/* line 4, resources/assets/styles/components/_store-locator.scss */
+
+.stockist ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1;
+  /* Firefox */
+}
+
+.stockist ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1;
+  /* Firefox */
+}
+
+.stockist ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1;
+  /* Firefox */
+}
+
+/* line 9, resources/assets/styles/components/_store-locator.scss */
+
+.stockist :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000;
+}
+
+/* line 13, resources/assets/styles/components/_store-locator.scss */
+
+.stockist ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #000;
+}
+
+/* line 17, resources/assets/styles/components/_store-locator.scss */
+
+.stockist__inner {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 17, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist__inner {
+    padding: 0 50px;
+  }
+}
+
+/* line 21, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-stores,
+.stockist #wpsl-direction-details,
+.stockist #wpsl-gmap {
+  height: 500px !important;
+}
+
+/* line 27, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (min-width: 900px) {
+  /* line 27, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist #wpsl-wrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+/* line 38, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-wrap #wpsl-result-list ul li {
+  padding: 10px 0;
+}
+
+/* line 45, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search {
+  margin-bottom: 40px;
+  padding: 0;
+  background: transparent;
+}
+
+/* line 50, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search .wpsl-input {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 54, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search .wpsl-input label {
+  display: none !important;
+}
+
+/* line 58, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search .wpsl-input #wpsl-search-input {
+  width: 100%;
+  background-color: #e1dfd6;
+  border-radius: 0;
+  border: 0;
+  padding: 10px 10px;
+  text-transform: uppercase;
+}
+
+/* line 35, resources/assets/styles/components/_forms.scss */
+
+.stockist .wpsl-search .wpsl-input #wpsl-search-input input {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
+}
+
+@media (min-width: 900px) {
+  /* line 35, resources/assets/styles/components/_forms.scss */
+
+  .stockist .wpsl-search .wpsl-input #wpsl-search-input input {
+    width: 100%;
+  }
+}
+
+/* line 45, resources/assets/styles/components/_forms.scss */
+
+.stockist .wpsl-search .wpsl-input #wpsl-search-input input:focus {
+  outline: none;
+  border: 0;
+}
+
+/* line 68, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search .wpsl-input #wpsl-search-input:focus {
+  outline: none;
+  border: 0;
+}
+
+/* line 75, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 75, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist .wpsl-search #wpsl-search-wrap {
+    width: 80%;
+  }
+}
+
+/* line 82, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap .wpsl-dropdown {
+  float: right;
+  margin: 0;
+  padding: 5px 5px;
+  width: 120px;
+  background-color: #e1dfd6;
+  border: 0;
+  border-radius: 0;
+}
+
+/* line 91, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap .wpsl-dropdown:focus,
+.stockist .wpsl-search #wpsl-search-wrap .wpsl-dropdown:hover {
+  outline: none;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* line 99, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap .wpsl-active {
+  z-index: 999;
+}
+
+/* line 103, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap .wpsl-select-wrap {
+  width: 100%;
+}
+
+/* line 107, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap #wpsl-radius {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* line 112, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap #wpsl-results {
+  width: 100%;
+}
+
+/* line 116, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search #wpsl-search-wrap div label {
+  float: left;
+  margin-right: 0;
+  line-height: 32px;
+  width: 50%;
+}
+
+/* line 124, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-search .wpsl-radius,
+.stockist .wpsl-search .wpsl-results {
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 131, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-search-btn {
+  color: #fff;
+  line-height: 1;
+  background: #000;
+  border: 1px solid #000;
+  overflow: hidden;
+  padding: 12px 21px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "reader", arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  width: 100%;
+  border-radius: 0;
+}
+
+/* line 25, resources/assets/styles/components/_buttons.scss */
+
+.stockist #wpsl-search-btn::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+/* line 37, resources/assets/styles/components/_buttons.scss */
+
+.stockist #wpsl-search-btn:hover,
+.stockist #wpsl-search-btn:active {
+  color: #000;
+}
+
+/* line 42, resources/assets/styles/components/_buttons.scss */
+
+.stockist #wpsl-search-btn:hover::after,
+.stockist #wpsl-search-btn:active::after {
+  width: 100%;
+}
+
+/* line 136, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-search-btn:hover {
+  color: #fff;
+}
+
+/* line 141, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-result-list {
+  width: 100%;
+}
+
+/* line 145, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-gmap {
+  width: 100%;
+}
+
+/* line 149, resources/assets/styles/components/_store-locator.scss */
+
+.stockist__col {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 149, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist__col {
+    width: 60%;
+  }
+}
+
+/* line 156, resources/assets/styles/components/_store-locator.scss */
+
+.stockist__col:first-of-type {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 156, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist__col:first-of-type {
+    width: 40%;
+  }
+}
+
 /* line 12, resources/assets/styles/layouts/_header.scss */
 
 .header {
