@@ -8345,11 +8345,88 @@ input input:focus {
 
 /* line 176, resources/assets/styles/components/_single-product.scss */
 
+.single-product .wl-add-to-single {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  margin: 10px 0 30px 0;
+}
+
+/* line 37, resources/assets/styles/common/_mixins.scss */
+
+.single-product .wl-add-to-single::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+       -o-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: #000;
+  -webkit-transform-origin: bottom;
+       -o-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+/* line 50, resources/assets/styles/common/_mixins.scss */
+
+.single-product .wl-add-to-single:hover {
+  text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  /* line 54, resources/assets/styles/common/_mixins.scss */
+
+  .single-product .wl-add-to-single:hover::after {
+    -webkit-transform: scaleX(1);
+         -o-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: bottom;
+         -o-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 186, resources/assets/styles/components/_single-product.scss */
+
+  .single-product .wl-add-to-single:hover::after {
+    -webkit-transform: scaleX(0);
+         -o-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+/* line 192, resources/assets/styles/components/_single-product.scss */
+
+.single-product .wl-add-to-single::before {
+  content: "";
+  display: block;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMjQgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXAgMzwvdGl0bGU+CiAgICA8ZGVmcz4KICAgICAgICA8cG9seWdvbiBpZD0icGF0aC0xIiBwb2ludHM9IjAuNDI4OTczMjc3IDAuNDM0NzgyNjA5IDIzLjQyODk3MzMgMC40MzQ3ODI2MDkgMjMuNDI4OTczMyAyMS40MzQ3ODI2IDAuNDI4OTczMjc3IDIxLjQzNDc4MjYiPjwvcG9seWdvbj4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIRUFERVIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjg0LjAwMDAwMCwgLTg1LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI4NC4wMDAwMDAsIDg1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQ2xpcC0yIj48L2c+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNi44Njk1OTIwMyw0LjA4MjY2MzM1IEM2LjY5NDc4MDc5LDQuMDgyNjYzMzUgNi41NDcwNzg2Myw0LjA5MzMxNzM4IDYuNDMzNDc0NjEsNC4xMDU4NzAxNSBDNS4yODg1ODE2Nyw0LjIyODIxMjE5IDQuMzY5NTQxMzEsNC43MjQwMzYwMyAzLjc3NDM2OTgsNS41Mzk4NjA1NiBDMy4xMzU4MjM3Niw2LjQxNTA1MjMgMi45MjgzOTY4OSw3LjU4MDgxNDI4IDMuMTkwMTQ3ODIsOC44MjIyMzA0MyBDMy45MzQ5OTExMywxMi40MjA4MDM1IDEwLjI3Mjc5ODksMTYuOTIzMjgxNSAxMS40MjkwNDM4LDE3LjcxODUxNTMgQzEyLjU4NTE0MDQsMTYuOTIyOTQzOSAxOC45MjMwNTQsMTIuNDE5MTE1OCAxOS42Njc2MjIsOC44MjMzOTA3NyBDMTkuOTI5NjY5NCw3LjU4MDgxNDI4IDE5LjcyMjI0MjYsNi40MTUwNTIzIDE5LjA4MzY3NTQsNS41Mzk4NjA1NiBDMTguNDg4NTI1LDQuNzI0MDM2MDMgMTcuNTY5NDg0Nyw0LjIyODIxMjE5IDE2LjQyNTg2MjUsNC4xMDU5NTQ1NCBDMTYuNDI1NDM4OSw0LjEwNTk1NDU0IDE2LjQyNTAxNTMsNC4xMDU5NTQ1NCAxNi40MjQ1OTE3LDQuMTA1ODcwMTUgQzE2LjAzODExNzgsNC4wNjMyNTQwMyAxNS4yNTY1MDc4LDQuMDQyNTc4ODggMTQuMzU5ODExMyw0LjM4ODMxODAxIEMxMy4yNzE5OTU3LDQuODE1NDcwODIgMTIuMzA3ODQ0MSw1LjY5Nzc1MTE5IDExLjcxNjQwMDEsNi44MDgwNDg5MiBDMTEuNjU5OTU4MSw2LjkxMzkzNTIyIDExLjU0OTQyNSw2Ljk4MDE1ODk5IDExLjQyOTA0MzgsNi45ODAxNTg5OSBDMTEuMzA4NjQxMyw2Ljk4MDE1ODk5IDExLjE5ODEwODIsNi45MTM5MzUyMiAxMS4xNDE2NjYzLDYuODA4MDQ4OTIgQzEwLjU1MDIyMjMsNS42OTc3NTExOSA5LjU4NjA3MDY4LDQuODE1NDcwODIgOC40OTYzNDg5Nyw0LjM4NzU3OTYxIEM3Ljg2NDY2NDkxLDQuMTQ0MDM0NzkgNy4yODkyOTU3NCw0LjA4MjY2MzM1IDYuODY5NTkyMDMsNC4wODI2NjMzNSBNMTEuNDI5MDQzOCwxOC40MzQ3ODI2IEMxMS4zNjYyNDgxLDE4LjQzNDc4MjYgMTEuMzAzNDUyNCwxOC40MTY3NDQ2IDExLjI0ODkzNzgsMTguMzgwNTYzMSBDMTAuOTI5NzA3MSwxOC4xNjkxMDY5IDMuNDIyNDM4OCwxMy4xNTMzMTU2IDIuNTUzMjUzNzQsOC45NTQyNzcxMyBDMi4yNTM1MDc3Myw3LjUzMjUyMzA0IDIuNTAwMTE1NjksNi4xODQxNjU3MyAzLjI0ODE1NzAzLDUuMTU4ODg5MjggQzMuOTU0Mjg1MTgsNC4xOTA4NzAzMyA1LjAzMTQwNTQsMy42MDQwMzM2NCA2LjM2MjczNjg0LDMuNDYxNzU0ODUgQzYuODA3MDA4MTYsMy40MTIzODc2NiA3LjcwNzAwODY0LDMuMzg4NDQyNDYgOC43MzMwODc1MywzLjc4Mzk3MDczIEM5LjgxODkxMjMxLDQuMjEwMzg1MTQgMTAuNzU5NTU1Miw0Ljk5MzcyMDE1IDExLjQyOTA0MzgsNi4wMTgzNjM2OSBDMTIuMDk4NDA1Miw0Ljk5MzgyNTYzIDEzLjAzODk0MjIsNC4yMTA0OTA2MyAxNC4xMjMwNTE1LDMuNzg0Njg4MDMgQzE1LjE1MDIxMDUsMy4zODg2NTM0MyAxNi4wNDk3ODc0LDMuNDEyMTc2NjkgMTYuNDk1OTQzNywzLjQ2MTc1NDg1IEMxNy44MjY5Nzg2LDMuNjA0MjQ0NjEgMTguOTAzODg3MSw0LjE5MTA4MTMgMTkuNjA5OTA5Myw1LjE1ODg4OTI4IEMyMC4zNTc5NTA2LDYuMTg0MTY1NzMgMjAuNjA0NTU4Niw3LjUzMjUyMzA0IDIwLjMwNDQ5NDksOC45NTU1NDI5NiBDMTkuNDM1MzA5OSwxMy4xNTMzMTU2IDExLjkyODM1OTIsMTguMTY5MTA2OSAxMS42MDkxMjg2LDE4LjM4MDU2MzEgQzExLjU1NDYxMzksMTguNDE2NzQ0NiAxMS40OTE4MTgyLDE4LjQzNDc4MjYgMTEuNDI5MDQzOCwxOC40MzQ3ODI2IiBpZD0iRmlsbC0xIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMC44IiBmaWxsPSIjMUExQTFBIiBtYXNrPSJ1cmwoI21hc2stMikiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+  background-size: 24px;
+  width: 24px;
+  height: 22px;
+  position: absolute;
+  right: -35px;
+  top: -4px;
+}
+
+/* line 205, resources/assets/styles/components/_single-product.scss */
+
 .single-product .woocommerce-product-attributes {
   padding: 20px 0;
 }
 
-/* line 179, resources/assets/styles/components/_single-product.scss */
+/* line 208, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
 .single-product .woocommerce-product-attributes tr p {
@@ -8365,7 +8442,7 @@ input input:focus {
   margin: 0;
 }
 
-/* line 196, resources/assets/styles/components/_single-product.scss */
+/* line 225, resources/assets/styles/components/_single-product.scss */
 
 .single-product .related .products {
   display: -webkit-box;
@@ -8375,7 +8452,7 @@ input input:focus {
   margin: 0;
 }
 
-/* line 205, resources/assets/styles/components/_single-product.scss */
+/* line 234, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8384,7 +8461,7 @@ input input:focus {
   text-align: center;
 }
 
-/* line 211, resources/assets/styles/components/_single-product.scss */
+/* line 240, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;

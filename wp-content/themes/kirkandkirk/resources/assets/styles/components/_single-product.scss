@@ -173,6 +173,35 @@
 		}
 	}
 
+	.wl-add-to-single {
+		@include hoverline($brand--primary);
+
+		margin: 10px 0 30px 0;
+
+		// &::after {
+		// 	transform: scaleX(1);
+		// 	transform-origin: bottom;
+		// }
+
+		&:hover::after {
+			@include breakpoint(medium) {
+				transform: scaleX(0);
+			}
+		}
+
+		&::before {
+			content: "";
+			display: block;
+			background: url("../images/ico-heart.svg");
+			background-size: 24px;
+			width: 24px;
+			height: 22px;
+			position: absolute;
+    	right: -35px;
+    	top: -4px;
+		}
+	}
+
 	.woocommerce-product-attributes {
 		padding: 20px 0;
 		tr {
