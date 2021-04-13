@@ -28,8 +28,10 @@
 			@include inner;
 
 			h2 {
+
+				@include title($brand--primary);
+
 				text-transform: uppercase;
-				font-weight: 100;
 			}
 		}
 	}

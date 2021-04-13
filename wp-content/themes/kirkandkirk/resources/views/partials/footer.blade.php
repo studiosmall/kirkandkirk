@@ -1,4 +1,4 @@
-<footer class="content-info">
+<footer class="content-info" @php if($options['colours']['footer_colour']) { @endphp style="background-color: {!! $options['colours']['footer_colour'] !!}" @php } @endphp>
   <div class="content-info__inner">
     {{-- @php dynamic_sidebar('sidebar-footer') @endphp --}}
     <div class="content-info__newsletter">

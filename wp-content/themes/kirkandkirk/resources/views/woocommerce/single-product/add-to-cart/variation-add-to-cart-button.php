@@ -15,7 +15,9 @@ global $product;
 <div class="woocommerce-variation-add-to-cart variations_button">
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-	<a class="how-to" href="/faqs">How to Measure and FAQs</a>
+	<div class="how-to__container">
+		<a class="how-to" href="/faqs">How to Measure and FAQs</a>
+	</div>
 
 	<?php
 	do_action( 'woocommerce_before_add_to_cart_quantity' );

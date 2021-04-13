@@ -1,7 +1,11 @@
 .archive #main {
 	@include inner;
 
-	.woocommerce-breadcrumb {
+	// .woocommerce-breadcrumb {
+	// 	display: none;
+	// }
+
+	.woocommerce-products-header {
 		display: none;
 	}
 }
@@ -26,12 +30,15 @@
 	@include subtitle($brand--primary);
 
 	text-transform: uppercase;
+	padding: 20px 0 0 0;
+	font-weight: 500;
 
 	a {
 		@include hoverline($brand--primary);
 		@include subtitle($brand--primary);
 
 		text-transform: uppercase;
+		font-weight: 500;
 	}
 }
 

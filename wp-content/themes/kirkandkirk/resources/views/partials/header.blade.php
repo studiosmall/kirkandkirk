@@ -1,6 +1,6 @@
 
 <header class="header">
-  <div class="header__banner">
+  <div class="header__banner" @php if($options['colours']['footer_colour']) { @endphp style="background-color: {!! $options['colours']['banner_colour'] !!}" @php } @endphp>
     <div class="header__banner--inner">
       <div class="header__currency">
         Currency (£ GBP)
@@ -13,13 +13,13 @@
       </div> --}}
 
       <div class="announcement">
-          <div class="announcement__item">
+          <div class="announcement__item" @php if($options['colours']['footer_colour']) { @endphp style="background-color: {!! $options['colours']['banner_colour'] !!}" @php } @endphp>
             @if($options['message']['banner_message'] == 'enable')
               <span>{!! $options['message']['message'] !!}</span>
             @endif
           </div>
 
-          <div class="announcement__item">
+          <div class="announcement__item" @php if($options['colours']['footer_colour']) { @endphp style="background-color: {!! $options['colours']['banner_colour'] !!}" @php } @endphp>
             @if($options['message']['banner_message'] == 'enable')
               <span>{!! $options['message']['secondary_message'] !!}</span>
             @endif
@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <div class="header__inner">
+  <div class="header__inner" @php if($options['colours']['footer_colour']) { @endphp style="background-color: {!! $options['colours']['header_colour'] !!}" @php } @endphp>
     <div class="header__logo-container">
       <a href="{{ home_url('/') }}">
         <img class="header__logo" src="@asset('images/logo.svg')" alt="{{ get_bloginfo('name', 'display') }}">

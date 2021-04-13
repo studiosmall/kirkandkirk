@@ -1,0 +1,163 @@
+.woocommerce-checkout {
+  background-color: $bg-alt;
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $brand--primary;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $brand--primary;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $brand--primary;
+  }
+
+  .wrap {
+    padding-bottom: 150px;
+  }
+
+  .content-info {
+    display: none;
+  }
+
+  .col2-set {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  .col-1,
+  .col-2 {
+    width: 100%;
+
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+  }
+
+  h3 {
+    @include subtitle($brand--primary);
+
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+  }
+
+  .woocommerce {
+    width: 100%;
+    margin: 0 auto;
+
+    .woocommerce-billing-fields {
+      label {
+        display: none;
+      }
+    }
+
+    .woocommerce-additional-fields {
+      h3 {
+        display: none;
+      }
+    }
+
+    .select2-container {
+      width: 94%;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      color: #444;
+      line-height: 28px;
+      background-color: #e1e1e1;
+      width: 90%;
+      border: 0;
+      border-radius: 0;
+    }
+
+    #order_comments {
+      width: 90%;
+      border: 0;
+      background-color: #e1e1e1;
+      padding: 10px 10px;
+      margin: 10px 0 0 0;
+
+      @include breakpoint(medium) {
+        width: 90%;
+      }
+
+      &:focus {
+        outline: none;
+        border: 0;
+      }
+    }
+
+    #order_review {
+      .shop_table {
+        width: 100%;
+
+        .product-name {
+          text-align: left;
+        }
+
+        .cart-subtotal {
+          text-align: left;
+          padding-top: 20px;
+          display: inline-block;
+          width: 100%;
+        }
+
+        .order-total {
+          text-align: left;
+          display: inline-block;
+          width: 100%;
+        }
+
+        .product-total {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  #place_order {
+    @include btn($brand--primary);
+  }
+
+  input {
+    @include input;
+  }
+
+  textarea {
+    @include input;
+  }
+
+  input {
+    width: 90%;
+    border: 0;
+    background-color: #e1e1e1;
+    padding: 10px 10px;
+
+    @include breakpoint(medium) {
+      width: 90%;
+    }
+
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+  }
+
+  select {
+    width: 90%;
+    border: 0;
+    background-color: #e1e1e1;
+    padding: 10px 10px;
+
+    @include breakpoint(medium) {
+      width: 90%;
+    }
+
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+  }
+}

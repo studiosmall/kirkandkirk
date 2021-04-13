@@ -1,6 +1,6 @@
 .page-header {
   padding: 10px 0;
-  background-color: $bg-alt;
+  background-color: $brand--white;
 
   &__inner {
     @include inner;
@@ -9,9 +9,9 @@
   h1 {
     font-family: $font--body;
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 500;
     color: $brand--primary;
-    letter-spacing: 1.87px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
   }
 }

@@ -265,3 +265,43 @@ function custom_templates( $templates ) {
 
     return $templates;
 }
+
+
+// Checkout placeholder fields
+add_filter( 'woocommerce_checkout_fields' , 'override_billing_checkout_fields', 20, 1 );
+function override_billing_checkout_fields( $fields ) {
+
+    $fields['billing']['billing_first_name']['placeholder'] = 'First Name';
+    $fields['billing']['billing_last_name']['placeholder'] = 'Last Name';
+    $fields['billing']['billing_company']['placeholder'] = 'Company (Optional)';
+    $fields['billing']['billing_postcode']['placeholder'] = 'Postcode';
+    $fields['billing']['billing_phone']['placeholder'] = 'Phone';
+    $fields['billing']['billing_city']['placeholder'] = 'City';
+    $fields['billing']['billing_state']['placeholder'] = 'Country (Optional)    ';
+    $fields['billing']['billing_email']['placeholder'] = 'Email';
+
+
+    $fields['shipping']['shipping_first_name']['placeholder'] = 'First Name';
+    $fields['shipping']['shipping_last_name']['placeholder'] = 'Last Name';
+    $fields['shipping']['shipping_company']['placeholder'] = 'Company (optional)';
+    $fields['shipping']['shipping_postcode']['placeholder'] = 'Postcode';
+    $fields['shipping']['shipping_phone']['placeholder'] = 'Phone';
+    $fields['shipping']['shipping_city']['placeholder'] = 'City';
+    // $fields['billing']['shipping_state']['placeholder'] = 'Country (Optional)    ';
+    // $fields['billing']['shipping_mail']['placeholder'] = 'Email';
+
+    return $fields;
+}
+
+
+// To change add to cart text on single product page
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Add to basket', 'woocommerce' ); 
+}
+
+// To change add to cart text on product archives(Collection) page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_add_to_cart_text' );  
+function woocommerce_custom_product_add_to_cart_text() {
+    return __( 'Add to basket', 'woocommerce' );
+}

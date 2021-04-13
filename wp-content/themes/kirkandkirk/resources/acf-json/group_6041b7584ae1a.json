@@ -3,6 +3,68 @@
     "title": "Options",
     "fields": [
         {
+            "key": "field_607532ddbc918",
+            "label": "Colours",
+            "name": "colours",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6075356dcae26",
+                    "label": "Banner Colour",
+                    "name": "banner_colour",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#BFDBE0"
+                },
+                {
+                    "key": "field_607532ecbc919",
+                    "label": "Header Colour",
+                    "name": "header_colour",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#BFDBE0"
+                },
+                {
+                    "key": "field_607532fbbc91a",
+                    "label": "Footer Colour",
+                    "name": "footer_colour",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "#BFDBE0"
+                }
+            ]
+        },
+        {
             "key": "field_6041bef808412",
             "label": "Message",
             "name": "message",
@@ -229,5 +291,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1617071833
+    "modified": 1618294141
 }

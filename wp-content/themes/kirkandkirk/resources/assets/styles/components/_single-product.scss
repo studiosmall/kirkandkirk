@@ -16,18 +16,30 @@
 				width: 65%;
 			}
 
+			&__inner {
+				padding: 0;
+
+				@include breakpoint(medium) {
+					padding: 0 10% 0 0;
+				}
+			}
+
 			&__360 {
 				text-align: center;
 				display: none;
 
 				.ico-360 {
 					background-image: url("../images/ico-360.svg");
-					background-size: 69px;
-					width: 69px;
-					height: 34px;
+					background-size: 41px;
+					width: 41px;
+					height: 20px;
 					display: inline-block;
 				}
 			}
+		}
+
+		.lifestyle {
+			margin: 85px 0;
 		}
 
 		.variations_form {
@@ -148,6 +160,9 @@
 				@include btn($brand--primary);
 
 				margin: 10px 0;
+				width: 50%;
+				float: right;
+				min-width: 200px;
 			}
 
 			.cart {

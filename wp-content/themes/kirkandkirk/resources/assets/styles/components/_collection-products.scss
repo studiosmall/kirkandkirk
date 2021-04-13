@@ -4,9 +4,9 @@
 	position: relative;
 	background-color: $brand--white;
 
-	// &:first-of-type {
-	// 	padding-top: 0;
-	// }
+	&:first-of-type {
+		padding-top: 10px;
+	}
 
 	&__inner {
 		@include inner;
@@ -139,6 +139,10 @@
 			@include title($brand--primary);
 
 			margin: 0 60px 0 0;
+
+			@include breakpoint(medium) {
+				font-size: 18px;
+			}
     }
 
 		a {

@@ -53,6 +53,7 @@ export default {
       e.preventDefault();
       $(this).toggleClass('active');
       $('.off-canvas, body').toggleClass('active');
+      $('.filter__container, .filter__title').removeClass('active');
     });
 
     // let onScroll = function() {
@@ -193,6 +194,14 @@ export default {
         function() {
           $('.product-images__360').fadeIn();
         }, 1000);
+    }
+
+    if($('.filter').length) {
+      $('.filter__title').on('click', function(e){
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.filter__container').toggleClass('active');
+      });
     }
 
   },

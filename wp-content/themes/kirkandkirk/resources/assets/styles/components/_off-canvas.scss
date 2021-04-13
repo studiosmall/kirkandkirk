@@ -73,6 +73,7 @@
 				@include hoverline($brand--primary);
 
 				font-family: $font--heading;
+				font-weight: 500;
 				font-size: 14px;
 				text-decoration: none;
 				color: $brand--primary;
@@ -105,6 +106,7 @@
 
 					a {
 						@include hoverline($brand--primary);
+						font-weight: 100;
 
 						&::after {
 							height: 1px;

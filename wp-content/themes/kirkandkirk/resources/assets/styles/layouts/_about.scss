@@ -1,3 +1,19 @@
+.page-template-about-page {
+  .video,
+  .two-column {
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint(medium) {
+      width: 95%;
+    }
+  }
+
+  .main {
+    padding-bottom: 150px;
+  }
+}
+
 .about-nav {
   display: flex;
   justify-content: center;
@@ -11,16 +27,17 @@
 
       &.current-menu-item {
         a {
-          color: #595959;
+          color: $brand--primary;
         }
       }
 
       a {
-        @include hoverline($brand--primary);
+        @include hoverline(#595959);
 
         font-family: $font--body;
         font-size: 18px;
-        color: $brand--primary;
+        font-weight: 500;
+        color: #595959;
         letter-spacing: 1.87px;
         text-transform: uppercase;
       }

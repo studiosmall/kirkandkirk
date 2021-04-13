@@ -111,14 +111,14 @@
       color: $brand--primary;
       font-family: $font--body;
 			font-size: 14px;
-			font-weight: 100;
+			font-weight: 500;
       letter-spacing: 0.75px;
       text-align: center;
       line-height: 20px;
 
 			@include breakpoint(medium) {
 				font-size: 16px;
-				line-height: 31px;
+				line-height: 22px;
 			}
 
       &:last-of-type {

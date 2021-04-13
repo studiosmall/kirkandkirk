@@ -3,7 +3,7 @@
 	padding-bottom: 120px;
 	list-style: none;
 	display: grid; /* 1 */
-  grid-template-columns: repeat(3, 1fr); /* 2 */
+  grid-template-columns: repeat(2, 1fr); /* 2 */
   grid-gap: 1rem; /* 3 */
 	gap: 30px;
   justify-content: space-between; /* 4 */

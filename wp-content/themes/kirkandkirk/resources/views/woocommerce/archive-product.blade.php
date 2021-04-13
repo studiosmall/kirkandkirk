@@ -17,6 +17,9 @@ the readme will list any important changes.
 @extends('layouts.app')
 
 @section('content')
+
+@include('partials.filter')
+
   @php
     do_action('get_header', 'shop');
     do_action('woocommerce_before_main_content');
@@ -31,6 +34,7 @@ the readme will list any important changes.
       do_action('woocommerce_archive_description');
     @endphp
   </header>
+
 
   @if(woocommerce_product_loop())
     @php

@@ -6,7 +6,7 @@
 	}
 
 	&.bg-color-brown {
-		background-color: #f5f1cc;
+		background-color: #bfdbe0;
 	}
 
   &__inner {
@@ -33,7 +33,7 @@
 		&:last-of-type {
 			width: 100%;
 			display: flex;
-			align-items: center;
+			align-items: end;
 
 		@include breakpoint(medium) {
 			width: 60%;
@@ -43,7 +43,7 @@
 
 	&__code {
 		mix-blend-mode: multiply;
-		max-width: 368px;
+		max-width: 300px;
 		padding: 0 0 44px 0;
 
 		@include breakpoint(medium) {

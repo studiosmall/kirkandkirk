@@ -34,6 +34,7 @@ if ( post_password_required() ) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 	<div class="product-images">
+		<div class="product-images__inner">
 
 		<?php
 		/**
@@ -50,12 +51,21 @@ if ( post_password_required() ) {
 			<span class="ico-360"></span>
 		</div>
 
-		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );?>
+		<?php 
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
+			$lifestyle_image = get_field('lifestyle_image');
+		?>
 
-		<?php if($image) { ?>
-			<img src="<?php  echo $image[0]; ?>" data-id="<?php echo $loop->post->ID; ?>">
+		<?php if($lifestyle_image['url']) { ?>
+			<div class="lifestyle">
+				<img src="<?php echo $lifestyle_image['url']; ?>" alt="<?php echo $lifestyle_image['title']; ?>">
+			</div>
 		<?php } ?>
 
+		<?php //if($image) { ?>
+			<!-- <img src="<?php  //echo $image[0]; ?>" data-id="<?php //echo $loop->post->ID; ?>"> -->
+		<?php// } ?>
+		</div>
 	</div>
 
 	<div class="summary entry-summary">
@@ -162,54 +172,59 @@ if ( post_password_required() ) {
 
 
 <?php
-	$shortcode = do_shortcode('[recently_viewed_products]');
-	$recently = explode(',', $shortcode);
+	$shortcode 	  = do_shortcode('[recently_viewed_products]');
+	$recently 	  = explode(',', $shortcode);
+	$num_recently = count($recently);
+
 ?>
-<section class="featured-products recently">
-  <div class="featured-products__inner">
 
-		<div class="title__inner">
-			<h2>Recently viewed</h2>
+<?php if(($num_recently >= 3)) { ?>
+	<section class="featured-products recently">
+		<div class="featured-products__inner">
+
+			<div class="title__inner">
+				<h2>Recently viewed</h2>
+			</div>
+
+			<div class="featured-products__products slider">
+			<?php foreach($recently as $product) : ?>
+
+					<div class="featured-products__product">
+						<?php
+							//$product  = wc_get_product($product);
+							$currency = get_woocommerce_currency_symbol();
+							$price    = get_post_meta( get_the_ID(), '_regular_price', true);
+							$sale     = get_post_meta( get_the_ID(), '_sale_price', true);
+
+							$image 		= get_the_post_thumbnail_url($product, 'large');
+							$link 		= get_permalink($product);
+							$title 		= get_the_title($product);
+							$fields  	= get_fields($product);
+
+							$textarea  = $fields['textarea'];
+							$colour    = $fields['product_colour'];
+
+						?>
+
+						<a class="link" href="<?php echo $link; ?>"></a>
+						<img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
+
+						<div class="featured-products__meta" style="border-color:<?php echo $colour; ?>">
+							<h1><?php echo $title; ?></h1>
+							<?php if($sale) : ?>
+								<span><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></span>
+							<?php elseif($price) : ?>
+								<span><?php echo $currency; echo $price; ?></span>
+							<?php endif; ?>
+
+						</div>
+
+					</div>
+				<?php endforeach ?>
+			</div>
 		</div>
-
-    <div class="featured-products__products slider">
-    <?php foreach($recently as $product) : ?>
-
-        <div class="featured-products__product">
-          <?php
-						//$product  = wc_get_product($product);
-						$currency = get_woocommerce_currency_symbol();
-						$price    = get_post_meta( get_the_ID(), '_regular_price', true);
-						$sale     = get_post_meta( get_the_ID(), '_sale_price', true);
-
-            $image 		= get_the_post_thumbnail_url($product, 'large');
-            $link 		= get_permalink($product);
-            $title 		= get_the_title($product);
-            $fields  	= get_fields($product);
-
-            $textarea  = $fields['textarea'];
-            $colour    = $fields['product_colour'];
-
-          ?>
-
-          <a class="link" href="<?php echo $link; ?>"></a>
-          <img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
-
-          <div class="featured-products__meta" style="border-color:<?php echo $colour; ?>">
-            <h1><?php echo $title; ?></h1>
-						<?php if($sale) : ?>
-							<span><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></span>
-						<?php elseif($price) : ?>
-							<span><?php echo $currency; echo $price; ?></span>
-						<?php endif; ?>
-
-          </div>
-
-        </div>
-      <?php endforeach ?>
-    </div>
-  </div>
-</section>
+	</section>
+<?php } ?>
 
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
