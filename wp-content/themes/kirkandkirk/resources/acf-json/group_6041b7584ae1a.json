@@ -160,6 +160,42 @@
             ]
         },
         {
+            "key": "field_607678657c54f",
+            "label": "Shipping",
+            "name": "shipping",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_607678707c550",
+                    "label": "Product Shipping Message",
+                    "name": "shipping_message",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "FREE INTERNATIONAL SHIPPING",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_6041b75ce4d96",
             "label": "Details",
             "name": "details",
@@ -291,5 +327,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618294141
+    "modified": 1618376853
 }

@@ -28,8 +28,27 @@
         },
         {
             "key": "field_605194c2120bd",
-            "label": "Textarea",
+            "label": "Excerpt",
             "name": "textarea",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 1500,
+            "rows": "",
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_60767eb35a2d0",
+            "label": "Read More Text",
+            "name": "read_more_text",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -76,5 +95,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617693144
+    "modified": 1618378486
 }

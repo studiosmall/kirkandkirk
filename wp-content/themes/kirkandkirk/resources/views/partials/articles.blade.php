@@ -26,6 +26,9 @@
 
 						<div class="articles__text">
 							{!! $article['textarea'] !!}
+
+							{{-- {!! $article['textarea'] !!} --}}
+
 						</div>
 					</div>
 

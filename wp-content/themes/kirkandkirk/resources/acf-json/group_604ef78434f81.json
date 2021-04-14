@@ -333,7 +333,8 @@
                             ],
                             "taxonomy": "",
                             "filters": [
-                                "search"
+                                "search",
+                                "taxonomy"
                             ],
                             "elements": [
                                 "featured_image"
@@ -736,5 +737,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618296168
+    "modified": 1618376957
 }

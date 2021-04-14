@@ -92,6 +92,7 @@ if ( post_password_required() ) {
 		do_action( 'woocommerce_single_product_summary' );
 
 		?>
+
 	</div>
 
 </div>

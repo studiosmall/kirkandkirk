@@ -51,6 +51,7 @@ trait Articles
           'colour' => get_field('colour'),
           'border' => get_field('image_border'),
           'textarea' => get_field('textarea'),
+          'readmore'  => get_field('read_more_text'),
           // 'category_name' => $category_name,
           // 'category_slug' => $category_slug,
           // 'photographer' => get_field('photographer'),

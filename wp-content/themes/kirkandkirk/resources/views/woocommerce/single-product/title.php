@@ -23,6 +23,18 @@ global $product;
 
 ?>
 
-<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
+<?php
+// echo wc_get_product_category_list( $product->get_id(), ', ', '
+// <span class="posted_in">' . _n( 'Category:', 'Categories:',
+// count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' );
+
+	$collection = get_field('collection');
+?>
+
+<?php if($collection) { ?>
+	<span class="posted_in"><?php echo $collection; ?></span>
+<?php } ?>
+
+<?php //echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
 
 <?php the_title( '<h1 class="product_title entry-title">', '</h1>' );

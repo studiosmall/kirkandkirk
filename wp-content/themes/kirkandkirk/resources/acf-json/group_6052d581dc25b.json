@@ -18,6 +18,25 @@
             "default_value": "#EA23BC"
         },
         {
+            "key": "field_6076641ec4875",
+            "label": "Collection",
+            "name": "collection",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_60752d7c9655b",
             "label": "Lifestyle Image",
             "name": "lifestyle_image",
@@ -130,5 +149,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618292121
+    "modified": 1618371763
 }
