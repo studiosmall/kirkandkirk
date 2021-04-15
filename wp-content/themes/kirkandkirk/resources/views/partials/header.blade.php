@@ -26,7 +26,7 @@
           </div>
       </div>
       <div class="header__find">
-        <a href="/find-a-store">
+        <a href="/stockists">
           Find a Store
         </a>
       </div>
