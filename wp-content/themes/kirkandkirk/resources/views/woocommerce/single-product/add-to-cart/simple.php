@@ -30,12 +30,15 @@ if ( $product->is_in_stock() ) : ?>
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 
+
+
+
+
 <?php
 	$featured_posts = get_field('product_variations');
 	$current        = get_the_ID();
 	$current_colour = get_field('product_colour', $current);
 ?>
-
 	<ul class="colours">
 		<li>
 			<a href="#">
@@ -54,6 +57,9 @@ if ( $product->is_in_stock() ) : ?>
 				</li>
 		<?php endforeach; ?>
 	</ul>
+
+
+
 
 
 

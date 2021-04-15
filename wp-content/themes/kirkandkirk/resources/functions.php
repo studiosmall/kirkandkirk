@@ -315,3 +315,14 @@ remove_action(
 add_action(
     'woocommerce_before_main_content', 'woocommerce_remove_breadcrumb'
 );
+
+// /**
+//  * Get attributes to show.
+//  *
+//  * @return array
+//  */
+// function iconic_get_attributes_to_show() {
+// 	return apply_filters( 'iconic_get_attributes_to_show', array(
+// 		'pa_color',
+// 	) );
+// }
