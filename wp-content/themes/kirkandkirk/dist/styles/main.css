@@ -5525,48 +5525,6 @@ input input:focus {
   text-align: left;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.off-canvas ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.off-canvas ul li a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .off-canvas ul li a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 /* line 83, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a::after {
@@ -5613,48 +5571,6 @@ input input:focus {
   line-height: 15px;
   text-decoration: none;
   font-weight: 100;
-}
-
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.off-canvas ul li ul.sub-menu li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.off-canvas ul li ul.sub-menu li a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .off-canvas ul li ul.sub-menu li a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
 }
 
 /* line 111, resources/assets/styles/components/_off-canvas.scss */
@@ -6249,48 +6165,6 @@ input input:focus {
   padding: 0;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.feature-collection__bottom a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.feature-collection__bottom a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .feature-collection__bottom a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 @media (min-width: 900px) {
   /* line 91, resources/assets/styles/components/_feature-collection.scss */
 
@@ -6459,48 +6333,6 @@ input input:focus {
   letter-spacing: 0.75px;
   margin: 0;
   padding: 0;
-}
-
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.cta-image__bottom a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.cta-image__bottom a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .cta-image__bottom a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
 }
 
 @media (min-width: 900px) {
@@ -7278,48 +7110,6 @@ input input:focus {
   padding: 0;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.featured-products__bottom a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.featured-products__bottom a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .featured-products__bottom a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 @media (min-width: 900px) {
   /* line 155, resources/assets/styles/components/_featured-products.scss */
 
@@ -7640,48 +7430,6 @@ input input:focus {
   padding: 0;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.collection-products__bottom a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.collection-products__bottom a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .collection-products__bottom a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 @media (min-width: 900px) {
   /* line 148, resources/assets/styles/components/_collection-products.scss */
 
@@ -7760,30 +7508,66 @@ input input:focus {
 
 .woocommerce-products-header {
   padding: 20px 0;
+  background-color: #dcdab7;
 }
 
-/* line 16, resources/assets/styles/components/_shop-header.scss */
+/* line 17, resources/assets/styles/components/_shop-header.scss */
+
+.woocommerce-products-header__inner {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 17, resources/assets/styles/components/_shop-header.scss */
+
+  .woocommerce-products-header__inner {
+    padding: 0 50px;
+  }
+}
+
+/* line 21, resources/assets/styles/components/_shop-header.scss */
 
 .woocommerce-products-header__title {
   font-family: "reader", arial, sans-serif;
   color: #000;
-  font-weight: 100;
-  font-size: 14px;
-  letter-spacing: 0.75px;
-  margin: 0;
-  padding: 0;
+  font-size: 18px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  padding: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 16, resources/assets/styles/components/_shop-header.scss */
+  /* line 21, resources/assets/styles/components/_shop-header.scss */
 
   .woocommerce-products-header__title {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
-/* line 24, resources/assets/styles/components/_shop-header.scss */
+/* line 29, resources/assets/styles/components/_shop-header.scss */
+
+.woocommerce-products-header .term-description {
+  padding: 15px 0 0 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 29, resources/assets/styles/components/_shop-header.scss */
+
+  .woocommerce-products-header .term-description {
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+/* line 42, resources/assets/styles/components/_shop-header.scss */
 
 .shop-header__inner {
   padding: 0 20px;
@@ -7792,14 +7576,38 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 24, resources/assets/styles/components/_shop-header.scss */
+  /* line 42, resources/assets/styles/components/_shop-header.scss */
 
   .shop-header__inner {
     padding: 0 50px;
   }
 }
 
-/* line 29, resources/assets/styles/components/_shop-header.scss */
+/* line 47, resources/assets/styles/components/_shop-header.scss */
+
+.breadcrumb-container {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 47, resources/assets/styles/components/_shop-header.scss */
+
+  .breadcrumb-container {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 47, resources/assets/styles/components/_shop-header.scss */
+
+  .breadcrumb-container {
+    padding-bottom: 20px;
+  }
+}
+
+/* line 55, resources/assets/styles/components/_shop-header.scss */
 
 .woocommerce-breadcrumb {
   font-family: "reader", arial, sans-serif;
@@ -7815,14 +7623,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 29, resources/assets/styles/components/_shop-header.scss */
+  /* line 55, resources/assets/styles/components/_shop-header.scss */
 
   .woocommerce-breadcrumb {
     font-size: 16px;
   }
 }
 
-/* line 36, resources/assets/styles/components/_shop-header.scss */
+/* line 62, resources/assets/styles/components/_shop-header.scss */
 
 .woocommerce-breadcrumb a {
   display: inline-block;
@@ -7841,57 +7649,15 @@ input input:focus {
   font-weight: 500;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.woocommerce-breadcrumb a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.woocommerce-breadcrumb a:hover {
-  text-decoration: none;
-}
-
 @media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .woocommerce-breadcrumb a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-@media (min-width: 900px) {
-  /* line 36, resources/assets/styles/components/_shop-header.scss */
+  /* line 62, resources/assets/styles/components/_shop-header.scss */
 
   .woocommerce-breadcrumb a {
     font-size: 16px;
   }
 }
 
-/* line 46, resources/assets/styles/components/_shop-header.scss */
+/* line 72, resources/assets/styles/components/_shop-header.scss */
 
 .woocommerce-result-count,
 .woocommerce-ordering {
@@ -8020,48 +7786,6 @@ input input:focus {
   margin: 0 0 30px 0;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.single-product .product .how-to::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.single-product .product .how-to:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .single-product .product .how-to:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 /* line 74, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to::after {
@@ -8085,11 +7809,54 @@ input input:focus {
 
 /* line 86, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share {
-  padding: 0 0 5px 0;
+.single-product .product ul.colours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-/* line 89, resources/assets/styles/components/_single-product.scss */
+/* line 92, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product ul.colours li {
+  margin: 0 10px 0 0;
+}
+
+/* line 97, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product ul.colours li a:hover .product-col {
+  border-color: #000;
+}
+
+/* line 102, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product ul.colours li a .product-col {
+  display: inline-block;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 110, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product ul.colours li a .product-col.active {
+  border-color: #000;
+}
+
+/* line 118, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .share {
+  padding: 0 0 5px 0;
+  display: none;
+}
+
+/* line 122, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share a {
   display: inline-block;
@@ -8099,75 +7866,42 @@ input input:focus {
   text-decoration: none;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.single-product .product .share a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.single-product .product .share a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .single-product .product .share a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-/* line 94, resources/assets/styles/components/_single-product.scss */
+/* line 127, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .sku_wrapper {
   display: none;
 }
 
-/* line 98, resources/assets/styles/components/_single-product.scss */
+/* line 131, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product a.reset_variations {
   display: none !important;
 }
 
-/* line 102, resources/assets/styles/components/_single-product.scss */
+/* line 135, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .quantity {
   display: none !important;
 }
 
-/* line 106, resources/assets/styles/components/_single-product.scss */
+/* line 139, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container {
   width: 100%;
   cursor: -webkit-grab;
   cursor: grab;
+  min-height: 200px;
 }
 
-/* line 111, resources/assets/styles/components/_single-product.scss */
+@media (min-width: 900px) {
+  /* line 139, resources/assets/styles/components/_single-product.scss */
+
+  .single-product .product #container.wc360-container {
+    min-height: 500px;
+  }
+}
+
+/* line 149, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary {
   width: 100%;
@@ -8179,14 +7913,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 111, resources/assets/styles/components/_single-product.scss */
+  /* line 149, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary {
     width: 35%;
   }
 }
 
-/* line 124, resources/assets/styles/components/_single-product.scss */
+/* line 162, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .posted_in a {
   display: inline-block;
@@ -8204,57 +7938,15 @@ input input:focus {
   text-transform: capitalize;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.single-product .product .summary .posted_in a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.single-product .product .summary .posted_in a:hover {
-  text-decoration: none;
-}
-
 @media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .single-product .product .summary .posted_in a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-@media (min-width: 900px) {
-  /* line 124, resources/assets/styles/components/_single-product.scss */
+  /* line 162, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .posted_in a {
     font-size: 16px;
   }
 }
 
-/* line 132, resources/assets/styles/components/_single-product.scss */
+/* line 170, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary h1.product_title {
   font-family: "reader", arial, sans-serif;
@@ -8267,7 +7959,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 132, resources/assets/styles/components/_single-product.scss */
+  /* line 170, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title {
     font-size: 20px;
@@ -8275,14 +7967,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 132, resources/assets/styles/components/_single-product.scss */
+  /* line 170, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title {
     font-size: 30px;
   }
 }
 
-/* line 140, resources/assets/styles/components/_single-product.scss */
+/* line 178, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .price {
   font-family: "reader", arial, sans-serif;
@@ -8298,7 +7990,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 140, resources/assets/styles/components/_single-product.scss */
+  /* line 178, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price {
     font-size: 16px;
@@ -8306,38 +7998,38 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 140, resources/assets/styles/components/_single-product.scss */
+  /* line 178, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price {
     font-size: 21px;
   }
 }
 
-/* line 152, resources/assets/styles/components/_single-product.scss */
+/* line 190, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .variations_form {
   padding: 10px 0 0 0;
 }
 
-/* line 156, resources/assets/styles/components/_single-product.scss */
+/* line 194, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability {
   margin: 10px 0 0 0;
 }
 
-/* line 160, resources/assets/styles/components/_single-product.scss */
+/* line 198, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.in-stock {
   color: #1bae27;
 }
 
-/* line 163, resources/assets/styles/components/_single-product.scss */
+/* line 201, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock {
   color: #b92828;
 }
 
-/* line 169, resources/assets/styles/components/_single-product.scss */
+/* line 207, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .button {
   color: #fff;
@@ -8397,19 +8089,19 @@ input input:focus {
   width: 100%;
 }
 
-/* line 179, resources/assets/styles/components/_single-product.scss */
+/* line 217, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .cart .quantity {
   display: none;
 }
 
-/* line 186, resources/assets/styles/components/_single-product.scss */
+/* line 224, resources/assets/styles/components/_single-product.scss */
 
 .single-product .single-product #wl-wrapper.wl-button-wrap {
   margin: 0 0 5px 0;
 }
 
-/* line 190, resources/assets/styles/components/_single-product.scss */
+/* line 228, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to {
   display: inline-block;
@@ -8419,49 +8111,7 @@ input input:focus {
   text-decoration: none;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.single-product .wl-add-to::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.single-product .wl-add-to:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .single-product .wl-add-to:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-/* line 193, resources/assets/styles/components/_single-product.scss */
+/* line 231, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to::before {
   content: "";
@@ -8475,7 +8125,7 @@ input input:focus {
   top: -4px;
 }
 
-/* line 206, resources/assets/styles/components/_single-product.scss */
+/* line 244, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single {
   display: inline-block;
@@ -8486,50 +8136,8 @@ input input:focus {
   margin: 10px 0 30px 0;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.single-product .wl-add-to-single::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.single-product .wl-add-to-single:hover {
-  text-decoration: none;
-}
-
 @media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .single-product .wl-add-to-single:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-@media (min-width: 900px) {
-  /* line 216, resources/assets/styles/components/_single-product.scss */
+  /* line 254, resources/assets/styles/components/_single-product.scss */
 
   .single-product .wl-add-to-single:hover::after {
     -webkit-transform: scaleX(0);
@@ -8538,7 +8146,7 @@ input input:focus {
   }
 }
 
-/* line 222, resources/assets/styles/components/_single-product.scss */
+/* line 260, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single::before {
   content: "";
@@ -8552,7 +8160,7 @@ input input:focus {
   top: -4px;
 }
 
-/* line 235, resources/assets/styles/components/_single-product.scss */
+/* line 273, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-wrap {
   position: relative;
@@ -8561,19 +8169,19 @@ input input:focus {
   padding: 0;
 }
 
-/* line 243, resources/assets/styles/components/_single-product.scss */
+/* line 281, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in {
   font-size: 0;
 }
 
-/* line 246, resources/assets/styles/components/_single-product.scss */
+/* line 284, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in .wl-add-link {
   display: none;
 }
 
-/* line 250, resources/assets/styles/components/_single-product.scss */
+/* line 288, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul {
   list-style: none;
@@ -8581,7 +8189,7 @@ input input:focus {
   padding: 10px 0 0 0;
 }
 
-/* line 256, resources/assets/styles/components/_single-product.scss */
+/* line 294, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a {
   display: inline-block;
@@ -8592,49 +8200,7 @@ input input:focus {
   font-size: 16px;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.single-product #wl-wrapper.wl-button-already-in ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.single-product #wl-wrapper.wl-button-already-in ul li a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .single-product #wl-wrapper.wl-button-already-in ul li a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
-/* line 261, resources/assets/styles/components/_single-product.scss */
+/* line 299, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a::before {
   content: "";
@@ -8648,13 +8214,13 @@ input input:focus {
   top: -1px;
 }
 
-/* line 278, resources/assets/styles/components/_single-product.scss */
+/* line 316, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes {
   padding: 20px 0;
 }
 
-/* line 281, resources/assets/styles/components/_single-product.scss */
+/* line 319, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
 .single-product .woocommerce-product-attributes tr p {
@@ -8670,7 +8236,7 @@ input input:focus {
   margin: 0;
 }
 
-/* line 298, resources/assets/styles/components/_single-product.scss */
+/* line 336, resources/assets/styles/components/_single-product.scss */
 
 .single-product .related .products {
   display: -webkit-box;
@@ -8680,7 +8246,7 @@ input input:focus {
   margin: 0;
 }
 
-/* line 307, resources/assets/styles/components/_single-product.scss */
+/* line 345, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8689,7 +8255,7 @@ input input:focus {
   text-align: center;
 }
 
-/* line 313, resources/assets/styles/components/_single-product.scss */
+/* line 351, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;
@@ -9621,48 +9187,6 @@ input input:focus {
   letter-spacing: 0.86px;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.articles__more a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.articles__more a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .articles__more a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 /* line 24, resources/assets/styles/components/_articles.scss */
 
 .articles__line {
@@ -9682,6 +9206,23 @@ input input:focus {
 
 /* line 38, resources/assets/styles/components/_articles.scss */
 
+.articles .moretext {
+  display: none;
+}
+
+/* line 42, resources/assets/styles/components/_articles.scss */
+
+.articles .moreless-button {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 48, resources/assets/styles/components/_articles.scss */
+
 .articles__sizer,
 .articles__card {
   width: calc((100% - 40px) / 2);
@@ -9689,7 +9230,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 38, resources/assets/styles/components/_articles.scss */
+  /* line 48, resources/assets/styles/components/_articles.scss */
 
   .articles__sizer,
   .articles__card {
@@ -9697,26 +9238,26 @@ input input:focus {
   }
 }
 
-/* line 48, resources/assets/styles/components/_articles.scss */
+/* line 58, resources/assets/styles/components/_articles.scss */
 
 .articles__card {
   float: left;
   padding: 500px 0 0 0;
 }
 
-/* line 52, resources/assets/styles/components/_articles.scss */
+/* line 62, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(2) {
   padding: 0;
 }
 
-/* line 56, resources/assets/styles/components/_articles.scss */
+/* line 66, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(4n) {
   padding: 0;
 }
 
-/* line 60, resources/assets/styles/components/_articles.scss */
+/* line 70, resources/assets/styles/components/_articles.scss */
 
 .articles__card h2 {
   font-family: "reader", arial, sans-serif;
@@ -9726,17 +9267,19 @@ input input:focus {
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
+  padding-top: 0;
+  margin-top: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 60, resources/assets/styles/components/_articles.scss */
+  /* line 70, resources/assets/styles/components/_articles.scss */
 
   .articles__card h2 {
     font-size: 20px;
   }
 }
 
-/* line 64, resources/assets/styles/components/_articles.scss */
+/* line 77, resources/assets/styles/components/_articles.scss */
 
 .articles__card h3 {
   font-family: "reader", arial, sans-serif;
@@ -9744,18 +9287,19 @@ input input:focus {
   letter-spacing: 1.5px;
   font-weight: 100;
   margin-top: 0;
+  margin-bottom: 5px;
   font-size: 14px;
 }
 
 @media (min-width: 900px) {
-  /* line 64, resources/assets/styles/components/_articles.scss */
+  /* line 77, resources/assets/styles/components/_articles.scss */
 
   .articles__card h3 {
     font-size: 16px;
   }
 }
 
-/* line 77, resources/assets/styles/components/_articles.scss */
+/* line 91, resources/assets/styles/components/_articles.scss */
 
 .articles__card p {
   font-family: "reader", arial, sans-serif;
@@ -9765,19 +9309,19 @@ input input:focus {
   line-height: 22px;
 }
 
-/* line 86, resources/assets/styles/components/_articles.scss */
+/* line 100, resources/assets/styles/components/_articles.scss */
 
 .articles__image {
   margin: 0 0 35px 0;
 }
 
-/* line 89, resources/assets/styles/components/_articles.scss */
+/* line 103, resources/assets/styles/components/_articles.scss */
 
 .articles__image.border {
   padding: 0 53px 0 53px;
 }
 
-/* line 93, resources/assets/styles/components/_articles.scss */
+/* line 107, resources/assets/styles/components/_articles.scss */
 
 .articles__image img {
   display: block;
@@ -10461,48 +10005,6 @@ input input:focus {
   text-decoration: none;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.header__banner a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.header__banner a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .header__banner a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 /* line 82, resources/assets/styles/layouts/_header.scss */
 
 .header .announcement {
@@ -10684,48 +10186,6 @@ input input:focus {
   text-decoration: none;
   font-size: 16px;
   display: inline-block;
-}
-
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.header__mobile-menu::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #abced0;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.header__mobile-menu:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .header__mobile-menu:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
 }
 
 @media (min-width: 900px) {
@@ -11034,48 +10494,6 @@ input input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.header__nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #abced0;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.header__nav ul li a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .header__nav ul li a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 /* line 373, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li a:hover {
@@ -11260,48 +10678,6 @@ input input:focus {
   line-height: 28px;
 }
 
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.content-info a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.content-info a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .content-info a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
-}
-
 /* line 14, resources/assets/styles/layouts/_footer.scss */
 
 .content-info a::after {
@@ -11441,48 +10817,6 @@ input input:focus {
   line-height: 15px;
   text-decoration: none;
   color: #000;
-}
-
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.content-info__copyright a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #000;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.content-info__copyright a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .content-info__copyright a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
 }
 
 /* line 94, resources/assets/styles/layouts/_footer.scss */
@@ -11663,48 +10997,6 @@ input input:focus {
   color: #595959;
   letter-spacing: 1.87px;
   text-transform: uppercase;
-}
-
-/* line 37, resources/assets/styles/common/_mixins.scss */
-
-.about-nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  -webkit-transform: scaleX(0);
-       -o-transform: scaleX(0);
-          transform: scaleX(0);
-  height: 1px;
-  bottom: -3px;
-  left: 0;
-  background-color: #595959;
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1), -o-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-/* line 50, resources/assets/styles/common/_mixins.scss */
-
-.about-nav ul li a:hover {
-  text-decoration: none;
-}
-
-@media (min-width: 900px) {
-  /* line 54, resources/assets/styles/common/_mixins.scss */
-
-  .about-nav ul li a:hover::after {
-    -webkit-transform: scaleX(1);
-         -o-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: bottom;
-         -o-transform-origin: bottom;
-            transform-origin: bottom;
-  }
 }
 
 /* line 45, resources/assets/styles/layouts/_about.scss */

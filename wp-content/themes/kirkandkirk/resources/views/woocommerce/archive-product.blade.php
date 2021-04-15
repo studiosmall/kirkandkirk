@@ -18,22 +18,33 @@ the readme will list any important changes.
 
 @section('content')
 
-@include('partials.filter')
+{{-- @php
+  do_action('get_header', 'shop');
+  do_action('woocommerce_before_main_content');
+@endphp --}}
+
+  <div class="breadcrumb-container">
+    <?php woocommerce_breadcrumb();?>
+  </div>
+
+  @include('partials.filter')
+
+  <header class="woocommerce-products-header">
+    <div class="woocommerce-products-header__inner">
+      @if(apply_filters('woocommerce_show_page_title', true))
+        <h1 class="woocommerce-products-header__title page-title">{!! woocommerce_page_title(false) !!}</h1>
+      @endif
+
+      @php
+        do_action('woocommerce_archive_description');
+      @endphp
+    </div>
+  </header>
 
   @php
     do_action('get_header', 'shop');
     do_action('woocommerce_before_main_content');
   @endphp
-
-  <header class="woocommerce-products-header">
-    @if(apply_filters('woocommerce_show_page_title', true))
-      <h1 class="woocommerce-products-header__title page-title">{!! woocommerce_page_title(false) !!}</h1>
-    @endif
-
-    @php
-      do_action('woocommerce_archive_description');
-    @endphp
-  </header>
 
 
   @if(woocommerce_product_loop())

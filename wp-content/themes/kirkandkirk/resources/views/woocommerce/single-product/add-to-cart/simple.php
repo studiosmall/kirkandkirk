@@ -29,6 +29,34 @@ if ( $product->is_in_stock() ) : ?>
 
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
+
+<?php
+	$featured_posts = get_field('product_variations');
+	$current        = get_the_ID();
+	$current_colour = get_field('product_colour', $current);
+?>
+
+	<ul class="colours">
+		<li>
+			<a href="#">
+				<span class="product-col active" style="background-color: <?php echo $current_colour ?>"></span>
+			</a>
+		</li>
+		<?php foreach( $featured_posts as $featured_post ):
+				$permalink = get_permalink( $featured_post->ID );
+				// $title = get_the_title( $featured_post->ID );
+				$colour = get_field('product_colour', $featured_post->ID);
+				?>
+				<li>
+						<a href="<?php echo esc_url( $permalink ); ?>">
+							<span class="product-col" style="background-color: <?php echo $colour ?>"></span>
+						</a>
+				</li>
+		<?php endforeach; ?>
+	</ul>
+
+
+
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
@@ -46,9 +74,10 @@ if ( $product->is_in_stock() ) : ?>
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
+		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+
 		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
-		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>

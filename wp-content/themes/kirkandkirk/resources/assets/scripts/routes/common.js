@@ -187,6 +187,19 @@ export default {
           gutter: 40,
         });
       // });
+
+      $('.moreless-button').click(function(e) {
+        e.preventDefault();
+
+        $(this).prev('.moretext').slideToggle();
+        $(this).fadeOut();
+
+        // if ($('.moreless-button').text() == 'Read More') {
+        //   $(this).text('Read Less')
+        // } else {
+        //   $(this).text('Read More')
+        // }
+      });
     }
 
     if($('.wc360').length) {
@@ -203,6 +216,7 @@ export default {
         $('.filter__container').toggleClass('active');
       });
     }
+
 
   },
 };

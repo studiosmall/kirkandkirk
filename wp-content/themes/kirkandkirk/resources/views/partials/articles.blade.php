@@ -25,9 +25,16 @@
 						<h2>{{ $article['title'] }}</h2>
 
 						<div class="articles__text">
-							{!! $article['textarea'] !!}
 
-							{{-- {!! $article['textarea'] !!} --}}
+							<p>
+								{!! $article['textarea'] !!}
+
+								@if($article['readmore'])
+									<span class="moretext">{!! $article['readmore'] !!}</span>
+
+									<a class="moreless-button" href="#">Read More</a>
+								@endif
+							</p>
 
 						</div>
 					</div>

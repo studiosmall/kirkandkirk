@@ -305,3 +305,13 @@ add_filter( 'woocommerce_product_add_to_cart_text', 'woocommerce_custom_product_
 function woocommerce_custom_product_add_to_cart_text() {
     return __( 'Add to basket', 'woocommerce' );
 }
+
+
+//Remove WooCommerce breadcrumb
+function woocommerce_remove_breadcrumb(){
+remove_action( 
+    'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+}
+add_action(
+    'woocommerce_before_main_content', 'woocommerce_remove_breadcrumb'
+);

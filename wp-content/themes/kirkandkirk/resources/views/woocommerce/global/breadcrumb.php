@@ -43,4 +43,52 @@ if ( ! empty( $breadcrumb ) ) {
 
 	echo $wrap_after;
 
+
+	// $terms = get_terms([
+  //   'taxonomy' => 'pa_colour',
+  //   'hide_empty' => false,
+	// ]);
+
+	// foreach ($terms as $term) {
+  //   echo get_term_meta($term->term_id)["colour"][0]; // Ex: #d4be16
+
+	// 	print('<pre>');
+	// 		print_r($term);
+	// 	print_r('</pre>');
+
+	// }
+
+	// $brand_terms = get_the_terms(305, 'pa_colour');
+	// $brand_string = ''; // Reset string
+	// foreach ($brand_terms as $term) :
+	// 		$brand_string .= $term->slug . ' ';
+	// endforeach;
+
+  // global $product;
+  // //$size = $product->get_attribute('pa_colour');
+
+	// print_r($product);
+
+
+	//echo $product->get_attribute( 'pa_colour' );
+
+// 	global $product;
+
+// if ( get_post_type( $post ) === 'product' && ! is_a($product, 'WC_Product') ) {
+//     $product = wc_get_product( get_the_id() ); // Get the WC_Product Object
+// }
+
+// $product_attributes = $product->get_attributes(); // Get the product attributes
+
+// // Raw output
+// echo '<pre>'; print_r( $product_attributes ); echo '</pre>';
+
+// $product = wc_get_product(305);
+// $variations = $product->get_available_variations();
+// $variations_id = wp_list_pluck( $variations, 'variation_id' );
+
+// 	print_r('<pre>');
+// 	print_r($variations);
+// 	print_r('</pre>');
+
 }

@@ -61,6 +61,35 @@
             "mime_types": ""
         },
         {
+            "key": "field_6077befd5dc40",
+            "label": "Product Variations",
+            "name": "product_variations",
+            "type": "relationship",
+            "instructions": "Related Product Colours",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
             "key": "field_60626fcedc1bf",
             "label": "Product Review",
             "name": "product_review",
@@ -149,5 +178,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618371763
+    "modified": 1618460705
 }

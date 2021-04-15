@@ -12,11 +12,29 @@
 
 .woocommerce-products-header {
 	padding: 20px 0;
+	background-color: #dcdab7;
+
+	&__inner {
+		@include inner;
+	}
 
 	&__title {
-		@include subtitle($brand--primary);
+		@include title($brand--primary);
 
 		text-transform: uppercase;
+		font-weight: 500;
+		margin: 0;
+	}
+
+	.term-description {
+		padding: 15px 0 0 0;
+		width: 100%;
+		max-width: 100%;
+
+		@include breakpoint(medium) {
+			width: 100%;
+			max-width: 540px;
+		}
 	}
 }
 
@@ -24,6 +42,14 @@
   &__inner {
 		@include inner;
   }
+}
+
+.breadcrumb-container {
+	@include inner;
+
+	@include breakpoint(medium) {
+		padding-bottom: 20px;
+	}
 }
 
 .woocommerce-breadcrumb {

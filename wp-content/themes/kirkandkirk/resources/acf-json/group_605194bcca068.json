@@ -43,14 +43,14 @@
             "placeholder": "",
             "maxlength": 1500,
             "rows": "",
-            "new_lines": "wpautop"
+            "new_lines": "br"
         },
         {
             "key": "field_60767eb35a2d0",
             "label": "Read More Text",
             "name": "read_more_text",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "Leave blank if not required",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -60,9 +60,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": 1500,
-            "rows": "",
-            "new_lines": "wpautop"
+            "maxlength": 600,
+            "rows": 6,
+            "new_lines": "br"
         }
     ],
     "location": [
@@ -95,5 +95,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618378486
+    "modified": 1618457096
 }
