@@ -5195,7 +5195,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fffaf5;
+  background-color: #fff;
   font-family: "reader", arial, sans-serif;
 }
 
@@ -6720,20 +6720,21 @@ input input:focus {
 /* line 95, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story__inner {
-  padding: 35px 20px;
+  margin: 35px 20px;
   height: 100%;
+  position: relative;
 }
 
 @media (min-width: 900px) {
   /* line 95, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story__inner {
-    padding: 10% 10%;
+    margin: 10% 10%;
     height: calc(100% - 20%);
   }
 }
 
-/* line 105, resources/assets/styles/components/_feature-story.scss */
+/* line 106, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story h2 {
   font-family: "reader", arial, sans-serif;
@@ -6747,14 +6748,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 105, resources/assets/styles/components/_feature-story.scss */
+  /* line 106, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story h2 {
     font-size: 20px;
   }
 }
 
-/* line 111, resources/assets/styles/components/_feature-story.scss */
+/* line 112, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story h3 {
   font-family: "reader", arial, sans-serif;
@@ -6766,14 +6767,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 111, resources/assets/styles/components/_feature-story.scss */
+  /* line 112, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story h3 {
     font-size: 16px;
   }
 }
 
-/* line 124, resources/assets/styles/components/_feature-story.scss */
+/* line 125, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story h4 {
   font-family: "reader", arial, sans-serif;
@@ -6786,14 +6787,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 124, resources/assets/styles/components/_feature-story.scss */
+  /* line 125, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story h4 {
     font-size: 16px;
   }
 }
 
-/* line 128, resources/assets/styles/components/_feature-story.scss */
+/* line 129, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story a {
   color: #000;
@@ -6805,15 +6806,17 @@ input input:focus {
   bottom: initial;
   display: inline-block;
   margin: 20px 0 0 0;
+  text-decoration: none;
 }
 
 @media (min-width: 900px) {
-  /* line 128, resources/assets/styles/components/_feature-story.scss */
+  /* line 129, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story a {
     position: absolute;
     display: initial;
     bottom: 60px;
+    left: 0;
     margin: 0;
   }
 }
@@ -7747,27 +7750,42 @@ input input:focus {
   margin: 85px 0;
 }
 
-/* line 47, resources/assets/styles/components/_single-product.scss */
+/* line 44, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .lifestyle.portrait {
+  width: 100%;
+  margin: 85px auto;
+}
+
+@media (min-width: 900px) {
+  /* line 44, resources/assets/styles/components/_single-product.scss */
+
+  .single-product .product .lifestyle.portrait {
+    width: 70%;
+  }
+}
+
+/* line 56, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .label {
   display: none;
 }
 
-/* line 51, resources/assets/styles/components/_single-product.scss */
+/* line 60, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper {
   border: 0;
   margin: 0 8px 5px 0;
 }
 
-/* line 55, resources/assets/styles/components/_single-product.scss */
+/* line 64, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper.selected {
   border: 2px solid #000;
   border-radius: 30px;
 }
 
-/* line 60, resources/assets/styles/components/_single-product.scss */
+/* line 69, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper a {
   border-radius: 30px;
@@ -7775,7 +7793,7 @@ input input:focus {
   height: 30px !important;
 }
 
-/* line 69, resources/assets/styles/components/_single-product.scss */
+/* line 78, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to {
   display: inline-block;
@@ -7786,7 +7804,7 @@ input input:focus {
   margin: 0 0 30px 0;
 }
 
-/* line 74, resources/assets/styles/components/_single-product.scss */
+/* line 83, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to::after {
   -webkit-transform: scaleX(1);
@@ -7798,7 +7816,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 79, resources/assets/styles/components/_single-product.scss */
+  /* line 88, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .how-to:hover::after {
     -webkit-transform: scaleX(0);
@@ -7807,7 +7825,7 @@ input input:focus {
   }
 }
 
-/* line 86, resources/assets/styles/components/_single-product.scss */
+/* line 95, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours {
   list-style: none;
@@ -7818,19 +7836,19 @@ input input:focus {
   display: flex;
 }
 
-/* line 92, resources/assets/styles/components/_single-product.scss */
+/* line 101, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li {
   margin: 0 10px 0 0;
 }
 
-/* line 97, resources/assets/styles/components/_single-product.scss */
+/* line 106, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a:hover .product-col {
   border-color: #000;
 }
 
-/* line 102, resources/assets/styles/components/_single-product.scss */
+/* line 111, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a .product-col {
   display: inline-block;
@@ -7843,20 +7861,19 @@ input input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 110, resources/assets/styles/components/_single-product.scss */
+/* line 119, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a .product-col.active {
   border-color: #000;
 }
 
-/* line 118, resources/assets/styles/components/_single-product.scss */
+/* line 127, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share {
   padding: 0 0 5px 0;
-  display: none;
 }
 
-/* line 122, resources/assets/styles/components/_single-product.scss */
+/* line 130, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share a {
   display: inline-block;
@@ -7866,25 +7883,25 @@ input input:focus {
   text-decoration: none;
 }
 
-/* line 127, resources/assets/styles/components/_single-product.scss */
+/* line 135, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .sku_wrapper {
   display: none;
 }
 
-/* line 131, resources/assets/styles/components/_single-product.scss */
+/* line 139, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product a.reset_variations {
   display: none !important;
 }
 
-/* line 135, resources/assets/styles/components/_single-product.scss */
+/* line 143, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .quantity {
   display: none !important;
 }
 
-/* line 139, resources/assets/styles/components/_single-product.scss */
+/* line 147, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container {
   width: 100%;
@@ -7894,14 +7911,20 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 139, resources/assets/styles/components/_single-product.scss */
+  /* line 147, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container {
     min-height: 500px;
   }
 }
 
-/* line 149, resources/assets/styles/components/_single-product.scss */
+/* line 156, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product #container.wc360-container .spinner {
+  display: none !important;
+}
+
+/* line 161, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary {
   width: 100%;
@@ -7913,14 +7936,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 149, resources/assets/styles/components/_single-product.scss */
+  /* line 161, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary {
     width: 35%;
   }
 }
 
-/* line 162, resources/assets/styles/components/_single-product.scss */
+/* line 174, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .posted_in a {
   display: inline-block;
@@ -7939,14 +7962,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 162, resources/assets/styles/components/_single-product.scss */
+  /* line 174, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .posted_in a {
     font-size: 16px;
   }
 }
 
-/* line 170, resources/assets/styles/components/_single-product.scss */
+/* line 182, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary h1.product_title {
   font-family: "reader", arial, sans-serif;
@@ -7959,7 +7982,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 170, resources/assets/styles/components/_single-product.scss */
+  /* line 182, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title {
     font-size: 20px;
@@ -7967,14 +7990,14 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 170, resources/assets/styles/components/_single-product.scss */
+  /* line 182, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title {
     font-size: 30px;
   }
 }
 
-/* line 178, resources/assets/styles/components/_single-product.scss */
+/* line 190, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .price {
   font-family: "reader", arial, sans-serif;
@@ -7990,7 +8013,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 178, resources/assets/styles/components/_single-product.scss */
+  /* line 190, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price {
     font-size: 16px;
@@ -7998,38 +8021,38 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 178, resources/assets/styles/components/_single-product.scss */
+  /* line 190, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price {
     font-size: 21px;
   }
 }
 
-/* line 190, resources/assets/styles/components/_single-product.scss */
+/* line 202, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .variations_form {
   padding: 10px 0 0 0;
 }
 
-/* line 194, resources/assets/styles/components/_single-product.scss */
+/* line 206, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability {
   margin: 10px 0 0 0;
 }
 
-/* line 198, resources/assets/styles/components/_single-product.scss */
+/* line 210, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.in-stock {
   color: #1bae27;
 }
 
-/* line 201, resources/assets/styles/components/_single-product.scss */
+/* line 213, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock {
   color: #b92828;
 }
 
-/* line 207, resources/assets/styles/components/_single-product.scss */
+/* line 219, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .button {
   color: #fff;
@@ -8059,49 +8082,27 @@ input input:focus {
   min-width: 200px;
 }
 
-/* line 26, resources/assets/styles/components/_buttons.scss */
-
-.single-product .product .summary .button::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 0%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 /* line 38, resources/assets/styles/components/_buttons.scss */
 
 .single-product .product .summary .button:hover,
 .single-product .product .summary .button:active {
   color: #000;
+  background: transparent;
 }
 
-/* line 44, resources/assets/styles/components/_buttons.scss */
-
-.single-product .product .summary .button:hover::after,
-.single-product .product .summary .button:active::after {
-  width: 100%;
-}
-
-/* line 217, resources/assets/styles/components/_single-product.scss */
+/* line 229, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .cart .quantity {
   display: none;
 }
 
-/* line 224, resources/assets/styles/components/_single-product.scss */
+/* line 236, resources/assets/styles/components/_single-product.scss */
 
 .single-product .single-product #wl-wrapper.wl-button-wrap {
   margin: 0 0 5px 0;
 }
 
-/* line 228, resources/assets/styles/components/_single-product.scss */
+/* line 240, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to {
   display: inline-block;
@@ -8111,7 +8112,7 @@ input input:focus {
   text-decoration: none;
 }
 
-/* line 231, resources/assets/styles/components/_single-product.scss */
+/* line 243, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to::before {
   content: "";
@@ -8125,7 +8126,7 @@ input input:focus {
   top: -4px;
 }
 
-/* line 244, resources/assets/styles/components/_single-product.scss */
+/* line 256, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single {
   display: inline-block;
@@ -8137,7 +8138,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 254, resources/assets/styles/components/_single-product.scss */
+  /* line 266, resources/assets/styles/components/_single-product.scss */
 
   .single-product .wl-add-to-single:hover::after {
     -webkit-transform: scaleX(0);
@@ -8146,7 +8147,7 @@ input input:focus {
   }
 }
 
-/* line 260, resources/assets/styles/components/_single-product.scss */
+/* line 272, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single::before {
   content: "";
@@ -8160,7 +8161,7 @@ input input:focus {
   top: -4px;
 }
 
-/* line 273, resources/assets/styles/components/_single-product.scss */
+/* line 285, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-wrap {
   position: relative;
@@ -8169,19 +8170,19 @@ input input:focus {
   padding: 0;
 }
 
-/* line 281, resources/assets/styles/components/_single-product.scss */
+/* line 293, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in {
   font-size: 0;
 }
 
-/* line 284, resources/assets/styles/components/_single-product.scss */
+/* line 296, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in .wl-add-link {
   display: none;
 }
 
-/* line 288, resources/assets/styles/components/_single-product.scss */
+/* line 300, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul {
   list-style: none;
@@ -8189,7 +8190,7 @@ input input:focus {
   padding: 10px 0 0 0;
 }
 
-/* line 294, resources/assets/styles/components/_single-product.scss */
+/* line 306, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a {
   display: inline-block;
@@ -8200,7 +8201,7 @@ input input:focus {
   font-size: 16px;
 }
 
-/* line 299, resources/assets/styles/components/_single-product.scss */
+/* line 311, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a::before {
   content: "";
@@ -8214,13 +8215,13 @@ input input:focus {
   top: -1px;
 }
 
-/* line 316, resources/assets/styles/components/_single-product.scss */
+/* line 328, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes {
   padding: 20px 0;
 }
 
-/* line 319, resources/assets/styles/components/_single-product.scss */
+/* line 331, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
 .single-product .woocommerce-product-attributes tr p {
@@ -8236,7 +8237,7 @@ input input:focus {
   margin: 0;
 }
 
-/* line 336, resources/assets/styles/components/_single-product.scss */
+/* line 348, resources/assets/styles/components/_single-product.scss */
 
 .single-product .related .products {
   display: -webkit-box;
@@ -8246,7 +8247,7 @@ input input:focus {
   margin: 0;
 }
 
-/* line 345, resources/assets/styles/components/_single-product.scss */
+/* line 357, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8255,7 +8256,7 @@ input input:focus {
   text-align: center;
 }
 
-/* line 351, resources/assets/styles/components/_single-product.scss */
+/* line 363, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;
@@ -8591,7 +8592,13 @@ input input:focus {
   border: 0;
 }
 
-/* line 89, resources/assets/styles/components/_form.scss */
+/* line 88, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body input:focus {
+  outline: 0;
+}
+
+/* line 93, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea {
   width: calc(100% - 8px);
@@ -8624,14 +8631,68 @@ input input:focus {
   border: 0;
 }
 
-/* line 98, resources/assets/styles/components/_form.scss */
+/* line 101, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .ginput_container_fileupload {
-  width: 225px;
-  margin: 15px auto;
+.form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
+  /* Edge */
+  color: #000;
 }
 
-/* line 103, resources/assets/styles/components/_form.scss */
+/* line 105, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body textarea::-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #000;
+}
+
+/* line 109, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+.form .gform_wrapper .gform_body textarea::-ms-input-placeholder {
+  color: #000;
+}
+
+.form .gform_wrapper .gform_body textarea::placeholder {
+  color: #000;
+}
+
+/* line 113, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body textarea:focus {
+  outline: 0;
+}
+
+/* line 118, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body .ginput_container_fileupload {
+  width: 253px;
+  margin: 15px auto;
+  text-transform: uppercase;
+}
+
+/* line 123, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body .ginput_container_fileupload input[type="file"] {
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* line 130, resources/assets/styles/components/_form.scss */
+
+.form .gform_wrapper .gform_body .ginput_container_fileupload input::-webkit-file-upload-button {
+  background: transparent;
+  text-transform: uppercase;
+  color: #000;
+  padding: 0;
+  border: 0;
+  text-align: center;
+}
+
+/* line 142, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox {
   display: -webkit-box;
@@ -8646,20 +8707,20 @@ input input:focus {
   margin: 15px 0 0 0;
 }
 
-/* line 109, resources/assets/styles/components/_form.scss */
+/* line 148, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li {
   margin: 0 20px;
 }
 
-/* line 112, resources/assets/styles/components/_form.scss */
+/* line 151, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li label {
   display: inline-block;
   margin: 0 0 0 5px;
 }
 
-/* line 117, resources/assets/styles/components/_form.scss */
+/* line 156, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li input {
   margin: 0 !important;
@@ -8667,7 +8728,7 @@ input input:focus {
   width: auto;
 }
 
-/* line 127, resources/assets/styles/components/_form.scss */
+/* line 166, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_footer .gform_button {
   font-family: "reader", arial, sans-serif;
@@ -8692,7 +8753,7 @@ input input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 127, resources/assets/styles/components/_form.scss */
+  /* line 166, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_footer .gform_button {
     font-size: 16px;
@@ -9573,7 +9634,56 @@ input input:focus {
 
 /* line 131, resources/assets/styles/components/_store-locator.scss */
 
-.stockist #wpsl-search-btn {
+.stockist #wpsl-result-list {
+  width: 100%;
+}
+
+/* line 135, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-gmap {
+  width: 100%;
+}
+
+/* line 139, resources/assets/styles/components/_store-locator.scss */
+
+.stockist .wpsl-preloader {
+  display: none;
+}
+
+/* line 143, resources/assets/styles/components/_store-locator.scss */
+
+.stockist__col {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 143, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist__col {
+    width: 60%;
+  }
+}
+
+/* line 150, resources/assets/styles/components/_store-locator.scss */
+
+.stockist__col:first-of-type {
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 150, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist__col:first-of-type {
+    width: 40%;
+    margin-right: 30px;
+  }
+}
+
+/* line 162, resources/assets/styles/components/_store-locator.scss */
+
+#wpsl-search-btn,
+#wpsl-search-wrap input {
   color: #fff;
   line-height: 1;
   background: #000;
@@ -9595,83 +9705,73 @@ input input:focus {
   font-weight: 500;
   letter-spacing: 1.5px;
   width: 100%;
+  text-transform: uppercase;
   border-radius: 0;
-}
-
-/* line 26, resources/assets/styles/components/_buttons.scss */
-
-.stockist #wpsl-search-btn::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 0%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 /* line 38, resources/assets/styles/components/_buttons.scss */
 
-.stockist #wpsl-search-btn:hover,
-.stockist #wpsl-search-btn:active {
+#wpsl-search-btn:hover,
+#wpsl-search-btn:active,
+#wpsl-search-wrap input:hover,
+#wpsl-search-wrap input:active {
   color: #000;
+  background: transparent;
 }
 
-/* line 44, resources/assets/styles/components/_buttons.scss */
+/* line 168, resources/assets/styles/components/_store-locator.scss */
 
-.stockist #wpsl-search-btn:hover::after,
-.stockist #wpsl-search-btn:active::after {
-  width: 100%;
-}
-
-/* line 136, resources/assets/styles/components/_store-locator.scss */
-
-.stockist #wpsl-search-btn:hover {
+#wpsl-search-btn:hover,
+#wpsl-search-wrap input:hover {
   color: #fff;
 }
 
-/* line 141, resources/assets/styles/components/_store-locator.scss */
+/* line 173, resources/assets/styles/components/_store-locator.scss */
 
-.stockist #wpsl-result-list {
+input[value="search"] {
+  text-transform: uppercase;
+}
+
+/* line 177, resources/assets/styles/components/_store-locator.scss */
+
+#wpsl-search-btn {
+  color: #fff;
+  line-height: 1;
+  background: #000;
+  border: 1px solid #000;
+  overflow: hidden;
+  padding: 12px 21px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "reader", arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
   width: 100%;
+  text-transform: uppercase;
+  border-radius: 0;
 }
 
-/* line 145, resources/assets/styles/components/_store-locator.scss */
+/* line 38, resources/assets/styles/components/_buttons.scss */
 
-.stockist #wpsl-gmap {
-  width: 100%;
+#wpsl-search-btn:hover,
+#wpsl-search-btn:active {
+  color: #000;
+  background: transparent;
 }
 
-/* line 149, resources/assets/styles/components/_store-locator.scss */
+/* line 183, resources/assets/styles/components/_store-locator.scss */
 
-.stockist__col {
-  width: 100%;
-}
-
-@media (min-width: 900px) {
-  /* line 149, resources/assets/styles/components/_store-locator.scss */
-
-  .stockist__col {
-    width: 60%;
-  }
-}
-
-/* line 156, resources/assets/styles/components/_store-locator.scss */
-
-.stockist__col:first-of-type {
-  width: 100%;
-}
-
-@media (min-width: 900px) {
-  /* line 156, resources/assets/styles/components/_store-locator.scss */
-
-  .stockist__col:first-of-type {
-    width: 40%;
-  }
+#wpsl-search-btn:hover {
+  color: #fff;
 }
 
 /* line 1, resources/assets/styles/components/_filter.scss */
@@ -11448,34 +11548,12 @@ input input:focus {
   width: auto;
 }
 
-/* line 26, resources/assets/styles/components/_buttons.scss */
-
-.woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 0%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 /* line 38, resources/assets/styles/components/_buttons.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button:hover,
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button:active {
   color: #000;
-}
-
-/* line 44, resources/assets/styles/components/_buttons.scss */
-
-.woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button:hover::after,
-.woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button:active::after {
-  width: 100%;
+  background: transparent;
 }
 
 /* line 1, resources/assets/styles/layouts/_checkout.scss */
@@ -11702,34 +11780,12 @@ input input:focus {
   width: 100%;
 }
 
-/* line 26, resources/assets/styles/components/_buttons.scss */
-
-.woocommerce-checkout #place_order::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 0%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
 /* line 38, resources/assets/styles/components/_buttons.scss */
 
 .woocommerce-checkout #place_order:hover,
 .woocommerce-checkout #place_order:active {
   color: #000;
-}
-
-/* line 44, resources/assets/styles/components/_buttons.scss */
-
-.woocommerce-checkout #place_order:hover::after,
-.woocommerce-checkout #place_order:active::after {
-  width: 100%;
+  background: transparent;
 }
 
 /* line 150, resources/assets/styles/common/_mixins.scss */

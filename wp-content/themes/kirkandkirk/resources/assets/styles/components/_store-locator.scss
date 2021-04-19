@@ -128,22 +128,16 @@
 		}
 	}
 
-	#wpsl-search-btn {
-		@include btn($brand--primary);
-
-		border-radius: 0;
-
-		&:hover {
-			color: $brand--white;
-		}
-	}
-
 	#wpsl-result-list {
 		width: 100%;
 	}
 
 	#wpsl-gmap {
 		width: 100%;
+	}
+
+	.wpsl-preloader {
+		display: none;
 	}
 
 	&__col {
@@ -155,10 +149,38 @@
 
 		&:first-of-type {
 			width: 100%;
+			margin: 0;
 
 			@include breakpoint(medium) {
 				width: 40%;
+				margin-right: 30px;
 			}
 		}
+	}
+}
+
+#wpsl-search-btn,
+#wpsl-search-wrap input {
+	@include btn($brand--primary);
+	text-transform: uppercase;
+	border-radius: 0;
+
+	&:hover {
+		color: $brand--white;
+	}
+}
+
+input[value="search"] {
+	text-transform: uppercase;
+}
+
+#wpsl-search-btn {
+	@include btn($brand--primary);
+
+	text-transform: uppercase;
+	border-radius: 0;
+
+	&:hover {
+		color: $brand--white;
 	}
 }

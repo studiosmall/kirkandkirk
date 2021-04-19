@@ -93,11 +93,12 @@
 	}
 
 	&__inner {
-		padding: 35px 20px;
+		margin: 35px 20px;
 		height: 100%;
+		position: relative;
 
 		@include breakpoint(medium) {
-			padding: 10% 10%;
+			margin: 10% 10%;
 			height: calc(100% - 20%);
 		}
 	}
@@ -135,11 +136,13 @@
 		bottom: initial;
 		display: inline-block;
 		margin: 20px 0 0 0;
+		text-decoration: none;
 
 		@include breakpoint(medium) {
 			position: absolute;
 			display: initial;
     	bottom: 60px;
+			left: 0;
 			margin: 0;
 		}
 	}

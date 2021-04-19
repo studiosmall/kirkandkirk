@@ -218,5 +218,47 @@ export default {
     }
 
 
+    let container = $('.articles__items');
+
+    $('.more-articles').on('click', function (e) {
+      e.preventDefault();
+
+      let filter = $('.filter__select').val();
+      let offset = parseInt($('.articles__items').attr('data-offset'));
+      // let search = $('.search-overlay input[type="search"]').val();  
+
+      $.ajax({
+        type: 'POST',
+        url: window.siteOptions.ajaxurl,
+        data: {
+          action: 'kirkandkirk_more_articles',
+          offset: offset,
+          // search: search,
+          category: filter,
+        },
+        success: function(result) {
+          if ( result == 'none' ) {
+            $('.more-articles').text('No more posts...').addClass('disabled');
+          } else {
+
+            //$('.articles__items').append(result);
+
+            var items = result;
+            // make jQuery object
+            var $items = $(items).hide();
+            container.append($items);
+
+            $items.show();
+            container.masonry('appended', $items);
+        
+
+            let count = $('.articles__card').length;
+            $('.articles__items').attr('data-offset', count);
+          }
+        },
+      });
+    });
+
+
   },
 };

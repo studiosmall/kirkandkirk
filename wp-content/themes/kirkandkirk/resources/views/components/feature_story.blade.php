@@ -27,7 +27,7 @@
             <h3>MEET</h3>
             <h2>{{ $title }}</h2>
 
-            {!! $textarea !!}
+            <p>{!! $textarea !!}</p>
 
             <a href="/stories">Read more stories</a>
 

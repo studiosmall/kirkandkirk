@@ -23,26 +23,26 @@
     letter-spacing: 1.5px;
     width: 100%;
 
-    &::after {
-      content: "";
-      position: absolute;
-      z-index:-1;
-      width: 0%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: $brand--white;
-      transition: all 0.3s;
-    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   z-index:-1;
+    //   width: 0%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   background: $brand--white;
+    //   transition: all 0.3s;
+    // }
 
     &:hover,
     &:active {
       color: $color;
-      //background: transparent;
+      background: transparent;
     }
 
-    &:hover::after,
-    &:active::after {
-      width: 100%;
-    }
+    // &:hover::after,
+    // &:active::after {
+    //   width: 100%;
+    // }
  }

@@ -57,11 +57,15 @@ if ( post_password_required() ) {
 
 		<?php 
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
+
 			$lifestyle_image = get_field('lifestyle_image');
+			$height 			   = $lifestyle_image['height'];
+			$width  				 = $lifestyle_image['width'];
 		?>
 
 		<?php if($lifestyle_image['url']) { ?>
-			<div class="lifestyle">
+
+			<div class="lifestyle <?php if($width >= $height ) { echo 'landscape'; } else { echo 'portrait'; } ?>">
 				<img src="<?php echo $lifestyle_image['url']; ?>" alt="<?php echo $lifestyle_image['title']; ?>">
 			</div>
 		<?php } ?>

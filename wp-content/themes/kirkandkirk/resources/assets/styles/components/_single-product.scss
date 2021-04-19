@@ -40,6 +40,15 @@
 
 		.lifestyle {
 			margin: 85px 0;
+
+			&.portrait {
+				width:  100%;
+				margin: 85px auto;
+
+				@include breakpoint(medium) {
+					width:  70%;
+				}
+			}
 		}
 
 		.variations_form {
@@ -117,7 +126,6 @@
 
 		.share {
 			padding: 0 0 5px 0;
-			display: none;
 
 			a {
 				@include hoverline($brand--primary);
@@ -143,6 +151,10 @@
 
 			@include breakpoint(medium) {
 				min-height: 500px;
+			}
+
+			.spinner {
+				display: none !important;
 			}
 		}
 

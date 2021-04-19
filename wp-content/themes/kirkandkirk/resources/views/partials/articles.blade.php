@@ -6,7 +6,7 @@
 
 	<div class="articles__inner">
 
-		<div class="articles__items">
+		<div class="articles__items" data-offset="6">
 
 			@if($articles['articles'])
 
@@ -14,7 +14,8 @@
 
 				@foreach( $articles['articles'] as $article )
 
-					<div class="articles__card" data-aos="fade-up">
+					{{-- <div class="articles__card" data-aos="fade-up"> --}}
+					<div class="articles__card">
 						<span class="articles__line" style="border-color: {{ $article['colour'] }};"></span>
 
 						<div class="articles__image {{ $article['border'] }}">
@@ -46,7 +47,7 @@
 		</div>
 
 		<div class="articles__more">
-			{{-- <a href="#" class="btn more-articles">Load More</a> --}}
+			<a href="#" class="btn more-articles">Load More</a>
 		</div>
 
 	</div>

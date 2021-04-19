@@ -84,6 +84,10 @@
                 padding: 10px 10px !important;
                 border: 0 !important;
                 background-color: #e1e1e1;
+
+                &:focus {
+                    outline: 0;
+                }
             }
 
             textarea {
@@ -93,11 +97,46 @@
                 padding: 10px 10px !important;
                 border: 0 !important;
                 background-color: #e1e1e1;
+
+                &::-webkit-input-placeholder { /* Edge */
+                    color: $brand--primary;
+                }
+
+                &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    color: $brand--primary;
+                }
+
+                &::placeholder {
+                    color: $brand--primary;
+                }
+
+                &:focus {
+                    outline: 0;
+                }
             }
 
             .ginput_container_fileupload {
-                width: 225px;
+                width: 253px;
                 margin: 15px auto;
+                text-transform: uppercase;
+
+                input[type="file"] {
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    text-align: center;
+                }
+
+                input {
+                    &::-webkit-file-upload-button {
+                        background: transparent;
+                        text-transform: uppercase;
+                        color: $brand--primary;
+                        padding: 0;
+                        border: 0;
+                        // display: none;
+                        text-align: center;
+                    }
+                }
             }
 
             .gfield_checkbox {
