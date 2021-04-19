@@ -43,12 +43,15 @@ if ( ! empty( $breadcrumb ) ) {
 		}
 	}
 
-	$color = $product->get_attribute('pa_colour');
-	if( ! empty( $color ) ){
-		echo '<span class="product-colour">';
-			echo ' &mdash; ';
-			echo $color;
-		echo '</span>';
+	if ( is_product() ){
+		$color = $product->get_attribute('pa_colour');
+
+		if( ! empty( $color ) ){
+			echo '<span class="product-colour">';
+				echo ' &mdash; ';
+				echo $color;
+			echo '</span>';
+		}
 	}
 
 	echo $wrap_after;
