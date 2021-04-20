@@ -2129,6 +2129,20 @@ Router.prototype.loadEvents = function loadEvents () {
       $('.filter__container, .filter__title').removeClass('active');
     });
 
+    $('#search-btn').on('click', function(e){
+      e.preventDefault();
+
+      $(this).toggleClass('hide');
+      $('.header__search').toggleClass('active');
+    });
+
+    if($('.woocommerce-breadcrumb a').length) {
+      if($('.woocommerce-breadcrumb a').text() == 'Optical') {
+        $(this).attr('/shop/optical/');
+      }
+      //console.log($('.woocommerce-breadcrumb a').text());
+    }
+
     // let onScroll = function() {
     //   let navbarHeight = $('.header').outerHeight();
     //   let st = $(this).scrollTop();
@@ -2297,7 +2311,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
       var filter = $('.filter__select').val();
       var offset = parseInt($('.articles__items').attr('data-offset'));
-      // let search = $('.search-overlay input[type="search"]').val();  
+      // let search = $('.search-overlay input[type='search']').val();  
 
       $.ajax({
         type: 'POST',

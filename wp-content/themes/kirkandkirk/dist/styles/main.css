@@ -5216,14 +5216,30 @@ p {
   margin-top: 0;
 }
 
-/* line 35, resources/assets/styles/common/_global.scss */
+/* line 33, resources/assets/styles/common/_global.scss */
+
+.inner {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 33, resources/assets/styles/common/_global.scss */
+
+  .inner {
+    padding: 0 50px;
+  }
+}
+
+/* line 39, resources/assets/styles/common/_global.scss */
 
 .about .wrap,
 .home .wrap {
   padding: 0 0 0 0;
 }
 
-/* line 40, resources/assets/styles/common/_global.scss */
+/* line 44, resources/assets/styles/common/_global.scss */
 
 .wrap {
   -webkit-box-flex: 1;
@@ -5236,21 +5252,21 @@ p {
 }
 
 @media (min-width: 900px) {
-  /* line 40, resources/assets/styles/common/_global.scss */
+  /* line 44, resources/assets/styles/common/_global.scss */
 
   .wrap {
     padding: 139px 0 0 0;
   }
 }
 
-/* line 52, resources/assets/styles/common/_global.scss */
+/* line 56, resources/assets/styles/common/_global.scss */
 
 img {
   width: 100%;
   height: auto;
 }
 
-/* line 57, resources/assets/styles/common/_global.scss */
+/* line 61, resources/assets/styles/common/_global.scss */
 
 .ico-search {
   display: block;
@@ -5260,7 +5276,7 @@ img {
   height: 16px;
 }
 
-/* line 65, resources/assets/styles/common/_global.scss */
+/* line 69, resources/assets/styles/common/_global.scss */
 
 .ico-heart {
   display: block;
@@ -5270,7 +5286,7 @@ img {
   height: 22px;
 }
 
-/* line 73, resources/assets/styles/common/_global.scss */
+/* line 77, resources/assets/styles/common/_global.scss */
 
 .ico-account {
   display: block;
@@ -5280,7 +5296,7 @@ img {
   height: 15px;
 }
 
-/* line 81, resources/assets/styles/common/_global.scss */
+/* line 85, resources/assets/styles/common/_global.scss */
 
 .ico-basket {
   display: block;
@@ -5290,25 +5306,25 @@ img {
   height: 15px;
 }
 
-/* line 90, resources/assets/styles/common/_global.scss */
+/* line 94, resources/assets/styles/common/_global.scss */
 
 .bg-color__blue {
   background-color: #bfdbe0;
 }
 
-/* line 93, resources/assets/styles/common/_global.scss */
+/* line 97, resources/assets/styles/common/_global.scss */
 
 .bg-color__blue--alt {
   background-color: #dde2ea;
 }
 
-/* line 99, resources/assets/styles/common/_global.scss */
+/* line 103, resources/assets/styles/common/_global.scss */
 
 .alert {
   padding: 60px 0;
 }
 
-/* line 102, resources/assets/styles/common/_global.scss */
+/* line 106, resources/assets/styles/common/_global.scss */
 
 .alert__inner {
   padding: 0 20px;
@@ -5317,17 +5333,45 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 102, resources/assets/styles/common/_global.scss */
+  /* line 106, resources/assets/styles/common/_global.scss */
 
   .alert__inner {
     padding: 0 50px;
   }
 }
 
-/* line 109, resources/assets/styles/common/_global.scss */
+/* line 113, resources/assets/styles/common/_global.scss */
 
 .about-page .section:nth-of-type(2n) {
   padding-top: 0;
+}
+
+/* line 119, resources/assets/styles/common/_global.scss */
+
+.woocommerce-error {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+/* line 124, resources/assets/styles/common/_global.scss */
+
+.woocommerce-error a {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 124, resources/assets/styles/common/_global.scss */
+
+  .woocommerce-error a {
+    font-size: 16px;
+  }
 }
 
 /**
@@ -5366,9 +5410,9 @@ label {
   }
 }
 
-/* line 150, resources/assets/styles/common/_mixins.scss */
+/* line 40, resources/assets/styles/components/_forms.scss */
 
-input input {
+input {
   width: 90%;
   border: 0;
   background-color: #f8f8f8;
@@ -5376,18 +5420,19 @@ input input {
 }
 
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/common/_mixins.scss */
+  /* line 40, resources/assets/styles/components/_forms.scss */
 
-  input input {
+  input {
     width: 100%;
   }
 }
 
-/* line 160, resources/assets/styles/common/_mixins.scss */
+/* line 159, resources/assets/styles/common/_mixins.scss */
 
-input input:focus {
+input:focus {
   outline: none;
   border: 0;
+  background-color: #f8f8f8;
 }
 
 /* line 1, resources/assets/styles/components/_off-canvas.scss */
@@ -5497,18 +5542,13 @@ input input:focus {
   }
 }
 
-/* line 65, resources/assets/styles/components/_off-canvas.scss */
+/* line 64, resources/assets/styles/components/_off-canvas.scss */
 
-.off-canvas ul li.current-menu-item a::after {
-  -webkit-transform: scaleX(1);
-       -o-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
+.off-canvas ul li.current-menu-item a {
+  color: #fff;
 }
 
-/* line 72, resources/assets/styles/components/_off-canvas.scss */
+/* line 74, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a {
   display: inline-block;
@@ -5523,46 +5563,50 @@ input input:focus {
   color: #000;
   letter-spacing: 0.75px;
   text-align: left;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
-/* line 83, resources/assets/styles/components/_off-canvas.scss */
+/* line 86, resources/assets/styles/components/_off-canvas.scss */
+
+.off-canvas ul li a:hover {
+  color: #fff;
+}
+
+/* line 90, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 72, resources/assets/styles/components/_off-canvas.scss */
+  /* line 74, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li a {
     font-size: 16px;
   }
 }
 
-/* line 92, resources/assets/styles/components/_off-canvas.scss */
+/* line 99, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu {
   padding: 0;
 }
 
-/* line 95, resources/assets/styles/components/_off-canvas.scss */
+/* line 102, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li {
   margin: 0 0 1px 0;
 }
 
-/* line 100, resources/assets/styles/components/_off-canvas.scss */
+/* line 108, resources/assets/styles/components/_off-canvas.scss */
 
-.off-canvas ul li ul.sub-menu li.current-menu-item a::after {
-  -webkit-transform: scaleX(1);
-       -o-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: bottom;
-       -o-transform-origin: bottom;
-          transform-origin: bottom;
+.off-canvas ul li ul.sub-menu li.current-menu-item a:hover {
+  color: #fff;
 }
 
-/* line 107, resources/assets/styles/components/_off-canvas.scss */
+/* line 119, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a {
   display: inline-block;
@@ -5573,14 +5617,20 @@ input input:focus {
   font-weight: 100;
 }
 
-/* line 111, resources/assets/styles/components/_off-canvas.scss */
+/* line 123, resources/assets/styles/components/_off-canvas.scss */
+
+.off-canvas ul li ul.sub-menu li a:hover {
+  color: #fff;
+}
+
+/* line 127, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 107, resources/assets/styles/components/_off-canvas.scss */
+  /* line 119, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li ul.sub-menu li a {
     font-size: 16px;
@@ -5588,21 +5638,21 @@ input input:focus {
   }
 }
 
-/* line 125, resources/assets/styles/components/_off-canvas.scss */
+/* line 141, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation {
   display: block;
 }
 
 @media (min-width: 900px) {
-  /* line 125, resources/assets/styles/components/_off-canvas.scss */
+  /* line 141, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas #menu-mobile-navigation {
     display: none;
   }
 }
 
-/* line 133, resources/assets/styles/components/_off-canvas.scss */
+/* line 149, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu {
   display: none;
@@ -5611,13 +5661,13 @@ input input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 141, resources/assets/styles/components/_off-canvas.scss */
+/* line 157, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu.active {
   display: block;
 }
 
-/* line 145, resources/assets/styles/components/_off-canvas.scss */
+/* line 161, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu ul.sub-menu {
   display: block;
@@ -8296,6 +8346,13 @@ input input:focus {
   padding: 60px 0 120px 0;
 }
 
+/* line 29, resources/assets/styles/components/_collection.scss */
+
+.term-new-arrivals .woocommerce-products-header,
+.tax-product_cat .woocommerce-products-header {
+  display: none;
+}
+
 /* line 1, resources/assets/styles/components/_video.scss */
 
 .video {
@@ -8562,34 +8619,30 @@ input input:focus {
 /* line 80, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body input {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
   width: calc(100% - 8px);
   padding: 10px 10px !important;
   border: 0 !important;
   background-color: #e1e1e1;
 }
 
-/* line 150, resources/assets/styles/common/_mixins.scss */
-
-.form .gform_wrapper .gform_body input input {
-  width: 90%;
-  border: 0;
-  background-color: #f8f8f8;
-  padding: 10px 10px;
-}
-
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/common/_mixins.scss */
+  /* line 80, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_body input input {
+  .form .gform_wrapper .gform_body input {
     width: 100%;
   }
 }
 
-/* line 160, resources/assets/styles/common/_mixins.scss */
+/* line 159, resources/assets/styles/common/_mixins.scss */
 
-.form .gform_wrapper .gform_body input input:focus {
+.form .gform_wrapper .gform_body input:focus {
   outline: none;
   border: 0;
+  background-color: #f8f8f8;
 }
 
 /* line 88, resources/assets/styles/components/_form.scss */
@@ -8601,34 +8654,30 @@ input input:focus {
 /* line 93, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
   width: calc(100% - 8px);
   padding: 10px 10px !important;
   border: 0 !important;
   background-color: #e1e1e1;
 }
 
-/* line 150, resources/assets/styles/common/_mixins.scss */
-
-.form .gform_wrapper .gform_body textarea input {
-  width: 90%;
-  border: 0;
-  background-color: #f8f8f8;
-  padding: 10px 10px;
-}
-
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/common/_mixins.scss */
+  /* line 93, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_body textarea input {
+  .form .gform_wrapper .gform_body textarea {
     width: 100%;
   }
 }
 
-/* line 160, resources/assets/styles/common/_mixins.scss */
+/* line 159, resources/assets/styles/common/_mixins.scss */
 
-.form .gform_wrapper .gform_body textarea input:focus {
+.form .gform_wrapper .gform_body textarea:focus {
   outline: none;
   border: 0;
+  background-color: #f8f8f8;
 }
 
 /* line 101, resources/assets/styles/components/_form.scss */
@@ -8763,7 +8812,7 @@ input input:focus {
 /* line 23, resources/assets/styles/components/_forms.scss */
 
 .form .gform_wrapper .gform_footer .gform_button:hover {
-  border: 1px solid #e1e1e1;
+  border: 1px solid #abced0;
   background: #abced0;
   color: #000;
 }
@@ -9515,6 +9564,10 @@ input input:focus {
 /* line 58, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-input #wpsl-search-input {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
   width: 100%;
   background-color: #e1dfd6;
   border-radius: 0;
@@ -9523,28 +9576,20 @@ input input:focus {
   text-transform: uppercase;
 }
 
-/* line 150, resources/assets/styles/common/_mixins.scss */
-
-.stockist .wpsl-search .wpsl-input #wpsl-search-input input {
-  width: 90%;
-  border: 0;
-  background-color: #f8f8f8;
-  padding: 10px 10px;
-}
-
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/common/_mixins.scss */
+  /* line 58, resources/assets/styles/components/_store-locator.scss */
 
-  .stockist .wpsl-search .wpsl-input #wpsl-search-input input {
+  .stockist .wpsl-search .wpsl-input #wpsl-search-input {
     width: 100%;
   }
 }
 
-/* line 160, resources/assets/styles/common/_mixins.scss */
+/* line 159, resources/assets/styles/common/_mixins.scss */
 
-.stockist .wpsl-search .wpsl-input #wpsl-search-input input:focus {
+.stockist .wpsl-search .wpsl-input #wpsl-search-input:focus {
   outline: none;
   border: 0;
+  background-color: #f8f8f8;
 }
 
 /* line 68, resources/assets/styles/components/_store-locator.scss */
@@ -10712,6 +10757,127 @@ input[value="search"] {
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
+/* line 459, resources/assets/styles/layouts/_header.scss */
+
+.header__search-container {
+  position: relative;
+  margin: 0 0 0 15px;
+}
+
+/* line 463, resources/assets/styles/layouts/_header.scss */
+
+.header__search-container a#search-btn {
+  margin: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 469, resources/assets/styles/layouts/_header.scss */
+
+.header__search-container a#search-btn.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 476, resources/assets/styles/layouts/_header.scss */
+
+.header__search {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 200px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 487, resources/assets/styles/layouts/_header.scss */
+
+.header__search.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 501, resources/assets/styles/layouts/_header.scss */
+
+.header__search input {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding: 5px 0;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: transparent;
+}
+
+@media (min-width: 900px) {
+  /* line 501, resources/assets/styles/layouts/_header.scss */
+
+  .header__search input {
+    font-size: 14px;
+  }
+}
+
+/* line 515, resources/assets/styles/layouts/_header.scss */
+
+.header__search input::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.header__search input::-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+.header__search input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+
+/* line 520, resources/assets/styles/layouts/_header.scss */
+
+.header__search input:focus {
+  outline: none;
+}
+
+/* line 524, resources/assets/styles/layouts/_header.scss */
+
+.header__search input.search-field__submit {
+  border: 0;
+  padding: 3px;
+  margin: 0;
+  width: 30px;
+  position: absolute;
+  right: -7px;
+  background: transparent;
+  top: 3px;
+  font-size: 25px;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  /* line 524, resources/assets/styles/layouts/_header.scss */
+
+  .header__search input.search-field__submit {
+    top: -3px;
+  }
+}
+
+/* line 540, resources/assets/styles/layouts/_header.scss */
+
+.header__search input.search-field__submit.active {
+  color: #000;
+}
+
 /* line 1, resources/assets/styles/layouts/_page-header.scss */
 
 .page-header {
@@ -10814,7 +10980,14 @@ input[value="search"] {
   }
 }
 
-/* line 36, resources/assets/styles/layouts/_footer.scss */
+/* line 35, resources/assets/styles/layouts/_footer.scss */
+
+.content-info__newsletter a {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+}
+
+/* line 41, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__row {
   display: -webkit-box;
@@ -10828,7 +11001,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 36, resources/assets/styles/layouts/_footer.scss */
+  /* line 41, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__row {
     -ms-flex-wrap: nowrap;
@@ -10836,21 +11009,21 @@ input[value="search"] {
   }
 }
 
-/* line 45, resources/assets/styles/layouts/_footer.scss */
+/* line 50, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__row--col {
   width: 50%;
 }
 
 @media (min-width: 900px) {
-  /* line 45, resources/assets/styles/layouts/_footer.scss */
+  /* line 50, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__row--col {
     width: 25%;
   }
 }
 
-/* line 52, resources/assets/styles/layouts/_footer.scss */
+/* line 57, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__row--col:first-of-type {
   width: 100%;
@@ -10858,7 +11031,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 52, resources/assets/styles/layouts/_footer.scss */
+  /* line 57, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__row--col:first-of-type {
     width: 25%;
@@ -10866,21 +11039,21 @@ input[value="search"] {
   }
 }
 
-/* line 64, resources/assets/styles/layouts/_footer.scss */
+/* line 69, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__mark {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 64, resources/assets/styles/layouts/_footer.scss */
+  /* line 69, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__mark {
     width: 25%;
   }
 }
 
-/* line 72, resources/assets/styles/layouts/_footer.scss */
+/* line 77, resources/assets/styles/layouts/_footer.scss */
 
 .content-info p {
   font-family: "reader", arial, sans-serif;
@@ -10891,7 +11064,7 @@ input[value="search"] {
   margin: 0;
 }
 
-/* line 81, resources/assets/styles/layouts/_footer.scss */
+/* line 86, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright {
   width: 75%;
@@ -10901,14 +11074,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 81, resources/assets/styles/layouts/_footer.scss */
+  /* line 86, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__copyright {
     margin: 0;
   }
 }
 
-/* line 91, resources/assets/styles/layouts/_footer.scss */
+/* line 96, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright a {
   display: inline-block;
@@ -10919,19 +11092,19 @@ input[value="search"] {
   color: #000;
 }
 
-/* line 94, resources/assets/styles/layouts/_footer.scss */
+/* line 99, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright a::after {
   bottom: 0;
 }
 
-/* line 103, resources/assets/styles/layouts/_footer.scss */
+/* line 108, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__by a {
   font-size: 16px;
 }
 
-/* line 108, resources/assets/styles/layouts/_footer.scss */
+/* line 113, resources/assets/styles/layouts/_footer.scss */
 
 .content-info ul {
   list-style: none;
@@ -10940,14 +11113,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 108, resources/assets/styles/layouts/_footer.scss */
+  /* line 113, resources/assets/styles/layouts/_footer.scss */
 
   .content-info ul {
     margin: 0;
   }
 }
 
-/* line 117, resources/assets/styles/layouts/_footer.scss */
+/* line 122, resources/assets/styles/layouts/_footer.scss */
 
 .content-info ul li {
   color: #000;
@@ -10956,7 +11129,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 117, resources/assets/styles/layouts/_footer.scss */
+  /* line 122, resources/assets/styles/layouts/_footer.scss */
 
   .content-info ul li {
     width: auto;
@@ -10964,7 +11137,7 @@ input[value="search"] {
   }
 }
 
-/* line 129, resources/assets/styles/layouts/_footer.scss */
+/* line 134, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__bottom {
   display: -webkit-box;
@@ -10983,7 +11156,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 129, resources/assets/styles/layouts/_footer.scss */
+  /* line 134, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__bottom {
     -ms-flex-wrap: nowrap;
@@ -10997,7 +11170,7 @@ input[value="search"] {
   }
 }
 
-/* line 145, resources/assets/styles/layouts/_footer.scss */
+/* line 150, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__bottom span {
   margin: 0 5px 0 0;
@@ -11006,7 +11179,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 145, resources/assets/styles/layouts/_footer.scss */
+  /* line 150, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__bottom span {
     width: auto;
@@ -11179,29 +11352,56 @@ input[value="search"] {
 
 /* line 32, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .woocommerce-form__label-for-checkbox {
-  text-align: left;
+.account .woocommerce input {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
 }
 
-/* line 35, resources/assets/styles/layouts/_account.scss */
+@media (min-width: 900px) {
+  /* line 32, resources/assets/styles/layouts/_account.scss */
+
+  .account .woocommerce input {
+    width: 100%;
+  }
+}
+
+/* line 159, resources/assets/styles/common/_mixins.scss */
+
+.account .woocommerce input:focus {
+  outline: none;
+  border: 0;
+  background-color: #f8f8f8;
+}
+
+/* line 36, resources/assets/styles/layouts/_account.scss */
+
+.account .woocommerce .woocommerce-form__label-for-checkbox {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* line 40, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .woocommerce-form__label-for-checkbox input {
   width: auto;
 }
 
-/* line 39, resources/assets/styles/layouts/_account.scss */
+/* line 44, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .woocommerce-form__label-for-checkbox span {
   font-size: 12px;
+  vertical-align: bottom;
 }
 
-/* line 44, resources/assets/styles/layouts/_account.scss */
+/* line 50, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .form-row {
   text-align: center;
 }
 
-/* line 47, resources/assets/styles/layouts/_account.scss */
+/* line 53, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .form-row button {
   font-family: "reader", arial, sans-serif;
@@ -11226,7 +11426,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 47, resources/assets/styles/layouts/_account.scss */
+  /* line 53, resources/assets/styles/layouts/_account.scss */
 
   .account .woocommerce .form-row button {
     font-size: 16px;
@@ -11236,7 +11436,7 @@ input[value="search"] {
 /* line 23, resources/assets/styles/components/_forms.scss */
 
 .account .woocommerce .form-row button:hover {
-  border: 1px solid #e1e1e1;
+  border: 1px solid #abced0;
   background: #abced0;
   color: #000;
 }
@@ -11247,17 +11447,459 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 52, resources/assets/styles/layouts/_account.scss */
+/* line 58, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .lost_password {
   text-align: center;
 }
 
-/* line 55, resources/assets/styles/layouts/_account.scss */
+/* line 61, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .lost_password a {
   font-size: 12px;
   color: #000;
+}
+
+/* line 70, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 900px) {
+  /* line 70, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce {
+    width: 60%;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+/* line 80, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce button {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  padding: 15px 10px;
+  background: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  text-align: center;
+  width: 220px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 30px 0 0 0;
+}
+
+@media (min-width: 900px) {
+  /* line 80, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce button {
+    font-size: 16px;
+  }
+}
+
+/* line 23, resources/assets/styles/components/_forms.scss */
+
+.woocommerce-account .woocommerce button:hover {
+  border: 1px solid #abced0;
+  background: #abced0;
+  color: #000;
+}
+
+/* line 29, resources/assets/styles/components/_forms.scss */
+
+.woocommerce-account .woocommerce button:focus {
+  outline: none;
+}
+
+/* line 86, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 86, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation {
+    width: 30%;
+  }
+}
+
+/* line 93, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 98, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li {
+  text-align: left;
+  margin: 0 10px 10px 10px;
+  display: inline-block;
+}
+
+@media (min-width: 900px) {
+  /* line 98, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li {
+    text-align: left;
+    display: block;
+    margin: 0 0 10px 0;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 109, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type {
+    margin: 30px 0 0 0;
+  }
+}
+
+/* line 116, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a {
+  border-bottom: 1px solid #000;
+}
+
+/* line 121, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+@media (min-width: 900px) {
+  /* line 121, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a {
+    font-size: 16px;
+  }
+}
+
+/* line 127, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a:hover {
+  border-bottom: 1px solid #000;
+}
+
+/* line 135, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 135, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  /* line 135, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content {
+    width: 70%;
+  }
+}
+
+/* line 144, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-info {
+  padding: 0;
+}
+
+/* line 148, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content a {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 148, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content a {
+    font-size: 16px;
+  }
+}
+
+/* line 152, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content h3 {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  /* line 152, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content h3 {
+    font-size: 20px;
+  }
+}
+
+/* line 158, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content label {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 158, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content label {
+    font-size: 16px;
+  }
+}
+
+/* line 164, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content span {
+  font-size: 12px;
+}
+
+/* line 168, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content input {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
+  background-color: #fff;
+}
+
+@media (min-width: 900px) {
+  /* line 168, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content input {
+    width: 100%;
+  }
+}
+
+/* line 159, resources/assets/styles/common/_mixins.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content input:focus {
+  outline: none;
+  border: 0;
+  background-color: #f8f8f8;
+}
+
+/* line 175, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content fieldset input {
+  width: 95%;
+}
+
+/* line 180, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 180, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
+    width: 100%;
+  }
+}
+
+/* line 189, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+}
+
+@media (min-width: 900px) {
+  /* line 189, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
+    font-size: 20px;
+  }
+}
+
+/* line 195, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table {
+  width: 100%;
+  text-align: left;
+}
+
+/* line 199, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 199, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
+    font-size: 16px;
+  }
+}
+
+/* line 203, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th {
+  text-align: left !important;
+}
+
+/* line 207, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td {
+  text-align: left !important;
+  padding: 10px 0 !important;
+}
+
+/* line 214, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses {
+  text-align: left;
+}
+
+/* line 217, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  /* line 217, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
+    font-size: 20px;
+  }
+}
+
+/* line 224, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  margin: 0 0 10px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 224, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
+    font-size: 16px;
+  }
+}
+
+/* line 230, resources/assets/styles/layouts/_account.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
+  width: 90%;
+  border: 0;
+  background-color: #f8f8f8;
+  padding: 10px 10px;
+  background-color: #fff;
+}
+
+@media (min-width: 900px) {
+  /* line 230, resources/assets/styles/layouts/_account.scss */
+
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
+    width: 100%;
+  }
+}
+
+/* line 159, resources/assets/styles/common/_mixins.scss */
+
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus {
+  outline: none;
+  border: 0;
+  background-color: #f8f8f8;
 }
 
 /* line 1, resources/assets/styles/layouts/_cart.scss */
@@ -11422,7 +12064,7 @@ input[value="search"] {
 /* line 23, resources/assets/styles/components/_forms.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button:hover {
-  border: 1px solid #e1e1e1;
+  border: 1px solid #abced0;
   background: #abced0;
   color: #000;
 }
@@ -11788,9 +12430,9 @@ input[value="search"] {
   background: transparent;
 }
 
-/* line 150, resources/assets/styles/common/_mixins.scss */
+/* line 124, resources/assets/styles/layouts/_checkout.scss */
 
-.woocommerce-checkout input input {
+.woocommerce-checkout input {
   width: 90%;
   border: 0;
   background-color: #f8f8f8;
@@ -11798,23 +12440,24 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/common/_mixins.scss */
+  /* line 124, resources/assets/styles/layouts/_checkout.scss */
 
-  .woocommerce-checkout input input {
+  .woocommerce-checkout input {
     width: 100%;
   }
 }
 
-/* line 160, resources/assets/styles/common/_mixins.scss */
+/* line 159, resources/assets/styles/common/_mixins.scss */
 
-.woocommerce-checkout input input:focus {
+.woocommerce-checkout input:focus {
   outline: none;
   border: 0;
+  background-color: #f8f8f8;
 }
 
-/* line 150, resources/assets/styles/common/_mixins.scss */
+/* line 128, resources/assets/styles/layouts/_checkout.scss */
 
-.woocommerce-checkout textarea input {
+.woocommerce-checkout textarea {
   width: 90%;
   border: 0;
   background-color: #f8f8f8;
@@ -11822,18 +12465,19 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/common/_mixins.scss */
+  /* line 128, resources/assets/styles/layouts/_checkout.scss */
 
-  .woocommerce-checkout textarea input {
+  .woocommerce-checkout textarea {
     width: 100%;
   }
 }
 
-/* line 160, resources/assets/styles/common/_mixins.scss */
+/* line 159, resources/assets/styles/common/_mixins.scss */
 
-.woocommerce-checkout textarea input:focus {
+.woocommerce-checkout textarea:focus {
   outline: none;
   border: 0;
+  background-color: #f8f8f8;
 }
 
 /* line 132, resources/assets/styles/layouts/_checkout.scss */
@@ -11882,6 +12526,108 @@ input[value="search"] {
 .woocommerce-checkout select:focus {
   outline: none;
   border: 0;
+}
+
+/* line 1, resources/assets/styles/layouts/_wishlist.scss */
+
+#wl-wrapper {
+  padding: 120px 0;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 1, resources/assets/styles/layouts/_wishlist.scss */
+
+  #wl-wrapper {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+/* line 11, resources/assets/styles/layouts/_wishlist.scss */
+
+#wl-wrapper .wl-intro h2 {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  /* line 11, resources/assets/styles/layouts/_wishlist.scss */
+
+  #wl-wrapper .wl-intro h2 {
+    font-size: 20px;
+  }
+}
+
+/* line 16, resources/assets/styles/layouts/_wishlist.scss */
+
+#wl-wrapper a {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 16, resources/assets/styles/layouts/_wishlist.scss */
+
+  #wl-wrapper a {
+    font-size: 16px;
+  }
+}
+
+/* line 21, resources/assets/styles/layouts/_wishlist.scss */
+
+#wl-wrapper .form-row .button {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  padding: 15px 10px;
+  background: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  text-align: center;
+  width: 220px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  /* line 21, resources/assets/styles/layouts/_wishlist.scss */
+
+  #wl-wrapper .form-row .button {
+    font-size: 16px;
+  }
+}
+
+/* line 23, resources/assets/styles/components/_forms.scss */
+
+#wl-wrapper .form-row .button:hover {
+  border: 1px solid #abced0;
+  background: #abced0;
+  color: #000;
+}
+
+/* line 29, resources/assets/styles/components/_forms.scss */
+
+#wl-wrapper .form-row .button:focus {
+  outline: none;
 }
 
 /* line 1, resources/assets/styles/layouts/_posts.scss */

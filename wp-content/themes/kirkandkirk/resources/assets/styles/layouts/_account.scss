@@ -29,8 +29,13 @@
       margin: 0 0 5px 0;
     }
 
+    input {
+      @include input;
+    }
+
     .woocommerce-form__label-for-checkbox {
-      text-align: left;
+      text-align: center;
+      margin: 20px 0;
 
       input {
         width: auto;
@@ -38,6 +43,7 @@
 
       span {
         font-size: 12px;
+        vertical-align: bottom;
       }
     }
 
@@ -55,6 +61,177 @@
       a {
         font-size: 12px;
         color: $brand--primary;
+      }
+    }
+  }
+}
+
+.woocommerce-account {
+  .woocommerce {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+      width: 60%;
+      flex-wrap: nowrap;
+    }
+
+    button {
+      @include button();
+
+      margin: 30px 0 0 0;
+    }
+
+    .woocommerce-MyAccount-navigation {
+      width: 100%;
+
+      @include breakpoint(medium) {
+        width: 30%;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          text-align: left;
+          margin: 0 10px 10px 10px;
+          display: inline-block;
+
+          @include breakpoint(medium) {
+            text-align: left;
+            display: block;
+            margin: 0 0 10px 0;
+          }
+
+          &:last-of-type {
+            @include breakpoint(medium) {
+            margin: 30px 0 0 0;
+            }
+          }
+
+          &.is-active {
+            a {
+              border-bottom: 1px solid #000;
+            }
+          }
+
+          a {
+            @include subtitle($brand--primary);
+
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+              border-bottom: 1px solid #000;
+            }
+          }
+        }
+      }
+    }
+
+    .woocommerce-MyAccount-content {
+      @include subtitle($brand--primary);
+
+      width: 100%;
+
+      @include breakpoint(medium) {
+        width: 70%;
+      }
+
+      .woocommerce-info {
+        padding: 0;
+      }
+
+      a {
+        @include subtitle($brand--primary);
+      }
+
+      h3 {
+        @include title($brand--primary);
+        margin: 0 0 20px 0;
+        text-align: left;
+      }
+
+      label {
+        @include subtitle($brand--primary);
+        text-align: left;
+        margin: 0 0 10px 0;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      input {
+        @include input;
+
+        background-color: #fff;
+      }
+
+      fieldset {
+        input {
+          width: 95%;
+        }
+      }
+
+      #wl-wrapper {
+        padding: 0;
+        flex-wrap: wrap;
+        width: 100%;
+
+        @include breakpoint(medium) {
+          width: 100%;
+        }
+
+        h2 {
+          @include title($brand--primary);
+          width: 100%;
+          text-align: left;
+        }
+
+        table {
+          width: 100%;
+          text-align: left;
+
+          h2 {
+            @include subtitle($brand--primary);
+          }
+
+          th {
+            text-align: left !important;
+          }
+
+          td {
+            text-align: left !important;
+            padding: 10px 0 !important;
+          }
+        }
+      }
+
+      .woocommerce-Addresses {
+        text-align: left;
+
+        h3 {
+          @include title($brand--primary);
+        }
+      }
+
+      .woocommerce-address-fields {
+
+        label {
+          @include subtitle($brand--primary);
+          text-align: left;
+          margin: 0 0 10px 0;
+        }
+
+        input {
+          @include input;
+
+          background-color: #fff;
+        }
       }
     }
   }

@@ -455,4 +455,92 @@
 	    }
 	  }
 	}
+
+	&__search-container {
+		position: relative;
+		margin: 0 0 0 15px;
+
+		a#search-btn {
+			margin: 0;
+			opacity: 1;
+			visibility: visible;
+			//transition: $transition;
+
+			&.hide {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+	&__search {
+		position: absolute;
+		right: 0;
+    top: -10px;
+		width: 200px;
+		order: 3;
+		z-index: 9;
+		opacity: 0;
+    visibility: hidden;
+		transition: $transition;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		// @include breakpoint(medium) {
+		// 	width: 33.33%;
+		// 	max-width: 300px;
+		// 	position: absolute;
+		// 	left: 50%;
+		// 	margin-left: -150px;
+		// 	order: 2;
+		// }
+
+		input {
+			width: 100%;
+			border-bottom: 1px solid $brand--primary;
+			border-radius: 0;
+			padding: 5px 0;
+			color: $brand--primary;
+			font-size: 16px;
+			font-weight: 300;
+			background-color: transparent;
+
+			@include breakpoint(medium) {
+				font-size: 14px;
+			}
+
+			&::placeholder {
+				color: $brand--primary;
+				opacity: 1;
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&.search-field__submit {
+				border: 0;
+				padding: 3px;
+				margin: 0;
+				width: 30px;
+				position: absolute;
+				right: -7px;
+				background: transparent;
+				top: 3px;
+				font-size: 25px;
+				color: $brand--primary;
+				cursor: pointer;
+				@include breakpoint(medium) {
+					top: -3px;
+				}
+
+				&.active {
+					color: $brand--primary;
+				}
+			}
+		}
+	}
 }

@@ -103,7 +103,7 @@ function jk_woocommerce_breadcrumbs() {
             'wrap_after'  => '</nav>',
             'before'      => '',
             'after'       => '',
-            'home'        => _x( '', 'breadcrumb', 'woocommerce' ),
+            //'home'        => _x( '', 'breadcrumb', 'woocommerce' ),
         );
 }
 

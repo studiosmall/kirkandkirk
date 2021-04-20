@@ -50,7 +50,27 @@
 
     <div class="header__right">
 	    <div class="header__buttons">
-        <a href="#"><span class="ico-search"></span></a>
+        <div class="header__search-container">
+          <a id="search-btn" href="#">
+            <span class="ico-search"></span>
+          </a>
+          {{-- {!! get_search_form(false) !!} --}}
+
+          <form role="search" method="get" class="header__search search-form" action="{{ home_url('/') }}">
+            <label>
+              <input
+                type="search"
+                class="search-field"
+                placeholder="{!! esc_attr_x('Search...', 'placeholder', 'sage') !!}"
+                value="{{ get_search_query() }}"
+                name="s"
+              >
+              <input type="submit" id="searchsubmit" class="search-field__submit" value="<?php echo esc_attr_x( '&#9679;', 'submit button' ); ?>"/>
+            </label>
+          </form>
+
+        </div>
+
         <a href="/wishlists"><span class="ico-heart"></span></a>
         <a href="/account"><span class="ico-account"></span></a>
         <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><span class="ico-basket"></span><span><?php echo sprintf ( _n('(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>

@@ -23,3 +23,10 @@
 .woocommerce-info {
 	padding: 60px 0 120px 0;
 }
+
+.term-new-arrivals,
+.tax-product_cat {
+	.woocommerce-products-header {
+		display: none;
+	}
+}
