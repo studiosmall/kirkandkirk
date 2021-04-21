@@ -18,6 +18,11 @@
 			font-family: $font--body;
 			font-size: 18px;
 			letter-spacing: 0.86px;
+
+			&.disabled {
+				opacity: 0.5;
+				cursor: initial;
+			}
 		}
 	}
 
@@ -43,11 +48,13 @@
 		@include hoverline($brand--primary);
 
 		text-transform: uppercase;
+		margin: 6px 0 0 0;
+		display: block;
 	}
 
 	&__sizer,
 	&__card {
-		width: calc((100% - 40px) / 2);
+		width: 100%;
 		padding: 0 0 35px 0;
 
 		@include breakpoint(medium) {
@@ -57,15 +64,43 @@
 
 	&__card {
 		float: left;
-		padding: 500px 0 0 0;
+		padding: 0 0 175px 0;
 
-		&:nth-child(2) {
-			padding: 0;
+		@include breakpoint(medium) {
+			padding: 600px 0 350px 0;
 		}
 
-		&:nth-child(4n) {
-			padding: 0;
+		&:nth-child(odd) {
+			padding: 0 0 175px 0;
+
+			@include breakpoint(medium) {
+				padding: 350px 0 350px 0;
+			}
 		}
+
+		&:nth-child(even) {
+			padding: 0 0 175px 0;
+
+			@include breakpoint(medium) {
+				padding: 0 0 350px 0;
+			}
+		}
+
+		&:nth-child(3) {
+			padding: 0 0 175px 0;
+
+			@include breakpoint(medium) {
+				padding: 600px 0 350px 0;
+			}
+		}
+
+		// &:nth-child(2) {
+		// 	padding: 0;
+		// }
+
+		// &:nth-child(4n) {
+		// 	padding: 0;
+		// }
 
 		h2 {
 			@include title($brand--primary);

@@ -1,3 +1,18 @@
+klarna-placement {
+	display: inline-block;
+	width: 100%;
+
+	div > div {
+		border: 0 !important;
+    padding: 10px 0 0 0 !important;
+	}
+
+	.container {
+		border: 0 !important;
+    padding: 10px 0 0 0 !important;
+	}
+}
+
 .single-product {
 	background-color: #fff;
 
@@ -219,10 +234,10 @@
 			.button {
 				@include btn($brand--primary);
 
-				margin: 10px 0;
-				width: 50%;
+				width: 100%;
+				margin: 20px 0 10px 0;
 				float: right;
-				min-width: 200px;
+				//min-width: 200px;
 			}
 
 			.cart {

@@ -65,6 +65,14 @@
 			width: 31%;
 		}
 
+		@include breakpoint(x-large) {
+			width: 21%;
+		}
+
+		@include breakpoint(xx-large) {
+			width: 20%;
+		}
+
 		&:hover {
 			.featured-products__meta {
 				//border-width: 3px;

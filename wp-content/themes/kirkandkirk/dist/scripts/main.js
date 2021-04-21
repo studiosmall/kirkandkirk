@@ -2263,31 +2263,6 @@ Router.prototype.loadEvents = function loadEvents () {
       })
     }
 
-    if($('.articles__items').length) {
-      var $grid = $('.articles__items');
-      // var $grid = $('.articles__items').imagesLoaded( function() {
-        $grid.masonry({
-          itemSelector: '.articles__card',
-          percentPosition: true,
-          columnWidth: '.articles__sizer',
-          gutter: 40,
-        });
-      // });
-
-      $('.moreless-button').click(function(e) {
-        e.preventDefault();
-
-        $(this).prev('.moretext').slideToggle();
-        $(this).fadeOut();
-
-        // if ($('.moreless-button').text() == 'Read More') {
-        //   $(this).text('Read Less')
-        // } else {
-        //   $(this).text('Read More')
-        // }
-      });
-    }
-
     if($('.wc360').length) {
       setTimeout(
         function() {
@@ -2303,47 +2278,95 @@ Router.prototype.loadEvents = function loadEvents () {
       });
     }
 
+    if($('#wpsl-wrap').length) {
+      $('#wpsl-search-input').focus(function(){
+        $(this).attr('placeholder','');
+      });
+      $('#wpsl-search-input').focusout(function(){
+        $(this).attr('placeholder','YOUR LOCATION');
+      });
+    }
+
+
+    if($('.articles__items').length) {
+      var $grid = $('.articles__items');
+      // var $grid = $('.articles__items').imagesLoaded( function() {
+        $grid.masonry({
+          itemSelector: '.articles__card',
+          percentPosition: true,
+          columnWidth: '.articles__sizer',
+          gutter: 40,
+        });
+      // });
+
+      $(document).on('click', '.moreless-button', function(e){
+      // $('.moreless-button').on('click', function (e) {
+        e.preventDefault();
+
+        $(this).prev('.moretext').slideToggle();
+        $(this).fadeOut();
+
+        $grid.masonry();
+
+        // if ($('.moreless-button').text() == 'Read More') {
+        //   $(this).text('Read Less')
+        // } else {
+        //   $(this).text('Read More')
+        // }
+      });
+    }
 
     var container = $('.articles__items');
 
-    $('.more-articles').on('click', function (e) {
-      e.preventDefault();
+      $('.more-articles').on('click', function (e) {
+        e.preventDefault();
 
-      var filter = $('.filter__select').val();
-      var offset = parseInt($('.articles__items').attr('data-offset'));
-      // let search = $('.search-overlay input[type='search']').val();  
-
-      $.ajax({
-        type: 'POST',
-        url: window.siteOptions.ajaxurl,
-        data: {
-          action: 'kirkandkirk_more_articles',
-          offset: offset,
-          // search: search,
-          category: filter,
-        },
-        success: function(result) {
-          if ( result == 'none' ) {
-            $('.more-articles').text('No more posts...').addClass('disabled');
-          } else {
-
-            //$('.articles__items').append(result);
-
-            var items = result;
-            // make jQuery object
-            var $items = $(items).hide();
-            container.append($items);
-
-            $items.show();
-            container.masonry('appended', $items);
-        
-
-            var count = $('.articles__card').length;
-            $('.articles__items').attr('data-offset', count);
-          }
-        },
+        if ($('.more-articles').hasClass('disabled')) {
+         //
+        } else {
+          var filter = $('.filter__select').val();
+          var offset = parseInt($('.articles__items').attr('data-offset'));
+          // let search = $('.search-overlay input[type='search']').val();
+  
+          $('.more-articles').text('Loading ...').addClass('disabled');
+  
+          $.ajax({
+            type: 'POST',
+            url: window.siteOptions.ajaxurl,
+            data: {
+              action: 'kirkandkirk_more_articles',
+              offset: offset,
+              // search: search,
+              category: filter,
+            },
+            success: function(result) {
+              if ( result == 'none' ) {
+                $('.more-articles').text('No more posts...').addClass('disabled');
+              } else {
+  
+                $('.more-articles').text('Load More').removeClass('disabled');
+                //$('.articles__items').append(result);
+  
+                var items = result;
+                // make jQuery object
+                var $items = $(items).hide();
+                container.append($items);
+  
+                $items.show();
+  
+                //container.masonry('appended', $items);
+                setTimeout( function(){
+                  container.append( $items ).masonry( 'appended', $items );
+                }, 100);
+  
+  
+                var count = $('.articles__card').length;
+                $('.articles__items').attr('data-offset', count);
+              }
+            },
+          });
+        }
       });
-    });
 
 
   },

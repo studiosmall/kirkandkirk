@@ -11,7 +11,7 @@
   <section class="feature-story">
  
       <div class="feature-story__items">
-        <div class="feature-story__item bg-color__{{ $colour }}">
+        <div class="feature-story__item bg-color" style="background-color: {{ $colour }}">
 
           @if($image)
             <div class="feature-story__image">
@@ -21,7 +21,7 @@
 
         </div>
 
-        <div class="feature-story__item  bg-color__{{ $colour }}--alt">
+        <div class="feature-story__item bg-color alt">
 
           <div class="feature-story__inner">
             <h3>MEET</h3>

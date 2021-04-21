@@ -17,6 +17,7 @@ module.exports = {
     'no-duplicate-selectors' : null,
     'selector-type-case' : null,
     'no-eol-whitespace' : null,
+    'selector-type-no-unknown' : null,
     'selector-list-comma-newline-after' : null,
     'declaration-block-no-duplicate-properties' : null,
     'declaration-block-single-line-max-declarations' : null,

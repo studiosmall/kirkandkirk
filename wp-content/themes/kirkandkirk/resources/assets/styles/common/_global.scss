@@ -93,11 +93,11 @@ img {
 .bg-color {
   &__blue {
     background-color: #bfdbe0;
-
-    &--alt {
-      background-color: #dde2ea;
-    }
   }
+}
+
+.alt {
+  background-color: #dde2ea;
 }
 
 .alert {
