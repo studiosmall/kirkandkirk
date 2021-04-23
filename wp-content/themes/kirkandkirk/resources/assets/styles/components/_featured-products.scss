@@ -1,3 +1,9 @@
+.single-product .featured-products {
+	.featured-products__inner {
+		@include inner;
+	}
+}
+
 .featured-products {
 	@include section;
 
@@ -66,11 +72,11 @@
 		}
 
 		@include breakpoint(x-large) {
-			width: 21%;
+			width: 25%;
 		}
 
 		@include breakpoint(xx-large) {
-			width: 20%;
+			width: 25%;
 		}
 
 		&:hover {

@@ -13,6 +13,16 @@
       width: 60%;
     }
 
+    p.cart-empty {
+      padding: 60px 0 30px 0;
+    }
+
+    .return-to-shop {
+      a {
+        @include hoverline($brand--primary);
+      }
+    }
+
     .woocommerce-cart-form {
       .shop_table {
         width: 100%;

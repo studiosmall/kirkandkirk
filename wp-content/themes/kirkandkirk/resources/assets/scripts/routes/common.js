@@ -59,16 +59,26 @@ export default {
     $('#search-btn').on('click', function(e){
       e.preventDefault();
 
-      $(this).toggleClass('hide');
+      // $(this).toggleClass('hide');
       $('.header__search').toggleClass('active');
     });
 
     if($('.woocommerce-breadcrumb a').length) {
-      if($('.woocommerce-breadcrumb a').text() == 'Optical') {
-        $(this).attr('/shop/optical/');
+      let $first = $('.woocommerce-breadcrumb a').first();
+      if($($first).text() == 'Optical') {
+        $($first).attr('href','/shop/optical/');
+
+        // setTimeout(function() {
+        //     $($first).addClass('hello');
+        // }, 1000);
       }
-      //console.log($('.woocommerce-breadcrumb a').text());
     }
+
+
+    $('#share-icons').on('click', function(e){
+      e.preventDefault();
+      $(this).parent().toggleClass('active');
+    });
 
     // let onScroll = function() {
     //   let navbarHeight = $('.header').outerHeight();

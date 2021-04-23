@@ -65,7 +65,7 @@
                 value="{{ get_search_query() }}"
                 name="s"
               >
-              <input type="submit" id="searchsubmit" class="search-field__submit" value="<?php echo esc_attr_x( '&#9679;', 'submit button' ); ?>"/>
+              <input type="submit" id="searchsubmit" class="search-field__submit" value=""/>
             </label>
           </form>
 

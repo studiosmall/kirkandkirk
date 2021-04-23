@@ -94,6 +94,14 @@
 			}
 		}
 
+		&:last-of-type {
+			padding: 0 0 175px 0;
+
+			@include breakpoint(medium) {
+				padding: 600px 0 250px 0;
+			}
+		}
+
 		// &:nth-child(2) {
 		// 	padding: 0;
 		// }

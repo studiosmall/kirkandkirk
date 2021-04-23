@@ -58,8 +58,17 @@ if ( $product->is_in_stock() ) : ?>
 		<?php endforeach; ?>
 	</ul>
 
-	
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
+
+	<?php
+		$eye_size = get_field('eye_size');
+		$bridge   = get_field('bridge');
+	?>
+
+	<div class="eye-size">
+		<?php if($eye_size) { ?><span>Eye size:</span> 	<?php echo $eye_size; } ?><?php if($bridge) { ?>, <span>Bridge:</span> <?php echo $bridge; } ?>
+	</div>
+
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		<?php
@@ -76,8 +85,36 @@ if ( $product->is_in_stock() ) : ?>
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
+		<div class="how-to__container">
+			<a class="how-to" href="/faqs">How to Measure and FAQs</a>
+		</div>
+
+		<?php
+			$url_ID = get_the_ID();
+		?>
 		<div class="share">
-			<a href="#">Share</a>
+			<a id="share-icons" href="#">Share</a>
+				<div class="share__inner">
+					<ul>
+						<li>
+							<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink($url_ID); ?>" target="_blank">
+								Facebook
+							</a>
+						</li>
+						<li>
+							<a href="//pinterest.com/pin/create/link/?url=<?php the_permalink($url_ID); ?>&amp;description=<?php the_title(); ?>" target="_blank">Pinterest</a>
+						</li>
+
+						<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true">Pinterest</a>
+						<li>
+							<a href="https://twitter.com/intent/tweet
+?url=http%3A%2F%2F<?php the_permalink($url_ID); ?>%2F
+&text=<?php the_title($url_ID); ?>" target="_blank">
+								Twitter
+							</a>
+						</li>
+					</ul>
+				</div>
 		</div>
 
 

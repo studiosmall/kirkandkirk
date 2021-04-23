@@ -94,6 +94,8 @@ klarna-placement {
 			@include hoverline($brand--primary);
 
 			margin: 0 0 30px 0;
+			border-bottom: 1px solid $brand--primary;
+			transition: $transition;
 
 			&::after {
 				transform: scaleX(1);
@@ -104,6 +106,10 @@ klarna-placement {
 				@include breakpoint(medium) {
 					transform: scaleX(0);
 				}
+			}
+
+			&:hover {
+				border-bottom: 1px solid transparent;
 			}
 		}
 
@@ -141,6 +147,30 @@ klarna-placement {
 
 		.share {
 			padding: 0 0 5px 0;
+
+			&.active {
+				.share__inner {
+					opacity: 1;
+					visibility: visible;
+					display: block;
+				}
+			}
+
+			&__inner {
+				opacity: 0;
+				visibility: hidden;
+				display: none;
+
+				ul {
+					list-style: none;
+					margin: 0 0 30px 0;
+					padding: 0;
+
+					li {
+						margin: 3px 0;
+					}
+				}
+			}
 
 			a {
 				@include hoverline($brand--primary);
@@ -205,12 +235,12 @@ klarna-placement {
 			.price {
 				@include subtitle($brand--primary);
 
-				font-size: 21px;
+				font-size: 18px;
 				margin: 10px 0 30px 0;
 				display: inline-block;
 
 				@include breakpoint(medium) {
-					font-size: 21px;
+					font-size: 18px;
 				}
 			}
 
@@ -340,8 +370,12 @@ klarna-placement {
 		}
 	}
 
+	.eye-size {
+		padding: 40px 0 2px 0;
+	}
+
 	.woocommerce-product-attributes {
-		padding: 20px 0;
+		padding: 0 0 20px 0;
 		tr {
 			th,
 			p {

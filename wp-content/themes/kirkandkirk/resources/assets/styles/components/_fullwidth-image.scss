@@ -1,7 +1,7 @@
 .fullwidth-image {
   background-size: cover;
 	// background-position: 50%;
-  background-position: 50% -50px;
+  background-position: 50% 0;
 	width: 100%;
 	height: 86.5vh;
 	text-align: center;
@@ -109,7 +109,7 @@
     p {
       max-width: 800px;
       width: 100%;
-      color: $brand--primary;
+      color: $brand--white;
       font-family: $font--body;
 			font-size: 14px;
 			font-weight: 500;

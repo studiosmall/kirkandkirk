@@ -51,6 +51,7 @@
 
 		&.active {
 			.plus {
+
 				&::after {
 					content: "\2212";
 				}
@@ -63,7 +64,8 @@
 			&::after {
 				content: "\002B";
 				display: inline-block;
-				font-size: 25px;
+				font-size: 23px;
+				font-weight: 100;
 				vertical-align: middle;
 				color: $brand--primary;
 			}

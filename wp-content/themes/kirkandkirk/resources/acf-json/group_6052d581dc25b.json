@@ -61,6 +61,44 @@
             "mime_types": ""
         },
         {
+            "key": "field_60822bc41fe7c",
+            "label": "Eye Size",
+            "name": "eye_size",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60822bda1fe7d",
+            "label": "Bridge",
+            "name": "bridge",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_6077befd5dc40",
             "label": "Product Variations",
             "name": "product_variations",
@@ -178,5 +216,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618460705
+    "modified": 1619143703
 }
