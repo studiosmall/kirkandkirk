@@ -1,6 +1,12 @@
 .two-column {
 	@include section;
 
+	padding: 0;
+
+	@include breakpoint(medium) {
+    padding: 35px 0;
+	}
+
 	&__inner {
 		@include inner;
 
@@ -22,6 +28,11 @@
 	}
 
 	&__textarea {
+		padding: 15px 0;
+
+		@include breakpoint(medium) {
+			padding: 0;
+		}
 
 		&.textarea-left {
 			width: 100%;
@@ -47,7 +58,11 @@
 	}
 
 	&__top-image {
-		padding: 0 0 70px 0;
+		padding: 0;
+
+		@include breakpoint(medium) {
+			padding: 0 0 70px 0;
+		}
 	}
 
 	&__bottom-container {
@@ -74,7 +89,7 @@
 		img {
 			max-width: 100%;
 			width: 100%;
-			padding: 70px 0;
+			padding: 0 0 40px 0;
 
 			@include breakpoint(medium) {
 				max-width: 60%;

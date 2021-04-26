@@ -7,7 +7,7 @@
       <div class="collection-products__bottom" data-aos="fade-up">
         <div class="collection-products__bottom--inner">
         <h3>{!! $c['collection_title'] !!}</h3>
-        <a href="{{ $c['collection_link'] }}">View Full Collection</a>
+        <a class="collection-btn" href="{{ $c['collection_link'] }}">View Full Collection</a>
         </div>
       </div>
 
@@ -45,6 +45,10 @@
 
           </div>
         @endforeach
+      </div>
+
+      <div class="collection-btn-mob">
+        <a href="{{ $c['collection_link'] }}">View Full Collection</a>
       </div>
 
     </div>

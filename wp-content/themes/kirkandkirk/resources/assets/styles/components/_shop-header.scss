@@ -56,8 +56,12 @@
 	@include subtitle($brand--primary);
 
 	text-transform: uppercase;
-	padding: 20px 0 0 0;
+	padding: 20px 0;
 	font-weight: 500;
+
+	@include breakpoint(medium) {
+		padding: 20px 0 0 0;
+	}
 
 	a {
 		@include hoverline($brand--primary);

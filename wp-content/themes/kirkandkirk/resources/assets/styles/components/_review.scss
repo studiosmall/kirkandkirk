@@ -10,21 +10,30 @@
 
 	.review-slider {
 		display: flex;
+		flex-wrap: wrap;
+
+		@include breakpoint(medium) {
+			flex-wrap: nowrap;
+		}
 
 		&__col {
 			width: 100%;
+			padding: 10px 0 50px 0;
 
 			@include breakpoint(medium) {
 				width: 40%;
+				padding: 0;
 			}
 
 			&:last-of-type {
 				width: 100%;
 				display: flex;
 				align-items: center;
+				padding: 0;
 
 				@include breakpoint(medium) {
 					width: 60%;
+					padding: 0;
 				}
 			}
 		}
@@ -37,11 +46,16 @@
 		}
 
 		&__quote {
-			width: 80%;
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 80%;
+			}
 		}
 	}
 
 	.slider-review {
+		
 		.slick-next {
 			opacity: 1;
 			display: block;
@@ -49,7 +63,14 @@
 			width: 17px;
 			height: 30px;
 			background-image: url("../images/ico-arrow-right.svg");
+			top: 21px;
+			right: -10px;
 			transition: $transition;
+
+			@include breakpoint(medium) {
+				top: 50%;
+				right: -25px;
+			}
 
 			&::before {
 				content: " ";
@@ -67,7 +88,14 @@
 			width: 17px;
 			height: 30px;
 			background-image: url("../images/ico-arrow-left.svg");
+			top: 21px;
+			left: -10px;
 			transition: $transition;
+
+			@include breakpoint(medium) {
+				top: 50%;
+				left: -25px;
+			}
 
 			&::before {
 				content: " ";

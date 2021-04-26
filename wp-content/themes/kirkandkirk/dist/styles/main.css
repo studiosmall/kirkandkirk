@@ -5245,7 +5245,7 @@ p {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-  padding: 100px 0 0 0;
+  padding: 120px 0 0 0;
   margin: 0 auto;
   max-width: 100%;
   width: 100%;
@@ -5448,7 +5448,7 @@ input:focus {
   background: #abced0;
   z-index: 5;
   width: 100vw;
-  height: auto;
+  height: 100%;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all ease 0.3s;
@@ -5464,20 +5464,29 @@ input:focus {
 
   .off-canvas {
     width: 100vw;
+    height: auto;
   }
 }
 
-/* line 24, resources/assets/styles/components/_off-canvas.scss */
+/* line 25, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas.active {
-  opacity: 1;
+  opacity: 0.9;
   visibility: visible;
   -webkit-transform: translateY(0);
        -o-transform: translateY(0);
           transform: translateY(0);
 }
 
-/* line 29, resources/assets/styles/components/_off-canvas.scss */
+@media (min-width: 900px) {
+  /* line 25, resources/assets/styles/components/_off-canvas.scss */
+
+  .off-canvas.active {
+    opacity: 1;
+  }
+}
+
+/* line 34, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas__inner {
   padding: 0 20px;
@@ -5489,11 +5498,13 @@ input:focus {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 180px 20px 10px 20px;
 }
 
 @media (min-width: 900px) {
-  /* line 29, resources/assets/styles/components/_off-canvas.scss */
+  /* line 34, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas__inner {
     padding: 0 50px;
@@ -5501,22 +5512,36 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 29, resources/assets/styles/components/_off-canvas.scss */
+  /* line 34, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas__inner {
     padding: 170px 46px 10px 46px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
-/* line 41, resources/assets/styles/components/_off-canvas.scss */
+/* line 48, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas .menu-main-menu-left-container,
 .off-canvas .menu-main-menu-center-container,
 .off-canvas .menu-main-menu-right-container {
-  margin: 0 5% 0 0;
+  margin: 0;
+  width: 100%;
 }
 
-/* line 47, resources/assets/styles/components/_off-canvas.scss */
+@media (min-width: 900px) {
+  /* line 48, resources/assets/styles/components/_off-canvas.scss */
+
+  .off-canvas .menu-main-menu-left-container,
+  .off-canvas .menu-main-menu-center-container,
+  .off-canvas .menu-main-menu-right-container {
+    margin: 0 5% 0 0;
+    width: initial;
+  }
+}
+
+/* line 60, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul {
   margin: 0;
@@ -5524,32 +5549,31 @@ input:focus {
   list-style: none;
 }
 
-/* line 51, resources/assets/styles/components/_off-canvas.scss */
+/* line 64, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li {
   font-size: 24px;
   line-height: 1;
-  margin: 0 0 32px;
+  margin: 0 0 20px;
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: 900px) {
-  /* line 51, resources/assets/styles/components/_off-canvas.scss */
+  /* line 64, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li {
-    text-align: left;
     margin: 0 0 17px;
   }
 }
 
-/* line 64, resources/assets/styles/components/_off-canvas.scss */
+/* line 76, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li.current-menu-item a {
   color: #fff;
 }
 
-/* line 74, resources/assets/styles/components/_off-canvas.scss */
+/* line 86, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a {
   display: inline-block;
@@ -5559,7 +5583,7 @@ input:focus {
   text-decoration: none;
   font-family: "reader", arial, sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   text-decoration: none;
   color: #000;
   letter-spacing: 0.75px;
@@ -5569,45 +5593,53 @@ input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 86, resources/assets/styles/components/_off-canvas.scss */
+@media (min-width: 900px) {
+  /* line 86, resources/assets/styles/components/_off-canvas.scss */
+
+  .off-canvas ul li a {
+    font-size: 14px;
+  }
+}
+
+/* line 102, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a:hover {
   color: #fff;
 }
 
-/* line 90, resources/assets/styles/components/_off-canvas.scss */
+/* line 106, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 74, resources/assets/styles/components/_off-canvas.scss */
+  /* line 86, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li a {
     font-size: 16px;
   }
 }
 
-/* line 99, resources/assets/styles/components/_off-canvas.scss */
+/* line 115, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu {
   padding: 0;
 }
 
-/* line 102, resources/assets/styles/components/_off-canvas.scss */
+/* line 118, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li {
   margin: 0 0 1px 0;
 }
 
-/* line 108, resources/assets/styles/components/_off-canvas.scss */
+/* line 124, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li.current-menu-item a:hover {
   color: #fff;
 }
 
-/* line 119, resources/assets/styles/components/_off-canvas.scss */
+/* line 135, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a {
   display: inline-block;
@@ -5618,20 +5650,20 @@ input:focus {
   font-weight: 100;
 }
 
-/* line 123, resources/assets/styles/components/_off-canvas.scss */
+/* line 139, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a:hover {
   color: #fff;
 }
 
-/* line 127, resources/assets/styles/components/_off-canvas.scss */
+/* line 143, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 119, resources/assets/styles/components/_off-canvas.scss */
+  /* line 135, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li ul.sub-menu li a {
     font-size: 16px;
@@ -5639,21 +5671,21 @@ input:focus {
   }
 }
 
-/* line 141, resources/assets/styles/components/_off-canvas.scss */
+/* line 157, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation {
   display: block;
 }
 
 @media (min-width: 900px) {
-  /* line 141, resources/assets/styles/components/_off-canvas.scss */
+  /* line 157, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas #menu-mobile-navigation {
     display: none;
   }
 }
 
-/* line 149, resources/assets/styles/components/_off-canvas.scss */
+/* line 165, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu {
   display: none;
@@ -5662,13 +5694,13 @@ input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 157, resources/assets/styles/components/_off-canvas.scss */
+/* line 173, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu.active {
   display: block;
 }
 
-/* line 161, resources/assets/styles/components/_off-canvas.scss */
+/* line 177, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu ul.sub-menu {
   display: block;
@@ -6497,8 +6529,8 @@ input:focus {
 
 .spotify__code {
   mix-blend-mode: multiply;
-  max-width: 300px;
-  padding: 0 0 44px 0;
+  max-width: 100%;
+  padding: 0;
 }
 
 @media (min-width: 900px) {
@@ -6506,24 +6538,27 @@ input:focus {
 
   .spotify__code {
     padding: 0;
+    max-width: 300px;
   }
 }
 
-/* line 54, resources/assets/styles/components/_spotify.scss */
+/* line 55, resources/assets/styles/components/_spotify.scss */
 
 .spotify__quote {
   max-width: 100%;
+  display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 54, resources/assets/styles/components/_spotify.scss */
+  /* line 55, resources/assets/styles/components/_spotify.scss */
 
   .spotify__quote {
     max-width: 700px;
+    display: initial;
   }
 }
 
-/* line 61, resources/assets/styles/components/_spotify.scss */
+/* line 64, resources/assets/styles/components/_spotify.scss */
 
 .spotify__quote p,
 .spotify__quote span {
@@ -6538,7 +6573,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 61, resources/assets/styles/components/_spotify.scss */
+  /* line 64, resources/assets/styles/components/_spotify.scss */
 
   .spotify__quote p,
   .spotify__quote span {
@@ -6546,13 +6581,13 @@ input:focus {
   }
 }
 
-/* line 66, resources/assets/styles/components/_spotify.scss */
+/* line 69, resources/assets/styles/components/_spotify.scss */
 
 .spotify__quote span {
   font-style: initial;
 }
 
-/* line 71, resources/assets/styles/components/_spotify.scss */
+/* line 74, resources/assets/styles/components/_spotify.scss */
 
 .spotify__info {
   display: -webkit-box;
@@ -6567,7 +6602,7 @@ input:focus {
   padding: 44px 0 0 0;
 }
 
-/* line 78, resources/assets/styles/components/_spotify.scss */
+/* line 81, resources/assets/styles/components/_spotify.scss */
 
 .spotify h3 {
   font-family: "reader", arial, sans-serif;
@@ -6581,14 +6616,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 78, resources/assets/styles/components/_spotify.scss */
+  /* line 81, resources/assets/styles/components/_spotify.scss */
 
   .spotify h3 {
     font-size: 20px;
   }
 }
 
-/* line 84, resources/assets/styles/components/_spotify.scss */
+/* line 87, resources/assets/styles/components/_spotify.scss */
 
 .spotify h4 {
   font-family: "reader", arial, sans-serif;
@@ -6601,7 +6636,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 84, resources/assets/styles/components/_spotify.scss */
+  /* line 87, resources/assets/styles/components/_spotify.scss */
 
   .spotify h4 {
     font-size: 16px;
@@ -6690,18 +6725,33 @@ input:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
-/* line 47, resources/assets/styles/components/_feature-story.scss */
+@media (min-width: 900px) {
+  /* line 42, resources/assets/styles/components/_feature-story.scss */
 
-.feature-story__items.reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  .feature-story__items {
+    -webkit-box-orient: initial;
+    -webkit-box-direction: initial;
+        -ms-flex-direction: initial;
+            flex-direction: initial;
+  }
 }
 
 /* line 52, resources/assets/styles/components/_feature-story.scss */
+
+.feature-story__items.reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+/* line 57, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story__item {
   width: 100%;
@@ -6727,10 +6777,11 @@ input:focus {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  line-height: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 52, resources/assets/styles/components/_feature-story.scss */
+  /* line 57, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story__item {
     width: 50%;
@@ -6741,7 +6792,7 @@ input:focus {
   }
 }
 
-/* line 71, resources/assets/styles/components/_feature-story.scss */
+/* line 77, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story__item:nth-child(even) {
   -webkit-box-ordinal-group: 2;
@@ -6750,7 +6801,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 71, resources/assets/styles/components/_feature-story.scss */
+  /* line 77, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story__item:nth-child(even) {
     -webkit-box-ordinal-group: initial;
@@ -6759,22 +6810,28 @@ input:focus {
   }
 }
 
-/* line 79, resources/assets/styles/components/_feature-story.scss */
+/* line 85, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story__image {
-  padding: 10% 5%;
   text-align: center;
 }
 
-/* line 83, resources/assets/styles/components/_feature-story.scss */
+@media (min-width: 900px) {
+  /* line 85, resources/assets/styles/components/_feature-story.scss */
+
+  .feature-story__image {
+    padding: 10% 5%;
+  }
+}
+
+/* line 92, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story__image img {
   height: auto;
-  width: auto;
 }
 
 @media (min-width: 900px) {
-  /* line 83, resources/assets/styles/components/_feature-story.scss */
+  /* line 92, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story__image img {
     width: auto;
@@ -6782,7 +6839,7 @@ input:focus {
   }
 }
 
-/* line 95, resources/assets/styles/components/_feature-story.scss */
+/* line 104, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story__inner {
   margin: 35px 20px;
@@ -6791,7 +6848,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 95, resources/assets/styles/components/_feature-story.scss */
+  /* line 104, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story__inner {
     margin: 10% 10%;
@@ -6799,7 +6856,7 @@ input:focus {
   }
 }
 
-/* line 106, resources/assets/styles/components/_feature-story.scss */
+/* line 115, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story h2 {
   font-family: "reader", arial, sans-serif;
@@ -6813,14 +6870,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 106, resources/assets/styles/components/_feature-story.scss */
+  /* line 115, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story h2 {
     font-size: 20px;
   }
 }
 
-/* line 112, resources/assets/styles/components/_feature-story.scss */
+/* line 121, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story h3 {
   font-family: "reader", arial, sans-serif;
@@ -6829,17 +6886,18 @@ input:focus {
   font-weight: 100;
   font-size: 14px;
   margin: 0 0 10px 0;
+  line-height: 22px;
 }
 
 @media (min-width: 900px) {
-  /* line 112, resources/assets/styles/components/_feature-story.scss */
+  /* line 121, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story h3 {
     font-size: 16px;
   }
 }
 
-/* line 125, resources/assets/styles/components/_feature-story.scss */
+/* line 135, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story h4 {
   font-family: "reader", arial, sans-serif;
@@ -6852,14 +6910,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 125, resources/assets/styles/components/_feature-story.scss */
+  /* line 135, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story h4 {
     font-size: 16px;
   }
 }
 
-/* line 129, resources/assets/styles/components/_feature-story.scss */
+/* line 139, resources/assets/styles/components/_feature-story.scss */
 
 .feature-story a {
   color: #000;
@@ -6875,7 +6933,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 129, resources/assets/styles/components/_feature-story.scss */
+  /* line 139, resources/assets/styles/components/_feature-story.scss */
 
   .feature-story a {
     position: absolute;
@@ -7002,7 +7060,7 @@ input:focus {
 /* line 64, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__product {
-  width: 31%;
+  width: 70%;
   position: relative;
   padding: 0 20px;
   cursor: -webkit-grab;
@@ -7486,6 +7544,20 @@ input:focus {
 
 /* line 138, resources/assets/styles/components/_collection-products.scss */
 
+.collection-products__bottom .collection-btn {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  /* line 138, resources/assets/styles/components/_collection-products.scss */
+
+  .collection-products__bottom .collection-btn {
+    display: initial;
+  }
+}
+
+/* line 146, resources/assets/styles/components/_collection-products.scss */
+
 .collection-products__bottom h3 {
   font-family: "reader", arial, sans-serif;
   color: #000;
@@ -7498,7 +7570,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 138, resources/assets/styles/components/_collection-products.scss */
+  /* line 146, resources/assets/styles/components/_collection-products.scss */
 
   .collection-products__bottom h3 {
     font-size: 20px;
@@ -7506,14 +7578,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 138, resources/assets/styles/components/_collection-products.scss */
+  /* line 146, resources/assets/styles/components/_collection-products.scss */
 
   .collection-products__bottom h3 {
     font-size: 18px;
   }
 }
 
-/* line 148, resources/assets/styles/components/_collection-products.scss */
+/* line 156, resources/assets/styles/components/_collection-products.scss */
 
 .collection-products__bottom a {
   display: inline-block;
@@ -7531,44 +7603,84 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 148, resources/assets/styles/components/_collection-products.scss */
+  /* line 156, resources/assets/styles/components/_collection-products.scss */
 
   .collection-products__bottom a {
     font-size: 16px;
   }
 }
 
-/* line 157, resources/assets/styles/components/_collection-products.scss */
+/* line 163, resources/assets/styles/components/_collection-products.scss */
+
+.collection-products .collection-btn-mob {
+  padding: 40px 0 0 0;
+  display: inline-block;
+}
+
+@media (min-width: 900px) {
+  /* line 163, resources/assets/styles/components/_collection-products.scss */
+
+  .collection-products .collection-btn-mob {
+    display: none;
+  }
+}
+
+/* line 171, resources/assets/styles/components/_collection-products.scss */
+
+.collection-products .collection-btn-mob a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 171, resources/assets/styles/components/_collection-products.scss */
+
+  .collection-products .collection-btn-mob a {
+    font-size: 16px;
+  }
+}
+
+/* line 179, resources/assets/styles/components/_collection-products.scss */
 
 .slider .slick-slide {
   padding: 0 40px 0 0;
 }
 
-/* line 160, resources/assets/styles/components/_collection-products.scss */
+/* line 182, resources/assets/styles/components/_collection-products.scss */
 
 .slider .slick-slide:focus {
   outline: none;
 }
 
-/* line 164, resources/assets/styles/components/_collection-products.scss */
+/* line 186, resources/assets/styles/components/_collection-products.scss */
 
 .slider .slick-dots {
   bottom: -40px;
 }
 
-/* line 167, resources/assets/styles/components/_collection-products.scss */
+/* line 189, resources/assets/styles/components/_collection-products.scss */
 
 .slider .slick-dots li {
   margin: 0 1px;
 }
 
-/* line 172, resources/assets/styles/components/_collection-products.scss */
+/* line 194, resources/assets/styles/components/_collection-products.scss */
 
 .slider .slick-dots li.slick-active button::before {
   opacity: 1;
 }
 
-/* line 179, resources/assets/styles/components/_collection-products.scss */
+/* line 201, resources/assets/styles/components/_collection-products.scss */
 
 .slider .slick-dots li button::before {
   color: #abced0;
@@ -7576,7 +7688,7 @@ input:focus {
   font-size: 13px;
 }
 
-/* line 189, resources/assets/styles/components/_collection-products.scss */
+/* line 211, resources/assets/styles/components/_collection-products.scss */
 
 .recently {
   padding-bottom: 110px;
@@ -7718,7 +7830,7 @@ input:focus {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  padding: 20px 0 0 0;
+  padding: 20px 0;
   font-weight: 500;
 }
 
@@ -7730,7 +7842,15 @@ input:focus {
   }
 }
 
-/* line 62, resources/assets/styles/components/_shop-header.scss */
+@media (min-width: 900px) {
+  /* line 55, resources/assets/styles/components/_shop-header.scss */
+
+  .woocommerce-breadcrumb {
+    padding: 20px 0 0 0;
+  }
+}
+
+/* line 66, resources/assets/styles/components/_shop-header.scss */
 
 .woocommerce-breadcrumb a {
   display: inline-block;
@@ -7750,14 +7870,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 62, resources/assets/styles/components/_shop-header.scss */
+  /* line 66, resources/assets/styles/components/_shop-header.scss */
 
   .woocommerce-breadcrumb a {
     font-size: 16px;
   }
 }
 
-/* line 72, resources/assets/styles/components/_shop-header.scss */
+/* line 76, resources/assets/styles/components/_shop-header.scss */
 
 .woocommerce-result-count,
 .woocommerce-ordering {
@@ -8434,7 +8554,7 @@ klarna-placement .container {
   list-style: none;
   display: grid;
   /* 1 */
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   /* 2 */
   grid-gap: 1rem;
   /* 3 */
@@ -8445,7 +8565,16 @@ klarna-placement .container {
   /* 4 */
 }
 
-/* line 11, resources/assets/styles/components/_collection.scss */
+@media (min-width: 900px) {
+  /* line 1, resources/assets/styles/components/_collection.scss */
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 */
+  }
+}
+
+/* line 15, resources/assets/styles/components/_collection.scss */
 
 .products li {
   cursor: initial;
@@ -8453,13 +8582,13 @@ klarna-placement .container {
   width: 100%;
 }
 
-/* line 23, resources/assets/styles/components/_collection.scss */
+/* line 27, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info {
   padding: 60px 0 120px 0;
 }
 
-/* line 28, resources/assets/styles/components/_collection.scss */
+/* line 32, resources/assets/styles/components/_collection.scss */
 
 .term-new-arrivals .woocommerce-products-header {
   display: none;
@@ -8979,23 +9108,36 @@ klarna-placement .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-/* line 14, resources/assets/styles/components/_review.scss */
-
-.review .review-slider__col {
-  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media (min-width: 900px) {
-  /* line 14, resources/assets/styles/components/_review.scss */
+  /* line 11, resources/assets/styles/components/_review.scss */
 
-  .review .review-slider__col {
-    width: 40%;
+  .review .review-slider {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
-/* line 21, resources/assets/styles/components/_review.scss */
+/* line 19, resources/assets/styles/components/_review.scss */
+
+.review .review-slider__col {
+  width: 100%;
+  padding: 10px 0 50px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 19, resources/assets/styles/components/_review.scss */
+
+  .review .review-slider__col {
+    width: 40%;
+    padding: 0;
+  }
+}
+
+/* line 28, resources/assets/styles/components/_review.scss */
 
 .review .review-slider__col:last-of-type {
   width: 100%;
@@ -9005,17 +9147,19 @@ klarna-placement .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 21, resources/assets/styles/components/_review.scss */
+  /* line 28, resources/assets/styles/components/_review.scss */
 
   .review .review-slider__col:last-of-type {
     width: 60%;
+    padding: 0;
   }
 }
 
-/* line 32, resources/assets/styles/components/_review.scss */
+/* line 41, resources/assets/styles/components/_review.scss */
 
 .review .review-slider__stars {
   display: -webkit-box;
@@ -9030,13 +9174,21 @@ klarna-placement .container {
   height: 100%;
 }
 
-/* line 39, resources/assets/styles/components/_review.scss */
+/* line 48, resources/assets/styles/components/_review.scss */
 
 .review .review-slider__quote {
-  width: 80%;
+  width: 100%;
 }
 
-/* line 45, resources/assets/styles/components/_review.scss */
+@media (min-width: 900px) {
+  /* line 48, resources/assets/styles/components/_review.scss */
+
+  .review .review-slider__quote {
+    width: 80%;
+  }
+}
+
+/* line 59, resources/assets/styles/components/_review.scss */
 
 .review .slider-review .slick-next {
   opacity: 1;
@@ -9045,24 +9197,35 @@ klarna-placement .container {
   width: 17px;
   height: 30px;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSIxOXB4IiB2aWV3Qm94PSIwIDAgMTEgMTkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXAgMiBDb3B5IDI8L3RpdGxlPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSI+CiAgICAgICAgPGcgaWQ9IlNJTkdMRS1QUk9EVUNULVBBR0UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzQ0LjAwMDAwMCwgLTE2NTYuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yLUNvcHktMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM0OS41MDAwMDAsIDE2NjUuNTAwMDAwKSByb3RhdGUoLTE4MC4wMDAwMDApIHRyYW5zbGF0ZSgtMTM0OS41MDAwMDAsIC0xNjY1LjUwMDAwMCkgdHJhbnNsYXRlKDEzNDUuMDAwMDAwLCAxNjU3LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGxpbmUgeDE9IjguNSIgeTE9IjAuNSIgeDI9IjAuNSIgeTI9IjguNSIgaWQ9IkxpbmUtNSI+PC9saW5lPgogICAgICAgICAgICAgICAgPGxpbmUgeDE9IjguNSIgeTE9IjE2LjUiIHgyPSIwLjUiIHkyPSI4LjUiIGlkPSJMaW5lLTUtQ29weSI+PC9saW5lPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
+  top: 21px;
+  right: -10px;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
-/* line 54, resources/assets/styles/components/_review.scss */
+@media (min-width: 900px) {
+  /* line 59, resources/assets/styles/components/_review.scss */
+
+  .review .slider-review .slick-next {
+    top: 50%;
+    right: -25px;
+  }
+}
+
+/* line 75, resources/assets/styles/components/_review.scss */
 
 .review .slider-review .slick-next::before {
   content: " ";
 }
 
-/* line 58, resources/assets/styles/components/_review.scss */
+/* line 79, resources/assets/styles/components/_review.scss */
 
 .review .slider-review .slick-next:hover {
   opacity: 0.7;
 }
 
-/* line 63, resources/assets/styles/components/_review.scss */
+/* line 84, resources/assets/styles/components/_review.scss */
 
 .review .slider-review .slick-prev {
   opacity: 1;
@@ -9071,24 +9234,35 @@ klarna-placement .container {
   width: 17px;
   height: 30px;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTFweCIgaGVpZ2h0PSIxOXB4IiB2aWV3Qm94PSIwIDAgMTEgMTkiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXAgMiBDb3B5PC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPgogICAgICAgIDxnIGlkPSJTSU5HTEUtUFJPRFVDVC1QQUdFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAyLjAwMDAwMCwgLTE2NTcuMDAwMDAwKSIgc3Ryb2tlPSIjMDAwMDAwIiBzdHJva2Utd2lkdGg9IjEuNSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yLUNvcHkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMy4wMDAwMDAsIDE2NTguMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8bGluZSB4MT0iOC41IiB5MT0iMC41IiB4Mj0iMC41IiB5Mj0iOC41IiBpZD0iTGluZS01Ij48L2xpbmU+CiAgICAgICAgICAgICAgICA8bGluZSB4MT0iOC41IiB5MT0iMTYuNSIgeDI9IjAuNSIgeTI9IjguNSIgaWQ9IkxpbmUtNS1Db3B5Ij48L2xpbmU+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+  top: 21px;
+  left: -10px;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
-/* line 72, resources/assets/styles/components/_review.scss */
+@media (min-width: 900px) {
+  /* line 84, resources/assets/styles/components/_review.scss */
+
+  .review .slider-review .slick-prev {
+    top: 50%;
+    left: -25px;
+  }
+}
+
+/* line 100, resources/assets/styles/components/_review.scss */
 
 .review .slider-review .slick-prev::before {
   content: " ";
 }
 
-/* line 76, resources/assets/styles/components/_review.scss */
+/* line 104, resources/assets/styles/components/_review.scss */
 
 .review .slider-review .slick-prev:hover {
   opacity: 0.7;
 }
 
-/* line 83, resources/assets/styles/components/_review.scss */
+/* line 111, resources/assets/styles/components/_review.scss */
 
 .star {
   display: block;
@@ -9097,31 +9271,31 @@ klarna-placement .container {
   height: 25px;
 }
 
-/* line 89, resources/assets/styles/components/_review.scss */
+/* line 117, resources/assets/styles/components/_review.scss */
 
 .star__one {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ1cHgiIGhlaWdodD0iMjVweCIgdmlld0JveD0iMCAwIDE0NSAyNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5Hcm91cCBDb3B5PC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJTSU5HTEUtUFJPRFVDVC1QQUdFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYyLjAwMDAwMCwgLTE2NTYuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjIuMDAwMDAwLCAxNjU2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXIiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iMTIuNSAxOC43NSA1LjE1MjY4NDM1IDIyLjYxMjcxMjQgNi41NTU4OTY3NyAxNC40MzEzNTYyIDAuNjExNzkzNTQ2IDguNjM3Mjg3NTcgOC44MjYzNDIxNyA3LjQ0MzY0Mzc5IDEyLjUgMCAxNi4xNzM2NTc4IDcuNDQzNjQzNzkgMjQuMzg4MjA2NSA4LjYzNzI4NzU3IDE4LjQ0NDEwMzIgMTQuNDMxMzU2MiAxOS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik00My41LDEuMTI5Nzc1NzMgTDQ2Ljg0MTYyNTEsNy45MDA2NDc2NyBMNTQuMzEzNzI1OSw4Ljk4NjQwNzQ3IEw0OC45MDY4NjI5LDE0LjI1Njc5NjMgTDUwLjE4MzI1MDEsMjEuNjk4NzA0NyBMNDMuNSwxOC4xODUxMTIxIEwzNi44MTY3NDk5LDIxLjY5ODcwNDcgTDM4LjA5MzEzNzEsMTQuMjU2Nzk2MyBMMzIuNjg2Mjc0MSw4Ljk4NjQwNzQ3IEw0MC4xNTgzNzQ5LDcuOTAwNjQ3NjcgTDQzLjUsMS4xMjk3NzU3MyBaIiBpZD0iU3Rhci1Db3B5IiBzdHJva2U9IiMwMDAwMDAiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik03Mi41LDEuMTI5Nzc1NzMgTDc1Ljg0MTYyNTEsNy45MDA2NDc2NyBMODMuMzEzNzI1OSw4Ljk4NjQwNzQ3IEw3Ny45MDY4NjI5LDE0LjI1Njc5NjMgTDc5LjE4MzI1MDEsMjEuNjk4NzA0NyBMNzIuNSwxOC4xODUxMTIxIEw2NS44MTY3NDk5LDIxLjY5ODcwNDcgTDY3LjA5MzEzNzEsMTQuMjU2Nzk2MyBMNjEuNjg2Mjc0MSw4Ljk4NjQwNzQ3IEw2OS4xNTgzNzQ5LDcuOTAwNjQ3NjcgTDcyLjUsMS4xMjk3NzU3MyBaIiBpZD0iU3Rhci1Db3B5LTIiIHN0cm9rZT0iIzAwMDAwMCI+PC9wYXRoPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEwMS41LDEuMTI5Nzc1NzMgTDEwNC44NDE2MjUsNy45MDA2NDc2NyBMMTEyLjMxMzcyNiw4Ljk4NjQwNzQ3IEwxMDYuOTA2ODYzLDE0LjI1Njc5NjMgTDEwOC4xODMyNSwyMS42OTg3MDQ3IEwxMDEuNSwxOC4xODUxMTIxIEw5NC44MTY3NDk5LDIxLjY5ODcwNDcgTDk2LjA5MzEzNzEsMTQuMjU2Nzk2MyBMOTAuNjg2Mjc0MSw4Ljk4NjQwNzQ3IEw5OC4xNTgzNzQ5LDcuOTAwNjQ3NjcgTDEwMS41LDEuMTI5Nzc1NzMgWiIgaWQ9IlN0YXItQ29weS0zIiBzdHJva2U9IiMwMDAwMDAiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMzIuNSwxLjEyOTc3NTczIEwxMzUuODQxNjI1LDcuOTAwNjQ3NjcgTDE0My4zMTM3MjYsOC45ODY0MDc0NyBMMTM3LjkwNjg2MywxNC4yNTY3OTYzIEwxMzkuMTgzMjUsMjEuNjk4NzA0NyBMMTMyLjUsMTguMTg1MTEyMSBMMTI1LjgxNjc1LDIxLjY5ODcwNDcgTDEyNy4wOTMxMzcsMTQuMjU2Nzk2MyBMMTIxLjY4NjI3NCw4Ljk4NjQwNzQ3IEwxMjkuMTU4Mzc1LDcuOTAwNjQ3NjcgTDEzMi41LDEuMTI5Nzc1NzMgWiIgaWQ9IlN0YXItQ29weS00IiBzdHJva2U9IiMwMDAwMDAiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
 }
 
-/* line 93, resources/assets/styles/components/_review.scss */
+/* line 121, resources/assets/styles/components/_review.scss */
 
 .star__two {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ1cHgiIGhlaWdodD0iMjVweCIgdmlld0JveD0iMCAwIDE0NSAyNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5Hcm91cCBDb3B5PC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJTSU5HTEUtUFJPRFVDVC1QQUdFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYyLjAwMDAwMCwgLTE2NTYuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjIuMDAwMDAwLCAxNjU2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXIiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iMTIuNSAxOC43NSA1LjE1MjY4NDM1IDIyLjYxMjcxMjQgNi41NTU4OTY3NyAxNC40MzEzNTYyIDAuNjExNzkzNTQ2IDguNjM3Mjg3NTcgOC44MjYzNDIxNyA3LjQ0MzY0Mzc5IDEyLjUgMCAxNi4xNzM2NTc4IDcuNDQzNjQzNzkgMjQuMzg4MjA2NSA4LjYzNzI4NzU3IDE4LjQ0NDEwMzIgMTQuNDMxMzU2MiAxOS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHkiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNDMuNSAxOC43NSAzNi4xNTI2ODQzIDIyLjYxMjcxMjQgMzcuNTU1ODk2OCAxNC40MzEzNTYyIDMxLjYxMTc5MzUgOC42MzcyODc1NyAzOS44MjYzNDIyIDcuNDQzNjQzNzkgNDMuNSAwIDQ3LjE3MzY1NzggNy40NDM2NDM3OSA1NS4zODgyMDY1IDguNjM3Mjg3NTcgNDkuNDQ0MTAzMiAxNC40MzEzNTYyIDUwLjg0NzMxNTcgMjIuNjEyNzEyNCI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTcyLjUsMS4xMjk3NzU3MyBMNzUuODQxNjI1MSw3LjkwMDY0NzY3IEw4My4zMTM3MjU5LDguOTg2NDA3NDcgTDc3LjkwNjg2MjksMTQuMjU2Nzk2MyBMNzkuMTgzMjUwMSwyMS42OTg3MDQ3IEw3Mi41LDE4LjE4NTExMjEgTDY1LjgxNjc0OTksMjEuNjk4NzA0NyBMNjcuMDkzMTM3MSwxNC4yNTY3OTYzIEw2MS42ODYyNzQxLDguOTg2NDA3NDcgTDY5LjE1ODM3NDksNy45MDA2NDc2NyBMNzIuNSwxLjEyOTc3NTczIFoiIGlkPSJTdGFyLUNvcHktMiIgc3Ryb2tlPSIjMDAwMDAwIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTAxLjUsMS4xMjk3NzU3MyBMMTA0Ljg0MTYyNSw3LjkwMDY0NzY3IEwxMTIuMzEzNzI2LDguOTg2NDA3NDcgTDEwNi45MDY4NjMsMTQuMjU2Nzk2MyBMMTA4LjE4MzI1LDIxLjY5ODcwNDcgTDEwMS41LDE4LjE4NTExMjEgTDk0LjgxNjc0OTksMjEuNjk4NzA0NyBMOTYuMDkzMTM3MSwxNC4yNTY3OTYzIEw5MC42ODYyNzQxLDguOTg2NDA3NDcgTDk4LjE1ODM3NDksNy45MDA2NDc2NyBMMTAxLjUsMS4xMjk3NzU3MyBaIiBpZD0iU3Rhci1Db3B5LTMiIHN0cm9rZT0iIzAwMDAwMCI+PC9wYXRoPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTEzMi41LDEuMTI5Nzc1NzMgTDEzNS44NDE2MjUsNy45MDA2NDc2NyBMMTQzLjMxMzcyNiw4Ljk4NjQwNzQ3IEwxMzcuOTA2ODYzLDE0LjI1Njc5NjMgTDEzOS4xODMyNSwyMS42OTg3MDQ3IEwxMzIuNSwxOC4xODUxMTIxIEwxMjUuODE2NzUsMjEuNjk4NzA0NyBMMTI3LjA5MzEzNywxNC4yNTY3OTYzIEwxMjEuNjg2Mjc0LDguOTg2NDA3NDcgTDEyOS4xNTgzNzUsNy45MDA2NDc2NyBMMTMyLjUsMS4xMjk3NzU3MyBaIiBpZD0iU3Rhci1Db3B5LTQiIHN0cm9rZT0iIzAwMDAwMCI+PC9wYXRoPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=);
 }
 
-/* line 97, resources/assets/styles/components/_review.scss */
+/* line 125, resources/assets/styles/components/_review.scss */
 
 .star__three {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ1cHgiIGhlaWdodD0iMjVweCIgdmlld0JveD0iMCAwIDE0NSAyNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5Hcm91cCBDb3B5PC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJTSU5HTEUtUFJPRFVDVC1QQUdFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYyLjAwMDAwMCwgLTE2NTYuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjIuMDAwMDAwLCAxNjU2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXIiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iMTIuNSAxOC43NSA1LjE1MjY4NDM1IDIyLjYxMjcxMjQgNi41NTU4OTY3NyAxNC40MzEzNTYyIDAuNjExNzkzNTQ2IDguNjM3Mjg3NTcgOC44MjYzNDIxNyA3LjQ0MzY0Mzc5IDEyLjUgMCAxNi4xNzM2NTc4IDcuNDQzNjQzNzkgMjQuMzg4MjA2NSA4LjYzNzI4NzU3IDE4LjQ0NDEwMzIgMTQuNDMxMzU2MiAxOS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHkiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNDMuNSAxOC43NSAzNi4xNTI2ODQzIDIyLjYxMjcxMjQgMzcuNTU1ODk2OCAxNC40MzEzNTYyIDMxLjYxMTc5MzUgOC42MzcyODc1NyAzOS44MjYzNDIyIDcuNDQzNjQzNzkgNDMuNSAwIDQ3LjE3MzY1NzggNy40NDM2NDM3OSA1NS4zODgyMDY1IDguNjM3Mjg3NTcgNDkuNDQ0MTAzMiAxNC40MzEzNTYyIDUwLjg0NzMxNTcgMjIuNjEyNzEyNCI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXItQ29weS0yIiBmaWxsPSIjMDAwMDAwIiBwb2ludHM9IjcyLjUgMTguNzUgNjUuMTUyNjg0MyAyMi42MTI3MTI0IDY2LjU1NTg5NjggMTQuNDMxMzU2MiA2MC42MTE3OTM1IDguNjM3Mjg3NTcgNjguODI2MzQyMiA3LjQ0MzY0Mzc5IDcyLjUgMCA3Ni4xNzM2NTc4IDcuNDQzNjQzNzkgODQuMzg4MjA2NSA4LjYzNzI4NzU3IDc4LjQ0NDEwMzIgMTQuNDMxMzU2MiA3OS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMDEuNSwxLjEyOTc3NTczIEwxMDQuODQxNjI1LDcuOTAwNjQ3NjcgTDExMi4zMTM3MjYsOC45ODY0MDc0NyBMMTA2LjkwNjg2MywxNC4yNTY3OTYzIEwxMDguMTgzMjUsMjEuNjk4NzA0NyBMMTAxLjUsMTguMTg1MTEyMSBMOTQuODE2NzQ5OSwyMS42OTg3MDQ3IEw5Ni4wOTMxMzcxLDE0LjI1Njc5NjMgTDkwLjY4NjI3NDEsOC45ODY0MDc0NyBMOTguMTU4Mzc0OSw3LjkwMDY0NzY3IEwxMDEuNSwxLjEyOTc3NTczIFoiIGlkPSJTdGFyLUNvcHktMyIgc3Ryb2tlPSIjMDAwMDAwIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTMyLjUsMS4xMjk3NzU3MyBMMTM1Ljg0MTYyNSw3LjkwMDY0NzY3IEwxNDMuMzEzNzI2LDguOTg2NDA3NDcgTDEzNy45MDY4NjMsMTQuMjU2Nzk2MyBMMTM5LjE4MzI1LDIxLjY5ODcwNDcgTDEzMi41LDE4LjE4NTExMjEgTDEyNS44MTY3NSwyMS42OTg3MDQ3IEwxMjcuMDkzMTM3LDE0LjI1Njc5NjMgTDEyMS42ODYyNzQsOC45ODY0MDc0NyBMMTI5LjE1ODM3NSw3LjkwMDY0NzY3IEwxMzIuNSwxLjEyOTc3NTczIFoiIGlkPSJTdGFyLUNvcHktNCIgc3Ryb2tlPSIjMDAwMDAwIj48L3BhdGg+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
 }
 
-/* line 101, resources/assets/styles/components/_review.scss */
+/* line 129, resources/assets/styles/components/_review.scss */
 
 .star__four {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ1cHgiIGhlaWdodD0iMjVweCIgdmlld0JveD0iMCAwIDE0NSAyNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5Hcm91cCBDb3B5PC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJTSU5HTEUtUFJPRFVDVC1QQUdFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYyLjAwMDAwMCwgLTE2NTYuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjIuMDAwMDAwLCAxNjU2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXIiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iMTIuNSAxOC43NSA1LjE1MjY4NDM1IDIyLjYxMjcxMjQgNi41NTU4OTY3NyAxNC40MzEzNTYyIDAuNjExNzkzNTQ2IDguNjM3Mjg3NTcgOC44MjYzNDIxNyA3LjQ0MzY0Mzc5IDEyLjUgMCAxNi4xNzM2NTc4IDcuNDQzNjQzNzkgMjQuMzg4MjA2NSA4LjYzNzI4NzU3IDE4LjQ0NDEwMzIgMTQuNDMxMzU2MiAxOS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHkiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNDMuNSAxOC43NSAzNi4xNTI2ODQzIDIyLjYxMjcxMjQgMzcuNTU1ODk2OCAxNC40MzEzNTYyIDMxLjYxMTc5MzUgOC42MzcyODc1NyAzOS44MjYzNDIyIDcuNDQzNjQzNzkgNDMuNSAwIDQ3LjE3MzY1NzggNy40NDM2NDM3OSA1NS4zODgyMDY1IDguNjM3Mjg3NTcgNDkuNDQ0MTAzMiAxNC40MzEzNTYyIDUwLjg0NzMxNTcgMjIuNjEyNzEyNCI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXItQ29weS0yIiBmaWxsPSIjMDAwMDAwIiBwb2ludHM9IjcyLjUgMTguNzUgNjUuMTUyNjg0MyAyMi42MTI3MTI0IDY2LjU1NTg5NjggMTQuNDMxMzU2MiA2MC42MTE3OTM1IDguNjM3Mjg3NTcgNjguODI2MzQyMiA3LjQ0MzY0Mzc5IDcyLjUgMCA3Ni4xNzM2NTc4IDcuNDQzNjQzNzkgODQuMzg4MjA2NSA4LjYzNzI4NzU3IDc4LjQ0NDEwMzIgMTQuNDMxMzU2MiA3OS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHktMyIgZmlsbD0iIzAwMDAwMCIgcG9pbnRzPSIxMDEuNSAxOC43NSA5NC4xNTI2ODQzIDIyLjYxMjcxMjQgOTUuNTU1ODk2OCAxNC40MzEzNTYyIDg5LjYxMTc5MzUgOC42MzcyODc1NyA5Ny44MjYzNDIyIDcuNDQzNjQzNzkgMTAxLjUgMCAxMDUuMTczNjU4IDcuNDQzNjQzNzkgMTEzLjM4ODIwNiA4LjYzNzI4NzU3IDEwNy40NDQxMDMgMTQuNDMxMzU2MiAxMDguODQ3MzE2IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMzIuNSwxLjEyOTc3NTczIEwxMzUuODQxNjI1LDcuOTAwNjQ3NjcgTDE0My4zMTM3MjYsOC45ODY0MDc0NyBMMTM3LjkwNjg2MywxNC4yNTY3OTYzIEwxMzkuMTgzMjUsMjEuNjk4NzA0NyBMMTMyLjUsMTguMTg1MTEyMSBMMTI1LjgxNjc1LDIxLjY5ODcwNDcgTDEyNy4wOTMxMzcsMTQuMjU2Nzk2MyBMMTIxLjY4NjI3NCw4Ljk4NjQwNzQ3IEwxMjkuMTU4Mzc1LDcuOTAwNjQ3NjcgTDEzMi41LDEuMTI5Nzc1NzMgWiIgaWQ9IlN0YXItQ29weS00IiBzdHJva2U9IiMwMDAwMDAiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
 }
 
-/* line 105, resources/assets/styles/components/_review.scss */
+/* line 133, resources/assets/styles/components/_review.scss */
 
 .star__five {
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTQ1cHgiIGhlaWdodD0iMjVweCIgdmlld0JveD0iMCAwIDE0NSAyNSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5Hcm91cCBDb3B5PC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJTSU5HTEUtUFJPRFVDVC1QQUdFIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYyLjAwMDAwMCwgLTE2NTYuMDAwMDAwKSIgZmlsbD0iIzAwMDAwMCI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjIuMDAwMDAwLCAxNjU2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXIiIHBvaW50cz0iMTIuNSAxOC43NSA1LjE1MjY4NDM1IDIyLjYxMjcxMjQgNi41NTU4OTY3NyAxNC40MzEzNTYyIDAuNjExNzkzNTQ2IDguNjM3Mjg3NTcgOC44MjYzNDIxNyA3LjQ0MzY0Mzc5IDEyLjUgMCAxNi4xNzM2NTc4IDcuNDQzNjQzNzkgMjQuMzg4MjA2NSA4LjYzNzI4NzU3IDE4LjQ0NDEwMzIgMTQuNDMxMzU2MiAxOS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHkiIHBvaW50cz0iNDMuNSAxOC43NSAzNi4xNTI2ODQzIDIyLjYxMjcxMjQgMzcuNTU1ODk2OCAxNC40MzEzNTYyIDMxLjYxMTc5MzUgOC42MzcyODc1NyAzOS44MjYzNDIyIDcuNDQzNjQzNzkgNDMuNSAwIDQ3LjE3MzY1NzggNy40NDM2NDM3OSA1NS4zODgyMDY1IDguNjM3Mjg3NTcgNDkuNDQ0MTAzMiAxNC40MzEzNTYyIDUwLjg0NzMxNTcgMjIuNjEyNzEyNCI+PC9wb2x5Z29uPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlN0YXItQ29weS0yIiBwb2ludHM9IjcyLjUgMTguNzUgNjUuMTUyNjg0MyAyMi42MTI3MTI0IDY2LjU1NTg5NjggMTQuNDMxMzU2MiA2MC42MTE3OTM1IDguNjM3Mjg3NTcgNjguODI2MzQyMiA3LjQ0MzY0Mzc5IDcyLjUgMCA3Ni4xNzM2NTc4IDcuNDQzNjQzNzkgODQuMzg4MjA2NSA4LjYzNzI4NzU3IDc4LjQ0NDEwMzIgMTQuNDMxMzU2MiA3OS44NDczMTU3IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHktMyIgcG9pbnRzPSIxMDEuNSAxOC43NSA5NC4xNTI2ODQzIDIyLjYxMjcxMjQgOTUuNTU1ODk2OCAxNC40MzEzNTYyIDg5LjYxMTc5MzUgOC42MzcyODc1NyA5Ny44MjYzNDIyIDcuNDQzNjQzNzkgMTAxLjUgMCAxMDUuMTczNjU4IDcuNDQzNjQzNzkgMTEzLjM4ODIwNiA4LjYzNzI4NzU3IDEwNy40NDQxMDMgMTQuNDMxMzU2MiAxMDguODQ3MzE2IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTdGFyLUNvcHktNCIgcG9pbnRzPSIxMzIuNSAxOC43NSAxMjUuMTUyNjg0IDIyLjYxMjcxMjQgMTI2LjU1NTg5NyAxNC40MzEzNTYyIDEyMC42MTE3OTQgOC42MzcyODc1NyAxMjguODI2MzQyIDcuNDQzNjQzNzkgMTMyLjUgMCAxMzYuMTczNjU4IDcuNDQzNjQzNzkgMTQ0LjM4ODIwNiA4LjYzNzI4NzU3IDEzOC40NDQxMDMgMTQuNDMxMzU2MiAxMzkuODQ3MzE2IDIyLjYxMjcxMjQiPjwvcG9seWdvbj4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
@@ -9206,6 +9380,7 @@ klarna-placement .container {
 
 .two-column {
   padding: 35px 0;
+  padding: 0;
 }
 
 @media (min-width: 900px) {
@@ -9216,7 +9391,15 @@ klarna-placement .container {
   }
 }
 
-/* line 4, resources/assets/styles/components/_two-column.scss */
+@media (min-width: 900px) {
+  /* line 1, resources/assets/styles/components/_two-column.scss */
+
+  .two-column {
+    padding: 35px 0;
+  }
+}
+
+/* line 10, resources/assets/styles/components/_two-column.scss */
 
 .two-column__inner {
   padding: 0 20px;
@@ -9233,7 +9416,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 4, resources/assets/styles/components/_two-column.scss */
+  /* line 10, resources/assets/styles/components/_two-column.scss */
 
   .two-column__inner {
     padding: 0 50px;
@@ -9241,7 +9424,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 4, resources/assets/styles/components/_two-column.scss */
+  /* line 10, resources/assets/styles/components/_two-column.scss */
 
   .two-column__inner {
     -ms-flex-wrap: nowrap;
@@ -9249,35 +9432,49 @@ klarna-placement .container {
   }
 }
 
-/* line 16, resources/assets/styles/components/_two-column.scss */
+/* line 22, resources/assets/styles/components/_two-column.scss */
 
 .two-column__col {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 16, resources/assets/styles/components/_two-column.scss */
+  /* line 22, resources/assets/styles/components/_two-column.scss */
 
   .two-column__col {
     width: 45%;
   }
 }
 
-/* line 26, resources/assets/styles/components/_two-column.scss */
+/* line 30, resources/assets/styles/components/_two-column.scss */
+
+.two-column__textarea {
+  padding: 15px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 30, resources/assets/styles/components/_two-column.scss */
+
+  .two-column__textarea {
+    padding: 0;
+  }
+}
+
+/* line 37, resources/assets/styles/components/_two-column.scss */
 
 .two-column__textarea.textarea-left {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 26, resources/assets/styles/components/_two-column.scss */
+  /* line 37, resources/assets/styles/components/_two-column.scss */
 
   .two-column__textarea.textarea-left {
     width: 85%;
   }
 }
 
-/* line 34, resources/assets/styles/components/_two-column.scss */
+/* line 45, resources/assets/styles/components/_two-column.scss */
 
 .two-column__textarea h1 {
   display: inline-block;
@@ -9287,7 +9484,7 @@ klarna-placement .container {
   letter-spacing: 2.73px;
 }
 
-/* line 42, resources/assets/styles/components/_two-column.scss */
+/* line 53, resources/assets/styles/components/_two-column.scss */
 
 .two-column__textarea h2 {
   display: inline-block;
@@ -9295,13 +9492,21 @@ klarna-placement .container {
   font-weight: 100;
 }
 
-/* line 49, resources/assets/styles/components/_two-column.scss */
+/* line 60, resources/assets/styles/components/_two-column.scss */
 
 .two-column__top-image {
-  padding: 0 0 70px 0;
+  padding: 0;
 }
 
-/* line 53, resources/assets/styles/components/_two-column.scss */
+@media (min-width: 900px) {
+  /* line 60, resources/assets/styles/components/_two-column.scss */
+
+  .two-column__top-image {
+    padding: 0 0 70px 0;
+  }
+}
+
+/* line 68, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container {
   display: -webkit-box;
@@ -9309,7 +9514,7 @@ klarna-placement .container {
   display: flex;
 }
 
-/* line 56, resources/assets/styles/components/_two-column.scss */
+/* line 71, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container.right {
   -webkit-box-pack: end;
@@ -9317,7 +9522,7 @@ klarna-placement .container {
           justify-content: flex-end;
 }
 
-/* line 60, resources/assets/styles/components/_two-column.scss */
+/* line 75, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container.left {
   -webkit-box-pack: start;
@@ -9325,7 +9530,7 @@ klarna-placement .container {
           justify-content: flex-start;
 }
 
-/* line 64, resources/assets/styles/components/_two-column.scss */
+/* line 79, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container.center {
   height: 100%;
@@ -9335,23 +9540,23 @@ klarna-placement .container {
   vertical-align: middle;
 }
 
-/* line 69, resources/assets/styles/components/_two-column.scss */
+/* line 84, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container.center img {
   -ms-flex-item-align: center;
       align-self: center;
 }
 
-/* line 74, resources/assets/styles/components/_two-column.scss */
+/* line 89, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container img {
   max-width: 100%;
   width: 100%;
-  padding: 70px 0;
+  padding: 0 0 40px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 74, resources/assets/styles/components/_two-column.scss */
+  /* line 89, resources/assets/styles/components/_two-column.scss */
 
   .two-column__bottom-container img {
     max-width: 60%;
@@ -9902,13 +10107,70 @@ klarna-placement .container {
   }
 }
 
-/* line 38, resources/assets/styles/components/_store-locator.scss */
+/* line 37, resources/assets/styles/components/_store-locator.scss */
 
-.stockist #wpsl-wrap #wpsl-result-list ul li {
-  padding: 10px 0;
+.stockist #wpsl-wrap #wpsl-result-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-/* line 45, resources/assets/styles/components/_store-locator.scss */
+/* line 41, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-wrap #wpsl-result-list ul li {
+  padding: 10px 0 10px 0;
+  width: 100%;
+  border-bottom: 0;
+  min-height: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 41, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist #wpsl-wrap #wpsl-result-list ul li {
+    width: 50%;
+    min-height: 170px;
+  }
+}
+
+/* line 53, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-wrap #wpsl-result-list ul li p b,
+.stockist #wpsl-wrap #wpsl-result-list ul li p strong {
+  font-weight: 100;
+}
+
+/* line 59, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-wrap #wpsl-result-list ul li .wpsl-direction-wrap {
+  display: none;
+  font-size: 13px;
+}
+
+/* line 62, resources/assets/styles/components/_store-locator.scss */
+
+.stockist #wpsl-wrap #wpsl-result-list ul li .wpsl-direction-wrap a {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+@media (min-width: 900px) {
+  /* line 62, resources/assets/styles/components/_store-locator.scss */
+
+  .stockist #wpsl-wrap #wpsl-result-list ul li .wpsl-direction-wrap a {
+    font-size: 16px;
+  }
+}
+
+/* line 72, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search {
   margin-bottom: 40px;
@@ -9916,20 +10178,20 @@ klarna-placement .container {
   background: transparent;
 }
 
-/* line 50, resources/assets/styles/components/_store-locator.scss */
+/* line 77, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-input {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 54, resources/assets/styles/components/_store-locator.scss */
+/* line 81, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-input label {
   display: none !important;
 }
 
-/* line 58, resources/assets/styles/components/_store-locator.scss */
+/* line 85, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-input #wpsl-search-input {
   width: 90%;
@@ -9947,7 +10209,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 58, resources/assets/styles/components/_store-locator.scss */
+  /* line 85, resources/assets/styles/components/_store-locator.scss */
 
   .stockist .wpsl-search .wpsl-input #wpsl-search-input {
     width: 100%;
@@ -9962,7 +10224,7 @@ klarna-placement .container {
   background-color: #e1e1e1;
 }
 
-/* line 69, resources/assets/styles/components/_store-locator.scss */
+/* line 96, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-input #wpsl-search-input:focus {
   outline: none;
@@ -9971,21 +10233,21 @@ klarna-placement .container {
   background-color: #e1dfd6;
 }
 
-/* line 78, resources/assets/styles/components/_store-locator.scss */
+/* line 105, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 78, resources/assets/styles/components/_store-locator.scss */
+  /* line 105, resources/assets/styles/components/_store-locator.scss */
 
   .stockist .wpsl-search #wpsl-search-wrap {
     width: 80%;
   }
 }
 
-/* line 85, resources/assets/styles/components/_store-locator.scss */
+/* line 112, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap .wpsl-dropdown {
   float: right;
@@ -9997,7 +10259,7 @@ klarna-placement .container {
   border-radius: 0;
 }
 
-/* line 94, resources/assets/styles/components/_store-locator.scss */
+/* line 121, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap .wpsl-dropdown:focus,
 .stockist .wpsl-search #wpsl-search-wrap .wpsl-dropdown:hover {
@@ -10007,32 +10269,32 @@ klarna-placement .container {
           box-shadow: none;
 }
 
-/* line 102, resources/assets/styles/components/_store-locator.scss */
+/* line 129, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap .wpsl-active {
   z-index: 999;
 }
 
-/* line 106, resources/assets/styles/components/_store-locator.scss */
+/* line 133, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap .wpsl-select-wrap {
   width: 100%;
 }
 
-/* line 110, resources/assets/styles/components/_store-locator.scss */
+/* line 137, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap #wpsl-radius {
   width: 100%;
   margin: 10px 0;
 }
 
-/* line 115, resources/assets/styles/components/_store-locator.scss */
+/* line 142, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap #wpsl-results {
   width: 100%;
 }
 
-/* line 119, resources/assets/styles/components/_store-locator.scss */
+/* line 146, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search #wpsl-search-wrap div label {
   float: left;
@@ -10041,7 +10303,7 @@ klarna-placement .container {
   width: 50%;
 }
 
-/* line 127, resources/assets/styles/components/_store-locator.scss */
+/* line 154, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-radius,
 .stockist .wpsl-search .wpsl-results {
@@ -10049,39 +10311,39 @@ klarna-placement .container {
   width: 100%;
 }
 
-/* line 134, resources/assets/styles/components/_store-locator.scss */
+/* line 161, resources/assets/styles/components/_store-locator.scss */
 
 .stockist #wpsl-result-list {
   width: 100%;
 }
 
-/* line 138, resources/assets/styles/components/_store-locator.scss */
+/* line 165, resources/assets/styles/components/_store-locator.scss */
 
 .stockist #wpsl-gmap {
   width: 100%;
 }
 
-/* line 142, resources/assets/styles/components/_store-locator.scss */
+/* line 169, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-preloader {
   display: none;
 }
 
-/* line 146, resources/assets/styles/components/_store-locator.scss */
+/* line 173, resources/assets/styles/components/_store-locator.scss */
 
 .stockist__col {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 146, resources/assets/styles/components/_store-locator.scss */
+  /* line 173, resources/assets/styles/components/_store-locator.scss */
 
   .stockist__col {
     width: 60%;
   }
 }
 
-/* line 153, resources/assets/styles/components/_store-locator.scss */
+/* line 180, resources/assets/styles/components/_store-locator.scss */
 
 .stockist__col:first-of-type {
   width: 100%;
@@ -10089,7 +10351,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 153, resources/assets/styles/components/_store-locator.scss */
+  /* line 180, resources/assets/styles/components/_store-locator.scss */
 
   .stockist__col:first-of-type {
     width: 40%;
@@ -10097,7 +10359,7 @@ klarna-placement .container {
   }
 }
 
-/* line 165, resources/assets/styles/components/_store-locator.scss */
+/* line 192, resources/assets/styles/components/_store-locator.scss */
 
 #wpsl-search-btn,
 #wpsl-search-wrap input {
@@ -10136,20 +10398,20 @@ klarna-placement .container {
   background: transparent;
 }
 
-/* line 171, resources/assets/styles/components/_store-locator.scss */
+/* line 198, resources/assets/styles/components/_store-locator.scss */
 
 #wpsl-search-btn:hover,
 #wpsl-search-wrap input:hover {
   color: #fff;
 }
 
-/* line 176, resources/assets/styles/components/_store-locator.scss */
+/* line 203, resources/assets/styles/components/_store-locator.scss */
 
 input[value="search"] {
   text-transform: uppercase;
 }
 
-/* line 180, resources/assets/styles/components/_store-locator.scss */
+/* line 207, resources/assets/styles/components/_store-locator.scss */
 
 #wpsl-search-btn {
   color: #fff;
@@ -10185,7 +10447,7 @@ input[value="search"] {
   background: transparent;
 }
 
-/* line 186, resources/assets/styles/components/_store-locator.scss */
+/* line 213, resources/assets/styles/components/_store-locator.scss */
 
 #wpsl-search-btn:hover {
   color: #fff;
@@ -10445,7 +10707,7 @@ input[value="search"] {
   max-width: 1440px;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 23px 20px;
+  padding: 15px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11029,7 +11291,7 @@ input[value="search"] {
 /* line 387, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger {
-  margin: -14px 2px 0 0;
+  margin: -3px 2px 0 0;
   padding: 0;
   color: #fff;
   background: transparent;
@@ -11038,13 +11300,21 @@ input[value="search"] {
   display: block;
 }
 
-/* line 396, resources/assets/styles/layouts/_header.scss */
+@media (min-width: 900px) {
+  /* line 387, resources/assets/styles/layouts/_header.scss */
+
+  .header__hamburger {
+    margin: -14px 2px 0 0;
+  }
+}
+
+/* line 400, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger:focus {
   outline: 0;
 }
 
-/* line 410, resources/assets/styles/layouts/_header.scss */
+/* line 414, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines {
   display: inline-block;
@@ -11059,7 +11329,7 @@ input[value="search"] {
   position: relative;
 }
 
-/* line 416, resources/assets/styles/layouts/_header.scss */
+/* line 420, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before,
 .header__hamburger .lines::after {
@@ -11080,32 +11350,32 @@ input[value="search"] {
   left: 0;
 }
 
-/* line 424, resources/assets/styles/layouts/_header.scss */
+/* line 428, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before {
   top: 7px;
 }
 
-/* line 427, resources/assets/styles/layouts/_header.scss */
+/* line 431, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::after {
   top: -7px;
 }
 
-/* line 432, resources/assets/styles/layouts/_header.scss */
+/* line 436, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines-button:hover {
   opacity: 1;
 }
 
-/* line 437, resources/assets/styles/layouts/_header.scss */
+/* line 441, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines {
   background: transparent;
   border: 0;
 }
 
-/* line 441, resources/assets/styles/layouts/_header.scss */
+/* line 445, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before,
 .header__hamburger.active .lines::after {
@@ -11116,28 +11386,28 @@ input[value="search"] {
   width: 20px;
 }
 
-/* line 448, resources/assets/styles/layouts/_header.scss */
+/* line 452, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
           transform: rotate3d(0, 0, 1, 45deg);
 }
 
-/* line 452, resources/assets/styles/layouts/_header.scss */
+/* line 456, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
-/* line 459, resources/assets/styles/layouts/_header.scss */
+/* line 463, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container {
   position: relative;
   margin: 0 0 0 15px;
 }
 
-/* line 463, resources/assets/styles/layouts/_header.scss */
+/* line 467, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container a#search-btn {
   margin: 0;
@@ -11145,14 +11415,14 @@ input[value="search"] {
   visibility: visible;
 }
 
-/* line 469, resources/assets/styles/layouts/_header.scss */
+/* line 473, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container a#search-btn.hide {
   opacity: 0;
   visibility: hidden;
 }
 
-/* line 476, resources/assets/styles/layouts/_header.scss */
+/* line 480, resources/assets/styles/layouts/_header.scss */
 
 .header__search {
   position: absolute;
@@ -11170,14 +11440,14 @@ input[value="search"] {
   transition: 0.3s all ease;
 }
 
-/* line 487, resources/assets/styles/layouts/_header.scss */
+/* line 491, resources/assets/styles/layouts/_header.scss */
 
 .header__search.active {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 501, resources/assets/styles/layouts/_header.scss */
+/* line 505, resources/assets/styles/layouts/_header.scss */
 
 .header__search input {
   width: 100%;
@@ -11191,14 +11461,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 501, resources/assets/styles/layouts/_header.scss */
+  /* line 505, resources/assets/styles/layouts/_header.scss */
 
   .header__search input {
     font-size: 14px;
   }
 }
 
-/* line 515, resources/assets/styles/layouts/_header.scss */
+/* line 519, resources/assets/styles/layouts/_header.scss */
 
 .header__search input::-webkit-input-placeholder {
   color: #000;
@@ -11215,13 +11485,13 @@ input[value="search"] {
   opacity: 1;
 }
 
-/* line 520, resources/assets/styles/layouts/_header.scss */
+/* line 524, resources/assets/styles/layouts/_header.scss */
 
 .header__search input:focus {
   outline: none;
 }
 
-/* line 524, resources/assets/styles/layouts/_header.scss */
+/* line 528, resources/assets/styles/layouts/_header.scss */
 
 .header__search input.search-field__submit {
   border: 0;
@@ -11238,14 +11508,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 524, resources/assets/styles/layouts/_header.scss */
+  /* line 528, resources/assets/styles/layouts/_header.scss */
 
   .header__search input.search-field__submit {
     top: -3px;
   }
 }
 
-/* line 540, resources/assets/styles/layouts/_header.scss */
+/* line 544, resources/assets/styles/layouts/_header.scss */
 
 .header__search input.search-field__submit.active {
   color: #000;
@@ -11615,21 +11885,22 @@ input[value="search"] {
 
 .about-nav ul {
   list-style: none;
+  padding: 0;
 }
 
-/* line 25, resources/assets/styles/layouts/_about.scss */
+/* line 26, resources/assets/styles/layouts/_about.scss */
 
 .about-nav ul li {
   display: inline-block;
 }
 
-/* line 29, resources/assets/styles/layouts/_about.scss */
+/* line 30, resources/assets/styles/layouts/_about.scss */
 
 .about-nav ul li.current-menu-item a {
   color: #000;
 }
 
-/* line 34, resources/assets/styles/layouts/_about.scss */
+/* line 35, resources/assets/styles/layouts/_about.scss */
 
 .about-nav ul li a {
   display: inline-block;
@@ -11638,14 +11909,22 @@ input[value="search"] {
   line-height: 15px;
   text-decoration: none;
   font-family: "reader", arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: #595959;
   letter-spacing: 1.87px;
   text-transform: uppercase;
 }
 
-/* line 45, resources/assets/styles/layouts/_about.scss */
+@media (min-width: 900px) {
+  /* line 35, resources/assets/styles/layouts/_about.scss */
+
+  .about-nav ul li a {
+    font-size: 18px;
+  }
+}
+
+/* line 50, resources/assets/styles/layouts/_about.scss */
 
 .about-nav ul li::after {
   content: "\2014";
@@ -11653,7 +11932,7 @@ input[value="search"] {
   color: #595959;
 }
 
-/* line 52, resources/assets/styles/layouts/_about.scss */
+/* line 57, resources/assets/styles/layouts/_about.scss */
 
 .about-nav ul li:last-of-type::after {
   content: "";

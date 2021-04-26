@@ -43,9 +43,14 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		flex-direction: column-reverse;
+
+		@include breakpoint(medium) {
+			flex-direction: initial;
+		}
 
 		&.reverse {
-			flex-direction: row-reverse;
+			flex-direction: column-reverse;
 		}
 	}
 
@@ -61,6 +66,7 @@
 		position: relative;
 		flex-direction: row;
 		order: 2;
+		line-height: 0;
 
 		@include breakpoint(medium) {
 			width: 50%;
@@ -77,13 +83,16 @@
 	}
 
 	&__image {
-		padding: 10% 5%;
 		text-align: center;
+
+		@include breakpoint(medium) {
+			padding: 10% 5%;
+		}
 
 		img {
 			height: auto;
     	// max-height: 70vh;
-			width: auto;
+			//width: auto;
 
 			@include breakpoint(medium) {
 				width: auto;
@@ -116,6 +125,7 @@
 		font-weight: 100;
 		font-size: 14px;
 		margin: 0 0 10px 0;
+		line-height: 22px;
 
 		@include breakpoint(medium) {
 			font-size: 16px;

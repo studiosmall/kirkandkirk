@@ -43,19 +43,22 @@
 
 	&__code {
 		mix-blend-mode: multiply;
-		max-width: 300px;
-		padding: 0 0 44px 0;
+		max-width: 100%;
+		padding: 0;
 
 		@include breakpoint(medium) {
 			padding: 0;
+			max-width: 300px;
 		}
 	}
 
 	&__quote {
 		max-width: 100%;
+		display: none;
 
 		@include breakpoint(medium) {
 			max-width: 700px;
+			display: initial;
 		}
 
 		p,
