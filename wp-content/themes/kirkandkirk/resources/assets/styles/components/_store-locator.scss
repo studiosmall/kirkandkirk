@@ -1,6 +1,12 @@
 .stockist {
 	@include section;
 
+	padding: 0 0 35px 0;
+
+	@include breakpoint(medium) {
+    padding: 35px 0;
+	}
+
 	::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 		color: $brand--primary;
 		opacity: 1; /* Firefox */
@@ -24,13 +30,19 @@
     height: 500px !important;
 	}
 
+	// #wpsl-gmap {
+	// 	margin-top: 0 !important;
+	// }
+
 	#wpsl-wrap {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
+		flex-direction: column-reverse;
 
 		@include breakpoint(medium) {
 			flex-wrap: nowrap;
+			flex-direction: initial;
 		}
 
 		#wpsl-result-list {
