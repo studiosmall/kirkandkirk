@@ -49,6 +49,7 @@
                 color: $brand--primary;
                 letter-spacing: 0.6px;
                 text-align: center;
+                line-height: 22px;
             }
         }
 
@@ -97,6 +98,7 @@
                 padding: 10px 10px !important;
                 border: 0 !important;
                 background-color: #e1e1e1;
+                line-height: 22px;
 
                 &::-webkit-input-placeholder { /* Edge */
                     color: $brand--primary;

@@ -27,7 +27,7 @@
 		width: 100%;
 
 		@include breakpoint(medium) {
-			width: 40%;
+			width: 30%;
 		}
 
 		&:last-of-type {
@@ -36,7 +36,7 @@
 			align-items: end;
 
 		@include breakpoint(medium) {
-			width: 60%;
+			width: 70%;
 		}
 		}
 	}
@@ -52,6 +52,12 @@
 	}
 
 	&__quote {
+		max-width: 100%;
+
+		@include breakpoint(medium) {
+			max-width: 700px;
+		}
+
 		p,
 		span {
 			@include quote;

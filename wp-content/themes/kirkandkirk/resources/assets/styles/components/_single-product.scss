@@ -264,11 +264,11 @@ klarna-placement {
 			.button {
 				@include btn($brand--primary);
 
-				// width: 100%;
-				width: 50%;
+				width: 100%;
+				// width: 50%;
 				margin: 20px 0 10px 0;
 				float: right;
-				min-width: 200px;
+				//min-width: 200px;
 			}
 
 			.cart {

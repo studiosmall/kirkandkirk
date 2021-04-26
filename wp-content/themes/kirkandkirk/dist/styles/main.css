@@ -5415,7 +5415,8 @@ label {
 input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
 }
 
@@ -5427,12 +5428,12 @@ input {
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
 /* line 1, resources/assets/styles/components/_off-canvas.scss */
@@ -6468,7 +6469,7 @@ input:focus {
   /* line 26, resources/assets/styles/components/_spotify.scss */
 
   .spotify__col {
-    width: 40%;
+    width: 30%;
   }
 }
 
@@ -6488,7 +6489,7 @@ input:focus {
   /* line 33, resources/assets/styles/components/_spotify.scss */
 
   .spotify__col:last-of-type {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -6508,7 +6509,21 @@ input:focus {
   }
 }
 
-/* line 55, resources/assets/styles/components/_spotify.scss */
+/* line 54, resources/assets/styles/components/_spotify.scss */
+
+.spotify__quote {
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 54, resources/assets/styles/components/_spotify.scss */
+
+  .spotify__quote {
+    max-width: 700px;
+  }
+}
+
+/* line 61, resources/assets/styles/components/_spotify.scss */
 
 .spotify__quote p,
 .spotify__quote span {
@@ -6517,13 +6532,13 @@ input:focus {
   font-size: 14px;
   color: #000;
   letter-spacing: 0.75px;
-  line-height: 22px;
+  line-height: 20px;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 55, resources/assets/styles/components/_spotify.scss */
+  /* line 61, resources/assets/styles/components/_spotify.scss */
 
   .spotify__quote p,
   .spotify__quote span {
@@ -6531,13 +6546,13 @@ input:focus {
   }
 }
 
-/* line 60, resources/assets/styles/components/_spotify.scss */
+/* line 66, resources/assets/styles/components/_spotify.scss */
 
 .spotify__quote span {
   font-style: initial;
 }
 
-/* line 65, resources/assets/styles/components/_spotify.scss */
+/* line 71, resources/assets/styles/components/_spotify.scss */
 
 .spotify__info {
   display: -webkit-box;
@@ -6552,7 +6567,7 @@ input:focus {
   padding: 44px 0 0 0;
 }
 
-/* line 72, resources/assets/styles/components/_spotify.scss */
+/* line 78, resources/assets/styles/components/_spotify.scss */
 
 .spotify h3 {
   font-family: "reader", arial, sans-serif;
@@ -6566,14 +6581,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 72, resources/assets/styles/components/_spotify.scss */
+  /* line 78, resources/assets/styles/components/_spotify.scss */
 
   .spotify h3 {
     font-size: 20px;
   }
 }
 
-/* line 78, resources/assets/styles/components/_spotify.scss */
+/* line 84, resources/assets/styles/components/_spotify.scss */
 
 .spotify h4 {
   font-family: "reader", arial, sans-serif;
@@ -6586,7 +6601,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 78, resources/assets/styles/components/_spotify.scss */
+  /* line 84, resources/assets/styles/components/_spotify.scss */
 
   .spotify h4 {
     font-size: 16px;
@@ -8219,10 +8234,9 @@ klarna-placement .container {
   font-weight: 500;
   letter-spacing: 1.5px;
   width: 100%;
-  width: 50%;
+  width: 100%;
   margin: 20px 0 10px 0;
   float: right;
-  min-width: 200px;
 }
 
 /* line 38, resources/assets/styles/components/_buttons.scss */
@@ -8445,10 +8459,9 @@ klarna-placement .container {
   padding: 60px 0 120px 0;
 }
 
-/* line 29, resources/assets/styles/components/_collection.scss */
+/* line 28, resources/assets/styles/components/_collection.scss */
 
-.term-new-arrivals .woocommerce-products-header,
-.tax-product_cat .woocommerce-products-header {
+.term-new-arrivals .woocommerce-products-header {
   display: none;
 }
 
@@ -8664,15 +8677,16 @@ klarna-placement .container {
   color: #000;
   letter-spacing: 0.6px;
   text-align: center;
+  line-height: 22px;
 }
 
-/* line 55, resources/assets/styles/components/_form.scss */
+/* line 56, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body {
   text-align: center;
 }
 
-/* line 58, resources/assets/styles/components/_form.scss */
+/* line 59, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body ul {
   list-style: none;
@@ -8680,13 +8694,13 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 63, resources/assets/styles/components/_form.scss */
+/* line 64, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body ul li {
   padding: 0 0 20px 0;
 }
 
-/* line 68, resources/assets/styles/components/_form.scss */
+/* line 69, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body label {
   font-family: "reader", arial, sans-serif;
@@ -8702,25 +8716,26 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 68, resources/assets/styles/components/_form.scss */
+  /* line 69, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body label {
     font-size: 16px;
   }
 }
 
-/* line 75, resources/assets/styles/components/_form.scss */
+/* line 76, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body label .gfield_required {
   color: #000;
 }
 
-/* line 80, resources/assets/styles/components/_form.scss */
+/* line 81, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
   width: calc(100% - 8px);
   padding: 10px 10px !important;
@@ -8729,71 +8744,73 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 80, resources/assets/styles/components/_form.scss */
+  /* line 81, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body input {
     width: 100%;
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .form .gform_wrapper .gform_body input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
-/* line 88, resources/assets/styles/components/_form.scss */
+/* line 89, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body input:focus {
   outline: 0;
 }
 
-/* line 93, resources/assets/styles/components/_form.scss */
+/* line 94, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
   width: calc(100% - 8px);
   padding: 10px 10px !important;
   border: 0 !important;
   background-color: #e1e1e1;
+  line-height: 22px;
 }
 
 @media (min-width: 900px) {
-  /* line 93, resources/assets/styles/components/_form.scss */
+  /* line 94, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body textarea {
     width: 100%;
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .form .gform_wrapper .gform_body textarea:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
-/* line 101, resources/assets/styles/components/_form.scss */
+/* line 103, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   /* Edge */
   color: #000;
 }
 
-/* line 105, resources/assets/styles/components/_form.scss */
+/* line 107, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea::-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000;
 }
 
-/* line 109, resources/assets/styles/components/_form.scss */
+/* line 111, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   color: #000;
@@ -8807,13 +8824,13 @@ klarna-placement .container {
   color: #000;
 }
 
-/* line 113, resources/assets/styles/components/_form.scss */
+/* line 115, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea:focus {
   outline: 0;
 }
 
-/* line 118, resources/assets/styles/components/_form.scss */
+/* line 120, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .ginput_container_fileupload {
   width: 253px;
@@ -8821,7 +8838,7 @@ klarna-placement .container {
   text-transform: uppercase;
 }
 
-/* line 123, resources/assets/styles/components/_form.scss */
+/* line 125, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .ginput_container_fileupload input[type="file"] {
   text-transform: uppercase;
@@ -8830,7 +8847,7 @@ klarna-placement .container {
   font-weight: 100;
 }
 
-/* line 131, resources/assets/styles/components/_form.scss */
+/* line 133, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .ginput_container_fileupload input::-webkit-file-upload-button {
   background: transparent;
@@ -8842,7 +8859,7 @@ klarna-placement .container {
   font-weight: 500;
 }
 
-/* line 144, resources/assets/styles/components/_form.scss */
+/* line 146, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox {
   display: -webkit-box;
@@ -8857,20 +8874,20 @@ klarna-placement .container {
   margin: 15px 0 0 0;
 }
 
-/* line 150, resources/assets/styles/components/_form.scss */
+/* line 152, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li {
   margin: 0 20px;
 }
 
-/* line 153, resources/assets/styles/components/_form.scss */
+/* line 155, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li label {
   display: inline-block;
   margin: 0 0 0 5px;
 }
 
-/* line 158, resources/assets/styles/components/_form.scss */
+/* line 160, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li input {
   margin: 0 !important;
@@ -8878,7 +8895,7 @@ klarna-placement .container {
   width: auto;
 }
 
-/* line 168, resources/assets/styles/components/_form.scss */
+/* line 170, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_footer .gform_button {
   font-family: "reader", arial, sans-serif;
@@ -8903,7 +8920,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 168, resources/assets/styles/components/_form.scss */
+  /* line 170, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_footer .gform_button {
     font-size: 16px;
@@ -9917,7 +9934,8 @@ klarna-placement .container {
 .stockist .wpsl-search .wpsl-input #wpsl-search-input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
   width: 100%;
   background-color: #e1dfd6;
@@ -9936,12 +9954,12 @@ klarna-placement .container {
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .stockist .wpsl-search .wpsl-input #wpsl-search-input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
 /* line 69, resources/assets/styles/components/_store-locator.scss */
@@ -11710,8 +11728,10 @@ input[value="search"] {
 .account .woocommerce input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
+  background-color: #e1e1e1;
 }
 
 @media (min-width: 900px) {
@@ -11722,41 +11742,42 @@ input[value="search"] {
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .account .woocommerce input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
-/* line 36, resources/assets/styles/layouts/_account.scss */
+/* line 38, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .woocommerce-form__label-for-checkbox {
   text-align: center;
   margin: 20px 0;
 }
 
-/* line 40, resources/assets/styles/layouts/_account.scss */
+/* line 42, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .woocommerce-form__label-for-checkbox input {
   width: auto;
+  background-color: #e1e1e1;
 }
 
-/* line 44, resources/assets/styles/layouts/_account.scss */
+/* line 47, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .woocommerce-form__label-for-checkbox span {
   font-size: 12px;
   vertical-align: bottom;
 }
 
-/* line 50, resources/assets/styles/layouts/_account.scss */
+/* line 53, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .form-row {
   text-align: center;
 }
 
-/* line 53, resources/assets/styles/layouts/_account.scss */
+/* line 56, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .form-row button {
   font-family: "reader", arial, sans-serif;
@@ -11781,7 +11802,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 53, resources/assets/styles/layouts/_account.scss */
+  /* line 56, resources/assets/styles/layouts/_account.scss */
 
   .account .woocommerce .form-row button {
     font-size: 16px;
@@ -11802,20 +11823,20 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 58, resources/assets/styles/layouts/_account.scss */
+/* line 61, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .lost_password {
   text-align: center;
 }
 
-/* line 61, resources/assets/styles/layouts/_account.scss */
+/* line 64, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce .lost_password a {
   font-size: 12px;
   color: #000;
 }
 
-/* line 70, resources/assets/styles/layouts/_account.scss */
+/* line 73, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce {
   display: -webkit-box;
@@ -11827,7 +11848,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 70, resources/assets/styles/layouts/_account.scss */
+  /* line 73, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce {
     width: 60%;
@@ -11836,7 +11857,7 @@ input[value="search"] {
   }
 }
 
-/* line 80, resources/assets/styles/layouts/_account.scss */
+/* line 83, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce button {
   font-family: "reader", arial, sans-serif;
@@ -11862,7 +11883,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 80, resources/assets/styles/layouts/_account.scss */
+  /* line 83, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce button {
     font-size: 16px;
@@ -11883,21 +11904,21 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 86, resources/assets/styles/layouts/_account.scss */
+/* line 89, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 86, resources/assets/styles/layouts/_account.scss */
+  /* line 89, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation {
     width: 30%;
   }
 }
 
-/* line 93, resources/assets/styles/layouts/_account.scss */
+/* line 96, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul {
   list-style: none;
@@ -11905,7 +11926,7 @@ input[value="search"] {
   padding: 0;
 }
 
-/* line 98, resources/assets/styles/layouts/_account.scss */
+/* line 101, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li {
   text-align: left;
@@ -11914,7 +11935,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 98, resources/assets/styles/layouts/_account.scss */
+  /* line 101, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li {
     text-align: left;
@@ -11924,20 +11945,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 109, resources/assets/styles/layouts/_account.scss */
+  /* line 112, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type {
     margin: 30px 0 0 0;
   }
 }
 
-/* line 116, resources/assets/styles/layouts/_account.scss */
+/* line 119, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a {
   border-bottom: 1px solid #000;
 }
 
-/* line 121, resources/assets/styles/layouts/_account.scss */
+/* line 124, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a {
   font-family: "reader", arial, sans-serif;
@@ -11954,20 +11975,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 121, resources/assets/styles/layouts/_account.scss */
+  /* line 124, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a {
     font-size: 16px;
   }
 }
 
-/* line 127, resources/assets/styles/layouts/_account.scss */
+/* line 130, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a:hover {
   border-bottom: 1px solid #000;
 }
 
-/* line 135, resources/assets/styles/layouts/_account.scss */
+/* line 138, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content {
   font-family: "reader", arial, sans-serif;
@@ -11981,7 +12002,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 135, resources/assets/styles/layouts/_account.scss */
+  /* line 138, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content {
     font-size: 16px;
@@ -11989,20 +12010,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 135, resources/assets/styles/layouts/_account.scss */
+  /* line 138, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content {
     width: 70%;
   }
 }
 
-/* line 144, resources/assets/styles/layouts/_account.scss */
+/* line 147, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-info {
   padding: 0;
 }
 
-/* line 148, resources/assets/styles/layouts/_account.scss */
+/* line 151, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content a {
   font-family: "reader", arial, sans-serif;
@@ -12015,14 +12036,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 148, resources/assets/styles/layouts/_account.scss */
+  /* line 151, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content a {
     font-size: 16px;
   }
 }
 
-/* line 152, resources/assets/styles/layouts/_account.scss */
+/* line 155, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content h3 {
   font-family: "reader", arial, sans-serif;
@@ -12037,14 +12058,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 152, resources/assets/styles/layouts/_account.scss */
+  /* line 155, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content h3 {
     font-size: 20px;
   }
 }
 
-/* line 158, resources/assets/styles/layouts/_account.scss */
+/* line 161, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content label {
   font-family: "reader", arial, sans-serif;
@@ -12059,52 +12080,53 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 158, resources/assets/styles/layouts/_account.scss */
+  /* line 161, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content label {
     font-size: 16px;
   }
 }
 
-/* line 164, resources/assets/styles/layouts/_account.scss */
+/* line 167, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content span {
   font-size: 12px;
 }
 
-/* line 168, resources/assets/styles/layouts/_account.scss */
+/* line 171, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
-  background-color: #fff;
+  background-color: #e1e1e1;
 }
 
 @media (min-width: 900px) {
-  /* line 168, resources/assets/styles/layouts/_account.scss */
+  /* line 171, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content input {
     width: 100%;
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
-/* line 175, resources/assets/styles/layouts/_account.scss */
+/* line 178, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content fieldset input {
   width: 95%;
 }
 
-/* line 180, resources/assets/styles/layouts/_account.scss */
+/* line 183, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
   padding: 0;
@@ -12114,14 +12136,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 180, resources/assets/styles/layouts/_account.scss */
+  /* line 183, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
     width: 100%;
   }
 }
 
-/* line 189, resources/assets/styles/layouts/_account.scss */
+/* line 192, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
   font-family: "reader", arial, sans-serif;
@@ -12136,21 +12158,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 189, resources/assets/styles/layouts/_account.scss */
+  /* line 192, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
     font-size: 20px;
   }
 }
 
-/* line 195, resources/assets/styles/layouts/_account.scss */
+/* line 198, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table {
   width: 100%;
   text-align: left;
 }
 
-/* line 199, resources/assets/styles/layouts/_account.scss */
+/* line 202, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
   font-family: "reader", arial, sans-serif;
@@ -12163,33 +12185,33 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 199, resources/assets/styles/layouts/_account.scss */
+  /* line 202, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
     font-size: 16px;
   }
 }
 
-/* line 203, resources/assets/styles/layouts/_account.scss */
+/* line 206, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th {
   text-align: left !important;
 }
 
-/* line 207, resources/assets/styles/layouts/_account.scss */
+/* line 210, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td {
   text-align: left !important;
   padding: 10px 0 !important;
 }
 
-/* line 214, resources/assets/styles/layouts/_account.scss */
+/* line 217, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses {
   text-align: left;
 }
 
-/* line 217, resources/assets/styles/layouts/_account.scss */
+/* line 220, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
   font-family: "reader", arial, sans-serif;
@@ -12202,14 +12224,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 217, resources/assets/styles/layouts/_account.scss */
+  /* line 220, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
     font-size: 20px;
   }
 }
 
-/* line 224, resources/assets/styles/layouts/_account.scss */
+/* line 227, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
   font-family: "reader", arial, sans-serif;
@@ -12224,37 +12246,38 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 224, resources/assets/styles/layouts/_account.scss */
+  /* line 227, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
     font-size: 16px;
   }
 }
 
-/* line 230, resources/assets/styles/layouts/_account.scss */
+/* line 233, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
-  background-color: #fff;
+  background-color: #e1e1e1;
 }
 
 @media (min-width: 900px) {
-  /* line 230, resources/assets/styles/layouts/_account.scss */
+  /* line 233, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
     width: 100%;
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
 /* line 1, resources/assets/styles/layouts/_cart.scss */
@@ -12806,7 +12829,8 @@ input[value="search"] {
 .woocommerce-checkout input {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
 }
 
@@ -12818,12 +12842,12 @@ input[value="search"] {
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .woocommerce-checkout input:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
 /* line 128, resources/assets/styles/layouts/_checkout.scss */
@@ -12831,7 +12855,8 @@ input[value="search"] {
 .woocommerce-checkout textarea {
   width: 90%;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
   padding: 10px 10px;
 }
 
@@ -12843,12 +12868,12 @@ input[value="search"] {
   }
 }
 
-/* line 165, resources/assets/styles/common/_mixins.scss */
+/* line 166, resources/assets/styles/common/_mixins.scss */
 
 .woocommerce-checkout textarea:focus {
   outline: none;
   border: 0;
-  background-color: #f8f8f8;
+  background-color: #e1e1e1;
 }
 
 /* line 132, resources/assets/styles/layouts/_checkout.scss */

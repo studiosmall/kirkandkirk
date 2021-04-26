@@ -31,6 +31,8 @@
 
     input {
       @include input;
+
+      background-color: #e1e1e1;
     }
 
     .woocommerce-form__label-for-checkbox {
@@ -39,6 +41,7 @@
 
       input {
         width: auto;
+        background-color: #e1e1e1;
       }
 
       span {
@@ -168,7 +171,7 @@
       input {
         @include input;
 
-        background-color: #fff;
+        background-color: #e1e1e1;
       }
 
       fieldset {
@@ -230,7 +233,7 @@
         input {
           @include input;
 
-          background-color: #fff;
+          background-color: #e1e1e1;
         }
       }
     }
