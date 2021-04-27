@@ -99,7 +99,9 @@
 					font-size: 14px;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus,
+				&:active {
 					color: $brand--white;
 				}
 

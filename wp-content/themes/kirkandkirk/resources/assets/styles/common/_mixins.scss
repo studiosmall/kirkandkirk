@@ -153,6 +153,7 @@
 }
 
 @mixin input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;

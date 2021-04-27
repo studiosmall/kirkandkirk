@@ -5413,6 +5413,7 @@ label {
 /* line 40, resources/assets/styles/components/_forms.scss */
 
 input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -5428,7 +5429,7 @@ input {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 input:focus {
   outline: none;
@@ -5603,11 +5604,13 @@ input:focus {
 
 /* line 102, resources/assets/styles/components/_off-canvas.scss */
 
-.off-canvas ul li a:hover {
+.off-canvas ul li a:hover,
+.off-canvas ul li a:focus,
+.off-canvas ul li a:active {
   color: #fff;
 }
 
-/* line 106, resources/assets/styles/components/_off-canvas.scss */
+/* line 108, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a::after {
   height: 1px;
@@ -5621,25 +5624,25 @@ input:focus {
   }
 }
 
-/* line 115, resources/assets/styles/components/_off-canvas.scss */
+/* line 117, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu {
   padding: 0;
 }
 
-/* line 118, resources/assets/styles/components/_off-canvas.scss */
+/* line 120, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li {
   margin: 0 0 1px 0;
 }
 
-/* line 124, resources/assets/styles/components/_off-canvas.scss */
+/* line 126, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li.current-menu-item a:hover {
   color: #fff;
 }
 
-/* line 135, resources/assets/styles/components/_off-canvas.scss */
+/* line 137, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a {
   display: inline-block;
@@ -5650,20 +5653,20 @@ input:focus {
   font-weight: 100;
 }
 
-/* line 139, resources/assets/styles/components/_off-canvas.scss */
+/* line 141, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a:hover {
   color: #fff;
 }
 
-/* line 143, resources/assets/styles/components/_off-canvas.scss */
+/* line 145, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 135, resources/assets/styles/components/_off-canvas.scss */
+  /* line 137, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li ul.sub-menu li a {
     font-size: 16px;
@@ -5671,21 +5674,21 @@ input:focus {
   }
 }
 
-/* line 157, resources/assets/styles/components/_off-canvas.scss */
+/* line 159, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation {
   display: block;
 }
 
 @media (min-width: 900px) {
-  /* line 157, resources/assets/styles/components/_off-canvas.scss */
+  /* line 159, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas #menu-mobile-navigation {
     display: none;
   }
 }
 
-/* line 165, resources/assets/styles/components/_off-canvas.scss */
+/* line 167, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu {
   display: none;
@@ -5694,13 +5697,13 @@ input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 173, resources/assets/styles/components/_off-canvas.scss */
+/* line 175, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu.active {
   display: block;
 }
 
-/* line 177, resources/assets/styles/components/_off-canvas.scss */
+/* line 179, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu ul.sub-menu {
   display: block;
@@ -8757,19 +8760,29 @@ klarna-placement .container {
 
 /* line 1, resources/assets/styles/components/_form.scss */
 
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 9, resources/assets/styles/components/_form.scss */
+
 .form {
   padding: 35px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 1, resources/assets/styles/components/_form.scss */
+  /* line 9, resources/assets/styles/components/_form.scss */
 
   .form {
     padding: 35px 0;
   }
 }
 
-/* line 4, resources/assets/styles/components/_form.scss */
+/* line 12, resources/assets/styles/components/_form.scss */
 
 .form__inner {
   padding: 0 20px;
@@ -8784,20 +8797,20 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 4, resources/assets/styles/components/_form.scss */
+  /* line 12, resources/assets/styles/components/_form.scss */
 
   .form__inner {
     padding: 0 50px;
   }
 }
 
-/* line 10, resources/assets/styles/components/_form.scss */
+/* line 18, resources/assets/styles/components/_form.scss */
 
 .form__container {
   margin: 0 auto;
 }
 
-/* line 14, resources/assets/styles/components/_form.scss */
+/* line 22, resources/assets/styles/components/_form.scss */
 
 .form__message {
   width: 90%;
@@ -8807,20 +8820,20 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 14, resources/assets/styles/components/_form.scss */
+  /* line 22, resources/assets/styles/components/_form.scss */
 
   .form__message {
     width: 50%;
   }
 }
 
-/* line 24, resources/assets/styles/components/_form.scss */
+/* line 32, resources/assets/styles/components/_form.scss */
 
 .form__message p {
   text-align: center;
 }
 
-/* line 29, resources/assets/styles/components/_form.scss */
+/* line 37, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper {
   text-align: center;
@@ -8829,28 +8842,28 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 29, resources/assets/styles/components/_form.scss */
+  /* line 37, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper {
     width: 50%;
   }
 }
 
-/* line 38, resources/assets/styles/components/_form.scss */
+/* line 46, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .validation_message {
   padding: 15px 0 0 0;
   font-style: italic;
 }
 
-/* line 43, resources/assets/styles/components/_form.scss */
+/* line 51, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .validation_error {
   padding: 15px 0;
   font-style: italic;
 }
 
-/* line 48, resources/assets/styles/components/_form.scss */
+/* line 56, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_heading {
   width: 80%;
@@ -8858,7 +8871,7 @@ klarna-placement .container {
   padding: 0 0 40px 0;
 }
 
-/* line 53, resources/assets/styles/components/_form.scss */
+/* line 61, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_heading span {
   font-family: "reader", arial, sans-serif;
@@ -8870,13 +8883,13 @@ klarna-placement .container {
   line-height: 22px;
 }
 
-/* line 64, resources/assets/styles/components/_form.scss */
+/* line 72, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body {
   text-align: center;
 }
 
-/* line 67, resources/assets/styles/components/_form.scss */
+/* line 75, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body ul {
   list-style: none;
@@ -8884,13 +8897,13 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 72, resources/assets/styles/components/_form.scss */
+/* line 80, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body ul li {
   padding: 0 0 20px 0;
 }
 
-/* line 77, resources/assets/styles/components/_form.scss */
+/* line 85, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body label {
   font-family: "reader", arial, sans-serif;
@@ -8906,22 +8919,23 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 77, resources/assets/styles/components/_form.scss */
+  /* line 85, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body label {
     font-size: 16px;
   }
 }
 
-/* line 84, resources/assets/styles/components/_form.scss */
+/* line 92, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body label .gfield_required {
   color: #000;
 }
 
-/* line 89, resources/assets/styles/components/_form.scss */
+/* line 97, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -8934,14 +8948,14 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 89, resources/assets/styles/components/_form.scss */
+  /* line 97, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body input {
     width: 100%;
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .form .gform_wrapper .gform_body input:focus {
   outline: none;
@@ -8949,15 +8963,16 @@ klarna-placement .container {
   background-color: #e1e1e1;
 }
 
-/* line 97, resources/assets/styles/components/_form.scss */
+/* line 105, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body input:focus {
   outline: 0;
 }
 
-/* line 102, resources/assets/styles/components/_form.scss */
+/* line 110, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -8971,14 +8986,14 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 102, resources/assets/styles/components/_form.scss */
+  /* line 110, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body textarea {
     width: 100%;
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .form .gform_wrapper .gform_body textarea:focus {
   outline: none;
@@ -8986,21 +9001,21 @@ klarna-placement .container {
   background-color: #e1e1e1;
 }
 
-/* line 111, resources/assets/styles/components/_form.scss */
+/* line 119, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   /* Edge */
   color: #000;
 }
 
-/* line 115, resources/assets/styles/components/_form.scss */
+/* line 123, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea::-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000;
 }
 
-/* line 119, resources/assets/styles/components/_form.scss */
+/* line 127, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   color: #000;
@@ -9014,13 +9029,13 @@ klarna-placement .container {
   color: #000;
 }
 
-/* line 123, resources/assets/styles/components/_form.scss */
+/* line 131, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body textarea:focus {
   outline: 0;
 }
 
-/* line 128, resources/assets/styles/components/_form.scss */
+/* line 136, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .ginput_container_fileupload {
   width: 300px;
@@ -9029,14 +9044,14 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 128, resources/assets/styles/components/_form.scss */
+  /* line 136, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_body .ginput_container_fileupload {
     width: 253px;
   }
 }
 
-/* line 137, resources/assets/styles/components/_form.scss */
+/* line 145, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .ginput_container_fileupload input[type="file"] {
   text-transform: uppercase;
@@ -9045,7 +9060,7 @@ klarna-placement .container {
   font-weight: 100;
 }
 
-/* line 145, resources/assets/styles/components/_form.scss */
+/* line 153, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .ginput_container_fileupload input::-webkit-file-upload-button {
   background: transparent;
@@ -9057,7 +9072,7 @@ klarna-placement .container {
   font-weight: 500;
 }
 
-/* line 158, resources/assets/styles/components/_form.scss */
+/* line 166, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox {
   display: -webkit-box;
@@ -9072,20 +9087,20 @@ klarna-placement .container {
   margin: 15px 0 0 0;
 }
 
-/* line 164, resources/assets/styles/components/_form.scss */
+/* line 172, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li {
   margin: 0 20px;
 }
 
-/* line 167, resources/assets/styles/components/_form.scss */
+/* line 175, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li label {
   display: inline-block;
   margin: 0 0 0 5px;
 }
 
-/* line 172, resources/assets/styles/components/_form.scss */
+/* line 180, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_body .gfield_checkbox li input {
   margin: 0 !important;
@@ -9093,7 +9108,7 @@ klarna-placement .container {
   width: auto;
 }
 
-/* line 182, resources/assets/styles/components/_form.scss */
+/* line 190, resources/assets/styles/components/_form.scss */
 
 .form .gform_wrapper .gform_footer .gform_button {
   font-family: "reader", arial, sans-serif;
@@ -9118,7 +9133,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 182, resources/assets/styles/components/_form.scss */
+  /* line 190, resources/assets/styles/components/_form.scss */
 
   .form .gform_wrapper .gform_footer .gform_button {
     font-size: 16px;
@@ -10285,6 +10300,7 @@ klarna-placement .container {
 /* line 97, resources/assets/styles/components/_store-locator.scss */
 
 .stockist .wpsl-search .wpsl-input #wpsl-search-input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -10307,7 +10323,7 @@ klarna-placement .container {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .stockist .wpsl-search .wpsl-input #wpsl-search-input:focus {
   outline: none;
@@ -12132,6 +12148,7 @@ input[value="search"] {
 /* line 32, resources/assets/styles/layouts/_account.scss */
 
 .account .woocommerce input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -12148,7 +12165,7 @@ input[value="search"] {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .account .woocommerce input:focus {
   outline: none;
@@ -12502,6 +12519,7 @@ input[value="search"] {
 /* line 171, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -12518,7 +12536,7 @@ input[value="search"] {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input:focus {
   outline: none;
@@ -12662,6 +12680,7 @@ input[value="search"] {
 /* line 233, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -12678,7 +12697,7 @@ input[value="search"] {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus {
   outline: none;
@@ -13233,6 +13252,7 @@ input[value="search"] {
 /* line 124, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -13248,7 +13268,7 @@ input[value="search"] {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .woocommerce-checkout input:focus {
   outline: none;
@@ -13259,6 +13279,7 @@ input[value="search"] {
 /* line 128, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout textarea {
+  border-radius: 0;
   width: 90%;
   border: 0;
   background-color: #e1e1e1;
@@ -13274,7 +13295,7 @@ input[value="search"] {
   }
 }
 
-/* line 166, resources/assets/styles/common/_mixins.scss */
+/* line 167, resources/assets/styles/common/_mixins.scss */
 
 .woocommerce-checkout textarea:focus {
   outline: none;
