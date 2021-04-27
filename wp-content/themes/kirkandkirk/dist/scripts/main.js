@@ -2300,9 +2300,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
     var $grid = $('.articles__items');
 
-    function updateMasonry(e) {
-      e.preventDefault();
-
+    function updateMasonry() {
       var $containerHeight = $(window).width();
 
       console.log($containerHeight);
@@ -2398,7 +2396,7 @@ Router.prototype.loadEvents = function loadEvents () {
                   //container.masonry('appended', $items);
                   setTimeout( function(){
                     container.append( $items ).masonry( 'appended', $items );
-                  }, 100);
+                  }, 500);
                 }
 
                 var count = $('.articles__card').length;
