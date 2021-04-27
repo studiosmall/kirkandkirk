@@ -54,7 +54,11 @@ klarna-placement {
 		}
 
 		.lifestyle {
-			margin: 85px 0;
+			margin: 20px 0;
+
+			@include breakpoint(medium) {
+				margin: 85px 0;
+			}
 
 			&.portrait {
 				width:  100%;
@@ -189,6 +193,13 @@ klarna-placement {
 			display: none !important;
 		}
 
+		.threesixty {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 500px;
+		}
+
 		#container.wc360-container {
 			width: 100%;
 			cursor: grab;
@@ -199,7 +210,14 @@ klarna-placement {
 			}
 
 			.spinner {
-				display: none !important;
+				//display: none !important;
+				margin-top: 0 !important;
+				background-color: transparent;
+
+				span {
+					@include subtitle($brand--primary);
+					color: $brand--primary;
+				}
 			}
 		}
 
