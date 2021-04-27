@@ -9861,7 +9861,7 @@ klarna-placement .container {
 .articles__sizer,
 .articles__card {
   width: 100%;
-  padding: 0 0 35px 0;
+  padding: 0;
 }
 
 @media (min-width: 900px) {
@@ -9869,82 +9869,83 @@ klarna-placement .container {
 
   .articles__sizer,
   .articles__card {
+    padding: 0 0 35px 0;
     width: calc((100% - 100px) / 3);
   }
 }
 
-/* line 66, resources/assets/styles/components/_articles.scss */
+/* line 67, resources/assets/styles/components/_articles.scss */
 
 .articles__card {
   float: left;
-  padding: 0 0 175px 0;
+  padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 66, resources/assets/styles/components/_articles.scss */
+  /* line 67, resources/assets/styles/components/_articles.scss */
 
   .articles__card {
     padding: 600px 0 350px 0;
   }
 }
 
-/* line 74, resources/assets/styles/components/_articles.scss */
+/* line 75, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(odd) {
-  padding: 0 0 175px 0;
+  padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 74, resources/assets/styles/components/_articles.scss */
+  /* line 75, resources/assets/styles/components/_articles.scss */
 
   .articles__card:nth-child(odd) {
     padding: 350px 0 350px 0;
   }
 }
 
-/* line 82, resources/assets/styles/components/_articles.scss */
+/* line 83, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(even) {
-  padding: 0 0 175px 0;
+  padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 82, resources/assets/styles/components/_articles.scss */
+  /* line 83, resources/assets/styles/components/_articles.scss */
 
   .articles__card:nth-child(even) {
     padding: 0 0 350px 0;
   }
 }
 
-/* line 90, resources/assets/styles/components/_articles.scss */
+/* line 91, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(3) {
-  padding: 0 0 175px 0;
+  padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 90, resources/assets/styles/components/_articles.scss */
+  /* line 91, resources/assets/styles/components/_articles.scss */
 
   .articles__card:nth-child(3) {
     padding: 600px 0 350px 0;
   }
 }
 
-/* line 98, resources/assets/styles/components/_articles.scss */
+/* line 99, resources/assets/styles/components/_articles.scss */
 
 .articles__card:last-of-type {
-  padding: 0 0 175px 0;
+  padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 98, resources/assets/styles/components/_articles.scss */
+  /* line 99, resources/assets/styles/components/_articles.scss */
 
   .articles__card:last-of-type {
     padding: 600px 0 250px 0;
   }
 }
 
-/* line 114, resources/assets/styles/components/_articles.scss */
+/* line 115, resources/assets/styles/components/_articles.scss */
 
 .articles__card h2 {
   font-family: "reader", arial, sans-serif;
@@ -9959,14 +9960,14 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 114, resources/assets/styles/components/_articles.scss */
+  /* line 115, resources/assets/styles/components/_articles.scss */
 
   .articles__card h2 {
     font-size: 20px;
   }
 }
 
-/* line 121, resources/assets/styles/components/_articles.scss */
+/* line 122, resources/assets/styles/components/_articles.scss */
 
 .articles__card h3 {
   font-family: "reader", arial, sans-serif;
@@ -9979,14 +9980,14 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 121, resources/assets/styles/components/_articles.scss */
+  /* line 122, resources/assets/styles/components/_articles.scss */
 
   .articles__card h3 {
     font-size: 16px;
   }
 }
 
-/* line 135, resources/assets/styles/components/_articles.scss */
+/* line 136, resources/assets/styles/components/_articles.scss */
 
 .articles__card p {
   font-family: "reader", arial, sans-serif;
@@ -9996,19 +9997,19 @@ klarna-placement .container {
   line-height: 22px;
 }
 
-/* line 144, resources/assets/styles/components/_articles.scss */
+/* line 145, resources/assets/styles/components/_articles.scss */
 
 .articles__image {
   margin: 0 0 35px 0;
 }
 
-/* line 147, resources/assets/styles/components/_articles.scss */
+/* line 148, resources/assets/styles/components/_articles.scss */
 
 .articles__image.border {
   padding: 0 53px 0 53px;
 }
 
-/* line 151, resources/assets/styles/components/_articles.scss */
+/* line 152, resources/assets/styles/components/_articles.scss */
 
 .articles__image img {
   display: block;

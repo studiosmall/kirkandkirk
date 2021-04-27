@@ -228,7 +228,9 @@ export default {
 
     var $grid = $('.articles__items');
 
-    function updateMasonry() {
+    function updateMasonry(e) {
+      e.preventDefault();
+
       var $containerHeight = $(window).width();
 
       console.log($containerHeight);

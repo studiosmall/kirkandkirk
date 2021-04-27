@@ -56,23 +56,24 @@
 	&__sizer,
 	&__card {
 		width: 100%;
-		padding: 0 0 35px 0;
+		padding: 0;
 
 		@include breakpoint(medium) {
+			padding: 0 0 35px 0;
 			width: calc((100% - 100px) / 3);
 		}
 	}
 
 	&__card {
 		float: left;
-		padding: 0 0 175px 0;
+		padding: 0 0 60px 0;
 
 		@include breakpoint(medium) {
 			padding: 600px 0 350px 0;
 		}
 
 		&:nth-child(odd) {
-			padding: 0 0 175px 0;
+			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
 				padding: 350px 0 350px 0;
@@ -80,7 +81,7 @@
 		}
 
 		&:nth-child(even) {
-			padding: 0 0 175px 0;
+			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
 				padding: 0 0 350px 0;
@@ -88,7 +89,7 @@
 		}
 
 		&:nth-child(3) {
-			padding: 0 0 175px 0;
+			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
 				padding: 600px 0 350px 0;
@@ -96,7 +97,7 @@
 		}
 
 		&:last-of-type {
-			padding: 0 0 175px 0;
+			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
 				padding: 600px 0 250px 0;
