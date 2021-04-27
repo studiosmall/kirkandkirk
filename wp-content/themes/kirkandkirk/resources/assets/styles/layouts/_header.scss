@@ -17,18 +17,33 @@
 	background-color: $brand--white;
   // transition: $transition;
 
-	@include breakpoint(medium) {
-		&.small {
-			.header__logo-container {
+	&.small {
+		.header__logo-container {
+			padding: 0 0 10px 0;
+			@include breakpoint(medium) {
 				padding: 0 0 20px 0;
 			}
+		}
 
-			.header__inner {
+		.header__inner {
+			padding: 15px 20px 15px 21px;
+			@include breakpoint(medium) {
 				padding: 23px 50px 15px 50px;
-		  }
+			}
+		}
 
-			.header__logo {
+		.header__logo {
+			width: 120px;
+			@include breakpoint(medium) {
 				width: 170px;
+			}
+		}
+
+		.header__banner {
+			display: none;
+
+			@include breakpoint(medium) {
+				display: block;
 			}
 		}
 	}

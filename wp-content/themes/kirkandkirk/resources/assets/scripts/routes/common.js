@@ -80,35 +80,35 @@ export default {
       $(this).parent().toggleClass('active');
     });
 
-    // let onScroll = function() {
-    //   let navbarHeight = $('.header').outerHeight();
-    //   let st = $(this).scrollTop();
-    //   // let navbarHeight = $('.header').outerHeight();
-    //   //if (st > lastScrollTop && st >= navbarHeight ){
-    //   if (st >= navbarHeight ){
-    //     // downscroll code
-    //     $('.header').addClass('small');
+    let onScroll = function() {
+      let navbarHeight = $('.header').outerHeight();
+      let st = $(this).scrollTop();
+      // let navbarHeight = $('.header').outerHeight();
+      //if (st > lastScrollTop && st >= navbarHeight ){
+      if (st >= navbarHeight ){
+        // downscroll code
+        $('.header').addClass('small');
 
-    //   } else {
-    //     // upscroll code
-    //     $('.header').removeClass('small');
-    //   }
-    //   // if (popup === null && $('.home .articles').length) {
-    //   //   let latestNews = $('.home .articles').offset().top
-    //   //   if (st > latestNews) {
-    //   //     $('.newsletter-popup').fadeIn();
-    //   //     popup = true;
-    //   //   }
-    //   // }
-    //   //lastScrollTop = st;
-    //   if (st > $(window).innerHeight()) {
-    //     $('.header').addClass('scrolled');
-    //   } else {
-    //     $('.header').removeClass('scrolled');
-    //   }
-    // }
-    // onScroll();
-    // $(window).scroll(onScroll);
+      } else {
+        // upscroll code
+        $('.header').removeClass('small');
+      }
+      // if (popup === null && $('.home .articles').length) {
+      //   let latestNews = $('.home .articles').offset().top
+      //   if (st > latestNews) {
+      //     $('.newsletter-popup').fadeIn();
+      //     popup = true;
+      //   }
+      // }
+      //lastScrollTop = st;
+      if (st > $(window).innerHeight()) {
+        $('.header').addClass('scrolled');
+      } else {
+        $('.header').removeClass('scrolled');
+      }
+    }
+    onScroll();
+    $(window).scroll(onScroll);
 
 
 

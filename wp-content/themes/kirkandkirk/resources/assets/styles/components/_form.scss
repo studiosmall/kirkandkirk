@@ -12,10 +12,14 @@
     }
 
     &__message {
-        width: 50%;
+        width: 90%;
         padding: 40px 0 80px 0;
         margin: 0 auto;
         text-align: center;
+
+        @include breakpoint(medium) {
+            width: 50%;
+        }
 
         p {
             text-align: center;
@@ -24,8 +28,12 @@
 
     .gform_wrapper {
         text-align: center;
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
+
+        @include breakpoint(medium) {
+            width: 50%;
+        }
 
         .validation_message {
             padding: 15px 0 0 0;
@@ -81,7 +89,7 @@
             input {
                 @include input;
 
-                width: calc(100% - 8px);
+                width: calc(100% - 20px);
                 padding: 10px 10px !important;
                 border: 0 !important;
                 background-color: #e1e1e1;
@@ -94,7 +102,7 @@
             textarea {
                 @include input;
 
-                width: calc(100% - 8px);
+                width: calc(100% - 20px);
                 padding: 10px 10px !important;
                 border: 0 !important;
                 background-color: #e1e1e1;
@@ -118,9 +126,13 @@
             }
 
             .ginput_container_fileupload {
-                width: 253px;
+                width: 300px;
                 margin: 15px auto;
                 text-transform: uppercase;
+
+                @include breakpoint(medium) {
+                    width: 253px;
+                }
 
                 input[type="file"] {
                     text-transform: uppercase;
