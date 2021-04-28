@@ -9617,21 +9617,29 @@ input[type="submit"] {
 /* line 79, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container.center {
-  height: 100%;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   vertical-align: middle;
 }
 
-/* line 84, resources/assets/styles/components/_two-column.scss */
+@media (min-width: 900px) {
+  /* line 79, resources/assets/styles/components/_two-column.scss */
+
+  .two-column__bottom-container.center {
+    height: 100%;
+  }
+}
+
+/* line 88, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container.center img {
   -ms-flex-item-align: center;
       align-self: center;
 }
 
-/* line 89, resources/assets/styles/components/_two-column.scss */
+/* line 93, resources/assets/styles/components/_two-column.scss */
 
 .two-column__bottom-container img {
   max-width: initial;
@@ -9641,7 +9649,7 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 89, resources/assets/styles/components/_two-column.scss */
+  /* line 93, resources/assets/styles/components/_two-column.scss */
 
   .two-column__bottom-container img {
     max-width: 60%;

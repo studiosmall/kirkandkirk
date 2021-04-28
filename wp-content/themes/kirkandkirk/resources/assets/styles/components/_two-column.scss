@@ -77,9 +77,13 @@
 		}
 
 		&.center {
-			height: 100%;
+			height: auto;
 			justify-content: center;
 			vertical-align: middle;
+
+			@include breakpoint(medium) {
+				height: 100%;
+			}
 
 			img {
 				align-self: center;
