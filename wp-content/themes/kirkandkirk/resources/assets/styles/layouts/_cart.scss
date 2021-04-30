@@ -4,7 +4,7 @@
   .wrap {
     padding-bottom: 150px;
   }
-
+  
   .woocommerce {
     width: 100%;
     margin: 0 auto;
@@ -24,6 +24,8 @@
     }
 
     .woocommerce-cart-form {
+      padding: 100px 0 0 0;
+
       .shop_table {
         width: 100%;
 
@@ -56,6 +58,12 @@
         .product-subtotal,
         .product-quantity {
           text-align: right;
+        }
+
+        .quantity {
+          input {
+            width: 30px;
+          }
         }
 
         .product-remove {

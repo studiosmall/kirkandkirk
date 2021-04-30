@@ -1,0 +1,136 @@
+.overlay {
+  background-color: rgba(215, 226, 240, 0.9);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+  z-index: 100;
+
+	&.open {
+		display: block;
+	}
+}
+
+.mailinglist {
+  position: fixed;
+  z-index: 99999;
+  top: 50%;
+  left: 20%;
+  transform: translate(-11%, -50%);
+  padding: 30px;
+  max-width: 900px;
+  width: 65%;
+	overflow: hidden;
+  background-color: #ededed;
+  box-shadow: rgba(0, 0, 0, 0.09) 0 2px 4px;
+
+  @include breakpoint(medium) {
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+
+	&__close {
+		//@include title(40px, $brand--primary);
+		transform: rotate(45deg);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+		cursor: pointer;
+    font-size: 20px;
+
+		&:focus {
+			outline: none;
+		}
+  }
+
+  &__inner {
+    padding: 70px 0;
+
+    &--title {
+      margin: 0 0 15px 0;
+      text-align: center;
+
+			h3 {
+        @include subtitle($brand--primary);
+
+        font-weight: 500;
+			}
+		}
+
+    .gform_wrapper {
+      width: 90%;
+
+      @include breakpoint(medium) {
+        width: 70%;
+      }
+    }
+
+    .gform_body {
+      input {
+        @include input;
+
+        background-color: #cfcfcf;
+
+        &:focus {
+          background-color: #cfcfcf;
+        }
+      }
+
+      .gfield_label {
+        text-align: center;
+        font-weight: 500;
+
+        .gfield_required {
+          display: none;
+        }
+      }
+
+      .hidden_label {
+        label {
+          display: none;
+        }
+      }
+
+      .gfield_checkbox {
+        display: inline-block;
+
+        li {
+          font-family: $font--body;
+          font-size: 14px;
+          color: $brand--primary;
+          letter-spacing: 0.52px;
+
+          label {
+            text-transform: none;
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+
+    .gform_footer {
+      .gform_button {
+        background-color: #cfcfcf;
+      }
+    }
+  }
+}
+
+// ::-webkit-input-placeholder { /* Edge */
+//   color: $brand--cream;
+// }
+
+// :-ms-input-placeholder { /* Internet Explorer 10-11 */
+//   color: $brand--cream;
+// }
+
+// ::placeholder {
+//   color: $brand--cream;
+// }
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover, 
+// input:-webkit-autofill:focus, 
+// input:-webkit-autofill:active  {
+//     -webkit-box-shadow: 0 0 0 30px $brand--white inset !important;
+// }

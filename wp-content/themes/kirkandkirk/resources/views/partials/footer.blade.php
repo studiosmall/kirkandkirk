@@ -2,7 +2,7 @@
   <div class="content-info__inner">
     {{-- @php dynamic_sidebar('sidebar-footer') @endphp --}}
     <div class="content-info__newsletter">
-      <a href="#">Sign up for our Newsletter</a>
+      <a id="newsletter-popup" href="#">Sign up for our Newsletter</a>
     </div>
 
     <div class="content-info__row">
@@ -79,7 +79,7 @@
             </g>
         </svg>
       </div>
-      
+
       <div class="content-info__copyright">
         <span class="content-info__by">site by: <a href="https://studiosmall.com" target="_blank" rel="nofollow noopener noreferrer">StudioSmall</a></span>
         <span>copyright {!! get_bloginfo('name', 'display') !!} {!! date('Y') !!}</span>
@@ -89,3 +89,5 @@
 
   </div>
 </footer>
+
+@include('partials.newsletter')

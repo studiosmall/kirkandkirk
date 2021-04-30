@@ -336,5 +336,20 @@ export default {
       });
 
 
+      // Newsletter
+      $('#newsletter-popup').on('click', function(e) {
+        e.preventDefault();
+        $('#mailinglist').fadeIn();
+        $('body').toggleClass('newsletter-open');
+        $('.overlay').toggleClass('open');
+      });
+
+      $('.mailinglist__close').on('click', function() {
+        $('#mailinglist').fadeOut();
+        $('body').removeClass('newsletter-open');
+        $('.overlay').removeClass('open');
+      });
+
+
   },
 };

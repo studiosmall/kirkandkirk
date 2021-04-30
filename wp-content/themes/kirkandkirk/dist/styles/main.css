@@ -8833,47 +8833,47 @@ input[type="submit"] {
   text-align: center;
 }
 
-/* line 37, resources/assets/styles/components/_form.scss */
+/* line 38, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper {
+.gform_wrapper {
   text-align: center;
   width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 900px) {
-  /* line 37, resources/assets/styles/components/_form.scss */
+  /* line 38, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper {
+  .gform_wrapper {
     width: 50%;
   }
 }
 
-/* line 46, resources/assets/styles/components/_form.scss */
+/* line 47, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .validation_message {
+.gform_wrapper .validation_message {
   padding: 15px 0 0 0;
   font-style: italic;
 }
 
-/* line 51, resources/assets/styles/components/_form.scss */
+/* line 52, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .validation_error {
+.gform_wrapper .validation_error {
   padding: 15px 0;
   font-style: italic;
 }
 
-/* line 56, resources/assets/styles/components/_form.scss */
+/* line 57, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_heading {
+.gform_wrapper .gform_heading {
   width: 80%;
   margin: 0 auto;
   padding: 0 0 40px 0;
 }
 
-/* line 61, resources/assets/styles/components/_form.scss */
+/* line 62, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_heading span {
+.gform_wrapper .gform_heading span {
   font-family: "reader", arial, sans-serif;
   font-weight: 100;
   font-size: 16px;
@@ -8883,29 +8883,29 @@ input[type="submit"] {
   line-height: 22px;
 }
 
-/* line 72, resources/assets/styles/components/_form.scss */
+/* line 73, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body {
+.gform_wrapper .gform_body {
   text-align: center;
 }
 
-/* line 75, resources/assets/styles/components/_form.scss */
+/* line 76, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body ul {
+.gform_wrapper .gform_body ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 80, resources/assets/styles/components/_form.scss */
+/* line 81, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body ul li {
+.gform_wrapper .gform_body ul li {
   padding: 0 0 20px 0;
 }
 
-/* line 85, resources/assets/styles/components/_form.scss */
+/* line 86, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body label {
+.gform_wrapper .gform_body label {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -8919,22 +8919,22 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 85, resources/assets/styles/components/_form.scss */
+  /* line 86, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_body label {
+  .gform_wrapper .gform_body label {
     font-size: 16px;
   }
 }
 
-/* line 92, resources/assets/styles/components/_form.scss */
+/* line 93, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body label .gfield_required {
+.gform_wrapper .gform_body label .gfield_required {
   color: #000;
 }
 
-/* line 97, resources/assets/styles/components/_form.scss */
+/* line 98, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body input {
+.gform_wrapper .gform_body input {
   border-radius: 0;
   width: 90%;
   border: 0;
@@ -8948,30 +8948,30 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 97, resources/assets/styles/components/_form.scss */
+  /* line 98, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_body input {
+  .gform_wrapper .gform_body input {
     width: 100%;
   }
 }
 
 /* line 167, resources/assets/styles/common/_mixins.scss */
 
-.form .gform_wrapper .gform_body input:focus {
+.gform_wrapper .gform_body input:focus {
   outline: none;
   border: 0;
   background-color: #e1e1e1;
 }
 
-/* line 105, resources/assets/styles/components/_form.scss */
+/* line 106, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body input:focus {
+.gform_wrapper .gform_body input:focus {
   outline: 0;
 }
 
-/* line 110, resources/assets/styles/components/_form.scss */
+/* line 111, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body textarea {
+.gform_wrapper .gform_body textarea {
   border-radius: 0;
   width: 90%;
   border: 0;
@@ -8986,83 +8986,83 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 110, resources/assets/styles/components/_form.scss */
+  /* line 111, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_body textarea {
+  .gform_wrapper .gform_body textarea {
     width: 100%;
   }
 }
 
 /* line 167, resources/assets/styles/common/_mixins.scss */
 
-.form .gform_wrapper .gform_body textarea:focus {
+.gform_wrapper .gform_body textarea:focus {
   outline: none;
   border: 0;
   background-color: #e1e1e1;
 }
 
-/* line 119, resources/assets/styles/components/_form.scss */
+/* line 120, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
+.gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   /* Edge */
   color: #000;
 }
 
-/* line 123, resources/assets/styles/components/_form.scss */
+/* line 124, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body textarea::-ms-input-placeholder {
+.gform_wrapper .gform_body textarea::-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000;
 }
 
-/* line 127, resources/assets/styles/components/_form.scss */
+/* line 128, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
+.gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   color: #000;
 }
 
-.form .gform_wrapper .gform_body textarea::-ms-input-placeholder {
+.gform_wrapper .gform_body textarea::-ms-input-placeholder {
   color: #000;
 }
 
-.form .gform_wrapper .gform_body textarea::placeholder {
+.gform_wrapper .gform_body textarea::placeholder {
   color: #000;
 }
 
-/* line 131, resources/assets/styles/components/_form.scss */
+/* line 132, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body textarea:focus {
+.gform_wrapper .gform_body textarea:focus {
   outline: 0;
 }
 
-/* line 136, resources/assets/styles/components/_form.scss */
+/* line 137, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .ginput_container_fileupload {
+.gform_wrapper .gform_body .ginput_container_fileupload {
   width: 300px;
   margin: 15px auto;
   text-transform: uppercase;
 }
 
 @media (min-width: 900px) {
-  /* line 136, resources/assets/styles/components/_form.scss */
+  /* line 137, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_body .ginput_container_fileupload {
+  .gform_wrapper .gform_body .ginput_container_fileupload {
     width: 253px;
   }
 }
 
-/* line 145, resources/assets/styles/components/_form.scss */
+/* line 146, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .ginput_container_fileupload input[type="file"] {
+.gform_wrapper .gform_body .ginput_container_fileupload input[type="file"] {
   text-transform: uppercase;
   cursor: pointer;
   text-align: center;
   font-weight: 100;
 }
 
-/* line 153, resources/assets/styles/components/_form.scss */
+/* line 154, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .ginput_container_fileupload input::-webkit-file-upload-button {
+.gform_wrapper .gform_body .ginput_container_fileupload input::-webkit-file-upload-button {
   background: transparent;
   text-transform: uppercase;
   color: #000;
@@ -9072,9 +9072,9 @@ input[type="submit"] {
   font-weight: 500;
 }
 
-/* line 166, resources/assets/styles/components/_form.scss */
+/* line 167, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .gfield_checkbox {
+.gform_wrapper .gform_body .gfield_checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9087,30 +9087,30 @@ input[type="submit"] {
   margin: 15px 0 0 0;
 }
 
-/* line 172, resources/assets/styles/components/_form.scss */
+/* line 173, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .gfield_checkbox li {
+.gform_wrapper .gform_body .gfield_checkbox li {
   margin: 0 20px;
 }
 
-/* line 175, resources/assets/styles/components/_form.scss */
+/* line 176, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .gfield_checkbox li label {
+.gform_wrapper .gform_body .gfield_checkbox li label {
   display: inline-block;
   margin: 0 0 0 5px;
 }
 
-/* line 180, resources/assets/styles/components/_form.scss */
+/* line 181, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_body .gfield_checkbox li input {
+.gform_wrapper .gform_body .gfield_checkbox li input {
   margin: 0 !important;
   display: inline-block;
   width: auto;
 }
 
-/* line 190, resources/assets/styles/components/_form.scss */
+/* line 191, resources/assets/styles/components/_form.scss */
 
-.form .gform_wrapper .gform_footer .gform_button {
+.gform_wrapper .gform_footer .gform_button {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -9133,16 +9133,16 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 190, resources/assets/styles/components/_form.scss */
+  /* line 191, resources/assets/styles/components/_form.scss */
 
-  .form .gform_wrapper .gform_footer .gform_button {
+  .gform_wrapper .gform_footer .gform_button {
     font-size: 16px;
   }
 }
 
 /* line 23, resources/assets/styles/components/_forms.scss */
 
-.form .gform_wrapper .gform_footer .gform_button:hover {
+.gform_wrapper .gform_footer .gform_button:hover {
   border: 1px solid #abced0;
   background: #abced0;
   color: #000;
@@ -9150,7 +9150,7 @@ input[type="submit"] {
 
 /* line 29, resources/assets/styles/components/_forms.scss */
 
-.form .gform_wrapper .gform_footer .gform_button:focus {
+.gform_wrapper .gform_footer .gform_button:focus {
   outline: none;
 }
 
@@ -10771,6 +10771,201 @@ input[value="search"] {
   margin: 0 0 10px 0;
 }
 
+/* line 1, resources/assets/styles/components/_newsletter.scss */
+
+.overlay {
+  background-color: rgba(215, 226, 240, 0.9);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: 100;
+}
+
+/* line 9, resources/assets/styles/components/_newsletter.scss */
+
+.overlay.open {
+  display: block;
+}
+
+/* line 14, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist {
+  position: fixed;
+  z-index: 99999;
+  top: 50%;
+  left: 20%;
+  -webkit-transform: translate(-11%, -50%);
+       -o-transform: translate(-11%, -50%);
+          transform: translate(-11%, -50%);
+  padding: 30px;
+  max-width: 900px;
+  width: 65%;
+  overflow: hidden;
+  background-color: #ededed;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 4px;
+          box-shadow: rgba(0, 0, 0, 0.09) 0 2px 4px;
+}
+
+@media (min-width: 900px) {
+  /* line 14, resources/assets/styles/components/_newsletter.scss */
+
+  .mailinglist {
+    -webkit-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}
+
+/* line 32, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__close {
+  -webkit-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* line 41, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__close:focus {
+  outline: none;
+}
+
+/* line 46, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner {
+  padding: 70px 0;
+}
+
+/* line 49, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner--title {
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+/* line 53, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner--title h3 {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 900px) {
+  /* line 53, resources/assets/styles/components/_newsletter.scss */
+
+  .mailinglist__inner--title h3 {
+    font-size: 16px;
+  }
+}
+
+/* line 60, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_wrapper {
+  width: 90%;
+}
+
+@media (min-width: 900px) {
+  /* line 60, resources/assets/styles/components/_newsletter.scss */
+
+  .mailinglist__inner .gform_wrapper {
+    width: 70%;
+  }
+}
+
+/* line 69, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body input {
+  border-radius: 0;
+  width: 90%;
+  border: 0;
+  background-color: #e1e1e1;
+  border: 1px solid #e1e1e1;
+  padding: 10px 10px;
+  background-color: #cfcfcf;
+}
+
+@media (min-width: 900px) {
+  /* line 69, resources/assets/styles/components/_newsletter.scss */
+
+  .mailinglist__inner .gform_body input {
+    width: 100%;
+  }
+}
+
+/* line 167, resources/assets/styles/common/_mixins.scss */
+
+.mailinglist__inner .gform_body input:focus {
+  outline: none;
+  border: 0;
+  background-color: #e1e1e1;
+}
+
+/* line 74, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body input:focus {
+  background-color: #cfcfcf;
+}
+
+/* line 79, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body .gfield_label {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* line 83, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body .gfield_label .gfield_required {
+  display: none;
+}
+
+/* line 89, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body .hidden_label label {
+  display: none;
+}
+
+/* line 94, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body .gfield_checkbox {
+  display: inline-block;
+}
+
+/* line 97, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body .gfield_checkbox li {
+  font-family: "reader", arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  letter-spacing: 0.52px;
+}
+
+/* line 103, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_body .gfield_checkbox li label {
+  text-transform: none;
+  opacity: 0.4;
+}
+
+/* line 112, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_footer .gform_button {
+  background-color: #cfcfcf;
+}
+
 /* line 12, resources/assets/styles/layouts/_header.scss */
 
 .header {
@@ -11779,9 +11974,18 @@ input[value="search"] {
 .content-info__newsletter a {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 5px 10px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
-/* line 41, resources/assets/styles/layouts/_footer.scss */
+/* line 40, resources/assets/styles/layouts/_footer.scss */
+
+.content-info__newsletter a:hover {
+  background-color: #fff;
+}
+
+/* line 46, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__row {
   display: -webkit-box;
@@ -11795,7 +11999,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 41, resources/assets/styles/layouts/_footer.scss */
+  /* line 46, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__row {
     -ms-flex-wrap: nowrap;
@@ -11803,21 +12007,21 @@ input[value="search"] {
   }
 }
 
-/* line 50, resources/assets/styles/layouts/_footer.scss */
+/* line 55, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__row--col {
   width: 50%;
 }
 
 @media (min-width: 900px) {
-  /* line 50, resources/assets/styles/layouts/_footer.scss */
+  /* line 55, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__row--col {
     width: 25%;
   }
 }
 
-/* line 57, resources/assets/styles/layouts/_footer.scss */
+/* line 62, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__row--col:first-of-type {
   width: 100%;
@@ -11825,7 +12029,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 57, resources/assets/styles/layouts/_footer.scss */
+  /* line 62, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__row--col:first-of-type {
     width: 25%;
@@ -11833,21 +12037,21 @@ input[value="search"] {
   }
 }
 
-/* line 69, resources/assets/styles/layouts/_footer.scss */
+/* line 74, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__mark {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 69, resources/assets/styles/layouts/_footer.scss */
+  /* line 74, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__mark {
     width: 25%;
   }
 }
 
-/* line 77, resources/assets/styles/layouts/_footer.scss */
+/* line 82, resources/assets/styles/layouts/_footer.scss */
 
 .content-info p {
   font-family: "reader", arial, sans-serif;
@@ -11858,7 +12062,7 @@ input[value="search"] {
   margin: 0;
 }
 
-/* line 86, resources/assets/styles/layouts/_footer.scss */
+/* line 91, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright {
   width: 75%;
@@ -11868,14 +12072,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 86, resources/assets/styles/layouts/_footer.scss */
+  /* line 91, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__copyright {
     margin: 0;
   }
 }
 
-/* line 96, resources/assets/styles/layouts/_footer.scss */
+/* line 101, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright a {
   display: inline-block;
@@ -11886,19 +12090,19 @@ input[value="search"] {
   color: #000;
 }
 
-/* line 99, resources/assets/styles/layouts/_footer.scss */
+/* line 104, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright a::after {
   bottom: 0;
 }
 
-/* line 108, resources/assets/styles/layouts/_footer.scss */
+/* line 113, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__by a {
   font-size: 16px;
 }
 
-/* line 113, resources/assets/styles/layouts/_footer.scss */
+/* line 118, resources/assets/styles/layouts/_footer.scss */
 
 .content-info ul {
   list-style: none;
@@ -11907,14 +12111,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 113, resources/assets/styles/layouts/_footer.scss */
+  /* line 118, resources/assets/styles/layouts/_footer.scss */
 
   .content-info ul {
     margin: 0;
   }
 }
 
-/* line 122, resources/assets/styles/layouts/_footer.scss */
+/* line 127, resources/assets/styles/layouts/_footer.scss */
 
 .content-info ul li {
   color: #000;
@@ -11923,7 +12127,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 122, resources/assets/styles/layouts/_footer.scss */
+  /* line 127, resources/assets/styles/layouts/_footer.scss */
 
   .content-info ul li {
     width: auto;
@@ -11931,7 +12135,7 @@ input[value="search"] {
   }
 }
 
-/* line 134, resources/assets/styles/layouts/_footer.scss */
+/* line 139, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__bottom {
   display: -webkit-box;
@@ -11950,7 +12154,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 134, resources/assets/styles/layouts/_footer.scss */
+  /* line 139, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__bottom {
     -ms-flex-wrap: nowrap;
@@ -11964,7 +12168,7 @@ input[value="search"] {
   }
 }
 
-/* line 150, resources/assets/styles/layouts/_footer.scss */
+/* line 155, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__bottom span {
   margin: 0 5px 0 0;
@@ -11973,7 +12177,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 150, resources/assets/styles/layouts/_footer.scss */
+  /* line 155, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__bottom span {
     width: auto;
@@ -12756,13 +12960,19 @@ input[value="search"] {
   text-decoration: none;
 }
 
-/* line 27, resources/assets/styles/layouts/_cart.scss */
+/* line 26, resources/assets/styles/layouts/_cart.scss */
+
+.woocommerce-cart .woocommerce .woocommerce-cart-form {
+  padding: 100px 0 0 0;
+}
+
+/* line 29, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table {
   width: 100%;
 }
 
-/* line 31, resources/assets/styles/layouts/_cart.scss */
+/* line 33, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-remove,
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-thumbnail,
@@ -12773,7 +12983,7 @@ input[value="search"] {
   font-size: 12px;
 }
 
-/* line 41, resources/assets/styles/layouts/_cart.scss */
+/* line 43, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-remove,
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-thumbnail,
@@ -12786,20 +12996,26 @@ input[value="search"] {
   text-transform: uppercase;
 }
 
-/* line 52, resources/assets/styles/layouts/_cart.scss */
+/* line 54, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-thumbnail {
   padding: 20px 0;
 }
 
-/* line 56, resources/assets/styles/layouts/_cart.scss */
+/* line 58, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-subtotal,
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-quantity {
   text-align: right;
 }
 
-/* line 62, resources/assets/styles/layouts/_cart.scss */
+/* line 64, resources/assets/styles/layouts/_cart.scss */
+
+.woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .quantity input {
+  width: 30px;
+}
+
+/* line 70, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-remove a {
   font-family: "reader", arial, sans-serif;
@@ -12814,20 +13030,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 62, resources/assets/styles/layouts/_cart.scss */
+  /* line 70, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-remove a {
     font-size: 16px;
   }
 }
 
-/* line 70, resources/assets/styles/layouts/_cart.scss */
+/* line 78, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-name {
   text-align: left;
 }
 
-/* line 72, resources/assets/styles/layouts/_cart.scss */
+/* line 80, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-name a {
   font-family: "reader", arial, sans-serif;
@@ -12841,21 +13057,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 72, resources/assets/styles/layouts/_cart.scss */
+  /* line 80, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-name a {
     font-size: 16px;
   }
 }
 
-/* line 79, resources/assets/styles/layouts/_cart.scss */
+/* line 87, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions {
   margin: 10px 0;
   text-align: right;
 }
 
-/* line 83, resources/assets/styles/layouts/_cart.scss */
+/* line 91, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button {
   font-family: "reader", arial, sans-serif;
@@ -12881,7 +13097,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 83, resources/assets/styles/layouts/_cart.scss */
+  /* line 91, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button {
     font-size: 16px;
@@ -12902,27 +13118,27 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 92, resources/assets/styles/layouts/_cart.scss */
+/* line 100, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item td {
   padding: 15px 15px;
   border-top: 1px solid #000;
 }
 
-/* line 97, resources/assets/styles/layouts/_cart.scss */
+/* line 105, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item td.product-thumbnail img {
   max-width: 200px;
 }
 
-/* line 105, resources/assets/styles/layouts/_cart.scss */
+/* line 113, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals {
   width: 50%;
   float: right;
 }
 
-/* line 109, resources/assets/styles/layouts/_cart.scss */
+/* line 117, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
   font-family: "reader", arial, sans-serif;
@@ -12940,14 +13156,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 109, resources/assets/styles/layouts/_cart.scss */
+  /* line 117, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
     font-size: 16px;
   }
 }
 
-/* line 118, resources/assets/styles/layouts/_cart.scss */
+/* line 126, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals h2 {
   text-align: right;
@@ -12956,14 +13172,14 @@ input[value="search"] {
   font-size: 16px;
 }
 
-/* line 127, resources/assets/styles/layouts/_cart.scss */
+/* line 135, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal th,
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .order-total th {
   font-weight: 100;
 }
 
-/* line 132, resources/assets/styles/layouts/_cart.scss */
+/* line 140, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .shop_table {
   text-align: right;
@@ -12971,25 +13187,25 @@ input[value="search"] {
   padding: 0 0 20px 0;
 }
 
-/* line 137, resources/assets/styles/layouts/_cart.scss */
+/* line 145, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .shop_table .tbody {
   float: right;
 }
 
-/* line 142, resources/assets/styles/layouts/_cart.scss */
+/* line 150, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .order-total {
   width: 100%;
 }
 
-/* line 147, resources/assets/styles/layouts/_cart.scss */
+/* line 155, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout {
   text-align: right;
 }
 
-/* line 150, resources/assets/styles/layouts/_cart.scss */
+/* line 158, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button {
   color: #fff;
@@ -13087,9 +13303,20 @@ input[value="search"] {
   display: -ms-flexbox;
   display: flex;
   padding: 10px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-/* line 30, resources/assets/styles/layouts/_checkout.scss */
+@media (min-width: 900px) {
+  /* line 25, resources/assets/styles/layouts/_checkout.scss */
+
+  .woocommerce-checkout .col2-set {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+/* line 35, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .col-1,
 .woocommerce-checkout .col-2 {
@@ -13097,7 +13324,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 30, resources/assets/styles/layouts/_checkout.scss */
+  /* line 35, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout .col-1,
   .woocommerce-checkout .col-2 {
@@ -13105,7 +13332,7 @@ input[value="search"] {
   }
 }
 
-/* line 39, resources/assets/styles/layouts/_checkout.scss */
+/* line 44, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout h3 {
   font-family: "reader", arial, sans-serif;
@@ -13120,39 +13347,53 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 39, resources/assets/styles/layouts/_checkout.scss */
+  /* line 44, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout h3 {
     font-size: 16px;
   }
 }
 
-/* line 46, resources/assets/styles/layouts/_checkout.scss */
+/* line 51, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce {
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 51, resources/assets/styles/layouts/_checkout.scss */
+/* line 56, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce .woocommerce-billing-fields label {
   display: none;
 }
 
-/* line 57, resources/assets/styles/layouts/_checkout.scss */
+/* line 62, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce .woocommerce-additional-fields h3 {
   display: none;
 }
 
-/* line 62, resources/assets/styles/layouts/_checkout.scss */
+/* line 67, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce .select2-container {
   width: 94%;
 }
 
-/* line 66, resources/assets/styles/layouts/_checkout.scss */
+/* line 71, resources/assets/styles/layouts/_checkout.scss */
+
+.woocommerce-checkout .woocommerce #billing_country_field {
+  width: 93%;
+}
+
+/* line 74, resources/assets/styles/layouts/_checkout.scss */
+
+.woocommerce-checkout .woocommerce #billing_country_field .select2-selection {
+  border-radius: 0;
+  border: 0;
+  background-color: #e1e1e1;
+}
+
+/* line 81, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #444;
@@ -13163,7 +13404,7 @@ input[value="search"] {
   border-radius: 0;
 }
 
-/* line 75, resources/assets/styles/layouts/_checkout.scss */
+/* line 90, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_comments {
   width: 90%;
@@ -13174,33 +13415,33 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 75, resources/assets/styles/layouts/_checkout.scss */
+  /* line 90, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout .woocommerce #order_comments {
     width: 90%;
   }
 }
 
-/* line 86, resources/assets/styles/layouts/_checkout.scss */
+/* line 101, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_comments:focus {
   outline: none;
   border: 0;
 }
 
-/* line 93, resources/assets/styles/layouts/_checkout.scss */
+/* line 108, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table {
   width: 100%;
 }
 
-/* line 96, resources/assets/styles/layouts/_checkout.scss */
+/* line 111, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .product-name {
   text-align: left;
 }
 
-/* line 100, resources/assets/styles/layouts/_checkout.scss */
+/* line 115, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .cart-subtotal {
   text-align: left;
@@ -13209,7 +13450,7 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 107, resources/assets/styles/layouts/_checkout.scss */
+/* line 122, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .order-total {
   text-align: left;
@@ -13217,13 +13458,13 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 113, resources/assets/styles/layouts/_checkout.scss */
+/* line 128, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .product-total {
   text-align: right;
 }
 
-/* line 120, resources/assets/styles/layouts/_checkout.scss */
+/* line 135, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout #place_order {
   color: #fff;
@@ -13257,7 +13498,7 @@ input[value="search"] {
   background: transparent;
 }
 
-/* line 124, resources/assets/styles/layouts/_checkout.scss */
+/* line 139, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
   border-radius: 0;
@@ -13266,10 +13507,11 @@ input[value="search"] {
   background-color: #e1e1e1;
   border: 1px solid #e1e1e1;
   padding: 10px 10px;
+  width: 95%;
 }
 
 @media (min-width: 900px) {
-  /* line 124, resources/assets/styles/layouts/_checkout.scss */
+  /* line 139, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 100%;
@@ -13284,7 +13526,15 @@ input[value="search"] {
   background-color: #e1e1e1;
 }
 
-/* line 128, resources/assets/styles/layouts/_checkout.scss */
+@media (min-width: 900px) {
+  /* line 139, resources/assets/styles/layouts/_checkout.scss */
+
+  .woocommerce-checkout input {
+    width: 90%;
+  }
+}
+
+/* line 149, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout textarea {
   border-radius: 0;
@@ -13293,10 +13543,11 @@ input[value="search"] {
   background-color: #e1e1e1;
   border: 1px solid #e1e1e1;
   padding: 10px 10px;
+  width: 95%;
 }
 
 @media (min-width: 900px) {
-  /* line 128, resources/assets/styles/layouts/_checkout.scss */
+  /* line 149, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout textarea {
     width: 100%;
@@ -13311,7 +13562,15 @@ input[value="search"] {
   background-color: #e1e1e1;
 }
 
-/* line 132, resources/assets/styles/layouts/_checkout.scss */
+@media (min-width: 900px) {
+  /* line 149, resources/assets/styles/layouts/_checkout.scss */
+
+  .woocommerce-checkout textarea {
+    width: 90%;
+  }
+}
+
+/* line 159, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
   width: 90%;
@@ -13321,21 +13580,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 132, resources/assets/styles/layouts/_checkout.scss */
+  /* line 159, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 90%;
   }
 }
 
-/* line 142, resources/assets/styles/layouts/_checkout.scss */
+/* line 169, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input:focus {
   outline: none;
   border: 0;
 }
 
-/* line 148, resources/assets/styles/layouts/_checkout.scss */
+/* line 175, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout select {
   width: 90%;
@@ -13345,18 +13604,151 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 148, resources/assets/styles/layouts/_checkout.scss */
+  /* line 175, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout select {
     width: 90%;
   }
 }
 
-/* line 158, resources/assets/styles/layouts/_checkout.scss */
+/* line 185, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout select:focus {
   outline: none;
   border: 0;
+}
+
+/* line 192, resources/assets/styles/layouts/_checkout.scss */
+
+#payment {
+  padding: 100px 0 0 0;
+}
+
+/* line 195, resources/assets/styles/layouts/_checkout.scss */
+
+#payment .woocommerce-terms-and-conditions-wrapper {
+  padding: 50px 0 0;
+}
+
+/* line 198, resources/assets/styles/layouts/_checkout.scss */
+
+#payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text {
+  line-height: 17px;
+}
+
+/* line 201, resources/assets/styles/layouts/_checkout.scss */
+
+#payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p {
+  font-size: 12px;
+}
+
+/* line 204, resources/assets/styles/layouts/_checkout.scss */
+
+#payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+/* line 215, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 220, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li {
+  margin: 0 0 30px 0;
+}
+
+/* line 223, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li input {
+  width: auto;
+}
+
+/* line 227, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li label {
+  font-weight: 500;
+  margin: 0 0 0 10px;
+  text-transform: capitalize;
+}
+
+/* line 232, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li label img {
+  margin: 0 0 0 10px;
+  width: 220px;
+  float: right;
+}
+
+/* line 240, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li.payment_method_kco label {
+  font-weight: 500;
+}
+
+/* line 243, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li.payment_method_kco label img {
+  margin: 0 0 0 10px;
+  width: 100px;
+}
+
+/* line 252, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li .payment_box fieldset {
+  border: 1px solid #000;
+}
+
+/* line 256, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li .payment_box label {
+  margin: 0 0 10px 0;
+}
+
+/* line 260, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .woocommerce-checkout-payment ul li .payment_box input {
+  width: 90%;
+}
+
+/* line 269, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .place-order label.woocommerce-form__label-for-checkbox {
+  padding: 0 0 30px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 274, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .place-order label.woocommerce-form__label-for-checkbox input {
+  width: auto;
+}
+
+/* line 278, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .place-order label.woocommerce-form__label-for-checkbox span {
+  text-transform: initial;
+}
+
+/* line 282, resources/assets/styles/layouts/_checkout.scss */
+
+#order_review .place-order label.woocommerce-form__label-for-checkbox a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* line 1, resources/assets/styles/layouts/_wishlist.scss */

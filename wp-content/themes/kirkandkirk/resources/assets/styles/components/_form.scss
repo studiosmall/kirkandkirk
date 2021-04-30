@@ -33,163 +33,164 @@ input[type="submit"] {
             text-align: center;
         }
     }
+}
 
-    .gform_wrapper {
-        text-align: center;
-        width: 100%;
+.gform_wrapper {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+
+    @include breakpoint(medium) {
+        width: 50%;
+    }
+
+    .validation_message {
+        padding: 15px 0 0 0;
+        font-style: italic;
+    }
+
+    .validation_error {
+        padding: 15px 0;
+        font-style: italic;
+    }
+
+    .gform_heading {
+        width: 80%;
         margin: 0 auto;
+        padding: 0 0 40px 0;
 
-        @include breakpoint(medium) {
-            width: 50%;
-        }
-
-        .validation_message {
-            padding: 15px 0 0 0;
-            font-style: italic;
-        }
-
-        .validation_error {
-            padding: 15px 0;
-            font-style: italic;
-        }
-
-        .gform_heading {
-            width: 80%;
-            margin: 0 auto;
-            padding: 0 0 40px 0;
-
-            span {
-                font-family: $font--body;
-                font-weight: 100;
-                font-size: 16px;
-                color: $brand--primary;
-                letter-spacing: 0.6px;
-                text-align: center;
-                line-height: 22px;
-            }
-        }
-
-        .gform_body {
+        span {
+            font-family: $font--body;
+            font-weight: 100;
+            font-size: 16px;
+            color: $brand--primary;
+            letter-spacing: 0.6px;
             text-align: center;
+            line-height: 22px;
+        }
+    }
 
-            ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
+    .gform_body {
+        text-align: center;
 
-                li {
-                    padding: 0 0 20px 0;
-                }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                padding: 0 0 20px 0;
+            }
+        }
+
+        label {
+            @include subtitle($brand--primary);
+
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+            display: block;
+
+            .gfield_required {
+                color: $brand--primary;
+            }
+        }
+
+        input {
+            @include input;
+
+            width: calc(100% - 20px);
+            padding: 10px 10px !important;
+            border: 0 !important;
+            background-color: #e1e1e1;
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        textarea {
+            @include input;
+
+            width: calc(100% - 20px);
+            padding: 10px 10px !important;
+            border: 0 !important;
+            background-color: #e1e1e1;
+            line-height: 22px;
+
+            &::-webkit-input-placeholder { /* Edge */
+                color: $brand--primary;
             }
 
-            label {
-                @include subtitle($brand--primary);
+            &::-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: $brand--primary;
+            }
 
+            &::placeholder {
+                color: $brand--primary;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+        }
+
+        .ginput_container_fileupload {
+            width: 300px;
+            margin: 15px auto;
+            text-transform: uppercase;
+
+            @include breakpoint(medium) {
+                width: 253px;
+            }
+
+            input[type="file"] {
                 text-transform: uppercase;
-                margin: 0 0 10px 0;
-                display: block;
-
-                .gfield_required {
-                    color: $brand--primary;
-                }
+                cursor: pointer;
+                text-align: center;
+                font-weight: 100;
             }
 
             input {
-                @include input;
-
-                width: calc(100% - 20px);
-                padding: 10px 10px !important;
-                border: 0 !important;
-                background-color: #e1e1e1;
-
-                &:focus {
-                    outline: 0;
-                }
-            }
-
-            textarea {
-                @include input;
-
-                width: calc(100% - 20px);
-                padding: 10px 10px !important;
-                border: 0 !important;
-                background-color: #e1e1e1;
-                line-height: 22px;
-
-                &::-webkit-input-placeholder { /* Edge */
-                    color: $brand--primary;
-                }
-
-                &::-ms-input-placeholder { /* Internet Explorer 10-11 */
-                    color: $brand--primary;
-                }
-
-                &::placeholder {
-                    color: $brand--primary;
-                }
-
-                &:focus {
-                    outline: 0;
-                }
-            }
-
-            .ginput_container_fileupload {
-                width: 300px;
-                margin: 15px auto;
-                text-transform: uppercase;
-
-                @include breakpoint(medium) {
-                    width: 253px;
-                }
-
-                input[type="file"] {
+                &::-webkit-file-upload-button {
+                    background: transparent;
                     text-transform: uppercase;
-                    cursor: pointer;
+                    color: $brand--primary;
+                    padding: 0;
+                    border: 0;
+                    // display: none;
                     text-align: center;
-                    font-weight: 100;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .gfield_checkbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0 0 0;
+
+            li {
+                margin: 0 20px;
+
+                label {
+                    display: inline-block;
+                    margin: 0 0 0 5px;
                 }
 
                 input {
-                    &::-webkit-file-upload-button {
-                        background: transparent;
-                        text-transform: uppercase;
-                        color: $brand--primary;
-                        padding: 0;
-                        border: 0;
-                        // display: none;
-                        text-align: center;
-                        font-weight: 500;
-                    }
+                    margin: 0 !important;
+                    display: inline-block;
+                    width: auto;
                 }
-            }
-
-            .gfield_checkbox {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 15px 0 0 0;
-
-                li {
-                    margin: 0 20px;
-
-                    label {
-                        display: inline-block;
-                        margin: 0 0 0 5px;
-                    }
-
-                    input {
-                        margin: 0 !important;
-                        display: inline-block;
-                        width: auto;
-                    }
-                }
-            }
-        }
-
-        .gform_footer {
-            .gform_button {
-                @include button;
             }
         }
     }
+
+    .gform_footer {
+        .gform_button {
+            @include button;
+        }
+    }
 }
+

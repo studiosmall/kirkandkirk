@@ -25,6 +25,11 @@
   .col2-set {
     display: flex;
     padding: 10px 0;
+    flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+      flex-wrap: nowrap;
+    }
   }
 
   .col-1,
@@ -61,6 +66,16 @@
 
     .select2-container {
       width: 94%;
+    }
+
+    #billing_country_field {
+      width: 93%;
+
+      .select2-selection {
+        border-radius: 0;
+        border: 0;
+        background-color: #e1e1e1;
+      }
     }
 
     .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -123,10 +138,22 @@
 
   input {
     @include input;
+
+    width: 95%;
+
+    @include breakpoint(medium) {
+      width: 90%;
+    }
   }
 
   textarea {
     @include input;
+
+    width: 95%;
+
+    @include breakpoint(medium) {
+      width: 90%;
+    }
   }
 
   input {
@@ -158,6 +185,104 @@
     &:focus {
       outline: none;
       border: 0;
+    }
+  }
+}
+
+#payment {
+  padding: 100px 0 0 0;
+
+  .woocommerce-terms-and-conditions-wrapper {
+    padding: 50px 0 0;
+
+    .woocommerce-privacy-policy-text {
+      line-height: 17px;
+
+      p {
+        font-size: 12px;
+
+        a {
+          @include hoverline($brand--primary);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#order_review {
+  .woocommerce-checkout-payment {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0 0 30px 0;
+
+        input {
+          width: auto;
+        }
+
+        label {
+          font-weight: 500;
+          margin: 0 0 0 10px;
+          text-transform: capitalize;
+
+          img {
+            margin: 0 0 0 10px;
+            width: 220px;
+            float: right;
+          }
+        }
+
+        &.payment_method_kco {
+          label {
+            font-weight: 500;
+
+            img {
+              margin: 0 0 0 10px;
+              width: 100px;
+            }
+          }
+        }
+
+        .payment_box {
+
+          fieldset {
+            border: 1px solid $brand--primary;
+          }
+
+          label {
+            margin: 0 0 10px 0;
+          }
+
+          input {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  .place-order {
+    label.woocommerce-form__label-for-checkbox {
+      padding: 0 0 30px 0;
+      display: inline-block;
+      width: 100%;
+
+      input {
+        width: auto;
+      }
+
+      span {
+        text-transform: initial;
+      }
+
+      a {
+        @include hoverline($brand--primary);
+        text-decoration: underline;
+      }
     }
   }
 }
