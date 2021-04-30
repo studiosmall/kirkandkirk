@@ -101,9 +101,9 @@ if ( $product->is_in_stock() ) : ?>
 								Facebook
 							</a>
 						</li>
-						<li>
-							<a href="//pinterest.com/pin/create/link/?url=<?php the_permalink($url_ID); ?>&amp;description=<?php the_title(); ?>" target="_blank">Pinterest</a>
-						</li>
+						<!-- <li>
+							<a href="//pinterest.com/pin/create/link/?url=<?php// the_permalink($url_ID); ?>&amp;description=<?php// the_title(); ?>" target="_blank">Pinterest</a>
+						</li> -->
 
 						<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true">Pinterest</a>
 						<li>
