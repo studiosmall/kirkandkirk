@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="42px" viewBox="0 0 73 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SINGLE-PRODUCT-PAGE" transform="translate(-408.000000, -772.000000)">
+            <g id="Group" transform="translate(410.000000, 778.000000)">
+                <text id="360°-copy" font-family="Helvetica" font-size="20" font-weight="normal" fill="#939191">
+                    <tspan x="16.4794922" y="28">360</tspan>
+                    <tspan x="49.8486328" y="28" font-family="LucidaGrande, Lucida Grande">°</tspan>
+                </text>
+                <path id="Line-Copy" d="M59.8259217,-5.2648808 L60.3516512,-4.97572955 L69.3516512,-0.0257295452 L70.3075232,0.5 L69.3516512,1.02572955 L60.3516512,5.97572955 L59.8259217,6.2648808 L59.2476192,5.2134217 L59.7733488,4.92427045 L66.727,1.1 L8.9375,1.1 L2.271,1.099 L9.22665125,4.92427045 L9.7523808,5.2134217 L9.1740783,6.2648808 L8.64834875,5.97572955 L-0.35165125,1.02572955 L-1.30752315,0.5 L-0.35165125,-0.0257295452 L8.64834875,-4.97572955 L9.1740783,-5.2648808 L9.7523808,-4.2134217 L9.22665125,-3.92427045 L2.272,-0.1 L8.9375,-0.1 L66.729,-0.099 L59.7733488,-3.92427045 L59.2476192,-4.2134217 L59.8259217,-5.2648808 Z" fill="#ACACAC" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>
