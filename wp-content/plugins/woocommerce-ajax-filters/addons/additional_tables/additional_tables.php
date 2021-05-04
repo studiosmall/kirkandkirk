@@ -45,9 +45,11 @@ class BeRocket_aapf_variations_tables_addon extends BeRocket_framework_addon_lib
                     add_action('admin_init', array($this, 'activate_hooks'));
                 }
                 add_action( "admin_footer", array( $this, 'destroy_table_wc_regeneration' ) );
+                add_action( 'br-filters/addon/add-table/destroy', array($this, 'destroy_table') );
             } elseif(is_admin()) {
                 if( ! empty($create_position) ) {
                     add_action( "admin_footer", array( $this, 'destroy_table_wc_regeneration' ) );
+                    add_action( 'br-filters/addon/add-table/destroy', array($this, 'destroy_table') );
                 }
             }
         } else {
@@ -570,11 +572,14 @@ class BeRocket_aapf_variations_tables_addon extends BeRocket_framework_addon_lib
         ));
     }
     function destroy_table_wc_regeneration() {
-        if ( function_exists('wc_update_product_lookup_tables_is_running') && wc_update_product_lookup_tables_is_running() ) {
-            delete_option('BeRocket_aapf_additional_tables_addon_position');
-            delete_option('BeRocket_aapf_additional_tables_addon_position_data');
-            $this->deactivate();
+        if ( apply_filters( 'br-filters/addon/add-table/wc-regenerate-destroy', function_exists('wc_update_product_lookup_tables_is_running') && wc_update_product_lookup_tables_is_running() ) ) {
+            $this->destroy_table();
         }
+    }
+    function destroy_table() {
+        delete_option('BeRocket_aapf_additional_tables_addon_position');
+        delete_option('BeRocket_aapf_additional_tables_addon_position_data');
+        $this->deactivate();
     }
 }
 new BeRocket_aapf_variations_tables_addon();

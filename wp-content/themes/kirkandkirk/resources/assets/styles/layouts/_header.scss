@@ -21,30 +21,34 @@
 		.header__logo-container {
 			padding: 0 0 10px 0;
 			@include breakpoint(medium) {
-				padding: 0 0 20px 0;
+				padding: 0 0 15px 0;
 			}
 		}
 
 		.header__inner {
 			padding: 15px 20px 15px 21px;
 			@include breakpoint(medium) {
-				padding: 23px 50px 15px 50px;
+				padding: 13px 50px 10px 50px;
 			}
 		}
 
 		.header__logo {
-			width: 120px;
+			width: 110px;
 			@include breakpoint(medium) {
-				width: 170px;
+				width: 130px;
 			}
 		}
 
 		.header__banner {
-			display: none;
+			//display: none;
+			height: 0;
+			padding: 0;
 
-			@include breakpoint(medium) {
-				display: block;
-			}
+			// @include breakpoint(medium) {
+			// 	height: 0;
+			// 	overflow: hidden;
+			// 	padding: 0;
+			// }
 		}
 	}
 
@@ -77,6 +81,9 @@
   &__banner {
     background-color: $brand--secondary;
     padding: 9px 0;
+		overflow: hidden;
+    height: 15px;
+		transition: 0.4s all ease;
 
     &--inner {
 			@include inner;

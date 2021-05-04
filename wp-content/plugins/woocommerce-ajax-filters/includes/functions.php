@@ -2250,7 +2250,7 @@ if ( ! function_exists( 'br_filters_query' ) ) {
                 $query['where'] .= " AND {$wpdb->posts}.post_author IN ({$author})";
             }
         }
-        
+
         /*if( function_exists('wc_get_product_visibility_term_ids') ) {
             $product_visibility_term_ids = wc_get_product_visibility_term_ids();
             $query[ 'where' ] .= " AND ( {$wpdb->posts}.ID NOT IN (SELECT object_id FROM {$wpdb->term_relationships} WHERE term_taxonomy_id='" . $product_visibility_term_ids[ 'exclude-from-catalog' ] . "') ) ";

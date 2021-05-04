@@ -6,6 +6,7 @@ if( ! class_exists('BeRocket_AAPF_compat_Relevanssi') ) {
                 remove_filter('berocket_aapf_recount_terms_query', array('BeRocket_AAPF_faster_attribute_recount', 'search_query'), 50, 3);
                 add_filter('berocket_aapf_recount_terms_query', array(__CLASS__, 'search_query'), 50, 3);
                 add_filter('bapf_query_count_before_update', array(__CLASS__, 'count_before_update'));
+                add_filter('relevanssi_modify_wp_query', array(__CLASS__, 'relevanssi_query'));
             }
         }
         static function count_before_update($query) {
@@ -44,6 +45,42 @@ if( ! class_exists('BeRocket_AAPF_compat_Relevanssi') ) {
                     }
                     $query['where']['search'] = "AND {$wpdb->posts}.ID IN (" . implode(',', $posts) . ")";
                 }
+            }
+            return $query;
+        }
+        public static function is_relevanssi( $s ) {
+            if ( function_exists('relevanssi_do_query') and strstr( $s, "}')" ) !== false ) {
+                return true;
+            }
+
+            return false;
+        }
+        static function relevanssi_query($query) {
+            global $wpdb;
+            $args = array(
+                'where' => '',
+                'join'  => '',
+            );
+            $BeRocket_AAPF = BeRocket_AAPF::getInstance();
+            $args = $BeRocket_AAPF->price_filter_post_clauses($args, $query);
+            if( ! empty($args['where']) || ! empty($args['join']) ) {
+                $join = ( empty($args['join']) ? '' : $args['join'] );
+                $where = ( empty($args['where']) ? '' : $args['where'] );
+                $request = "SELECT {$wpdb->posts}.ID FROM {$wpdb->posts} $join WHERE 1=1 $where group by {$wpdb->posts}.ID";
+                $ids = $wpdb->get_col($request, 0);
+                if( ! is_array($ids) || empty($ids) ) {
+                    $ids = array();
+                }
+                $posts_in = $query->get( 'post__in' );
+                if( empty($posts_in) ) {
+                    $posts_in = $ids;
+                } else {
+                    $posts_in = array_intersect($posts_in, $ids);
+                }
+                if( count($posts_in) == 0 ) {
+                    $posts_in = array(0);
+                }
+                $posts_in = $query->set( 'post__in', $posts_in );
             }
             return $query;
         }

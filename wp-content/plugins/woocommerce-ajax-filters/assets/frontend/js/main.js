@@ -493,6 +493,7 @@ function braapf_filtered_filters_set() {
             });
             url_data.queryargs = newqueryargs;
         }
+        url_data = berocket_apply_filters('braapf_remove_pages_from_url_data', url_data);
         return url_data;
     }
     braapf_apply_additional_filter_data = function (url_data, filters_start) {
@@ -894,6 +895,35 @@ function braapf_filtered_filters_set() {
             try {if( berocket_apply_filters('etTheme_compatibility', (typeof(etTheme) == 'object' && typeof(etTheme.global_image_lazy) == 'function' ) ) ) {
                 etTheme.global_image_lazy();
             }} catch (e) {berocket_throw_error('etTheme_compatibility', e);}
+            try {if( berocket_apply_filters('the7_compatibility', ($(the_ajax_script.products_holder_id+' .iso-lazy-load').length > 0) ) ) {
+                $(the_ajax_script.products_holder_id+' .iso-lazy-load').attr('src', function(){
+                    if(typeof($(this).data('src')) != 'undefined' && $(this).data('src')) {
+                        return $(this).data('src');
+                    }
+                    return $(this).attr('src');
+                }).attr('srcset', function() {
+                    if(typeof($(this).data('srcset')) != 'undefined' && $(this).data('srcset')) {
+                        return $(this).data('srcset');
+                    }
+                    return $(this).attr('srcset');
+                }).removeClass('iso-lazy-load');
+            }} catch (e) {berocket_throw_error('etTheme_compatibility', e);}
+            try { if( typeof(InfiniteScroll) == 'function' ) {
+                var infScroll = InfiniteScroll.data( '.shop-container .products' );
+                if( typeof(infScroll) == 'object' && infScroll.options ) {
+                    var infOptionsStore = infScroll.options;
+                    infScroll.destroy();
+                    jQuery('.shop-container .products').data('infiniteScroll', '').infiniteScroll(infOptionsStore);
+                }
+            }} catch (e) {berocket_throw_error('flatsome_infinitescroll', e);}
+            try { if( jQuery('.shop-container .products').length && typeof(jQuery('.shop-container .products').data('packery')) == 'object' ) {
+                jQuery('.shop-container .products').packery('reloadItems').packery('layout');
+            }} catch (e) {berocket_throw_error('flatsome_packery', e);}
+            try {if( berocket_apply_filters('JetSmartFilters_compatibility', (typeof(window.JetSmartFilters) == 'object' && typeof(window.JetSmartFilters.initializeFilters) == 'function' ) ) ) {
+                window.JetSmartFilters.initializeFilters()
+            }} catch (e) {berocket_throw_error('JetSmartFilters_compatibility', e);}
+            $(window).trigger('resize');
+            $(window).trigger('scroll');
         }
         return data;
     }
@@ -1184,7 +1214,10 @@ braapf_check_partial_load_filters,
 braapf_add_loader_element,
 braapf_remove_loader_element,
 braapf_elementor_sticky_fix,
-baapfGet_wprocketInstance;
+baapfGet_wprocketInstance,
+brapf_jet_smart_filters_add,
+brapf_jet_smart_filters_remove_pages,
+brapf_jet_smart_filters;
 (function ($){
     //CHILD/PARENT FEATURE
     braapf_child_parent_grab_single = function(single_data, element, selected_filters) {
@@ -1281,6 +1314,43 @@ baapfGet_wprocketInstance;
         try {
             $(this.form).find("[data-quantity]").attr("data-quantity", this.value);
         } catch (e) {berocket_throw_error('wc_quantity_change', e);}
+    });
+    //JetWooBuilder
+    brapf_jet_smart_filters = function(data) {
+        var $html = $('<div><div>'+data+'</div></div>');
+        if( jQuery('#jet-smart-filters-js-extra').length > 0 && $html.find('#jet-smart-filters-js-extra').length > 0 ) {
+            jQuery('#jet-smart-filters-js-extra').replaceWith($html.find('#jet-smart-filters-js-extra'));
+        }
+    }
+    brapf_jet_smart_filters_remove_pages = function(url_data) {
+        if( Array.isArray(url_data.queryargs) ) {
+            var newqueryargs = [];
+            $.each(url_data.queryargs, function(i, val) {
+                if(val.name != 'pagenum') {
+                    newqueryargs.push(val);
+                }
+            });
+            url_data.queryargs = newqueryargs;
+        }
+        return url_data;
+    }
+    brapf_jet_smart_filters_add = function(elem) {
+        elem.done.push(brapf_jet_smart_filters);
+        return elem;
+    }
+    brapf_JetSmartFilter_extra_props = function() {
+        var compat_filters = braapf_compact_filters();
+        var filter_mask = berocket_apply_filters('braapf_filters_mask', the_ajax_script.url_mask);
+        var filter_string = braapf_compat_filters_to_string(compat_filters, filter_mask, the_ajax_script.url_split);
+        JetSmartFilterSettings.extra_props.brfilters = filter_string;
+    }
+    jQuery(document).ready(function() {
+        if( berocket_apply_filters('JetSmartFilter_compatibility', (jQuery('#jet-smart-filters-js-extra').length > 0)) ) {
+            jQuery(document).on('berocket_ajax_products_loaded', brapf_JetSmartFilter_extra_props);
+            brapf_JetSmartFilter_extra_props();
+            berocket_add_filter( 'ajax_load_from_filters', brapf_jet_smart_filters_add );
+            berocket_add_filter( 'braapf_remove_pages_from_url_data', brapf_jet_smart_filters_remove_pages );
+        }
     });
 })(jQuery);
 

@@ -689,6 +689,7 @@ class BeRocket_AAPF_Widget_functions {
             $query[ 'from' ]   = "FROM {$wpdb->postmeta} as wp_price_check";
             $query[ 'join' ]   = "INNER JOIN {$wpdb->posts} ON ({$wpdb->posts}.ID = wp_price_check.post_id)";
         }
+
         if( braapf_filters_must_be_recounted() ) {
             $query = br_filters_query( $query, 'price', $product_cat );
         } elseif( braapf_filters_must_be_recounted('first') && ! empty($br_wc_query) ) {
@@ -743,7 +744,6 @@ class BeRocket_AAPF_Widget_functions {
 
             $query[ 'where' ] .= "$wpdb->posts.ID IN(" . implode( ',', $post__in ) . ")";
         }
-
 
         $query_string = implode( ' ', $query );
 

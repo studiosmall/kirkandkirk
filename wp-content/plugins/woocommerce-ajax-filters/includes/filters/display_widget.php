@@ -284,6 +284,7 @@ class BeRocket_AAPF_Widget {
             $wp_query      = $br_wc_query;
             $wp_the_query  = $br_wc_query;
             if( class_exists('WC_Query') &&  method_exists('WC_Query', 'product_query') && method_exists('WC_Query', 'get_main_query') ) {
+                $wp_query = apply_filters('braapf_wp_query_widget_start', $wp_query, $old_query, $br_options);
                 wc()->query->product_query($wp_query);
             }
         }
@@ -617,6 +618,7 @@ class BeRocket_AAPF_Widget {
                 $wp_query = $old_query;
             }
             if( ! empty($wc_query) && is_a($wc_query, 'WP_Query') && class_exists('WC_Query') &&  method_exists('WC_Query', 'product_query') && method_exists('WC_Query', 'get_main_query') ) {
+                $wc_query = apply_filters('braapf_wp_query_widget_end', $wc_query, $old_query);
                 wc()->query->product_query($wc_query);
             }
             wc()->query->remove_ordering_args();

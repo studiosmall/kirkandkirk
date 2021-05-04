@@ -56,12 +56,17 @@ Klarna Checkout works for merchants in Sweden, Finland, Norway, Germany, Austria
 For help setting up and configuring Klarna Checkout for WooCommerce please refer to our [documentation](https://docs.krokedil.com/collection/121-klarna-checkout/).
 
 = Are there any specific requirements? =
-* WooCommerce 3.0 or newer is required.
+* WooCommerce 3.2 or newer is required.
 * PHP 5.6 or higher is required.
 * A SSL Certificate is required.
 * This plugin integrates with Klarnas V3 platform. You need an agreement with Klarna specific to the V3 platform to use this plugin.
 
 == Changelog ==
+= 2021.04.27    - version 2.5.4 =
+* Fix           - Move our hidden shipping field to the billing address fields to prevent issues if you remove the order comments from the checkout using the filter woocommerce_enable_order_notes_field.
+* Fix           - Prevent unlocking the iframe during the order submission process.
+* Fix           - Fixed an issue with not sending shipping tax to Klarna if you had prices exclusive of tax and shipping in the Klarna iframe.
+
 = 2021.04.07    - version 2.5.3 =
 * Fix           - Removed old code that would set the Klarna checkout page to be considered to also be the cart page.
 
@@ -75,8 +80,8 @@ For help setting up and configuring Klarna Checkout for WooCommerce please refer
 * Feature       - Added a setting to select if you want to show the order details in Klarna, WooCommerce or in both during the checkout process. Default is to show it in WooCommerce as the order review.
 * Enhancement   - Improved the calculation flow for the plugin so we are more inline with the WooCommerce standard.
 * Enhancement   - Improved the speed of update calls to Klarna to enhance the checkout experience for the customer.
-* Enhancement   - Removed the dependency of URL fragments, or hashtag urls. This should improve the compatibility with some other plugins that use a similar feature to display content.
-* Fix           - Fixed a issue with a fee reference being to long in some cases.
+* Enhancement   - Removed the dependency of URL fragments, or hashtag urls. This should improve the comptability with some other plugins that use a similar feature to display content.
+* Fix           - Fixed a issue with a fee reference beeing to long in some cases.
 * Fix           - Fixed a issue with updating the Klarna order incorrectly during order submission if the cart had been cleared at this point.
 
 = 2021.02.17    - version 2.4.3 =
