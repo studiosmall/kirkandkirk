@@ -86,7 +86,7 @@ if ( $product->is_in_stock() ) : ?>
 		?>
 
 		<div class="how-to__container">
-			<a class="how-to" href="/faqs">How to Measure and FAQs</a>
+			<a class="how-to" href="/faqs">FAQs</a>
 		</div>
 
 		<?php

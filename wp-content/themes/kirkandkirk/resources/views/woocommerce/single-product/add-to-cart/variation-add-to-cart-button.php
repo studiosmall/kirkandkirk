@@ -16,7 +16,7 @@ global $product;
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 	<div class="how-to__container">
-		<a class="how-to" href="/faqs">How to Measure and FAQs</a>
+		<a class="how-to" href="/faqs">FAQs</a>
 	</div>
 
 	<div class="share">

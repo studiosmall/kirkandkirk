@@ -98,7 +98,7 @@ Container::getInstance()
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
 function jk_woocommerce_breadcrumbs() {
     return array(
-            'delimiter'   => ' &mdash; ',
+            'delimiter'   => ' &ndash; ',
             'wrap_before' => '<nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
             'wrap_after'  => '</nav>',
             'before'      => '',
@@ -326,3 +326,22 @@ add_action(
 // 		'pa_color',
 // 	) );
 // }
+
+// Change return to basket link
+function store_mall_wc_empty_cart_redirect_url() {
+    $url = '/shop/optical/';
+    return esc_url( $url );
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'store_mall_wc_empty_cart_redirect_url' );
+
+
+// Remove Image sizes
+function wpse_240765_unset_images( $sizes ){
+    //unset( $sizes[ 'thumbnail' ]);
+    unset( $sizes[ 'medium' ]);
+    unset( $sizes[ 'medium_large' ] );
+    unset( $sizes[ 'large' ]);
+    //unset( $sizes[ 'full' ] );
+    return $sizes;
+}
+add_filter( 'intermediate_image_sizes_advanced', 'wpse_240765_unset_images' );
