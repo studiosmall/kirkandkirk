@@ -1,0 +1,7 @@
+.textarea {
+	@include section;
+
+	&__inner {
+		@include inner;
+	}
+}

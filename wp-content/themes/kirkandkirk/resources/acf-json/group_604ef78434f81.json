@@ -764,6 +764,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6091fd5ef8d6c": {
+                    "key": "layout_6091fd5ef8d6c",
+                    "name": "textarea",
+                    "label": "Textarea",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6091fd63f8d6d",
+                            "label": "Textarea",
+                            "name": "textarea",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "very_simple",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Layout",
@@ -806,5 +835,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1619149113
+    "modified": 1620180344
 }

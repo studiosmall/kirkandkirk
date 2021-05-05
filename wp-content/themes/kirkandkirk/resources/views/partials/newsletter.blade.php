@@ -7,6 +7,10 @@
 
 		<div class="mailinglist__inner--title">
 			<h3>SIGN UP TO OUR NEWSLETTER</h3>
+			<span>
+				Modern ideas crafted the authentic way. <br/>
+				Never miss Kirk & Kirk news again &#8212; sign up to our newsletter
+			<span>
 		</div>
 
 		@php

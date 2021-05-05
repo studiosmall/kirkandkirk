@@ -51,6 +51,7 @@
 		text-transform: uppercase;
 		margin: 6px 0 0 0;
 		display: block;
+		letter-spacing: 1px;
 	}
 
 	&__sizer,
@@ -135,7 +136,7 @@
 
 		p {
 			font-family: $font--body;
-			font-size: 18px;
+			font-size: 14px;
 			letter-spacing: 0.75px;
 			text-align: left;
 			line-height: 22px;

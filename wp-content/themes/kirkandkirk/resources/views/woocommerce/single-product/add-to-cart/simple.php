@@ -69,7 +69,7 @@ if ( $product->is_in_stock() ) : ?>
 		<?php if($eye_size) { ?><span>Eye size:</span> 	<?php echo $eye_size; } ?><?php if($bridge) { ?>, <span>Bridge:</span> <?php echo $bridge; } ?>
 	</div>
 
-		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 		<?php
 		do_action( 'woocommerce_before_add_to_cart_quantity' );
@@ -82,7 +82,6 @@ if ( $product->is_in_stock() ) : ?>
 			)
 		);
 
-		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		?>
 
 		<div class="how-to__container">
@@ -117,6 +116,7 @@ if ( $product->is_in_stock() ) : ?>
 				</div>
 		</div>
 
+		<?php do_action( 'woocommerce_after_add_to_cart_quantity' ); ?>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

@@ -5209,7 +5209,7 @@ body.archive {
 
 p {
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.75px;
   text-align: left;
   line-height: 22px;
@@ -5361,7 +5361,7 @@ img {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -5396,7 +5396,7 @@ label {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -5469,7 +5469,21 @@ input:focus {
   }
 }
 
-/* line 25, resources/assets/styles/components/_off-canvas.scss */
+/* line 26, resources/assets/styles/components/_off-canvas.scss */
+
+.off-canvas.small .off-canvas__inner {
+  padding: 180px 20px 10px 20px;
+}
+
+@media (min-width: 900px) {
+  /* line 26, resources/assets/styles/components/_off-canvas.scss */
+
+  .off-canvas.small .off-canvas__inner {
+    padding: 110px 46px 10px 46px;
+  }
+}
+
+/* line 35, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas.active {
   opacity: 0.9;
@@ -5480,14 +5494,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 25, resources/assets/styles/components/_off-canvas.scss */
+  /* line 35, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas.active {
     opacity: 1;
   }
 }
 
-/* line 34, resources/assets/styles/components/_off-canvas.scss */
+/* line 44, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas__inner {
   padding: 0 20px;
@@ -5502,10 +5516,13 @@ input:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 180px 20px 10px 20px;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 @media (min-width: 900px) {
-  /* line 34, resources/assets/styles/components/_off-canvas.scss */
+  /* line 44, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas__inner {
     padding: 0 50px;
@@ -5513,7 +5530,7 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 34, resources/assets/styles/components/_off-canvas.scss */
+  /* line 44, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas__inner {
     padding: 170px 46px 10px 46px;
@@ -5522,27 +5539,31 @@ input:focus {
   }
 }
 
-/* line 48, resources/assets/styles/components/_off-canvas.scss */
+/* line 59, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas .menu-main-menu-left-container,
 .off-canvas .menu-main-menu-center-container,
-.off-canvas .menu-main-menu-right-container {
+.off-canvas .menu-main-menu-right-container,
+.off-canvas .menu-professional-centre-navigation-container,
+.off-canvas .menu-professional-right-navigation-container {
   margin: 0;
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 48, resources/assets/styles/components/_off-canvas.scss */
+  /* line 59, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas .menu-main-menu-left-container,
   .off-canvas .menu-main-menu-center-container,
-  .off-canvas .menu-main-menu-right-container {
+  .off-canvas .menu-main-menu-right-container,
+  .off-canvas .menu-professional-centre-navigation-container,
+  .off-canvas .menu-professional-right-navigation-container {
     margin: 0 5% 0 0;
     width: initial;
   }
 }
 
-/* line 60, resources/assets/styles/components/_off-canvas.scss */
+/* line 73, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul {
   margin: 0;
@@ -5550,7 +5571,7 @@ input:focus {
   list-style: none;
 }
 
-/* line 64, resources/assets/styles/components/_off-canvas.scss */
+/* line 77, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li {
   font-size: 24px;
@@ -5561,20 +5582,20 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 64, resources/assets/styles/components/_off-canvas.scss */
+  /* line 77, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li {
     margin: 0 0 17px;
   }
 }
 
-/* line 76, resources/assets/styles/components/_off-canvas.scss */
+/* line 89, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li.current-menu-item a {
   color: #fff;
 }
 
-/* line 86, resources/assets/styles/components/_off-canvas.scss */
+/* line 99, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a {
   display: inline-block;
@@ -5595,14 +5616,14 @@ input:focus {
 }
 
 @media (min-width: 900px) {
-  /* line 86, resources/assets/styles/components/_off-canvas.scss */
+  /* line 99, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li a {
     font-size: 14px;
   }
 }
 
-/* line 102, resources/assets/styles/components/_off-canvas.scss */
+/* line 115, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a:hover,
 .off-canvas ul li a:focus,
@@ -5610,39 +5631,39 @@ input:focus {
   color: #fff;
 }
 
-/* line 108, resources/assets/styles/components/_off-canvas.scss */
+/* line 121, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 86, resources/assets/styles/components/_off-canvas.scss */
+  /* line 99, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li a {
     font-size: 16px;
   }
 }
 
-/* line 117, resources/assets/styles/components/_off-canvas.scss */
+/* line 130, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu {
   padding: 0;
 }
 
-/* line 120, resources/assets/styles/components/_off-canvas.scss */
+/* line 133, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li {
   margin: 0 0 1px 0;
 }
 
-/* line 126, resources/assets/styles/components/_off-canvas.scss */
+/* line 139, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li.current-menu-item a:hover {
   color: #fff;
 }
 
-/* line 137, resources/assets/styles/components/_off-canvas.scss */
+/* line 150, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a {
   display: inline-block;
@@ -5653,20 +5674,20 @@ input:focus {
   font-weight: 100;
 }
 
-/* line 141, resources/assets/styles/components/_off-canvas.scss */
+/* line 154, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a:hover {
   color: #fff;
 }
 
-/* line 145, resources/assets/styles/components/_off-canvas.scss */
+/* line 158, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas ul li ul.sub-menu li a::after {
   height: 1px;
 }
 
 @media (min-width: 900px) {
-  /* line 137, resources/assets/styles/components/_off-canvas.scss */
+  /* line 150, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas ul li ul.sub-menu li a {
     font-size: 16px;
@@ -5674,21 +5695,21 @@ input:focus {
   }
 }
 
-/* line 159, resources/assets/styles/components/_off-canvas.scss */
+/* line 172, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation {
   display: block;
 }
 
 @media (min-width: 900px) {
-  /* line 159, resources/assets/styles/components/_off-canvas.scss */
+  /* line 172, resources/assets/styles/components/_off-canvas.scss */
 
   .off-canvas #menu-mobile-navigation {
     display: none;
   }
 }
 
-/* line 167, resources/assets/styles/components/_off-canvas.scss */
+/* line 180, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu {
   display: none;
@@ -5697,19 +5718,28 @@ input:focus {
   transition: 0.3s all ease;
 }
 
-/* line 175, resources/assets/styles/components/_off-canvas.scss */
+/* line 188, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu.active {
   display: block;
 }
 
-/* line 179, resources/assets/styles/components/_off-canvas.scss */
+/* line 192, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas #menu-mobile-navigation li > ul.sub-menu ul.sub-menu {
   display: block;
 }
 
 /* line 1, resources/assets/styles/components/_announcement.scss */
+
+span.professional {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* line 8, resources/assets/styles/components/_announcement.scss */
 
 .announcement {
   position: relative;
@@ -5719,7 +5749,7 @@ input:focus {
   text-align: center;
 }
 
-/* line 8, resources/assets/styles/components/_announcement.scss */
+/* line 15, resources/assets/styles/components/_announcement.scss */
 
 .announcement a,
 .announcement p {
@@ -5731,10 +5761,10 @@ input:focus {
   color: #000;
   text-transform: uppercase;
   font-size: 20px;
-  letter-spacing: 2.25px;
+  letter-spacing: 1px;
 }
 
-/* line 21, resources/assets/styles/components/_announcement.scss */
+/* line 28, resources/assets/styles/components/_announcement.scss */
 
 .announcement__item {
   background: #abced0;
@@ -5745,7 +5775,7 @@ input:focus {
   transition: 0.6s;
 }
 
-/* line 26, resources/assets/styles/components/_announcement.scss */
+/* line 33, resources/assets/styles/components/_announcement.scss */
 
 .announcement__item.out {
   -webkit-transform: translateY(-100%);
@@ -5756,7 +5786,7 @@ input:focus {
   transition: 0.6s;
 }
 
-/* line 30, resources/assets/styles/components/_announcement.scss */
+/* line 37, resources/assets/styles/components/_announcement.scss */
 
 .announcement__item.start {
   -webkit-transform: translateY(100%);
@@ -5767,7 +5797,7 @@ input:focus {
   transition: none;
 }
 
-/* line 34, resources/assets/styles/components/_announcement.scss */
+/* line 41, resources/assets/styles/components/_announcement.scss */
 
 .announcement__item.in {
   -webkit-transform: translateY(0%);
@@ -6219,7 +6249,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -6246,7 +6276,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -6389,7 +6419,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -6416,7 +6446,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -6610,7 +6640,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -6632,7 +6662,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -6864,7 +6894,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -6884,7 +6914,7 @@ input:focus {
 .feature-story h3 {
   font-family: "reader", arial, sans-serif;
   color: #000;
-  letter-spacing: 3.03px;
+  letter-spacing: 1px;
   font-weight: 100;
   font-size: 14px;
   margin: 0 0 10px 0;
@@ -6906,7 +6936,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -7025,7 +7055,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -7168,7 +7198,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   line-height: initial;
@@ -7238,7 +7268,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -7265,7 +7295,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -7492,7 +7522,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   line-height: initial;
@@ -7564,7 +7594,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -7599,7 +7629,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -7639,7 +7669,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -7747,7 +7777,7 @@ input:focus {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -7828,7 +7858,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -7864,7 +7894,7 @@ input:focus {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -7972,33 +8002,36 @@ klarna-placement .container {
 .single-product .product .product-images__360 {
   text-align: center;
   display: none;
+  position: relative;
 }
 
-/* line 46, resources/assets/styles/components/_single-product.scss */
+/* line 47, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .product-images__360 .ico-360 {
+  position: absolute;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzNweCIgaGVpZ2h0PSI0MnB4IiB2aWV3Qm94PSIwIDAgNzMgNDIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXA8L3RpdGxlPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlNJTkdMRS1QUk9EVUNULVBBR0UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MDguMDAwMDAwLCAtNzcyLjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQxMC4wMDAwMDAsIDc3OC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDx0ZXh0IGlkPSIzNjDCsC1jb3B5IiBmb250LWZhbWlseT0iSGVsdmV0aWNhIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjOTM5MTkxIj4KICAgICAgICAgICAgICAgICAgICA8dHNwYW4geD0iMTYuNDc5NDkyMiIgeT0iMjgiPjM2MDwvdHNwYW4+CiAgICAgICAgICAgICAgICAgICAgPHRzcGFuIHg9IjQ5Ljg0ODYzMjgiIHk9IjI4IiBmb250LWZhbWlseT0iTHVjaWRhR3JhbmRlLCBMdWNpZGEgR3JhbmRlIj7CsDwvdHNwYW4+CiAgICAgICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgICAgICA8cGF0aCBpZD0iTGluZS1Db3B5IiBkPSJNNTkuODI1OTIxNywtNS4yNjQ4ODA4IEw2MC4zNTE2NTEyLC00Ljk3NTcyOTU1IEw2OS4zNTE2NTEyLC0wLjAyNTcyOTU0NTIgTDcwLjMwNzUyMzIsMC41IEw2OS4zNTE2NTEyLDEuMDI1NzI5NTUgTDYwLjM1MTY1MTIsNS45NzU3Mjk1NSBMNTkuODI1OTIxNyw2LjI2NDg4MDggTDU5LjI0NzYxOTIsNS4yMTM0MjE3IEw1OS43NzMzNDg4LDQuOTI0MjcwNDUgTDY2LjcyNywxLjEgTDguOTM3NSwxLjEgTDIuMjcxLDEuMDk5IEw5LjIyNjY1MTI1LDQuOTI0MjcwNDUgTDkuNzUyMzgwOCw1LjIxMzQyMTcgTDkuMTc0MDc4Myw2LjI2NDg4MDggTDguNjQ4MzQ4NzUsNS45NzU3Mjk1NSBMLTAuMzUxNjUxMjUsMS4wMjU3Mjk1NSBMLTEuMzA3NTIzMTUsMC41IEwtMC4zNTE2NTEyNSwtMC4wMjU3Mjk1NDUyIEw4LjY0ODM0ODc1LC00Ljk3NTcyOTU1IEw5LjE3NDA3ODMsLTUuMjY0ODgwOCBMOS43NTIzODA4LC00LjIxMzQyMTcgTDkuMjI2NjUxMjUsLTMuOTI0MjcwNDUgTDIuMjcyLC0wLjEgTDguOTM3NSwtMC4xIEw2Ni43MjksLTAuMDk5IEw1OS43NzMzNDg4LC0zLjkyNDI3MDQ1IEw1OS4yNDc2MTkyLC00LjIxMzQyMTcgTDU5LjgyNTkyMTcsLTUuMjY0ODgwOCBaIiBmaWxsPSIjQUNBQ0FDIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
   background-size: 41px;
   width: 41px;
   height: 20px;
   display: inline-block;
+  top: -20px;
 }
 
-/* line 56, resources/assets/styles/components/_single-product.scss */
+/* line 59, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .lifestyle {
   margin: 20px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 56, resources/assets/styles/components/_single-product.scss */
+  /* line 59, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .lifestyle {
-    margin: 85px 0;
+    margin: 60px 0;
   }
 }
 
-/* line 63, resources/assets/styles/components/_single-product.scss */
+/* line 66, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .lifestyle.portrait {
   width: 100%;
@@ -8006,34 +8039,34 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 63, resources/assets/styles/components/_single-product.scss */
+  /* line 66, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .lifestyle.portrait {
     width: 70%;
   }
 }
 
-/* line 75, resources/assets/styles/components/_single-product.scss */
+/* line 78, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .label {
   display: none;
 }
 
-/* line 79, resources/assets/styles/components/_single-product.scss */
+/* line 82, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper {
   border: 0;
   margin: 0 8px 5px 0;
 }
 
-/* line 83, resources/assets/styles/components/_single-product.scss */
+/* line 86, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper.selected {
   border: 2px solid #000;
   border-radius: 30px;
 }
 
-/* line 88, resources/assets/styles/components/_single-product.scss */
+/* line 91, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper a {
   border-radius: 30px;
@@ -8041,7 +8074,7 @@ klarna-placement .container {
   height: 30px !important;
 }
 
-/* line 97, resources/assets/styles/components/_single-product.scss */
+/* line 100, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to {
   display: inline-block;
@@ -8051,12 +8084,13 @@ klarna-placement .container {
   text-decoration: none;
   margin: 0 0 30px 0;
   border-bottom: 1px solid #000;
+  font-size: 14px;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
 
-/* line 104, resources/assets/styles/components/_single-product.scss */
+/* line 108, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to::after {
   -webkit-transform: scaleX(1);
@@ -8068,7 +8102,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 109, resources/assets/styles/components/_single-product.scss */
+  /* line 113, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .how-to:hover::after {
     -webkit-transform: scaleX(0);
@@ -8077,13 +8111,13 @@ klarna-placement .container {
   }
 }
 
-/* line 115, resources/assets/styles/components/_single-product.scss */
+/* line 119, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to:hover {
   border-bottom: 1px solid transparent;
 }
 
-/* line 120, resources/assets/styles/components/_single-product.scss */
+/* line 124, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours {
   list-style: none;
@@ -8094,19 +8128,19 @@ klarna-placement .container {
   display: flex;
 }
 
-/* line 126, resources/assets/styles/components/_single-product.scss */
+/* line 130, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li {
   margin: 0 10px 0 0;
 }
 
-/* line 131, resources/assets/styles/components/_single-product.scss */
+/* line 135, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a:hover .product-col {
   border-color: #000;
 }
 
-/* line 136, resources/assets/styles/components/_single-product.scss */
+/* line 140, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a .product-col {
   display: inline-block;
@@ -8119,19 +8153,20 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 144, resources/assets/styles/components/_single-product.scss */
+/* line 148, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a .product-col.active {
   border-color: #000;
 }
 
-/* line 152, resources/assets/styles/components/_single-product.scss */
+/* line 156, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share {
   padding: 0 0 5px 0;
+  font-size: 14px;
 }
 
-/* line 156, resources/assets/styles/components/_single-product.scss */
+/* line 161, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share.active .share__inner {
   opacity: 1;
@@ -8139,7 +8174,7 @@ klarna-placement .container {
   display: block;
 }
 
-/* line 163, resources/assets/styles/components/_single-product.scss */
+/* line 168, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share__inner {
   opacity: 0;
@@ -8147,7 +8182,7 @@ klarna-placement .container {
   display: none;
 }
 
-/* line 168, resources/assets/styles/components/_single-product.scss */
+/* line 173, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share__inner ul {
   list-style: none;
@@ -8155,13 +8190,13 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 173, resources/assets/styles/components/_single-product.scss */
+/* line 178, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share__inner ul li {
   margin: 3px 0;
 }
 
-/* line 179, resources/assets/styles/components/_single-product.scss */
+/* line 184, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share a {
   display: inline-block;
@@ -8171,25 +8206,25 @@ klarna-placement .container {
   text-decoration: none;
 }
 
-/* line 184, resources/assets/styles/components/_single-product.scss */
+/* line 189, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .sku_wrapper {
   display: none;
 }
 
-/* line 188, resources/assets/styles/components/_single-product.scss */
+/* line 193, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product a.reset_variations {
   display: none !important;
 }
 
-/* line 192, resources/assets/styles/components/_single-product.scss */
+/* line 197, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .quantity {
   display: none !important;
 }
 
-/* line 196, resources/assets/styles/components/_single-product.scss */
+/* line 201, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .threesixty {
   display: -webkit-box;
@@ -8204,71 +8239,72 @@ klarna-placement .container {
   min-height: 500px;
 }
 
-/* line 203, resources/assets/styles/components/_single-product.scss */
+/* line 208, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container {
   width: 100%;
   cursor: -webkit-grab;
   cursor: grab;
+  float: initial;
   min-height: 200px;
 }
 
 @media (min-width: 900px) {
-  /* line 203, resources/assets/styles/components/_single-product.scss */
+  /* line 208, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container {
     min-height: 500px;
   }
 }
 
-/* line 212, resources/assets/styles/components/_single-product.scss */
+/* line 218, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container .spinner {
   margin-top: 0 !important;
   background-color: transparent;
 }
 
-/* line 217, resources/assets/styles/components/_single-product.scss */
+/* line 223, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container .spinner span {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   color: #000;
 }
 
 @media (min-width: 900px) {
-  /* line 217, resources/assets/styles/components/_single-product.scss */
+  /* line 223, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container .spinner span {
     font-size: 16px;
   }
 }
 
-/* line 224, resources/assets/styles/components/_single-product.scss */
+/* line 230, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary {
   width: 100%;
   position: sticky;
   position: -webkit-sticky;
   height: 100%;
-  top: 170px;
+  top: 140px;
   padding: 0 0 50px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 224, resources/assets/styles/components/_single-product.scss */
+  /* line 230, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary {
     width: 35%;
   }
 }
 
-/* line 237, resources/assets/styles/components/_single-product.scss */
+/* line 244, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .posted_in a {
   display: inline-block;
@@ -8280,34 +8316,34 @@ klarna-placement .container {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: capitalize;
 }
 
 @media (min-width: 900px) {
-  /* line 237, resources/assets/styles/components/_single-product.scss */
+  /* line 244, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .posted_in a {
     font-size: 16px;
   }
 }
 
-/* line 245, resources/assets/styles/components/_single-product.scss */
+/* line 252, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary h1.product_title {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
 }
 
 @media (min-width: 900px) {
-  /* line 245, resources/assets/styles/components/_single-product.scss */
+  /* line 252, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title {
     font-size: 20px;
@@ -8315,21 +8351,21 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 245, resources/assets/styles/components/_single-product.scss */
+  /* line 252, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title {
     font-size: 30px;
   }
 }
 
-/* line 253, resources/assets/styles/components/_single-product.scss */
+/* line 260, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .price {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -8338,7 +8374,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 253, resources/assets/styles/components/_single-product.scss */
+  /* line 260, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price {
     font-size: 16px;
@@ -8346,38 +8382,38 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 253, resources/assets/styles/components/_single-product.scss */
+  /* line 260, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price {
     font-size: 18px;
   }
 }
 
-/* line 265, resources/assets/styles/components/_single-product.scss */
+/* line 272, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .variations_form {
   padding: 10px 0 0 0;
 }
 
-/* line 269, resources/assets/styles/components/_single-product.scss */
+/* line 276, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability {
   margin: 10px 0 0 0;
 }
 
-/* line 273, resources/assets/styles/components/_single-product.scss */
+/* line 280, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.in-stock {
   color: #1bae27;
 }
 
-/* line 276, resources/assets/styles/components/_single-product.scss */
+/* line 283, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock {
   color: #b92828;
 }
 
-/* line 282, resources/assets/styles/components/_single-product.scss */
+/* line 289, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .button {
   color: #fff;
@@ -8399,7 +8435,7 @@ klarna-placement .container {
   font-family: "reader", arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   width: 100%;
   width: 100%;
   margin: 20px 0 10px 0;
@@ -8414,19 +8450,19 @@ klarna-placement .container {
   background: transparent;
 }
 
-/* line 293, resources/assets/styles/components/_single-product.scss */
+/* line 300, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .cart .quantity {
   display: none;
 }
 
-/* line 300, resources/assets/styles/components/_single-product.scss */
+/* line 307, resources/assets/styles/components/_single-product.scss */
 
 .single-product .single-product #wl-wrapper.wl-button-wrap {
   margin: 0 0 5px 0;
 }
 
-/* line 304, resources/assets/styles/components/_single-product.scss */
+/* line 311, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to {
   display: inline-block;
@@ -8436,7 +8472,7 @@ klarna-placement .container {
   text-decoration: none;
 }
 
-/* line 307, resources/assets/styles/components/_single-product.scss */
+/* line 314, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to::before {
   content: "";
@@ -8450,7 +8486,7 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 320, resources/assets/styles/components/_single-product.scss */
+/* line 327, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single {
   display: inline-block;
@@ -8462,7 +8498,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 330, resources/assets/styles/components/_single-product.scss */
+  /* line 337, resources/assets/styles/components/_single-product.scss */
 
   .single-product .wl-add-to-single:hover::after {
     -webkit-transform: scaleX(0);
@@ -8471,7 +8507,7 @@ klarna-placement .container {
   }
 }
 
-/* line 336, resources/assets/styles/components/_single-product.scss */
+/* line 343, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single::before {
   content: "";
@@ -8485,7 +8521,7 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 349, resources/assets/styles/components/_single-product.scss */
+/* line 356, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-wrap {
   position: relative;
@@ -8494,19 +8530,19 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 357, resources/assets/styles/components/_single-product.scss */
+/* line 364, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in {
   font-size: 0;
 }
 
-/* line 360, resources/assets/styles/components/_single-product.scss */
+/* line 367, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in .wl-add-link {
   display: none;
 }
 
-/* line 364, resources/assets/styles/components/_single-product.scss */
+/* line 371, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul {
   list-style: none;
@@ -8514,7 +8550,7 @@ klarna-placement .container {
   padding: 10px 0 0 0;
 }
 
-/* line 370, resources/assets/styles/components/_single-product.scss */
+/* line 377, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a {
   display: inline-block;
@@ -8522,10 +8558,17 @@ klarna-placement .container {
   color: #000;
   line-height: 15px;
   text-decoration: none;
-  font-size: 16px;
 }
 
-/* line 375, resources/assets/styles/components/_single-product.scss */
+@media (min-width: 900px) {
+  /* line 377, resources/assets/styles/components/_single-product.scss */
+
+  .single-product #wl-wrapper.wl-button-already-in ul li a {
+    font-size: 14px;
+  }
+}
+
+/* line 384, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a::before {
   content: "";
@@ -8539,32 +8582,41 @@ klarna-placement .container {
   top: -1px;
 }
 
-/* line 392, resources/assets/styles/components/_single-product.scss */
+/* line 401, resources/assets/styles/components/_single-product.scss */
 
 .single-product .eye-size {
   padding: 40px 0 2px 0;
+  font-size: 14px;
 }
 
-/* line 395, resources/assets/styles/components/_single-product.scss */
+/* line 405, resources/assets/styles/components/_single-product.scss */
 
 .single-product .eye-size span {
   font-weight: 500;
 }
 
-/* line 400, resources/assets/styles/components/_single-product.scss */
+/* line 410, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes {
   padding: 0 0 20px 0;
 }
 
-/* line 403, resources/assets/styles/components/_single-product.scss */
+/* line 412, resources/assets/styles/components/_single-product.scss */
+
+.single-product .woocommerce-product-attributes tr {
+  margin: -2px;
+  display: block;
+  padding: 2px 0;
+}
+
+/* line 417, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
 .single-product .woocommerce-product-attributes tr p {
   display: inline-block;
   font-family: "reader", arial, sans-serif;
   font-weight: 100;
-  font-size: 16px;
+  font-size: 14px;
   color: #000;
   letter-spacing: 0.5px;
   text-align: left;
@@ -8573,7 +8625,7 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 420, resources/assets/styles/components/_single-product.scss */
+/* line 434, resources/assets/styles/components/_single-product.scss */
 
 .single-product .related .products {
   display: -webkit-box;
@@ -8583,7 +8635,28 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 429, resources/assets/styles/components/_single-product.scss */
+/* line 442, resources/assets/styles/components/_single-product.scss */
+
+#nosepads_option_field {
+  padding: 30px 0 0 0;
+  margin: 0;
+}
+
+/* line 447, resources/assets/styles/components/_single-product.scss */
+
+#nosepads_option_field span input {
+  width: auto;
+  margin: 0 5px 0 0;
+}
+
+/* line 452, resources/assets/styles/components/_single-product.scss */
+
+#nosepads_option_field span label {
+  font-size: 14px;
+  text-transform: initial;
+}
+
+/* line 460, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8592,7 +8665,7 @@ klarna-placement .container {
   text-align: center;
 }
 
-/* line 435, resources/assets/styles/components/_single-product.scss */
+/* line 466, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;
@@ -8915,7 +8988,7 @@ input[type="submit"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -9120,7 +9193,7 @@ input[type="submit"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   padding: 15px 10px;
@@ -9429,7 +9502,7 @@ input[type="submit"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   font-weight: 500;
@@ -9568,9 +9641,9 @@ input[type="submit"] {
 .two-column__textarea h1 {
   display: inline-block;
   font-family: "reader", arial, sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 18px;
-  letter-spacing: 2.73px;
+  letter-spacing: 1px;
 }
 
 /* line 53, resources/assets/styles/components/_two-column.scss */
@@ -9578,7 +9651,7 @@ input[type="submit"] {
 .two-column__textarea h2 {
   display: inline-block;
   font-size: 17px;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 /* line 60, resources/assets/styles/components/_two-column.scss */
@@ -9659,6 +9732,7 @@ input[type="submit"] {
   .two-column__bottom-container img {
     max-width: 60%;
     width: 100%;
+    height: initial;
     padding: 40px 0;
   }
 }
@@ -9709,7 +9783,7 @@ input[type="submit"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   margin: 20px 0;
@@ -9852,6 +9926,36 @@ input[type="submit"] {
   }
 }
 
+/* line 1, resources/assets/styles/components/_textarea.scss */
+
+.textarea {
+  padding: 35px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 1, resources/assets/styles/components/_textarea.scss */
+
+  .textarea {
+    padding: 35px 0;
+  }
+}
+
+/* line 4, resources/assets/styles/components/_textarea.scss */
+
+.textarea__inner {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 4, resources/assets/styles/components/_textarea.scss */
+
+  .textarea__inner {
+    padding: 0 50px;
+  }
+}
+
 /* line 1, resources/assets/styles/components/_articles.scss */
 
 .articles {
@@ -9951,9 +10055,10 @@ input[type="submit"] {
   text-transform: uppercase;
   margin: 6px 0 0 0;
   display: block;
+  letter-spacing: 1px;
 }
 
-/* line 56, resources/assets/styles/components/_articles.scss */
+/* line 57, resources/assets/styles/components/_articles.scss */
 
 .articles__sizer,
 .articles__card {
@@ -9962,7 +10067,7 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 56, resources/assets/styles/components/_articles.scss */
+  /* line 57, resources/assets/styles/components/_articles.scss */
 
   .articles__sizer,
   .articles__card {
@@ -9971,7 +10076,7 @@ input[type="submit"] {
   }
 }
 
-/* line 67, resources/assets/styles/components/_articles.scss */
+/* line 68, resources/assets/styles/components/_articles.scss */
 
 .articles__card {
   float: left;
@@ -9979,76 +10084,76 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 67, resources/assets/styles/components/_articles.scss */
+  /* line 68, resources/assets/styles/components/_articles.scss */
 
   .articles__card {
     padding: 600px 0 350px 0;
   }
 }
 
-/* line 75, resources/assets/styles/components/_articles.scss */
+/* line 76, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(odd) {
   padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 75, resources/assets/styles/components/_articles.scss */
+  /* line 76, resources/assets/styles/components/_articles.scss */
 
   .articles__card:nth-child(odd) {
     padding: 350px 0 350px 0;
   }
 }
 
-/* line 83, resources/assets/styles/components/_articles.scss */
+/* line 84, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(even) {
   padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 83, resources/assets/styles/components/_articles.scss */
+  /* line 84, resources/assets/styles/components/_articles.scss */
 
   .articles__card:nth-child(even) {
     padding: 0 0 350px 0;
   }
 }
 
-/* line 91, resources/assets/styles/components/_articles.scss */
+/* line 92, resources/assets/styles/components/_articles.scss */
 
 .articles__card:nth-child(3) {
   padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 91, resources/assets/styles/components/_articles.scss */
+  /* line 92, resources/assets/styles/components/_articles.scss */
 
   .articles__card:nth-child(3) {
     padding: 600px 0 350px 0;
   }
 }
 
-/* line 99, resources/assets/styles/components/_articles.scss */
+/* line 100, resources/assets/styles/components/_articles.scss */
 
 .articles__card:last-of-type {
   padding: 0 0 60px 0;
 }
 
 @media (min-width: 900px) {
-  /* line 99, resources/assets/styles/components/_articles.scss */
+  /* line 100, resources/assets/styles/components/_articles.scss */
 
   .articles__card:last-of-type {
     padding: 600px 0 250px 0;
   }
 }
 
-/* line 115, resources/assets/styles/components/_articles.scss */
+/* line 116, resources/assets/styles/components/_articles.scss */
 
 .articles__card h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -10057,14 +10162,14 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 115, resources/assets/styles/components/_articles.scss */
+  /* line 116, resources/assets/styles/components/_articles.scss */
 
   .articles__card h2 {
     font-size: 20px;
   }
 }
 
-/* line 122, resources/assets/styles/components/_articles.scss */
+/* line 123, resources/assets/styles/components/_articles.scss */
 
 .articles__card h3 {
   font-family: "reader", arial, sans-serif;
@@ -10077,36 +10182,36 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 122, resources/assets/styles/components/_articles.scss */
+  /* line 123, resources/assets/styles/components/_articles.scss */
 
   .articles__card h3 {
     font-size: 16px;
   }
 }
 
-/* line 136, resources/assets/styles/components/_articles.scss */
+/* line 137, resources/assets/styles/components/_articles.scss */
 
 .articles__card p {
   font-family: "reader", arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.75px;
   text-align: left;
   line-height: 22px;
 }
 
-/* line 145, resources/assets/styles/components/_articles.scss */
+/* line 146, resources/assets/styles/components/_articles.scss */
 
 .articles__image {
   margin: 0 0 35px 0;
 }
 
-/* line 148, resources/assets/styles/components/_articles.scss */
+/* line 149, resources/assets/styles/components/_articles.scss */
 
 .articles__image.border {
   padding: 0 53px 0 53px;
 }
 
-/* line 152, resources/assets/styles/components/_articles.scss */
+/* line 153, resources/assets/styles/components/_articles.scss */
 
 .articles__image img {
   display: block;
@@ -10290,7 +10395,7 @@ input[type="submit"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   font-size: 13px;
@@ -10517,7 +10622,7 @@ input[type="submit"] {
   font-family: "reader", arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   width: 100%;
   text-transform: uppercase;
   border-radius: 0;
@@ -10568,7 +10673,7 @@ input[value="search"] {
   font-family: "reader", arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   width: 100%;
   text-transform: uppercase;
   border-radius: 0;
@@ -10665,7 +10770,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -10710,7 +10815,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   margin: 20px 0 10px 0;
@@ -10751,7 +10856,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -10866,7 +10971,7 @@ input[value="search"] {
 /* line 49, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner--title {
-  margin: 0 0 15px 0;
+  margin: 0 0 40px 0;
   text-align: center;
 }
 
@@ -10877,7 +10982,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   font-weight: 500;
@@ -10891,21 +10996,35 @@ input[value="search"] {
   }
 }
 
-/* line 60, resources/assets/styles/components/_newsletter.scss */
+/* line 59, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner--title span {
+  display: block;
+  margin: 20px 0 20px 0;
+  line-height: 1.5em;
+}
+
+/* line 66, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_wrapper {
   width: 90%;
 }
 
 @media (min-width: 900px) {
-  /* line 60, resources/assets/styles/components/_newsletter.scss */
+  /* line 66, resources/assets/styles/components/_newsletter.scss */
 
   .mailinglist__inner .gform_wrapper {
     width: 70%;
   }
 }
 
-/* line 69, resources/assets/styles/components/_newsletter.scss */
+/* line 74, resources/assets/styles/components/_newsletter.scss */
+
+.mailinglist__inner .gform_heading {
+  padding: 0;
+}
+
+/* line 79, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body input {
   border-radius: 0;
@@ -10918,7 +11037,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 69, resources/assets/styles/components/_newsletter.scss */
+  /* line 79, resources/assets/styles/components/_newsletter.scss */
 
   .mailinglist__inner .gform_body input {
     width: 100%;
@@ -10933,54 +11052,56 @@ input[value="search"] {
   background-color: #e1e1e1;
 }
 
-/* line 74, resources/assets/styles/components/_newsletter.scss */
+/* line 84, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body input:focus {
   background-color: #cfcfcf;
 }
 
-/* line 79, resources/assets/styles/components/_newsletter.scss */
+/* line 89, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body .gfield_label {
   text-align: center;
   font-weight: 500;
 }
 
-/* line 83, resources/assets/styles/components/_newsletter.scss */
+/* line 93, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body .gfield_label .gfield_required {
   display: none;
 }
 
-/* line 89, resources/assets/styles/components/_newsletter.scss */
+/* line 99, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body .hidden_label label {
   display: none;
 }
 
-/* line 94, resources/assets/styles/components/_newsletter.scss */
+/* line 104, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body .gfield_checkbox {
   display: inline-block;
 }
 
-/* line 97, resources/assets/styles/components/_newsletter.scss */
+/* line 107, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body .gfield_checkbox li {
   font-family: "reader", arial, sans-serif;
   font-size: 14px;
   color: #000;
   letter-spacing: 0.52px;
+  margin: 0;
+  padding: 0 0 8px 0;
 }
 
-/* line 103, resources/assets/styles/components/_newsletter.scss */
+/* line 115, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_body .gfield_checkbox li label {
   text-transform: none;
   opacity: 0.4;
 }
 
-/* line 112, resources/assets/styles/components/_newsletter.scss */
+/* line 124, resources/assets/styles/components/_newsletter.scss */
 
 .mailinglist__inner .gform_footer .gform_button {
   background-color: #cfcfcf;
@@ -11154,7 +11275,7 @@ input[value="search"] {
 .header .announcement {
   text-transform: uppercase;
   width: 100%;
-  letter-spacing: 2.25px;
+  letter-spacing: 1px;
   font-size: 12px;
 }
 
@@ -11915,7 +12036,7 @@ input[value="search"] {
   font-size: 18px;
   font-weight: 500;
   color: #000;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -12057,19 +12178,85 @@ input[value="search"] {
 
 /* line 74, resources/assets/styles/layouts/_footer.scss */
 
+.content-info__row-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 900px) {
+  /* line 74, resources/assets/styles/layouts/_footer.scss */
+
+  .content-info__row-bottom {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+/* line 83, resources/assets/styles/layouts/_footer.scss */
+
+.content-info__row-bottom--col {
+  width: 50%;
+}
+
+@media (min-width: 900px) {
+  /* line 83, resources/assets/styles/layouts/_footer.scss */
+
+  .content-info__row-bottom--col {
+    width: 25%;
+  }
+}
+
+/* line 90, resources/assets/styles/layouts/_footer.scss */
+
+.content-info__row-bottom--col:first-of-type {
+  width: 100%;
+  margin: 0 0 30px 0;
+}
+
+@media (min-width: 900px) {
+  /* line 90, resources/assets/styles/layouts/_footer.scss */
+
+  .content-info__row-bottom--col:first-of-type {
+    width: 25%;
+    margin: 0;
+  }
+}
+
+/* line 100, resources/assets/styles/layouts/_footer.scss */
+
+.content-info__row-bottom--col:last-of-type {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  /* line 100, resources/assets/styles/layouts/_footer.scss */
+
+  .content-info__row-bottom--col:last-of-type {
+    width: 50%;
+  }
+}
+
+/* line 110, resources/assets/styles/layouts/_footer.scss */
+
 .content-info__mark {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 74, resources/assets/styles/layouts/_footer.scss */
+  /* line 110, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__mark {
     width: 25%;
   }
 }
 
-/* line 82, resources/assets/styles/layouts/_footer.scss */
+/* line 118, resources/assets/styles/layouts/_footer.scss */
 
 .content-info p {
   font-family: "reader", arial, sans-serif;
@@ -12080,7 +12267,7 @@ input[value="search"] {
   margin: 0;
 }
 
-/* line 91, resources/assets/styles/layouts/_footer.scss */
+/* line 127, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright {
   width: 75%;
@@ -12090,14 +12277,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 91, resources/assets/styles/layouts/_footer.scss */
+  /* line 127, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__copyright {
     margin: 0;
   }
 }
 
-/* line 101, resources/assets/styles/layouts/_footer.scss */
+/* line 137, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright a {
   display: inline-block;
@@ -12108,19 +12295,19 @@ input[value="search"] {
   color: #000;
 }
 
-/* line 104, resources/assets/styles/layouts/_footer.scss */
+/* line 140, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__copyright a::after {
   bottom: 0;
 }
 
-/* line 113, resources/assets/styles/layouts/_footer.scss */
+/* line 149, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__by a {
   font-size: 16px;
 }
 
-/* line 118, resources/assets/styles/layouts/_footer.scss */
+/* line 154, resources/assets/styles/layouts/_footer.scss */
 
 .content-info ul {
   list-style: none;
@@ -12129,14 +12316,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 118, resources/assets/styles/layouts/_footer.scss */
+  /* line 154, resources/assets/styles/layouts/_footer.scss */
 
   .content-info ul {
     margin: 0;
   }
 }
 
-/* line 127, resources/assets/styles/layouts/_footer.scss */
+/* line 163, resources/assets/styles/layouts/_footer.scss */
 
 .content-info ul li {
   color: #000;
@@ -12145,7 +12332,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 127, resources/assets/styles/layouts/_footer.scss */
+  /* line 163, resources/assets/styles/layouts/_footer.scss */
 
   .content-info ul li {
     width: auto;
@@ -12153,7 +12340,7 @@ input[value="search"] {
   }
 }
 
-/* line 139, resources/assets/styles/layouts/_footer.scss */
+/* line 175, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__bottom {
   display: -webkit-box;
@@ -12172,7 +12359,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 139, resources/assets/styles/layouts/_footer.scss */
+  /* line 175, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__bottom {
     -ms-flex-wrap: nowrap;
@@ -12186,7 +12373,7 @@ input[value="search"] {
   }
 }
 
-/* line 155, resources/assets/styles/layouts/_footer.scss */
+/* line 191, resources/assets/styles/layouts/_footer.scss */
 
 .content-info__bottom span {
   margin: 0 5px 0 0;
@@ -12195,7 +12382,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 155, resources/assets/styles/layouts/_footer.scss */
+  /* line 191, resources/assets/styles/layouts/_footer.scss */
 
   .content-info__bottom span {
     width: auto;
@@ -12285,7 +12472,7 @@ input[value="search"] {
   font-size: 14px;
   font-weight: 500;
   color: #595959;
-  letter-spacing: 1.87px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -12311,15 +12498,49 @@ input[value="search"] {
   content: "";
 }
 
+/* line 4, resources/assets/styles/layouts/_professional-login.scss */
+
+.professional-login .woocommerce h2,
+.professional-user .woocommerce h2 {
+  display: none;
+}
+
+/* line 8, resources/assets/styles/layouts/_professional-login.scss */
+
+.professional-login .header__inner,
+.professional-user .header__inner {
+  background-color: #c0c7c2 !important;
+}
+
+/* line 12, resources/assets/styles/layouts/_professional-login.scss */
+
+.professional-login .header__banner,
+.professional-login .announcement__item,
+.professional-login .content-info,
+.professional-user .header__banner,
+.professional-user .announcement__item,
+.professional-user .content-info {
+  background-color: #dcdab7 !important;
+}
+
+/* line 18, resources/assets/styles/layouts/_professional-login.scss */
+
+.professional-login .page-header,
+.professional-user .page-header {
+  background-color: #f8f8f8 !important;
+}
+
 /* line 1, resources/assets/styles/layouts/_account.scss */
 
-.account {
+.account,
+.professional-login {
   background-color: #f8f8f8;
 }
 
-/* line 4, resources/assets/styles/layouts/_account.scss */
+/* line 5, resources/assets/styles/layouts/_account.scss */
 
-.account .inner {
+.account .inner,
+.professional-login .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12328,30 +12549,33 @@ input[value="search"] {
           justify-content: center;
 }
 
-/* line 9, resources/assets/styles/layouts/_account.scss */
+/* line 10, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce {
+.account .woocommerce,
+.professional-login .woocommerce {
   padding: 120px 0;
   text-align: center;
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 9, resources/assets/styles/layouts/_account.scss */
+  /* line 10, resources/assets/styles/layouts/_account.scss */
 
-  .account .woocommerce {
+  .account .woocommerce,
+  .professional-login .woocommerce {
     width: 50%;
   }
 }
 
-/* line 18, resources/assets/styles/layouts/_account.scss */
+/* line 19, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce h2 {
+.account .woocommerce h2,
+.professional-login .woocommerce h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -12359,25 +12583,28 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 18, resources/assets/styles/layouts/_account.scss */
+  /* line 19, resources/assets/styles/layouts/_account.scss */
 
-  .account .woocommerce h2 {
+  .account .woocommerce h2,
+  .professional-login .woocommerce h2 {
     font-size: 16px;
   }
 }
 
-/* line 25, resources/assets/styles/layouts/_account.scss */
+/* line 26, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce label {
+.account .woocommerce label,
+.professional-login .woocommerce label {
   width: 100%;
   display: block;
   text-align: center;
   margin: 0 0 5px 0;
 }
 
-/* line 32, resources/assets/styles/layouts/_account.scss */
+/* line 33, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce input {
+.account .woocommerce input,
+.professional-login .woocommerce input {
   border-radius: 0;
   width: 90%;
   border: 0;
@@ -12388,56 +12615,63 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 32, resources/assets/styles/layouts/_account.scss */
+  /* line 33, resources/assets/styles/layouts/_account.scss */
 
-  .account .woocommerce input {
+  .account .woocommerce input,
+  .professional-login .woocommerce input {
     width: 100%;
   }
 }
 
 /* line 166, resources/assets/styles/common/_mixins.scss */
 
-.account .woocommerce input:focus {
+.account .woocommerce input:focus,
+.professional-login .woocommerce input:focus {
   outline: none;
   border: 0;
   background-color: #e1e1e1;
 }
 
-/* line 38, resources/assets/styles/layouts/_account.scss */
+/* line 39, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .woocommerce-form__label-for-checkbox {
+.account .woocommerce .woocommerce-form__label-for-checkbox,
+.professional-login .woocommerce .woocommerce-form__label-for-checkbox {
   text-align: center;
   margin: 20px 0;
 }
 
-/* line 42, resources/assets/styles/layouts/_account.scss */
+/* line 43, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .woocommerce-form__label-for-checkbox input {
+.account .woocommerce .woocommerce-form__label-for-checkbox input,
+.professional-login .woocommerce .woocommerce-form__label-for-checkbox input {
   width: auto;
   background-color: #e1e1e1;
 }
 
-/* line 47, resources/assets/styles/layouts/_account.scss */
+/* line 48, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .woocommerce-form__label-for-checkbox span {
+.account .woocommerce .woocommerce-form__label-for-checkbox span,
+.professional-login .woocommerce .woocommerce-form__label-for-checkbox span {
   font-size: 12px;
   vertical-align: bottom;
 }
 
-/* line 53, resources/assets/styles/layouts/_account.scss */
+/* line 54, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .form-row {
+.account .woocommerce .form-row,
+.professional-login .woocommerce .form-row {
   text-align: center;
 }
 
-/* line 56, resources/assets/styles/layouts/_account.scss */
+/* line 57, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .form-row button {
+.account .woocommerce .form-row button,
+.professional-login .woocommerce .form-row button {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   padding: 15px 10px;
@@ -12455,16 +12689,18 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 56, resources/assets/styles/layouts/_account.scss */
+  /* line 57, resources/assets/styles/layouts/_account.scss */
 
-  .account .woocommerce .form-row button {
+  .account .woocommerce .form-row button,
+  .professional-login .woocommerce .form-row button {
     font-size: 16px;
   }
 }
 
 /* line 23, resources/assets/styles/components/_forms.scss */
 
-.account .woocommerce .form-row button:hover {
+.account .woocommerce .form-row button:hover,
+.professional-login .woocommerce .form-row button:hover {
   border: 1px solid #abced0;
   background: #abced0;
   color: #000;
@@ -12472,24 +12708,27 @@ input[value="search"] {
 
 /* line 29, resources/assets/styles/components/_forms.scss */
 
-.account .woocommerce .form-row button:focus {
+.account .woocommerce .form-row button:focus,
+.professional-login .woocommerce .form-row button:focus {
   outline: none;
 }
 
-/* line 61, resources/assets/styles/layouts/_account.scss */
+/* line 62, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .lost_password {
+.account .woocommerce .lost_password,
+.professional-login .woocommerce .lost_password {
   text-align: center;
 }
 
-/* line 64, resources/assets/styles/layouts/_account.scss */
+/* line 65, resources/assets/styles/layouts/_account.scss */
 
-.account .woocommerce .lost_password a {
+.account .woocommerce .lost_password a,
+.professional-login .woocommerce .lost_password a {
   font-size: 12px;
   color: #000;
 }
 
-/* line 73, resources/assets/styles/layouts/_account.scss */
+/* line 74, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce {
   display: -webkit-box;
@@ -12501,7 +12740,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 73, resources/assets/styles/layouts/_account.scss */
+  /* line 74, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce {
     width: 60%;
@@ -12510,14 +12749,14 @@ input[value="search"] {
   }
 }
 
-/* line 83, resources/assets/styles/layouts/_account.scss */
+/* line 84, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce button {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   padding: 15px 10px;
@@ -12536,7 +12775,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 83, resources/assets/styles/layouts/_account.scss */
+  /* line 84, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce button {
     font-size: 16px;
@@ -12557,21 +12796,21 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 89, resources/assets/styles/layouts/_account.scss */
+/* line 90, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 89, resources/assets/styles/layouts/_account.scss */
+  /* line 90, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation {
     width: 30%;
   }
 }
 
-/* line 96, resources/assets/styles/layouts/_account.scss */
+/* line 97, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul {
   list-style: none;
@@ -12579,7 +12818,7 @@ input[value="search"] {
   padding: 0;
 }
 
-/* line 101, resources/assets/styles/layouts/_account.scss */
+/* line 102, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li {
   text-align: left;
@@ -12588,7 +12827,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 101, resources/assets/styles/layouts/_account.scss */
+  /* line 102, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li {
     text-align: left;
@@ -12598,27 +12837,27 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 112, resources/assets/styles/layouts/_account.scss */
+  /* line 113, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type {
     margin: 30px 0 0 0;
   }
 }
 
-/* line 119, resources/assets/styles/layouts/_account.scss */
+/* line 120, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a {
   border-bottom: 1px solid #000;
 }
 
-/* line 124, resources/assets/styles/layouts/_account.scss */
+/* line 125, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -12628,34 +12867,34 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 124, resources/assets/styles/layouts/_account.scss */
+  /* line 125, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a {
     font-size: 16px;
   }
 }
 
-/* line 130, resources/assets/styles/layouts/_account.scss */
+/* line 131, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a:hover {
   border-bottom: 1px solid #000;
 }
 
-/* line 138, resources/assets/styles/layouts/_account.scss */
+/* line 139, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 138, resources/assets/styles/layouts/_account.scss */
+  /* line 139, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content {
     font-size: 16px;
@@ -12663,46 +12902,46 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 138, resources/assets/styles/layouts/_account.scss */
+  /* line 139, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content {
     width: 70%;
   }
 }
 
-/* line 147, resources/assets/styles/layouts/_account.scss */
+/* line 148, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-info {
   padding: 0;
 }
 
-/* line 151, resources/assets/styles/layouts/_account.scss */
+/* line 152, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content a {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 151, resources/assets/styles/layouts/_account.scss */
+  /* line 152, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content a {
     font-size: 16px;
   }
 }
 
-/* line 155, resources/assets/styles/layouts/_account.scss */
+/* line 156, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content h3 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -12711,21 +12950,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 155, resources/assets/styles/layouts/_account.scss */
+  /* line 156, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content h3 {
     font-size: 20px;
   }
 }
 
-/* line 161, resources/assets/styles/layouts/_account.scss */
+/* line 162, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content label {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -12733,20 +12972,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 161, resources/assets/styles/layouts/_account.scss */
+  /* line 162, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content label {
     font-size: 16px;
   }
 }
 
-/* line 167, resources/assets/styles/layouts/_account.scss */
+/* line 168, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content span {
   font-size: 12px;
 }
 
-/* line 171, resources/assets/styles/layouts/_account.scss */
+/* line 172, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input {
   border-radius: 0;
@@ -12759,7 +12998,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 171, resources/assets/styles/layouts/_account.scss */
+  /* line 172, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content input {
     width: 100%;
@@ -12774,13 +13013,13 @@ input[value="search"] {
   background-color: #e1e1e1;
 }
 
-/* line 178, resources/assets/styles/layouts/_account.scss */
+/* line 179, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content fieldset input {
   width: 95%;
 }
 
-/* line 183, resources/assets/styles/layouts/_account.scss */
+/* line 184, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
   padding: 0;
@@ -12790,20 +13029,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 183, resources/assets/styles/layouts/_account.scss */
+  /* line 184, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
     width: 100%;
   }
 }
 
-/* line 192, resources/assets/styles/layouts/_account.scss */
+/* line 193, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -12812,87 +13051,87 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 192, resources/assets/styles/layouts/_account.scss */
+  /* line 193, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
     font-size: 20px;
   }
 }
 
-/* line 198, resources/assets/styles/layouts/_account.scss */
+/* line 199, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table {
   width: 100%;
   text-align: left;
 }
 
-/* line 202, resources/assets/styles/layouts/_account.scss */
+/* line 203, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 900px) {
-  /* line 202, resources/assets/styles/layouts/_account.scss */
+  /* line 203, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
     font-size: 16px;
   }
 }
 
-/* line 206, resources/assets/styles/layouts/_account.scss */
+/* line 207, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th {
   text-align: left !important;
 }
 
-/* line 210, resources/assets/styles/layouts/_account.scss */
+/* line 211, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td {
   text-align: left !important;
   padding: 10px 0 !important;
 }
 
-/* line 217, resources/assets/styles/layouts/_account.scss */
+/* line 218, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses {
   text-align: left;
 }
 
-/* line 220, resources/assets/styles/layouts/_account.scss */
+/* line 221, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
 }
 
 @media (min-width: 900px) {
-  /* line 220, resources/assets/styles/layouts/_account.scss */
+  /* line 221, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
     font-size: 20px;
   }
 }
 
-/* line 227, resources/assets/styles/layouts/_account.scss */
+/* line 228, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -12900,14 +13139,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 227, resources/assets/styles/layouts/_account.scss */
+  /* line 228, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
     font-size: 16px;
   }
 }
 
-/* line 233, resources/assets/styles/layouts/_account.scss */
+/* line 234, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
   border-radius: 0;
@@ -12920,7 +13159,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 233, resources/assets/styles/layouts/_account.scss */
+  /* line 234, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
     width: 100%;
@@ -13040,7 +13279,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   margin: 0 10px 0 0;
@@ -13068,7 +13307,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -13084,19 +13323,27 @@ input[value="search"] {
 
 /* line 87, resources/assets/styles/layouts/_cart.scss */
 
+.woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .variation-Nosepadoption {
+  text-transform: none;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* line 93, resources/assets/styles/layouts/_cart.scss */
+
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions {
   margin: 10px 0;
   text-align: right;
 }
 
-/* line 91, resources/assets/styles/layouts/_cart.scss */
+/* line 97, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   padding: 15px 10px;
@@ -13115,7 +13362,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 91, resources/assets/styles/layouts/_cart.scss */
+  /* line 97, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button {
     font-size: 16px;
@@ -13136,34 +13383,34 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 100, resources/assets/styles/layouts/_cart.scss */
+/* line 106, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item td {
   padding: 15px 15px;
   border-top: 1px solid #000;
 }
 
-/* line 105, resources/assets/styles/layouts/_cart.scss */
+/* line 111, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item td.product-thumbnail img {
   max-width: 200px;
 }
 
-/* line 113, resources/assets/styles/layouts/_cart.scss */
+/* line 119, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals {
   width: 50%;
   float: right;
 }
 
-/* line 117, resources/assets/styles/layouts/_cart.scss */
+/* line 123, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   padding: 20px 0;
@@ -13174,14 +13421,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 117, resources/assets/styles/layouts/_cart.scss */
+  /* line 123, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
     font-size: 16px;
   }
 }
 
-/* line 126, resources/assets/styles/layouts/_cart.scss */
+/* line 132, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals h2 {
   text-align: right;
@@ -13190,14 +13437,14 @@ input[value="search"] {
   font-size: 16px;
 }
 
-/* line 135, resources/assets/styles/layouts/_cart.scss */
+/* line 141, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal th,
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .order-total th {
   font-weight: 100;
 }
 
-/* line 140, resources/assets/styles/layouts/_cart.scss */
+/* line 146, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .shop_table {
   text-align: right;
@@ -13205,25 +13452,25 @@ input[value="search"] {
   padding: 0 0 20px 0;
 }
 
-/* line 145, resources/assets/styles/layouts/_cart.scss */
+/* line 151, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .shop_table .tbody {
   float: right;
 }
 
-/* line 150, resources/assets/styles/layouts/_cart.scss */
+/* line 156, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .order-total {
   width: 100%;
 }
 
-/* line 155, resources/assets/styles/layouts/_cart.scss */
+/* line 161, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout {
   text-align: right;
 }
 
-/* line 158, resources/assets/styles/layouts/_cart.scss */
+/* line 164, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button {
   color: #fff;
@@ -13245,7 +13492,7 @@ input[value="search"] {
   font-family: "reader", arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   width: 100%;
   text-align: center;
   width: auto;
@@ -13357,7 +13604,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -13461,6 +13708,14 @@ input[value="search"] {
 
 /* line 115, resources/assets/styles/layouts/_checkout.scss */
 
+.woocommerce-checkout .woocommerce #order_review .shop_table .variation-Nosepadoption {
+  text-transform: none;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* line 121, resources/assets/styles/layouts/_checkout.scss */
+
 .woocommerce-checkout .woocommerce #order_review .shop_table .cart-subtotal {
   text-align: left;
   padding-top: 20px;
@@ -13468,7 +13723,7 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 122, resources/assets/styles/layouts/_checkout.scss */
+/* line 128, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .order-total {
   text-align: left;
@@ -13476,13 +13731,13 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 128, resources/assets/styles/layouts/_checkout.scss */
+/* line 134, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .product-total {
   text-align: right;
 }
 
-/* line 135, resources/assets/styles/layouts/_checkout.scss */
+/* line 141, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout #place_order {
   color: #fff;
@@ -13504,7 +13759,7 @@ input[value="search"] {
   font-family: "reader", arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   width: 100%;
 }
 
@@ -13516,7 +13771,7 @@ input[value="search"] {
   background: transparent;
 }
 
-/* line 139, resources/assets/styles/layouts/_checkout.scss */
+/* line 145, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
   border-radius: 0;
@@ -13529,7 +13784,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 139, resources/assets/styles/layouts/_checkout.scss */
+  /* line 145, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 100%;
@@ -13545,14 +13800,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 139, resources/assets/styles/layouts/_checkout.scss */
+  /* line 145, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 90%;
   }
 }
 
-/* line 149, resources/assets/styles/layouts/_checkout.scss */
+/* line 155, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout textarea {
   border-radius: 0;
@@ -13565,7 +13820,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 149, resources/assets/styles/layouts/_checkout.scss */
+  /* line 155, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout textarea {
     width: 100%;
@@ -13581,14 +13836,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 149, resources/assets/styles/layouts/_checkout.scss */
+  /* line 155, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout textarea {
     width: 90%;
   }
 }
 
-/* line 159, resources/assets/styles/layouts/_checkout.scss */
+/* line 165, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
   width: 90%;
@@ -13598,21 +13853,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 159, resources/assets/styles/layouts/_checkout.scss */
+  /* line 165, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 90%;
   }
 }
 
-/* line 169, resources/assets/styles/layouts/_checkout.scss */
+/* line 175, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input:focus {
   outline: none;
   border: 0;
 }
 
-/* line 175, resources/assets/styles/layouts/_checkout.scss */
+/* line 181, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout select {
   width: 90%;
@@ -13622,45 +13877,45 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 175, resources/assets/styles/layouts/_checkout.scss */
+  /* line 181, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout select {
     width: 90%;
   }
 }
 
-/* line 185, resources/assets/styles/layouts/_checkout.scss */
+/* line 191, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout select:focus {
   outline: none;
   border: 0;
 }
 
-/* line 192, resources/assets/styles/layouts/_checkout.scss */
+/* line 198, resources/assets/styles/layouts/_checkout.scss */
 
 #payment {
   padding: 100px 0 0 0;
 }
 
-/* line 195, resources/assets/styles/layouts/_checkout.scss */
+/* line 201, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper {
   padding: 50px 0 0;
 }
 
-/* line 198, resources/assets/styles/layouts/_checkout.scss */
+/* line 204, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text {
   line-height: 17px;
 }
 
-/* line 201, resources/assets/styles/layouts/_checkout.scss */
+/* line 207, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p {
   font-size: 12px;
 }
 
-/* line 204, resources/assets/styles/layouts/_checkout.scss */
+/* line 210, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p a {
   display: inline-block;
@@ -13671,7 +13926,7 @@ input[value="search"] {
   text-decoration: underline;
 }
 
-/* line 215, resources/assets/styles/layouts/_checkout.scss */
+/* line 221, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul {
   list-style: none;
@@ -13679,19 +13934,19 @@ input[value="search"] {
   padding: 0;
 }
 
-/* line 220, resources/assets/styles/layouts/_checkout.scss */
+/* line 226, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li {
   margin: 0 0 30px 0;
 }
 
-/* line 223, resources/assets/styles/layouts/_checkout.scss */
+/* line 229, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li input {
   width: auto;
 }
 
-/* line 227, resources/assets/styles/layouts/_checkout.scss */
+/* line 233, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li label {
   font-weight: 500;
@@ -13699,7 +13954,7 @@ input[value="search"] {
   text-transform: capitalize;
 }
 
-/* line 232, resources/assets/styles/layouts/_checkout.scss */
+/* line 238, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li label img {
   margin: 0 0 0 10px;
@@ -13707,38 +13962,38 @@ input[value="search"] {
   float: right;
 }
 
-/* line 240, resources/assets/styles/layouts/_checkout.scss */
+/* line 246, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li.payment_method_kco label {
   font-weight: 500;
 }
 
-/* line 243, resources/assets/styles/layouts/_checkout.scss */
+/* line 249, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li.payment_method_kco label img {
   margin: 0 0 0 10px;
   width: 100px;
 }
 
-/* line 252, resources/assets/styles/layouts/_checkout.scss */
+/* line 258, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li .payment_box fieldset {
   border: 1px solid #000;
 }
 
-/* line 256, resources/assets/styles/layouts/_checkout.scss */
+/* line 262, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li .payment_box label {
   margin: 0 0 10px 0;
 }
 
-/* line 260, resources/assets/styles/layouts/_checkout.scss */
+/* line 266, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li .payment_box input {
   width: 90%;
 }
 
-/* line 269, resources/assets/styles/layouts/_checkout.scss */
+/* line 275, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox {
   padding: 0 0 30px 0;
@@ -13746,19 +14001,19 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 274, resources/assets/styles/layouts/_checkout.scss */
+/* line 280, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox input {
   width: auto;
 }
 
-/* line 278, resources/assets/styles/layouts/_checkout.scss */
+/* line 284, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox span {
   text-transform: initial;
 }
 
-/* line 282, resources/assets/styles/layouts/_checkout.scss */
+/* line 288, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox a {
   display: inline-block;
@@ -13791,7 +14046,7 @@ input[value="search"] {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   padding: 0;
   font-weight: 500;
@@ -13812,7 +14067,7 @@ input[value="search"] {
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
 }
@@ -13825,14 +14080,22 @@ input[value="search"] {
   }
 }
 
-/* line 21, resources/assets/styles/layouts/_wishlist.scss */
+@media (min-width: 900px) {
+  /* line 16, resources/assets/styles/layouts/_wishlist.scss */
+
+  #wl-wrapper a {
+    font-size: 14px;
+  }
+}
+
+/* line 25, resources/assets/styles/layouts/_wishlist.scss */
 
 #wl-wrapper .form-row .button {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
   font-size: 14px;
-  letter-spacing: 0.75px;
+  letter-spacing: 1px;
   margin: 0;
   padding: 0;
   padding: 15px 10px;
@@ -13850,7 +14113,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 21, resources/assets/styles/layouts/_wishlist.scss */
+  /* line 25, resources/assets/styles/layouts/_wishlist.scss */
 
   #wl-wrapper .form-row .button {
     font-size: 16px;

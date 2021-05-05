@@ -2160,11 +2160,11 @@ Router.prototype.loadEvents = function loadEvents () {
       //if (st > lastScrollTop && st >= navbarHeight ){
       if (st >= navbarHeight ){
         // downscroll code
-        $('.header').addClass('small');
+        $('.header, .off-canvas').addClass('small');
 
       } else {
         // upscroll code
-        $('.header').removeClass('small');
+        $('.header, .off-canvas').removeClass('small');
       }
       // if (popup === null && $('.home .articles').length) {
       //   let latestNews = $('.home .articles').offset().top

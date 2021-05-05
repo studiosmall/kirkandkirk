@@ -22,6 +22,16 @@
 		height: auto;
 	}
 
+	&.small {
+		.off-canvas__inner {
+			padding: 180px 20px 10px 20px;
+
+			@include breakpoint(medium) {
+				padding: 110px 46px 10px 46px;
+			}
+		}
+	}
+
 	&.active {
 		opacity: 0.9;
 		visibility: visible;
@@ -38,6 +48,7 @@
     justify-content: start;
 		flex-wrap: wrap;
 		padding: 180px 20px 10px 20px;
+		transition: $transition;
 
 		@include breakpoint(medium) {
 			padding: 170px 46px 10px 46px;
@@ -47,7 +58,9 @@
 
 	.menu-main-menu-left-container,
 	.menu-main-menu-center-container,
-	.menu-main-menu-right-container {
+	.menu-main-menu-right-container,
+	.menu-professional-centre-navigation-container,
+	.menu-professional-right-navigation-container {
 		margin: 0;
 		width: 100%;
 

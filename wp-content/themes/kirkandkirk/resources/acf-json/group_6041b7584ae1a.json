@@ -228,6 +228,25 @@
                     "maxlength": "",
                     "rows": "",
                     "new_lines": "br"
+                },
+                {
+                    "key": "field_6090b25c23318",
+                    "label": "Footer Details",
+                    "name": "footer_details",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "visual",
+                    "toolbar": "very_simple",
+                    "media_upload": 0,
+                    "delay": 0
                 }
             ]
         },
@@ -327,5 +346,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1618376853
+    "modified": 1620095612
 }

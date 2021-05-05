@@ -1,3 +1,10 @@
+span.professional {
+	color: $brand--primary;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
 .announcement {
 	position:relative;
 	z-index:13;
@@ -15,7 +22,7 @@
 		color: $brand--primary;
 		text-transform: uppercase;
     font-size: 20px;
-    letter-spacing: 2.25px;
+    letter-spacing: 1px;
 	}
 
 	&__item {

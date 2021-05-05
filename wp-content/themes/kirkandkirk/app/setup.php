@@ -53,10 +53,12 @@ add_action('after_setup_theme', function () {
      */
     register_nav_menus([
         'left_navigation'           => __('Main Left Navigation', 'sage'),
-        'center_navigation'         => __('Main Center Navigation', 'sage'),
+        'center_navigation'         => __('Main Centre Navigation', 'sage'),
+        'professional_centre_navigation' => __('Professional Centre Navigation', 'sage'),
+        'professional_right_navigation' => __('Professional Right Navigation', 'sage'),
         'right_navigation'          => __('Main Right Navigation', 'sage'),
         'footer_left_navigation'    => __('Footer Left Navigation', 'sage'),
-        'footer_center_navigation'  => __('Footer Center Navigation', 'sage'),
+        'footer_center_navigation'  => __('Footer Centre Navigation', 'sage'),
         'footer_right_navigation'   => __('Footer Right Navigation', 'sage'),
         'about_navigation'          => __('About Navigation', 'sage'),
     ]);

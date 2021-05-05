@@ -15,6 +15,10 @@
 
   a {
     @include subtitle($brand--primary);
+
+    @include breakpoint(medium) {
+      font-size: 14px;
+    }
   }
 
   .form-row {

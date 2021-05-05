@@ -12,7 +12,14 @@
           @endif
       </div> --}}
 
-      <div class="announcement">
+      @php
+        $user = wp_get_current_user();
+      @endphp
+
+      @if ( in_array( 'professional', (array) $user->roles ) )
+        <span class="professional">PROFESSIONAL ACCOUNT</span>
+      @else
+        <div class="announcement">
           <div class="announcement__item" @php if($options['colours']['footer_colour']) { @endphp style="background-color: {!! $options['colours']['banner_colour'] !!}" @php } @endphp>
             @if($options['message']['banner_message'] == 'enable')
               <span>{!! $options['message']['message'] !!}</span>
@@ -24,7 +31,9 @@
               <span>{!! $options['message']['secondary_message'] !!}</span>
             @endif
           </div>
-      </div>
+        </div>
+      @endif
+
       <div class="header__find">
         <a href="/retailers">
           Find a Store
@@ -89,22 +98,46 @@
         ]) !!}
     @endif
 
-    @if (has_nav_menu('center_navigation'))
-    {!! wp_nav_menu(
-      ['theme_location' => 'center_navigation',
-      'menu_class' => 'nav',
-      'items_wrap' => '<ul>%3$s</ul>',
-      ]) !!}
-    @endif
 
-    @if (has_nav_menu('right_navigation'))
-    {!! wp_nav_menu(
-      ['theme_location' => 'right_navigation',
-      'menu_class' => 'nav',
-      'items_wrap' => '<ul>%3$s</ul>',
-      ]) !!}
-    @endif
+    @php $user = wp_get_current_user(); @endphp
 
+    @if ( in_array( 'professional', (array) $user->roles ) )
+
+    @if (has_nav_menu('professional_centre_navigation'))
+      {!! wp_nav_menu(
+        ['theme_location' => 'professional_centre_navigation',
+        'menu_class' => 'nav',
+        'items_wrap' => '<ul>%3$s</ul>',
+        ]) !!}
+      @endif
+
+      @if (has_nav_menu('professional_right_navigation'))
+      {!! wp_nav_menu(
+        ['theme_location' => 'professional_right_navigation',
+        'menu_class' => 'nav',
+        'items_wrap' => '<ul>%3$s</ul>',
+        ]) !!}
+      @endif
+
+    @else
+
+      @if (has_nav_menu('center_navigation'))
+      {!! wp_nav_menu(
+        ['theme_location' => 'center_navigation',
+        'menu_class' => 'nav',
+        'items_wrap' => '<ul>%3$s</ul>',
+        ]) !!}
+      @endif
+
+      @if (has_nav_menu('right_navigation'))
+      {!! wp_nav_menu(
+        ['theme_location' => 'right_navigation',
+        'menu_class' => 'nav',
+        'items_wrap' => '<ul>%3$s</ul>',
+        ]) !!}
+      @endif
+
+    @endif
 
   </div>
 </div>

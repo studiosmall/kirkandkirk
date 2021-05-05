@@ -193,7 +193,7 @@ function my_toolbars( $toolbars )
 	// Add a new toolbar called "Very Simple"
 	// - this toolbar has only 1 row of buttons
 	$toolbars['Very Simple' ] = array();
-	$toolbars['Very Simple' ][1] = array('formatselect', 'bold' , 'italic' , 'underline' );
+	$toolbars['Very Simple' ][1] = array('formatselect', 'bold' , 'italic' , 'underline', 'link' );
 
 	// Edit the "Full" toolbar and remove 'code'
 	// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
@@ -345,3 +345,159 @@ function wpse_240765_unset_images( $sizes ){
     return $sizes;
 }
 add_filter( 'intermediate_image_sizes_advanced', 'wpse_240765_unset_images' );
+
+
+
+
+
+
+
+// Backend: Additional pricing option custom field
+add_action( 'woocommerce_product_options_pricing', 'wc_cost_product_field' );
+function wc_cost_product_field() {
+    woocommerce_wp_text_input( array(
+        'id'        => '_nosepad_price',
+        'class'     => 'wc_input_price short',
+        'label'     => __( 'Nosepad Cost', 'woocommerce' ) . ' (' . get_woocommerce_currency_symbol() . ')'
+    ));
+}
+
+// Backend: Saving product pricing option custom field value
+add_action( 'woocommerce_admin_process_product_object', 'save_product_custom_meta_data', 100, 1 );
+function save_product_custom_meta_data( $product ){
+    if ( isset( $_POST['_nosepad_price'] ) )
+        $product->update_meta_data( '_nosepad_price', sanitize_text_field($_POST['_nosepad_price']) );
+}
+
+// Front: Add a text input field inside the add to cart form on single product page
+add_action('woocommerce_single_product_summary','add_nosepad_price_option_to_single_product', 2 );
+function add_nosepad_price_option_to_single_product(){
+    global $product;
+
+    if( $product->is_type('variable') || ! $product->get_meta( '_nosepad_price' ) ) return;
+
+    add_action('woocommerce_after_add_to_cart_button', 'product_option_custom_field', 90 );
+}
+
+function product_option_custom_field(){
+    global $product;
+
+    $active_price = (float) $product->get_price();
+    $nosepad_price = (float) $product->get_meta( '_nosepad_price' );
+    $nosepad_price_html   = strip_tags( wc_price( wc_get_price_to_display( $product, array('price' => $nosepad_price ) ) ) );
+    $active_price_html   = wc_price( wc_get_price_to_display( $product ) );
+    $disp_price_sum_html = wc_price( wc_get_price_to_display( $product, array('price' => $active_price + $nosepad_price ) ) );
+
+    echo '<div class="hidden-field">
+    <p class="form-row form-row-wide" id="nosepads_option_field" data-priority="">
+    <span class="woocommerce-input-wrapper">
+    <input type="checkbox" class="input-checkbox " name="nosepad_option" id="nosepad_option" value="1">
+        <label class="checkbox"> ' . __("Add nosepads to my frame", "Woocommerce") .
+        ' + ' . $nosepad_price_html . '</label></span></p>
+    <input type="hidden" name="nosepad_price" value="' . $nosepad_price . '">
+    <input type="hidden" name="active_price" value="' . $active_price . '"></div>';
+
+    // Jquery: Update displayed price
+    ?>
+    <script type="text/javascript">
+    jQuery(function($) {
+        var cb = 'input[name="nosepad_option"]'
+            pp = 'p.price';
+
+        // On change / select a variation
+        $('form.cart').on( 'change', cb, function(){
+            if( $(cb).prop('checked') === true )
+                $(pp).html('<?php echo $disp_price_sum_html; ?>');
+            else
+                $(pp).html('<?php echo $active_price_html; ?>');
+        })
+
+    });
+    </script>
+    <?php
+}
+
+// Front: Calculate new item price and add it as custom cart item data
+add_filter('woocommerce_add_cart_item_data', 'add_custom_product_data', 10, 3);
+function add_custom_product_data( $cart_item_data, $product_id, $variation_id ) {
+    if (isset($_POST['nosepad_option']) && !empty($_POST['nosepad_option'])) {
+        $cart_item_data['new_price'] = (float) ($_POST['active_price'] + $_POST['nosepad_price']);
+        $cart_item_data['nosepad_price'] = (float) $_POST['nosepad_price'];
+        $cart_item_data['active_price'] = (float) $_POST['active_price'];
+        $cart_item_data['unique_key'] = md5(microtime().rand());
+    }
+
+    return $cart_item_data;
+}
+
+// Front: Set the new calculated cart item price
+add_action('woocommerce_before_calculate_totals', 'extra_price_add_custom_price', 20, 1);
+
+function extra_price_add_custom_price($cart) {
+    if (is_admin() && !defined('DOING_AJAX'))
+        return;
+
+    if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 )
+        return;
+
+    foreach($cart->get_cart() as $cart_item) {
+        if (isset($cart_item['new_price']))
+            $cart_item['data']->set_price((float) $cart_item['new_price']);
+    }
+}
+
+// Front: Display option in cart item
+add_filter('woocommerce_get_item_data', 'display_custom_item_data', 10, 2);
+
+function display_custom_item_data($cart_item_data, $cart_item) {
+    if (isset($cart_item['nosepad_price'])) {
+        $cart_item_data[] = array(
+            'name' => __("Nosepad option", "woocommerce"),
+            'value' => strip_tags( '+ ' . wc_price( wc_get_price_to_display( $cart_item['data'], array('price' => $cart_item['nosepad_price'] ) ) ) )
+        );
+    }
+
+    return $cart_item_data;
+}
+
+// Save chosen seats to each order item as custom meta data and display order items Warrenty everywhere
+add_action('woocommerce_checkout_create_order_line_item', 'save_order_item_product_waranty', 10, 4 );
+function save_order_item_product_waranty( $item, $cart_item_key, $values, $order ) {
+    if( isset($values['nosepad_price']) && $values['nosepad_price'] > 0 ) {
+        $key = __("Nosepad option", "woocommerce");
+        $value = strip_tags( '+ '. wc_price( wc_get_price_to_display( $values['data'], array('price' => $values['nosepad_price']) ) ) );
+        $item->update_meta_data( $key, $value );
+    }
+}
+
+function prefix_wishlist_template_location( $template_hook, $product_id ) {
+    // Return your hook here
+    return 'woocommerce_after_add_to_cart_quantity';
+  }
+add_filter( 'woocommerce_wishlists_template_location', 'prefix_wishlist_template_location', 10, 2 );
+
+
+//
+// Create Professional User Role */
+//
+add_role(
+    'professional', //  System name of the role.
+    __( 'Professional'  ), // Display name of the role.
+    array(
+        'read'  => false,
+        'delete_posts'  => false,
+        'delete_published_posts' => false,
+        'edit_posts'   => false,
+        'publish_posts' => false,
+        'upload_files'  => false,
+        'edit_pages'  => false,
+        'edit_published_pages'  =>  false,
+        'publish_pages'  => false,
+        'delete_published_pages' => false, // This user will NOT be able to  delete published pages.
+    )
+);
+// function wps_remove_role() {
+//     remove_role( 'professional' );
+// }
+// add_action( 'init', 'wps_remove_role' );
+
