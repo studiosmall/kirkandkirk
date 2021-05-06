@@ -5,13 +5,14 @@
       display: none;
     }
   }
-  .header__inner {
+  .header__inner,
+  .header {
     background-color: #c0c7c2 !important;
   }
 
   .header__banner,
   .announcement__item,
-  .content-info, {
+  .content-info {
     background-color: #dcdab7 !important;
   }
 

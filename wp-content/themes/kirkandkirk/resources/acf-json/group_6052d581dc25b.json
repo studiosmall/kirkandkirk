@@ -37,13 +37,45 @@
             "maxlength": ""
         },
         {
+            "key": "field_609351e67bee1",
+            "label": "Lifestyle Image Layout",
+            "name": "lifestyle_image_layout",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "single": "Single",
+                "double": "Double"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "single",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_60752d7c9655b",
             "label": "Lifestyle Image",
             "name": "lifestyle_image",
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609351e67bee1",
+                        "operator": "==",
+                        "value": "single"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -59,6 +91,59 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_609352347bee2",
+            "label": "Double",
+            "name": "double",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_609351e67bee1",
+                        "operator": "==",
+                        "value": "double"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 2,
+            "max": 2,
+            "layout": "table",
+            "button_label": "Add Image",
+            "sub_fields": [
+                {
+                    "key": "field_609352607bee3",
+                    "label": "Portrait Image",
+                    "name": "portrait_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         },
         {
             "key": "field_60822bc41fe7c",
@@ -216,5 +301,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1619143703
+    "modified": 1620274452
 }
