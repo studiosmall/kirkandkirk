@@ -16,6 +16,12 @@ body {
     //   url("../images/bg-triangle-alt.svg") 91px 100%, $brand--primary;
   }
 
+  &.front-page-data {
+    .page-header {
+      display: none;
+    }
+  }
+
   &.archive {
     background-color: $brand--white;
   }
@@ -26,7 +32,7 @@ p {
   font-size: 14px;
   letter-spacing: 0.75px;
   text-align: left;
-  line-height: 22px;
+  line-height: 18px;
   margin-top: 0;
 }
 

@@ -5199,24 +5199,30 @@ body {
   font-family: "reader", arial, sans-serif;
 }
 
-/* line 19, resources/assets/styles/common/_global.scss */
+/* line 20, resources/assets/styles/common/_global.scss */
+
+body.front-page-data .page-header {
+  display: none;
+}
+
+/* line 25, resources/assets/styles/common/_global.scss */
 
 body.archive {
   background-color: #fff;
 }
 
-/* line 24, resources/assets/styles/common/_global.scss */
+/* line 30, resources/assets/styles/common/_global.scss */
 
 p {
   color: #000;
   font-size: 14px;
   letter-spacing: 0.75px;
   text-align: left;
-  line-height: 22px;
+  line-height: 18px;
   margin-top: 0;
 }
 
-/* line 33, resources/assets/styles/common/_global.scss */
+/* line 39, resources/assets/styles/common/_global.scss */
 
 .inner {
   padding: 0 20px;
@@ -5225,21 +5231,21 @@ p {
 }
 
 @media (min-width: 900px) {
-  /* line 33, resources/assets/styles/common/_global.scss */
+  /* line 39, resources/assets/styles/common/_global.scss */
 
   .inner {
     padding: 0 50px;
   }
 }
 
-/* line 39, resources/assets/styles/common/_global.scss */
+/* line 45, resources/assets/styles/common/_global.scss */
 
 .about .wrap,
 .home .wrap {
   padding: 0 0 0 0;
 }
 
-/* line 44, resources/assets/styles/common/_global.scss */
+/* line 50, resources/assets/styles/common/_global.scss */
 
 .wrap {
   -webkit-box-flex: 1;
@@ -5252,21 +5258,21 @@ p {
 }
 
 @media (min-width: 900px) {
-  /* line 44, resources/assets/styles/common/_global.scss */
+  /* line 50, resources/assets/styles/common/_global.scss */
 
   .wrap {
     padding: 139px 0 0 0;
   }
 }
 
-/* line 56, resources/assets/styles/common/_global.scss */
+/* line 62, resources/assets/styles/common/_global.scss */
 
 img {
   width: 100%;
   height: auto;
 }
 
-/* line 61, resources/assets/styles/common/_global.scss */
+/* line 67, resources/assets/styles/common/_global.scss */
 
 .ico-search {
   display: block;
@@ -5276,7 +5282,7 @@ img {
   height: 16px;
 }
 
-/* line 69, resources/assets/styles/common/_global.scss */
+/* line 75, resources/assets/styles/common/_global.scss */
 
 .ico-heart {
   display: block;
@@ -5286,7 +5292,7 @@ img {
   height: 22px;
 }
 
-/* line 77, resources/assets/styles/common/_global.scss */
+/* line 83, resources/assets/styles/common/_global.scss */
 
 .ico-account {
   display: block;
@@ -5296,7 +5302,7 @@ img {
   height: 15px;
 }
 
-/* line 85, resources/assets/styles/common/_global.scss */
+/* line 91, resources/assets/styles/common/_global.scss */
 
 .ico-basket {
   display: block;
@@ -5306,25 +5312,25 @@ img {
   height: 15px;
 }
 
-/* line 94, resources/assets/styles/common/_global.scss */
+/* line 100, resources/assets/styles/common/_global.scss */
 
 .bg-color__blue {
   background-color: #bfdbe0;
 }
 
-/* line 99, resources/assets/styles/common/_global.scss */
+/* line 105, resources/assets/styles/common/_global.scss */
 
 .alt {
   background-color: #dde2ea;
 }
 
-/* line 103, resources/assets/styles/common/_global.scss */
+/* line 109, resources/assets/styles/common/_global.scss */
 
 .alert {
   padding: 60px 0;
 }
 
-/* line 106, resources/assets/styles/common/_global.scss */
+/* line 112, resources/assets/styles/common/_global.scss */
 
 .alert__inner {
   padding: 0 20px;
@@ -5333,20 +5339,20 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 106, resources/assets/styles/common/_global.scss */
+  /* line 112, resources/assets/styles/common/_global.scss */
 
   .alert__inner {
     padding: 0 50px;
   }
 }
 
-/* line 113, resources/assets/styles/common/_global.scss */
+/* line 119, resources/assets/styles/common/_global.scss */
 
 .about-page .section:nth-of-type(2n) {
   padding-top: 0;
 }
 
-/* line 119, resources/assets/styles/common/_global.scss */
+/* line 125, resources/assets/styles/common/_global.scss */
 
 .woocommerce-error {
   list-style: none;
@@ -5354,7 +5360,7 @@ img {
   padding: 0 0 20px 0;
 }
 
-/* line 124, resources/assets/styles/common/_global.scss */
+/* line 130, resources/assets/styles/common/_global.scss */
 
 .woocommerce-error a {
   font-family: "reader", arial, sans-serif;
@@ -5367,7 +5373,7 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 124, resources/assets/styles/common/_global.scss */
+  /* line 130, resources/assets/styles/common/_global.scss */
 
   .woocommerce-error a {
     font-size: 16px;
@@ -8761,7 +8767,7 @@ klarna-placement .container {
   color: #000;
   letter-spacing: 0.5px;
   text-align: left;
-  line-height: 22px;
+  line-height: 18px;
   padding: 0;
   margin: 0;
 }
@@ -10354,7 +10360,7 @@ input[type="submit"] {
   font-size: 14px;
   letter-spacing: 0.75px;
   text-align: left;
-  line-height: 22px;
+  line-height: 18px;
 }
 
 /* line 146, resources/assets/styles/components/_articles.scss */
