@@ -13,14 +13,21 @@ klarna-placement {
 	}
 }
 
-.single-product {
+.single-product,
+.single-data {
 	background-color: #fff;
 
-  &__inner {
+  // &__inner {
+	// 	@include inner;
+  // }
+
+	.woocommerce-breadcrumb {
 		@include inner;
-  }
+	}
 
 	.product {
+		@include inner;
+
 		display: flex;
 		flex-wrap: wrap;
 

@@ -1,3 +1,9 @@
+.archive-data {
+	.content-area {
+		@include inner;
+	}
+}
+
 .products {
 	padding: 0;
 	padding-bottom: 120px;

@@ -7939,29 +7939,36 @@ klarna-placement .container {
 
 /* line 16, resources/assets/styles/components/_single-product.scss */
 
-.single-product {
+.single-product,
+.single-data {
   background-color: #fff;
 }
 
-/* line 19, resources/assets/styles/components/_single-product.scss */
+/* line 24, resources/assets/styles/components/_single-product.scss */
 
-.single-product__inner {
+.single-product .woocommerce-breadcrumb,
+.single-data .woocommerce-breadcrumb {
   padding: 0 20px;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 @media (min-width: 900px) {
-  /* line 19, resources/assets/styles/components/_single-product.scss */
+  /* line 24, resources/assets/styles/components/_single-product.scss */
 
-  .single-product__inner {
+  .single-product .woocommerce-breadcrumb,
+  .single-data .woocommerce-breadcrumb {
     padding: 0 50px;
   }
 }
 
-/* line 23, resources/assets/styles/components/_single-product.scss */
+/* line 28, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product {
+.single-product .product,
+.single-data .product {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7969,37 +7976,51 @@ klarna-placement .container {
       flex-wrap: wrap;
 }
 
-/* line 27, resources/assets/styles/components/_single-product.scss */
-
-.single-product .product .product-images {
-  width: 100%;
-}
-
 @media (min-width: 900px) {
-  /* line 27, resources/assets/styles/components/_single-product.scss */
+  /* line 28, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .product-images {
-    width: 65%;
+  .single-product .product,
+  .single-data .product {
+    padding: 0 50px;
   }
 }
 
 /* line 34, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .product-images__inner {
-  padding: 0;
+.single-product .product .product-images,
+.single-data .product .product-images {
+  width: 100%;
 }
 
 @media (min-width: 900px) {
   /* line 34, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .product-images__inner {
+  .single-product .product .product-images,
+  .single-data .product .product-images {
+    width: 65%;
+  }
+}
+
+/* line 41, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .product-images__inner,
+.single-data .product .product-images__inner {
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  /* line 41, resources/assets/styles/components/_single-product.scss */
+
+  .single-product .product .product-images__inner,
+  .single-data .product .product-images__inner {
     padding: 0 10% 0 0;
   }
 }
 
-/* line 42, resources/assets/styles/components/_single-product.scss */
+/* line 49, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .product-images__360 {
+.single-product .product .product-images__360,
+.single-data .product .product-images__360 {
   display: none;
   position: relative;
   display: -webkit-box;
@@ -8013,9 +8034,10 @@ klarna-placement .container {
           align-items: center;
 }
 
-/* line 49, resources/assets/styles/components/_single-product.scss */
+/* line 56, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .product-images__360 .ico-360 {
+.single-product .product .product-images__360 .ico-360,
+.single-data .product .product-images__360 .ico-360 {
   position: absolute;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzNweCIgaGVpZ2h0PSI0MnB4IiB2aWV3Qm94PSIwIDAgNzMgNDIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXA8L3RpdGxlPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IlNJTkdMRS1QUk9EVUNULVBBR0UiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00MDguMDAwMDAwLCAtNzcyLjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQxMC4wMDAwMDAsIDc3OC4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDx0ZXh0IGlkPSIzNjDCsC1jb3B5IiBmb250LWZhbWlseT0iSGVsdmV0aWNhIiBmb250LXNpemU9IjIwIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjOTM5MTkxIj4KICAgICAgICAgICAgICAgICAgICA8dHNwYW4geD0iMTYuNDc5NDkyMiIgeT0iMjgiPjM2MDwvdHNwYW4+CiAgICAgICAgICAgICAgICAgICAgPHRzcGFuIHg9IjQ5Ljg0ODYzMjgiIHk9IjI4IiBmb250LWZhbWlseT0iTHVjaWRhR3JhbmRlLCBMdWNpZGEgR3JhbmRlIj7CsDwvdHNwYW4+CiAgICAgICAgICAgICAgICA8L3RleHQ+CiAgICAgICAgICAgICAgICA8cGF0aCBpZD0iTGluZS1Db3B5IiBkPSJNNTkuODI1OTIxNywtNS4yNjQ4ODA4IEw2MC4zNTE2NTEyLC00Ljk3NTcyOTU1IEw2OS4zNTE2NTEyLC0wLjAyNTcyOTU0NTIgTDcwLjMwNzUyMzIsMC41IEw2OS4zNTE2NTEyLDEuMDI1NzI5NTUgTDYwLjM1MTY1MTIsNS45NzU3Mjk1NSBMNTkuODI1OTIxNyw2LjI2NDg4MDggTDU5LjI0NzYxOTIsNS4yMTM0MjE3IEw1OS43NzMzNDg4LDQuOTI0MjcwNDUgTDY2LjcyNywxLjEgTDguOTM3NSwxLjEgTDIuMjcxLDEuMDk5IEw5LjIyNjY1MTI1LDQuOTI0MjcwNDUgTDkuNzUyMzgwOCw1LjIxMzQyMTcgTDkuMTc0MDc4Myw2LjI2NDg4MDggTDguNjQ4MzQ4NzUsNS45NzU3Mjk1NSBMLTAuMzUxNjUxMjUsMS4wMjU3Mjk1NSBMLTEuMzA3NTIzMTUsMC41IEwtMC4zNTE2NTEyNSwtMC4wMjU3Mjk1NDUyIEw4LjY0ODM0ODc1LC00Ljk3NTcyOTU1IEw5LjE3NDA3ODMsLTUuMjY0ODgwOCBMOS43NTIzODA4LC00LjIxMzQyMTcgTDkuMjI2NjUxMjUsLTMuOTI0MjcwNDUgTDIuMjcyLC0wLjEgTDguOTM3NSwtMC4xIEw2Ni43MjksLTAuMDk5IEw1OS43NzMzNDg4LC0zLjkyNDI3MDQ1IEw1OS4yNDc2MTkyLC00LjIxMzQyMTcgTDU5LjgyNTkyMTcsLTUuMjY0ODgwOCBaIiBmaWxsPSIjQUNBQ0FDIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
   background-size: 41px;
@@ -8025,38 +8047,43 @@ klarna-placement .container {
   top: -20px;
 }
 
-/* line 61, resources/assets/styles/components/_single-product.scss */
-
-.single-product .product .lifestyle {
-  margin: 20px 0;
-}
-
-@media (min-width: 900px) {
-  /* line 61, resources/assets/styles/components/_single-product.scss */
-
-  .single-product .product .lifestyle {
-    margin: 60px 0;
-  }
-}
-
 /* line 68, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .lifestyle.portrait {
-  width: 100%;
-  margin: 85px auto;
+.single-product .product .lifestyle,
+.single-data .product .lifestyle {
+  margin: 20px 0;
 }
 
 @media (min-width: 900px) {
   /* line 68, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .lifestyle.portrait {
+  .single-product .product .lifestyle,
+  .single-data .product .lifestyle {
+    margin: 60px 0;
+  }
+}
+
+/* line 75, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .lifestyle.portrait,
+.single-data .product .lifestyle.portrait {
+  width: 100%;
+  margin: 85px auto;
+}
+
+@media (min-width: 900px) {
+  /* line 75, resources/assets/styles/components/_single-product.scss */
+
+  .single-product .product .lifestyle.portrait,
+  .single-data .product .lifestyle.portrait {
     width: 70%;
   }
 }
 
-/* line 78, resources/assets/styles/components/_single-product.scss */
+/* line 85, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .double-image {
+.single-product .product .double-image,
+.single-data .product .double-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8069,60 +8096,68 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 78, resources/assets/styles/components/_single-product.scss */
+  /* line 85, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .double-image {
+  .single-product .product .double-image,
+  .single-data .product .double-image {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     margin: 60px 0;
   }
 }
 
-/* line 89, resources/assets/styles/components/_single-product.scss */
+/* line 96, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .double-image .portrait-img {
+.single-product .product .double-image .portrait-img,
+.single-data .product .double-image .portrait-img {
   width: 50%;
 }
 
 @media (min-width: 900px) {
-  /* line 89, resources/assets/styles/components/_single-product.scss */
+  /* line 96, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .double-image .portrait-img {
+  .single-product .product .double-image .portrait-img,
+  .single-data .product .double-image .portrait-img {
     width: 49%;
   }
 }
 
-/* line 100, resources/assets/styles/components/_single-product.scss */
+/* line 107, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .variations_form .variations .label {
+.single-product .product .variations_form .variations .label,
+.single-data .product .variations_form .variations .label {
   display: none;
 }
 
-/* line 104, resources/assets/styles/components/_single-product.scss */
+/* line 111, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .variations_form .variations .swatch-wrapper {
+.single-product .product .variations_form .variations .swatch-wrapper,
+.single-data .product .variations_form .variations .swatch-wrapper {
   border: 0;
   margin: 0 8px 5px 0;
 }
 
-/* line 108, resources/assets/styles/components/_single-product.scss */
+/* line 115, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .variations_form .variations .swatch-wrapper.selected {
+.single-product .product .variations_form .variations .swatch-wrapper.selected,
+.single-data .product .variations_form .variations .swatch-wrapper.selected {
   border: 2px solid #000;
   border-radius: 30px;
 }
 
-/* line 113, resources/assets/styles/components/_single-product.scss */
+/* line 120, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .variations_form .variations .swatch-wrapper a {
+.single-product .product .variations_form .variations .swatch-wrapper a,
+.single-data .product .variations_form .variations .swatch-wrapper a {
   border-radius: 30px;
   width: 30px !important;
   height: 30px !important;
 }
 
-/* line 122, resources/assets/styles/components/_single-product.scss */
+/* line 129, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .how-to {
+.single-product .product .how-to,
+.single-data .product .how-to {
   display: inline-block;
   position: relative;
   color: #000;
@@ -8136,9 +8171,10 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 130, resources/assets/styles/components/_single-product.scss */
+/* line 137, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .how-to::after {
+.single-product .product .how-to::after,
+.single-data .product .how-to::after {
   -webkit-transform: scaleX(1);
        -o-transform: scaleX(1);
           transform: scaleX(1);
@@ -8148,24 +8184,27 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 135, resources/assets/styles/components/_single-product.scss */
+  /* line 142, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .how-to:hover::after {
+  .single-product .product .how-to:hover::after,
+  .single-data .product .how-to:hover::after {
     -webkit-transform: scaleX(0);
          -o-transform: scaleX(0);
             transform: scaleX(0);
   }
 }
 
-/* line 141, resources/assets/styles/components/_single-product.scss */
+/* line 148, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .how-to:hover {
+.single-product .product .how-to:hover,
+.single-data .product .how-to:hover {
   border-bottom: 1px solid transparent;
 }
 
-/* line 146, resources/assets/styles/components/_single-product.scss */
+/* line 153, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product ul.colours {
+.single-product .product ul.colours,
+.single-data .product ul.colours {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -8174,21 +8213,24 @@ klarna-placement .container {
   display: flex;
 }
 
-/* line 152, resources/assets/styles/components/_single-product.scss */
+/* line 159, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product ul.colours li {
+.single-product .product ul.colours li,
+.single-data .product ul.colours li {
   margin: 0 10px 0 0;
 }
 
-/* line 157, resources/assets/styles/components/_single-product.scss */
+/* line 164, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product ul.colours li a:hover .product-col {
+.single-product .product ul.colours li a:hover .product-col,
+.single-data .product ul.colours li a:hover .product-col {
   border-color: #000;
 }
 
-/* line 162, resources/assets/styles/components/_single-product.scss */
+/* line 169, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product ul.colours li a .product-col {
+.single-product .product ul.colours li a .product-col,
+.single-data .product ul.colours li a .product-col {
   display: inline-block;
   border-radius: 30px;
   width: 30px;
@@ -8199,52 +8241,59 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 170, resources/assets/styles/components/_single-product.scss */
+/* line 177, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product ul.colours li a .product-col.active {
+.single-product .product ul.colours li a .product-col.active,
+.single-data .product ul.colours li a .product-col.active {
   border-color: #000;
 }
 
-/* line 178, resources/assets/styles/components/_single-product.scss */
+/* line 185, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share {
+.single-product .product .share,
+.single-data .product .share {
   padding: 0 0 5px 0;
   font-size: 14px;
 }
 
-/* line 183, resources/assets/styles/components/_single-product.scss */
+/* line 190, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share.active .share__inner {
+.single-product .product .share.active .share__inner,
+.single-data .product .share.active .share__inner {
   opacity: 1;
   visibility: visible;
   display: block;
 }
 
-/* line 190, resources/assets/styles/components/_single-product.scss */
+/* line 197, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share__inner {
+.single-product .product .share__inner,
+.single-data .product .share__inner {
   opacity: 0;
   visibility: hidden;
   display: none;
 }
 
-/* line 195, resources/assets/styles/components/_single-product.scss */
+/* line 202, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share__inner ul {
+.single-product .product .share__inner ul,
+.single-data .product .share__inner ul {
   list-style: none;
   margin: 0 0 30px 0;
   padding: 0;
 }
 
-/* line 200, resources/assets/styles/components/_single-product.scss */
+/* line 207, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share__inner ul li {
+.single-product .product .share__inner ul li,
+.single-data .product .share__inner ul li {
   margin: 3px 0;
 }
 
-/* line 206, resources/assets/styles/components/_single-product.scss */
+/* line 213, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .share a {
+.single-product .product .share a,
+.single-data .product .share a {
   display: inline-block;
   position: relative;
   color: #000;
@@ -8252,27 +8301,31 @@ klarna-placement .container {
   text-decoration: none;
 }
 
-/* line 211, resources/assets/styles/components/_single-product.scss */
+/* line 218, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .sku_wrapper {
+.single-product .product .sku_wrapper,
+.single-data .product .sku_wrapper {
   display: none;
 }
 
-/* line 215, resources/assets/styles/components/_single-product.scss */
+/* line 222, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product a.reset_variations {
+.single-product .product a.reset_variations,
+.single-data .product a.reset_variations {
   display: none !important;
 }
 
-/* line 219, resources/assets/styles/components/_single-product.scss */
+/* line 226, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .quantity {
+.single-product .product .quantity,
+.single-data .product .quantity {
   display: none !important;
 }
 
-/* line 223, resources/assets/styles/components/_single-product.scss */
+/* line 230, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .threesixty {
+.single-product .product .threesixty,
+.single-data .product .threesixty {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8285,9 +8338,10 @@ klarna-placement .container {
   min-height: 500px;
 }
 
-/* line 230, resources/assets/styles/components/_single-product.scss */
+/* line 237, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product #container.wc360-container {
+.single-product .product #container.wc360-container,
+.single-data .product #container.wc360-container {
   width: 100%;
   cursor: -webkit-grab;
   cursor: grab;
@@ -8296,23 +8350,26 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 230, resources/assets/styles/components/_single-product.scss */
+  /* line 237, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product #container.wc360-container {
+  .single-product .product #container.wc360-container,
+  .single-data .product #container.wc360-container {
     min-height: 500px;
   }
 }
 
-/* line 240, resources/assets/styles/components/_single-product.scss */
+/* line 247, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product #container.wc360-container .spinner {
+.single-product .product #container.wc360-container .spinner,
+.single-data .product #container.wc360-container .spinner {
   margin-top: 0 !important;
   background-color: transparent;
 }
 
-/* line 245, resources/assets/styles/components/_single-product.scss */
+/* line 252, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product #container.wc360-container .spinner span {
+.single-product .product #container.wc360-container .spinner span,
+.single-data .product #container.wc360-container .spinner span {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -8324,16 +8381,18 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 245, resources/assets/styles/components/_single-product.scss */
+  /* line 252, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product #container.wc360-container .spinner span {
+  .single-product .product #container.wc360-container .spinner span,
+  .single-data .product #container.wc360-container .spinner span {
     font-size: 16px;
   }
 }
 
-/* line 252, resources/assets/styles/components/_single-product.scss */
+/* line 259, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary {
+.single-product .product .summary,
+.single-data .product .summary {
   width: 100%;
   position: sticky;
   position: -webkit-sticky;
@@ -8343,16 +8402,18 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 252, resources/assets/styles/components/_single-product.scss */
+  /* line 259, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .summary {
+  .single-product .product .summary,
+  .single-data .product .summary {
     width: 35%;
   }
 }
 
-/* line 266, resources/assets/styles/components/_single-product.scss */
+/* line 273, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary .posted_in a {
+.single-product .product .summary .posted_in a,
+.single-data .product .summary .posted_in a {
   display: inline-block;
   position: relative;
   color: #000;
@@ -8369,16 +8430,18 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 266, resources/assets/styles/components/_single-product.scss */
+  /* line 273, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .summary .posted_in a {
+  .single-product .product .summary .posted_in a,
+  .single-data .product .summary .posted_in a {
     font-size: 16px;
   }
 }
 
-/* line 274, resources/assets/styles/components/_single-product.scss */
+/* line 281, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary h1.product_title {
+.single-product .product .summary h1.product_title,
+.single-data .product .summary h1.product_title {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
@@ -8389,24 +8452,27 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 274, resources/assets/styles/components/_single-product.scss */
+  /* line 281, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .summary h1.product_title {
+  .single-product .product .summary h1.product_title,
+  .single-data .product .summary h1.product_title {
     font-size: 20px;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 274, resources/assets/styles/components/_single-product.scss */
+  /* line 281, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .summary h1.product_title {
+  .single-product .product .summary h1.product_title,
+  .single-data .product .summary h1.product_title {
     font-size: 30px;
   }
 }
 
-/* line 282, resources/assets/styles/components/_single-product.scss */
+/* line 289, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary .price {
+.single-product .product .summary .price,
+.single-data .product .summary .price {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -8420,48 +8486,55 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 282, resources/assets/styles/components/_single-product.scss */
+  /* line 289, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .summary .price {
+  .single-product .product .summary .price,
+  .single-data .product .summary .price {
     font-size: 16px;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 282, resources/assets/styles/components/_single-product.scss */
+  /* line 289, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .product .summary .price {
+  .single-product .product .summary .price,
+  .single-data .product .summary .price {
     font-size: 18px;
   }
 }
 
-/* line 294, resources/assets/styles/components/_single-product.scss */
+/* line 301, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary .variations_form {
+.single-product .product .summary .variations_form,
+.single-data .product .summary .variations_form {
   padding: 10px 0 0 0;
-}
-
-/* line 298, resources/assets/styles/components/_single-product.scss */
-
-.single-product .product .summary .woocommerce-variation-availability {
-  margin: 10px 0 0 0;
-}
-
-/* line 302, resources/assets/styles/components/_single-product.scss */
-
-.single-product .product .summary .woocommerce-variation-availability .stock.in-stock {
-  color: #1bae27;
 }
 
 /* line 305, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock {
+.single-product .product .summary .woocommerce-variation-availability,
+.single-data .product .summary .woocommerce-variation-availability {
+  margin: 10px 0 0 0;
+}
+
+/* line 309, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .summary .woocommerce-variation-availability .stock.in-stock,
+.single-data .product .summary .woocommerce-variation-availability .stock.in-stock {
+  color: #1bae27;
+}
+
+/* line 312, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock,
+.single-data .product .summary .woocommerce-variation-availability .stock.out-of-stock {
   color: #b92828;
 }
 
-/* line 311, resources/assets/styles/components/_single-product.scss */
+/* line 318, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary .button {
+.single-product .product .summary .button,
+.single-data .product .summary .button {
   color: #fff;
   line-height: 1;
   background: #000;
@@ -8491,26 +8564,31 @@ klarna-placement .container {
 /* line 38, resources/assets/styles/components/_buttons.scss */
 
 .single-product .product .summary .button:hover,
-.single-product .product .summary .button:active {
+.single-product .product .summary .button:active,
+.single-data .product .summary .button:hover,
+.single-data .product .summary .button:active {
   color: #000;
   background: transparent;
 }
 
-/* line 322, resources/assets/styles/components/_single-product.scss */
+/* line 329, resources/assets/styles/components/_single-product.scss */
 
-.single-product .product .summary .cart .quantity {
+.single-product .product .summary .cart .quantity,
+.single-data .product .summary .cart .quantity {
   display: none;
 }
 
-/* line 329, resources/assets/styles/components/_single-product.scss */
+/* line 336, resources/assets/styles/components/_single-product.scss */
 
-.single-product .single-product #wl-wrapper.wl-button-wrap {
+.single-product .single-product #wl-wrapper.wl-button-wrap,
+.single-data .single-product #wl-wrapper.wl-button-wrap {
   margin: 0 0 5px 0;
 }
 
-/* line 333, resources/assets/styles/components/_single-product.scss */
+/* line 340, resources/assets/styles/components/_single-product.scss */
 
-.single-product .wl-add-to {
+.single-product .wl-add-to,
+.single-data .wl-add-to {
   display: inline-block;
   position: relative;
   color: #000;
@@ -8518,9 +8596,10 @@ klarna-placement .container {
   text-decoration: none;
 }
 
-/* line 336, resources/assets/styles/components/_single-product.scss */
+/* line 343, resources/assets/styles/components/_single-product.scss */
 
-.single-product .wl-add-to::before {
+.single-product .wl-add-to::before,
+.single-data .wl-add-to::before {
   content: "";
   display: block;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMjQgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXAgMzwvdGl0bGU+CiAgICA8ZGVmcz4KICAgICAgICA8cG9seWdvbiBpZD0icGF0aC0xIiBwb2ludHM9IjAuNDI4OTczMjc3IDAuNDM0NzgyNjA5IDIzLjQyODk3MzMgMC40MzQ3ODI2MDkgMjMuNDI4OTczMyAyMS40MzQ3ODI2IDAuNDI4OTczMjc3IDIxLjQzNDc4MjYiPjwvcG9seWdvbj4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIRUFERVIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjg0LjAwMDAwMCwgLTg1LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI4NC4wMDAwMDAsIDg1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQ2xpcC0yIj48L2c+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNi44Njk1OTIwMyw0LjA4MjY2MzM1IEM2LjY5NDc4MDc5LDQuMDgyNjYzMzUgNi41NDcwNzg2Myw0LjA5MzMxNzM4IDYuNDMzNDc0NjEsNC4xMDU4NzAxNSBDNS4yODg1ODE2Nyw0LjIyODIxMjE5IDQuMzY5NTQxMzEsNC43MjQwMzYwMyAzLjc3NDM2OTgsNS41Mzk4NjA1NiBDMy4xMzU4MjM3Niw2LjQxNTA1MjMgMi45MjgzOTY4OSw3LjU4MDgxNDI4IDMuMTkwMTQ3ODIsOC44MjIyMzA0MyBDMy45MzQ5OTExMywxMi40MjA4MDM1IDEwLjI3Mjc5ODksMTYuOTIzMjgxNSAxMS40MjkwNDM4LDE3LjcxODUxNTMgQzEyLjU4NTE0MDQsMTYuOTIyOTQzOSAxOC45MjMwNTQsMTIuNDE5MTE1OCAxOS42Njc2MjIsOC44MjMzOTA3NyBDMTkuOTI5NjY5NCw3LjU4MDgxNDI4IDE5LjcyMjI0MjYsNi40MTUwNTIzIDE5LjA4MzY3NTQsNS41Mzk4NjA1NiBDMTguNDg4NTI1LDQuNzI0MDM2MDMgMTcuNTY5NDg0Nyw0LjIyODIxMjE5IDE2LjQyNTg2MjUsNC4xMDU5NTQ1NCBDMTYuNDI1NDM4OSw0LjEwNTk1NDU0IDE2LjQyNTAxNTMsNC4xMDU5NTQ1NCAxNi40MjQ1OTE3LDQuMTA1ODcwMTUgQzE2LjAzODExNzgsNC4wNjMyNTQwMyAxNS4yNTY1MDc4LDQuMDQyNTc4ODggMTQuMzU5ODExMyw0LjM4ODMxODAxIEMxMy4yNzE5OTU3LDQuODE1NDcwODIgMTIuMzA3ODQ0MSw1LjY5Nzc1MTE5IDExLjcxNjQwMDEsNi44MDgwNDg5MiBDMTEuNjU5OTU4MSw2LjkxMzkzNTIyIDExLjU0OTQyNSw2Ljk4MDE1ODk5IDExLjQyOTA0MzgsNi45ODAxNTg5OSBDMTEuMzA4NjQxMyw2Ljk4MDE1ODk5IDExLjE5ODEwODIsNi45MTM5MzUyMiAxMS4xNDE2NjYzLDYuODA4MDQ4OTIgQzEwLjU1MDIyMjMsNS42OTc3NTExOSA5LjU4NjA3MDY4LDQuODE1NDcwODIgOC40OTYzNDg5Nyw0LjM4NzU3OTYxIEM3Ljg2NDY2NDkxLDQuMTQ0MDM0NzkgNy4yODkyOTU3NCw0LjA4MjY2MzM1IDYuODY5NTkyMDMsNC4wODI2NjMzNSBNMTEuNDI5MDQzOCwxOC40MzQ3ODI2IEMxMS4zNjYyNDgxLDE4LjQzNDc4MjYgMTEuMzAzNDUyNCwxOC40MTY3NDQ2IDExLjI0ODkzNzgsMTguMzgwNTYzMSBDMTAuOTI5NzA3MSwxOC4xNjkxMDY5IDMuNDIyNDM4OCwxMy4xNTMzMTU2IDIuNTUzMjUzNzQsOC45NTQyNzcxMyBDMi4yNTM1MDc3Myw3LjUzMjUyMzA0IDIuNTAwMTE1NjksNi4xODQxNjU3MyAzLjI0ODE1NzAzLDUuMTU4ODg5MjggQzMuOTU0Mjg1MTgsNC4xOTA4NzAzMyA1LjAzMTQwNTQsMy42MDQwMzM2NCA2LjM2MjczNjg0LDMuNDYxNzU0ODUgQzYuODA3MDA4MTYsMy40MTIzODc2NiA3LjcwNzAwODY0LDMuMzg4NDQyNDYgOC43MzMwODc1MywzLjc4Mzk3MDczIEM5LjgxODkxMjMxLDQuMjEwMzg1MTQgMTAuNzU5NTU1Miw0Ljk5MzcyMDE1IDExLjQyOTA0MzgsNi4wMTgzNjM2OSBDMTIuMDk4NDA1Miw0Ljk5MzgyNTYzIDEzLjAzODk0MjIsNC4yMTA0OTA2MyAxNC4xMjMwNTE1LDMuNzg0Njg4MDMgQzE1LjE1MDIxMDUsMy4zODg2NTM0MyAxNi4wNDk3ODc0LDMuNDEyMTc2NjkgMTYuNDk1OTQzNywzLjQ2MTc1NDg1IEMxNy44MjY5Nzg2LDMuNjA0MjQ0NjEgMTguOTAzODg3MSw0LjE5MTA4MTMgMTkuNjA5OTA5Myw1LjE1ODg4OTI4IEMyMC4zNTc5NTA2LDYuMTg0MTY1NzMgMjAuNjA0NTU4Niw3LjUzMjUyMzA0IDIwLjMwNDQ5NDksOC45NTU1NDI5NiBDMTkuNDM1MzA5OSwxMy4xNTMzMTU2IDExLjkyODM1OTIsMTguMTY5MTA2OSAxMS42MDkxMjg2LDE4LjM4MDU2MzEgQzExLjU1NDYxMzksMTguNDE2NzQ0NiAxMS40OTE4MTgyLDE4LjQzNDc4MjYgMTEuNDI5MDQzOCwxOC40MzQ3ODI2IiBpZD0iRmlsbC0xIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMC44IiBmaWxsPSIjMUExQTFBIiBtYXNrPSJ1cmwoI21hc2stMikiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
@@ -8532,9 +8611,10 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 349, resources/assets/styles/components/_single-product.scss */
+/* line 356, resources/assets/styles/components/_single-product.scss */
 
-.single-product .wl-add-to-single {
+.single-product .wl-add-to-single,
+.single-data .wl-add-to-single {
   display: inline-block;
   position: relative;
   color: #000;
@@ -8544,18 +8624,20 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 359, resources/assets/styles/components/_single-product.scss */
+  /* line 366, resources/assets/styles/components/_single-product.scss */
 
-  .single-product .wl-add-to-single:hover::after {
+  .single-product .wl-add-to-single:hover::after,
+  .single-data .wl-add-to-single:hover::after {
     -webkit-transform: scaleX(0);
          -o-transform: scaleX(0);
             transform: scaleX(0);
   }
 }
 
-/* line 365, resources/assets/styles/components/_single-product.scss */
+/* line 372, resources/assets/styles/components/_single-product.scss */
 
-.single-product .wl-add-to-single::before {
+.single-product .wl-add-to-single::before,
+.single-data .wl-add-to-single::before {
   content: "";
   display: block;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyMnB4IiB2aWV3Qm94PSIwIDAgMjQgMjIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+R3JvdXAgMzwvdGl0bGU+CiAgICA8ZGVmcz4KICAgICAgICA8cG9seWdvbiBpZD0icGF0aC0xIiBwb2ludHM9IjAuNDI4OTczMjc3IDAuNDM0NzgyNjA5IDIzLjQyODk3MzMgMC40MzQ3ODI2MDkgMjMuNDI4OTczMyAyMS40MzQ3ODI2IDAuNDI4OTczMjc3IDIxLjQzNDc4MjYiPjwvcG9seWdvbj4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJIRUFERVIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjg0LjAwMDAwMCwgLTg1LjAwMDAwMCkiPgogICAgICAgICAgICA8ZyBpZD0iR3JvdXAtMyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTI4NC4wMDAwMDAsIDg1LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQ2xpcC0yIj48L2c+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNi44Njk1OTIwMyw0LjA4MjY2MzM1IEM2LjY5NDc4MDc5LDQuMDgyNjYzMzUgNi41NDcwNzg2Myw0LjA5MzMxNzM4IDYuNDMzNDc0NjEsNC4xMDU4NzAxNSBDNS4yODg1ODE2Nyw0LjIyODIxMjE5IDQuMzY5NTQxMzEsNC43MjQwMzYwMyAzLjc3NDM2OTgsNS41Mzk4NjA1NiBDMy4xMzU4MjM3Niw2LjQxNTA1MjMgMi45MjgzOTY4OSw3LjU4MDgxNDI4IDMuMTkwMTQ3ODIsOC44MjIyMzA0MyBDMy45MzQ5OTExMywxMi40MjA4MDM1IDEwLjI3Mjc5ODksMTYuOTIzMjgxNSAxMS40MjkwNDM4LDE3LjcxODUxNTMgQzEyLjU4NTE0MDQsMTYuOTIyOTQzOSAxOC45MjMwNTQsMTIuNDE5MTE1OCAxOS42Njc2MjIsOC44MjMzOTA3NyBDMTkuOTI5NjY5NCw3LjU4MDgxNDI4IDE5LjcyMjI0MjYsNi40MTUwNTIzIDE5LjA4MzY3NTQsNS41Mzk4NjA1NiBDMTguNDg4NTI1LDQuNzI0MDM2MDMgMTcuNTY5NDg0Nyw0LjIyODIxMjE5IDE2LjQyNTg2MjUsNC4xMDU5NTQ1NCBDMTYuNDI1NDM4OSw0LjEwNTk1NDU0IDE2LjQyNTAxNTMsNC4xMDU5NTQ1NCAxNi40MjQ1OTE3LDQuMTA1ODcwMTUgQzE2LjAzODExNzgsNC4wNjMyNTQwMyAxNS4yNTY1MDc4LDQuMDQyNTc4ODggMTQuMzU5ODExMyw0LjM4ODMxODAxIEMxMy4yNzE5OTU3LDQuODE1NDcwODIgMTIuMzA3ODQ0MSw1LjY5Nzc1MTE5IDExLjcxNjQwMDEsNi44MDgwNDg5MiBDMTEuNjU5OTU4MSw2LjkxMzkzNTIyIDExLjU0OTQyNSw2Ljk4MDE1ODk5IDExLjQyOTA0MzgsNi45ODAxNTg5OSBDMTEuMzA4NjQxMyw2Ljk4MDE1ODk5IDExLjE5ODEwODIsNi45MTM5MzUyMiAxMS4xNDE2NjYzLDYuODA4MDQ4OTIgQzEwLjU1MDIyMjMsNS42OTc3NTExOSA5LjU4NjA3MDY4LDQuODE1NDcwODIgOC40OTYzNDg5Nyw0LjM4NzU3OTYxIEM3Ljg2NDY2NDkxLDQuMTQ0MDM0NzkgNy4yODkyOTU3NCw0LjA4MjY2MzM1IDYuODY5NTkyMDMsNC4wODI2NjMzNSBNMTEuNDI5MDQzOCwxOC40MzQ3ODI2IEMxMS4zNjYyNDgxLDE4LjQzNDc4MjYgMTEuMzAzNDUyNCwxOC40MTY3NDQ2IDExLjI0ODkzNzgsMTguMzgwNTYzMSBDMTAuOTI5NzA3MSwxOC4xNjkxMDY5IDMuNDIyNDM4OCwxMy4xNTMzMTU2IDIuNTUzMjUzNzQsOC45NTQyNzcxMyBDMi4yNTM1MDc3Myw3LjUzMjUyMzA0IDIuNTAwMTE1NjksNi4xODQxNjU3MyAzLjI0ODE1NzAzLDUuMTU4ODg5MjggQzMuOTU0Mjg1MTgsNC4xOTA4NzAzMyA1LjAzMTQwNTQsMy42MDQwMzM2NCA2LjM2MjczNjg0LDMuNDYxNzU0ODUgQzYuODA3MDA4MTYsMy40MTIzODc2NiA3LjcwNzAwODY0LDMuMzg4NDQyNDYgOC43MzMwODc1MywzLjc4Mzk3MDczIEM5LjgxODkxMjMxLDQuMjEwMzg1MTQgMTAuNzU5NTU1Miw0Ljk5MzcyMDE1IDExLjQyOTA0MzgsNi4wMTgzNjM2OSBDMTIuMDk4NDA1Miw0Ljk5MzgyNTYzIDEzLjAzODk0MjIsNC4yMTA0OTA2MyAxNC4xMjMwNTE1LDMuNzg0Njg4MDMgQzE1LjE1MDIxMDUsMy4zODg2NTM0MyAxNi4wNDk3ODc0LDMuNDEyMTc2NjkgMTYuNDk1OTQzNywzLjQ2MTc1NDg1IEMxNy44MjY5Nzg2LDMuNjA0MjQ0NjEgMTguOTAzODg3MSw0LjE5MTA4MTMgMTkuNjA5OTA5Myw1LjE1ODg4OTI4IEMyMC4zNTc5NTA2LDYuMTg0MTY1NzMgMjAuNjA0NTU4Niw3LjUzMjUyMzA0IDIwLjMwNDQ5NDksOC45NTU1NDI5NiBDMTkuNDM1MzA5OSwxMy4xNTMzMTU2IDExLjkyODM1OTIsMTguMTY5MTA2OSAxMS42MDkxMjg2LDE4LjM4MDU2MzEgQzExLjU1NDYxMzksMTguNDE2NzQ0NiAxMS40OTE4MTgyLDE4LjQzNDc4MjYgMTEuNDI5MDQzOCwxOC40MzQ3ODI2IiBpZD0iRmlsbC0xIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMC44IiBmaWxsPSIjMUExQTFBIiBtYXNrPSJ1cmwoI21hc2stMikiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
@@ -8567,38 +8649,43 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 378, resources/assets/styles/components/_single-product.scss */
+/* line 385, resources/assets/styles/components/_single-product.scss */
 
-.single-product #wl-wrapper.wl-button-wrap {
+.single-product #wl-wrapper.wl-button-wrap,
+.single-data #wl-wrapper.wl-button-wrap {
   position: relative;
   clear: both;
   width: 100%;
   padding: 0;
 }
 
-/* line 386, resources/assets/styles/components/_single-product.scss */
+/* line 393, resources/assets/styles/components/_single-product.scss */
 
-.single-product #wl-wrapper.wl-button-already-in {
+.single-product #wl-wrapper.wl-button-already-in,
+.single-data #wl-wrapper.wl-button-already-in {
   font-size: 0;
 }
 
-/* line 389, resources/assets/styles/components/_single-product.scss */
+/* line 396, resources/assets/styles/components/_single-product.scss */
 
-.single-product #wl-wrapper.wl-button-already-in .wl-add-link {
+.single-product #wl-wrapper.wl-button-already-in .wl-add-link,
+.single-data #wl-wrapper.wl-button-already-in .wl-add-link {
   display: none;
 }
 
-/* line 393, resources/assets/styles/components/_single-product.scss */
+/* line 400, resources/assets/styles/components/_single-product.scss */
 
-.single-product #wl-wrapper.wl-button-already-in ul {
+.single-product #wl-wrapper.wl-button-already-in ul,
+.single-data #wl-wrapper.wl-button-already-in ul {
   list-style: none;
   margin: 0;
   padding: 10px 0 0 0;
 }
 
-/* line 399, resources/assets/styles/components/_single-product.scss */
+/* line 406, resources/assets/styles/components/_single-product.scss */
 
-.single-product #wl-wrapper.wl-button-already-in ul li a {
+.single-product #wl-wrapper.wl-button-already-in ul li a,
+.single-data #wl-wrapper.wl-button-already-in ul li a {
   display: inline-block;
   position: relative;
   color: #000;
@@ -8607,16 +8694,18 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 399, resources/assets/styles/components/_single-product.scss */
+  /* line 406, resources/assets/styles/components/_single-product.scss */
 
-  .single-product #wl-wrapper.wl-button-already-in ul li a {
+  .single-product #wl-wrapper.wl-button-already-in ul li a,
+  .single-data #wl-wrapper.wl-button-already-in ul li a {
     font-size: 14px;
   }
 }
 
-/* line 406, resources/assets/styles/components/_single-product.scss */
+/* line 413, resources/assets/styles/components/_single-product.scss */
 
-.single-product #wl-wrapper.wl-button-already-in ul li a::before {
+.single-product #wl-wrapper.wl-button-already-in ul li a::before,
+.single-data #wl-wrapper.wl-button-already-in ul li a::before {
   content: "";
   display: block;
   background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTguOCIgaGVpZ2h0PSIxNS44IiB2aWV3Qm94PSIwIDAgMTguOCAxNS44Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0xLC5jbHMtMywuY2xzLTR7ZmlsbC1ydWxlOmV2ZW5vZGQ7fS5jbHMtMnttYXNrOnVybCgjbWFzayk7fS5jbHMtM3tmaWxsOiMxYTFhMWE7fS5jbHMtMywuY2xzLTR7c3Ryb2tlOiMwMDA7c3Ryb2tlLXdpZHRoOjAuOHB4O308L3N0eWxlPjxtYXNrIGlkPSJtYXNrIiB4PSItMS42IiB5PSItMi42IiB3aWR0aD0iMjMiIGhlaWdodD0iMjEiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yLjAzIC0zLjAzKSI+PGcgaWQ9Im1hc2stMiI+PHBvbHlnb24gaWQ9InBhdGgtMSIgY2xhc3M9ImNscy0xIiBwb2ludHM9IjAuNDMgMC40MyAyMy40MyAwLjQzIDIzLjQzIDIxLjQzIDAuNDMgMjEuNDMgMC40MyAwLjQzIi8+PC9nPjwvZz48L21hc2s+PC9kZWZzPjxnIGlkPSJQYWdlLTEiPjxnIGlkPSJIRUFERVIiPjxnIGlkPSJHcm91cC0zIj48ZyBjbGFzcz0iY2xzLTIiPjxwYXRoIGlkPSJGaWxsLTEiIGNsYXNzPSJjbHMtMyIgZD0iTTYuODcsNC4wOGEyLjY4LDIuNjgsMCwwLDAtLjQ0LDBBMy42NCwzLjY0LDAsMCwwLDMuNzcsNS41NGE0LjExLDQuMTEsMCwwLDAtLjU4LDMuMjhjLjc0LDMuNiw3LjA4LDguMSw4LjI0LDguOSwxLjE2LS44LDcuNDktNS4zLDguMjQtOC45YTQuMDcsNC4wNywwLDAsMC0uNTktMy4yOCwzLjYxLDMuNjEsMCwwLDAtMi42NS0xLjQzaDBhNC4zLDQuMywwLDAsMC0yLjA2LjI4LDUuMjUsNS4yNSwwLDAsMC0yLjY0LDIuNDIuMzMuMzMsMCwwLDEtLjU4LDBBNS4yNSw1LjI1LDAsMCwwLDguNSw0LjM5YTQuNDYsNC40NiwwLDAsMC0xLjYzLS4zMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIuMDMgLTMuMDMpIi8+PC9nPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTIwLjMsOWMtLjg2LDQuMTktOC4zNyw5LjIxLTguNjksOS40MmEuMzEuMzEsMCwwLDEtLjE4LjA1LjI5LjI5LDAsMCwxLS4xOC0uMDVjLS4zMi0uMjEtNy44My01LjIzLTguNy05LjQzYTQuNjgsNC42OCwwLDAsMSwuNy0zLjc5LDQuMjUsNC4yNSwwLDAsMSwzLjExLTEuNyw1LjE3LDUuMTcsMCwwLDEsMi4zNy4zMkE1Ljc2LDUuNzYsMCwwLDEsMTEuNDMsNmE1Ljc4LDUuNzgsMCwwLDEsMi42OS0yLjI0LDUuMjIsNS4yMiwwLDAsMSwyLjM4LS4zMiw0LjI3LDQuMjcsMCwwLDEsMy4xMSwxLjdBNC42OSw0LjY5LDAsMCwxLDIwLjMsOVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yLjAzIC0zLjAzKSIvPjwvZz48L2c+PC9nPjwvc3ZnPg==);
@@ -8628,37 +8717,43 @@ klarna-placement .container {
   top: -1px;
 }
 
-/* line 423, resources/assets/styles/components/_single-product.scss */
+/* line 430, resources/assets/styles/components/_single-product.scss */
 
-.single-product .eye-size {
+.single-product .eye-size,
+.single-data .eye-size {
   padding: 40px 0 2px 0;
   font-size: 14px;
 }
 
-/* line 427, resources/assets/styles/components/_single-product.scss */
+/* line 434, resources/assets/styles/components/_single-product.scss */
 
-.single-product .eye-size span {
+.single-product .eye-size span,
+.single-data .eye-size span {
   font-weight: 500;
 }
 
-/* line 432, resources/assets/styles/components/_single-product.scss */
+/* line 439, resources/assets/styles/components/_single-product.scss */
 
-.single-product .woocommerce-product-attributes {
+.single-product .woocommerce-product-attributes,
+.single-data .woocommerce-product-attributes {
   padding: 0 0 20px 0;
 }
 
-/* line 434, resources/assets/styles/components/_single-product.scss */
+/* line 441, resources/assets/styles/components/_single-product.scss */
 
-.single-product .woocommerce-product-attributes tr {
+.single-product .woocommerce-product-attributes tr,
+.single-data .woocommerce-product-attributes tr {
   margin: -2px;
   display: block;
   padding: 2px 0;
 }
 
-/* line 439, resources/assets/styles/components/_single-product.scss */
+/* line 446, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
-.single-product .woocommerce-product-attributes tr p {
+.single-product .woocommerce-product-attributes tr p,
+.single-data .woocommerce-product-attributes tr th,
+.single-data .woocommerce-product-attributes tr p {
   display: inline-block;
   font-family: "reader", arial, sans-serif;
   font-weight: 100;
@@ -8671,9 +8766,10 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 456, resources/assets/styles/components/_single-product.scss */
+/* line 463, resources/assets/styles/components/_single-product.scss */
 
-.single-product .related .products {
+.single-product .related .products,
+.single-data .related .products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8681,28 +8777,28 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 464, resources/assets/styles/components/_single-product.scss */
+/* line 471, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field {
   padding: 30px 0 0 0;
   margin: 0;
 }
 
-/* line 469, resources/assets/styles/components/_single-product.scss */
+/* line 476, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span input {
   width: auto;
   margin: 0 5px 0 0;
 }
 
-/* line 474, resources/assets/styles/components/_single-product.scss */
+/* line 481, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span label {
   font-size: 14px;
   text-transform: initial;
 }
 
-/* line 482, resources/assets/styles/components/_single-product.scss */
+/* line 489, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8711,14 +8807,30 @@ klarna-placement .container {
   text-align: center;
 }
 
-/* line 488, resources/assets/styles/components/_single-product.scss */
+/* line 495, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;
   color: #000;
 }
 
-/* line 1, resources/assets/styles/components/_collection.scss */
+/* line 2, resources/assets/styles/components/_collection.scss */
+
+.archive-data .content-area {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 2, resources/assets/styles/components/_collection.scss */
+
+  .archive-data .content-area {
+    padding: 0 50px;
+  }
+}
+
+/* line 7, resources/assets/styles/components/_collection.scss */
 
 .products {
   padding: 0;
@@ -8738,7 +8850,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 1, resources/assets/styles/components/_collection.scss */
+  /* line 7, resources/assets/styles/components/_collection.scss */
 
   .products {
     grid-template-columns: repeat(2, 1fr);
@@ -8746,7 +8858,7 @@ klarna-placement .container {
   }
 }
 
-/* line 15, resources/assets/styles/components/_collection.scss */
+/* line 21, resources/assets/styles/components/_collection.scss */
 
 .products li {
   cursor: initial;
@@ -8754,13 +8866,13 @@ klarna-placement .container {
   width: 100%;
 }
 
-/* line 27, resources/assets/styles/components/_collection.scss */
+/* line 33, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info {
   padding: 60px 0 120px 0;
 }
 
-/* line 32, resources/assets/styles/components/_collection.scss */
+/* line 38, resources/assets/styles/components/_collection.scss */
 
 .term-new-arrivals .woocommerce-products-header {
   display: none;
