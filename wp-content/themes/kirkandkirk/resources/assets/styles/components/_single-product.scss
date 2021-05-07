@@ -23,6 +23,10 @@ klarna-placement {
 
 	.woocommerce-breadcrumb {
 		@include inner;
+
+		@include breakpoint(medium) {
+			padding: 0 50px 20px 50px;
+		}
 	}
 
 	.product {
@@ -47,11 +51,10 @@ klarna-placement {
 			}
 
 			&__360 {
-				display: none;
 				position: relative;
-				display: flex;
   			justify-content: center;
   			align-items: center;
+				display: none;
 
 				.ico-360 {
 					position: absolute;
@@ -62,6 +65,12 @@ klarna-placement {
 					display: inline-block;
 					top: -20px;
 				}
+			}
+		}
+
+		.woocommerce-product-gallery {
+			&__wrapper {
+				margin: 0;
 			}
 		}
 

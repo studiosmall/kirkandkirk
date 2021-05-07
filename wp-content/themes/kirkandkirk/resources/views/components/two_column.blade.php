@@ -1,47 +1,62 @@
 <section class="two-column section" data-aos="fade-up">
-
   <div class="two-column__inner">
 
     <div class="two-column__col">
 
-      @if($c['image_left']['url'])
-      <img class="two-column__top-image" src="{{ $c['image_left']['url'] }}" alt="{{ $c['image_left']['title'] }}">
-      @endif
+      @if($c['image'])
 
-      @if($c['textarea_left'])
-      <div class="two-column__textarea textarea-left">
-        {!! $c['textarea_left'] !!}
-      </div>
-      @endif
+        @foreach($c['image'] as $layout)
 
-      @if($c['bottom_image_left']['url'])
-      <div class="two-column__bottom-container {!! $c['image_position_left'] !!}">
-        <img src="{{ $c['bottom_image_left']['url'] }}" alt="{{ $c['bottom_image_left']['title'] }}">
-      </div>
+          @if($layout['layout'] == 'landscape')
+
+            <div class="two-column__top-image">
+              <img src="{{ $layout['landscape']['url'] }}" alt="{{ $layout['landscape']['title'] }}">
+
+              @if($layout['landscape']['caption'])
+                <span class="caption">{!! $layout['landscape']['caption'] !!}</span>
+              @endif
+            </div>
+
+            {{-- @php
+              print_r('<pre>');
+                print_r($layout['landscape']);
+              print_r('</pre>');
+            @endphp --}}
+
+          @elseif ($layout['layout'] == 'portrait')
+
+            <div class="two-column__portrait">
+              <div class="col">
+                <img src="{{ $layout['portrait']['url'] }}" alt="{{ $layout['portrait']['title'] }}">
+
+                @if($layout['portrait']['caption'])
+                  <span class="caption">{!! $layout['portrait']['caption'] !!}</span>
+                @endif
+              </div>
+              <div class="col">
+                <img src="{{ $layout['portrait_right']['url'] }}" alt="{{ $layout['portrait_right']['title'] }}">
+
+                @if($layout['portrait_right']['caption'])
+                  <span class="caption">{!! $layout['portrait_right']['caption'] !!}</span>
+                @endif
+              </div>
+            </div>
+
+          @endif
+
+        @endforeach
+
       @endif
 
     </div>
 
     <div class="two-column__col">
-
-      @if($c['image_right']['url'])
-        <img class="two-column__top-image" src="{{ $c['image_right']['url'] }}" alt="{{ $c['image_right']['title'] }}">
-      @endif
-
       @if($c['textarea_right'])
       <div class="two-column__textarea {!! $c['image_position_right'] !!}">
         {!! $c['textarea_right'] !!}
       </div>
       @endif
-
-      @if($c['bottom_image_right']['url'])
-      <div class="two-column__bottom-container {!! $c['image_position_left'] !!}">
-        <img src="{{ $c['bottom_image_right']['url'] }}" alt="{{ $c['bottom_image_right']['title'] }}">
-      </div>
-      @endif
-
     </div>
 
   </div>
-
 </section>

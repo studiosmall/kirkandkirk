@@ -56,6 +56,12 @@ export default {
       $('.filter__container, .filter__title').removeClass('active');
     });
 
+    $('.off-canvas ul li.menu-item-has-children > a').click(function(e) {
+      e.preventDefault();
+      $(this).parent().toggleClass('active');
+      $(this).next().slideToggle();
+    });
+
     $('#search-btn').on('click', function(e){
       e.preventDefault();
 
@@ -202,9 +208,10 @@ export default {
     }
 
     if($('.wc360').length) {
+      console.log('yes');
       setTimeout(
         function() {
-          $('.product-images__360').fadeIn();
+          $('.product-images__360').css('display', 'flex');
         }, 1000);
     }
 

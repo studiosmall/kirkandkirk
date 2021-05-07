@@ -249,7 +249,6 @@ if ( post_password_required() ) {
 
 							$textarea  = $fields['textarea'];
 							$colour    = $fields['product_colour'];
-
 						?>
 
 						<a class="link" href="<?php echo $link; ?>"></a>

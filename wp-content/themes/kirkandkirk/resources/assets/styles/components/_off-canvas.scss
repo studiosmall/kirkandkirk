@@ -47,11 +47,11 @@
 		display: flex;
     justify-content: start;
 		flex-wrap: wrap;
-		padding: 180px 20px 10px 20px;
+		padding: 180px 20px 20px 20px;
 		transition: $transition;
 
 		@include breakpoint(medium) {
-			padding: 170px 46px 10px 46px;
+			padding: 170px 50px 60px 50px;
 			flex-wrap: nowrap;
 		}
 	}
@@ -65,7 +65,7 @@
 		width: 100%;
 
 		@include breakpoint(medium) {
-			margin: 0 5% 0 0;
+			margin: 0 10% 0 0;
 			width: initial;
 		}
 	}
@@ -96,24 +96,43 @@
 				}
 			}
 
+			&.menu-item-has-children {
+				position: relative;
+
+				&::after {
+					content: ' \002B';
+					position: absolute;
+					right: 0;
+					top: 4px;
+					font-size: 17px;
+				}
+
+				&.active {
+					&::after {
+						content: ' \2212';
+					}
+				}
+			}
+
 			a {
 				@include hoverline($brand--primary);
 
 				font-family: $font--heading;
 				font-weight: 500;
-				font-size: 18px;
+				font-size: 16px;
 				text-decoration: none;
+				text-transform: uppercase;
 				color: $brand--primary;
-				letter-spacing: 0.75px;
+				letter-spacing: 1px;
 				text-align: left;
 				transition: $transition;
+				width: 100%;
 
 				@include breakpoint(medium) {
-					font-size: 14px;
+					font-size: 16px;
 				}
 
 				&:hover,
-				&:focus,
 				&:active {
 					color: $brand--white;
 				}
@@ -128,7 +147,9 @@
 			}
 
 			ul.sub-menu {
+				display: none;
 				padding: 0;
+				margin: 17px 0 0 0;
 
 				li {
 					margin: 0 0 1px 0;
@@ -150,6 +171,8 @@
 					a {
 						@include hoverline($brand--primary);
 						font-weight: 100;
+						text-transform: capitalize;
+						letter-spacing: 0.6px;
 
 						&:hover {
 							color: $brand--white;
