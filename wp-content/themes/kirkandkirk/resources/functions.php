@@ -501,3 +501,17 @@ add_role(
 // }
 // add_action( 'init', 'wps_remove_role' );
 
+
+// add_action( 'widgets_init', 'override_woocommerce_widgets', 15 );
+// function override_woocommerce_widgets() {
+//   // Ensure our parent class exists to avoid fatal error (thanks Wilgert!)
+
+//   if ( class_exists( 'WC_Widget_Layered_Nav' ) ) {
+//     unregister_widget( 'WC_Widget_Layered_Nav' );
+
+//     include_once( 'widget/class-wc-widget-layered-nav.php' );
+
+//     register_widget( 'WC_Widget_Layered_Nav' );
+//   }
+
+// }

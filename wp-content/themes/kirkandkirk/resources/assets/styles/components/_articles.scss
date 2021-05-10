@@ -70,14 +70,14 @@
 		padding: 0 0 60px 0;
 
 		@include breakpoint(medium) {
-			padding: 600px 0 350px 0;
+			padding: 600px 0 150px 0;
 		}
 
 		&:nth-child(odd) {
 			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
-				padding: 350px 0 350px 0;
+				padding: 150px 0 150px 0;
 			}
 		}
 
@@ -85,7 +85,7 @@
 			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
-				padding: 0 0 350px 0;
+				padding: 0 0 150px 0;
 			}
 		}
 
@@ -93,7 +93,7 @@
 			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
-				padding: 600px 0 350px 0;
+				padding: 600px 0 150px 0;
 			}
 		}
 
@@ -101,7 +101,7 @@
 			padding: 0 0 60px 0;
 
 			@include breakpoint(medium) {
-				padding: 600px 0 250px 0;
+				padding: 125px 0 250px 0;
 			}
 		}
 

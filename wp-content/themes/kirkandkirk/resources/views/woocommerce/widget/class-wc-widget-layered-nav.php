@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Widget layered nav class.
  */
-class WC_Widget_Layered_Nav extends WC_Widget {
+class Custom_WC_Widget_Layered_Nav extends WC_Widget {
 
 	/**
 	 * Constructor.
@@ -20,7 +20,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 		$this->widget_cssclass    = 'woocommerce widget_layered_nav woocommerce-widget-layered-nav';
 		$this->widget_description = __( 'Display a list of attributes to filter products in your store.', 'woocommerce' );
 		$this->widget_id          = 'woocommerce_layered_nav';
-		$this->widget_name        = __( 'Filter Products by Attribute', 'woocommerce' );
+		$this->widget_name        = __( 'Filter Productssssss by Attribute', 'woocommerce' );
 		parent::__construct();
 	}
 
@@ -471,8 +471,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 			if ( 0 < $count ) {
 				$found = true;
 			} elseif ( 0 === $count && ! $option_is_set ) {
-				$found = true;  // StudioSmall updated
-				//continue;
+				continue;
 			}
 
 			$filter_name = 'filter_' . wc_attribute_taxonomy_slug( $taxonomy );
@@ -514,9 +513,8 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 				$link      = apply_filters( 'woocommerce_layered_nav_link', $link, $term, $taxonomy );
 				$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a>';
 			} else {
-				//$link      = false;  // StudioSmall updated
-				$link      = apply_filters( 'woocommerce_layered_nav_link', $link, $term, $taxonomy ); // StudioSmall updated
-				$term_html = '<span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
+				$link      = false;
+				$term_html = '<span>' . esc_html( $term->name ) . '</span>';
 			}
 
 			$term_html .= ' ' . apply_filters( 'woocommerce_layered_nav_count', '<span class="count">(' . absint( $count ) . ')</span>', $count, $term );

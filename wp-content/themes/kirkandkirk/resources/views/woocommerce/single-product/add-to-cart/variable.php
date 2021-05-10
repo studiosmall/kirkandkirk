@@ -25,10 +25,7 @@ $variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_j
 
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
-
-
 <?php
-
 	$featured_posts = get_field('product_variations');
 	$current        = get_the_ID();
 	$current_colour = get_field('product_colour', $current);
@@ -52,10 +49,6 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 			</li>
 	<?php endforeach; ?>
 </ul>
-
-	<div class="share">
-		<a href="#">Share</a>
-	</div>
 
 
 <form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">

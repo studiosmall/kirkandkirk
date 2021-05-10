@@ -64,6 +64,10 @@ klarna-placement {
 					height: 20px;
 					display: inline-block;
 					top: -20px;
+
+					@include breakpoint(medium) {
+						top: -70px;
+					}
 				}
 			}
 		}
@@ -139,20 +143,21 @@ klarna-placement {
 			@include hoverline($brand--primary);
 
 			margin: 0 0 30px 0;
-			border-bottom: 1px solid $brand--primary;
+			border-bottom: 1px solid transparent;
 			font-size: 14px;
+			letter-spacing: 0.5px;
 			transition: $transition;
 
-			&::after {
-				transform: scaleX(1);
-				transform-origin: bottom;
-			}
+			// &::after {
+			// 	transform: scaleX(1);
+			// 	transform-origin: bottom;
+			// }
 
-			&:hover::after {
-				@include breakpoint(medium) {
-					transform: scaleX(0);
-				}
-			}
+			// &:hover::after {
+			// 	@include breakpoint(medium) {
+			// 		transform: scaleX(0);
+			// 	}
+			// }
 
 			&:hover {
 				border-bottom: 1px solid transparent;
@@ -215,12 +220,15 @@ klarna-placement {
 
 					li {
 						margin: 3px 0;
+						letter-spacing: 0.5px;
 					}
 				}
 			}
 
 			a {
 				@include hoverline($brand--primary);
+
+				letter-spacing: 0.5px;
 			}
 		}
 
@@ -399,6 +407,8 @@ klarna-placement {
 	}
 
 	#wl-wrapper {
+		letter-spacing: 0.5px;
+
 		&.wl-button-already-in {
 			font-size: 0;
 
@@ -414,6 +424,7 @@ klarna-placement {
 				li {
 					a {
 						@include hoverline($brand--primary);
+						letter-spacing: 0.5px;
 
 						@include breakpoint(medium) {
 							font-size: 14px;
@@ -439,9 +450,11 @@ klarna-placement {
 	.eye-size {
 		padding: 40px 0 2px 0;
 		font-size: 14px;
+		letter-spacing: 0.5px;
 
 		span {
 			font-weight: 500;
+			letter-spacing: 0.5px;
 		}
 	}
 
@@ -482,12 +495,15 @@ klarna-placement {
 	margin: 0;
 
 	span {
+		letter-spacing: 0.5px;
+
 		input {
 			width: auto;
 			margin: 0 5px 0 0;
 		}
 
 		label {
+			letter-spacing: 0.5px;
 			font-size: 14px;
 			text-transform: initial;
 		}

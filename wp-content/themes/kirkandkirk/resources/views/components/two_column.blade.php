@@ -17,12 +17,6 @@
               @endif
             </div>
 
-            {{-- @php
-              print_r('<pre>');
-                print_r($layout['landscape']);
-              print_r('</pre>');
-            @endphp --}}
-
           @elseif ($layout['layout'] == 'portrait')
 
             <div class="two-column__portrait">
