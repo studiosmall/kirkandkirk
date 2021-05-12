@@ -11,11 +11,30 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "#EA23BC"
+        },
+        {
+            "key": "field_6099e353ace4c",
+            "label": "Product Colour Name",
+            "name": "product_colour_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_6076641ec4875",
@@ -301,5 +320,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620274452
+    "modified": 1620706798
 }

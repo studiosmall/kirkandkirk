@@ -11,7 +11,7 @@
               <a href="{{ $download['file'] }}" download>
                 <img src="{{ $download['thumbnail_image']['url'] }}">
               </a>
-              
+
               <a href="{{ $download['file'] }}" download>
                 <h3>
                   {!! $download['title'] !!}

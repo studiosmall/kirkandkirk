@@ -512,16 +512,44 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 
 			if ( $count > 0 || $option_is_set ) {
 				$link      = apply_filters( 'woocommerce_layered_nav_link', $link, $term, $taxonomy );
-				$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a>';
+
+				// print_r('<pre>');
+				// 	print_r($term);
+				// print_r('</pre>');
+
+				$type = $term->taxonomy;
+				$name = $term->slug;
+				//$name = str_replace(' ', '-', strtolower($term->name));
+
+						if($type == 'pa_shape') {
+							$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '"><span class="shape-graphic '. $name .' "></span>' . esc_html( $term->name ) . '</a>';
+						} elseif($type == 'pa_colour') {
+							$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '"><span class="colour-graphic '. $name .' "></span>' . esc_html( $term->name ) . '</a>';
+						} else {
+							$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a>';
+						}
+
 			} else {
-				//$link      = false;  // StudioSmall updated
-				$link      = apply_filters( 'woocommerce_layered_nav_link', $link, $term, $taxonomy ); // StudioSmall updated
-				$term_html = '<span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
+						//$link      = false;  // StudioSmall updated
+						$link      = apply_filters( 'woocommerce_layered_nav_link', $link, $term, $taxonomy ); // StudioSmall updated
+						//$term_html = '<span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
+
+						$type = $term->taxonomy;
+						$name = $term->slug;
+						//$name = str_replace(' ', '-', strtolower($term->name));
+
+						if($type == 'pa_shape') {
+							$term_html = '<span class="none shape-graphic '. $name .' "></span><span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
+						} elseif($type == 'pa_colour') {
+							$term_html = '<span class="none colour-graphic '. $name .' "></span><span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
+						} else {
+							$term_html = '<span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
+						}
 			}
 
 			$term_html .= ' ' . apply_filters( 'woocommerce_layered_nav_count', '<span class="count">(' . absint( $count ) . ')</span>', $count, $term );
 
-			echo '<li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term ' . ( $option_is_set ? 'woocommerce-widget-layered-nav-list__item--chosen chosen' : '' ) . '">';
+			echo '<li class="woocommerce-widget-layered-nav-list__item wc-layered-nav-term '. $name .' ' . ( $option_is_set ? 'woocommerce-widget-layered-nav-list__item--chosen chosen' : '' ) . '">';
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo apply_filters( 'woocommerce_layered_nav_term_html', $term_html, $term, $link, $count );
 			echo '</li>';
