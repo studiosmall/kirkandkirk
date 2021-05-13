@@ -22,6 +22,8 @@
         </section>
       @endif
 
+    @elseif($type['page_type'] == 'normal')
+
       @include('partials.page-header')
       {{-- @include('partials.filter') --}}
       @include('partials.content-page')
