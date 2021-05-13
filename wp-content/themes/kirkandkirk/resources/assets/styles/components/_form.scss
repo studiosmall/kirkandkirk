@@ -17,6 +17,7 @@ input[type="submit"] {
 
     &__container {
         margin: 0 auto;
+        width: 100%;
     }
 
     &__message {
@@ -72,6 +73,53 @@ input[type="submit"] {
 
     .gform_body {
         text-align: center;
+
+        // point-of-sale-order-form
+        #gform_fields_3 {
+            li {
+                &.gfmc-column {
+                    background-color: #e1e1e1;
+                    margin: 0 0 37px 0;
+
+                    label {
+                        margin: 0 0 20px 0;
+                    }
+
+                    ul {
+                        padding: 30px;
+
+                        li:first-of-type {
+                            margin-right: 30px;
+                            padding-bottom: 5px;
+                        }
+                    }
+                }
+
+                &:nth-child(1),
+                &:nth-child(3) {
+                    width: 200px;
+                    float: left;
+                    clear: inherit;
+                    // margin: 0 30px 0 0;
+                }
+
+                &:nth-child(2) {
+                    width: calc(100% - 230px);
+                    //margin-bottom: 70px !important;
+                    // margin-top: 70px !important;
+                    float: left;
+                    clear: inherit;
+                    text-align: left;
+
+                    input {
+                        border-bottom: 1px solid #979797 !important;
+                        padding-left: 0 !important;
+                        width: 88%;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
 
         ul {
             list-style: none;
@@ -193,4 +241,3 @@ input[type="submit"] {
         }
     }
 }
-

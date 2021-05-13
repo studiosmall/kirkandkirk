@@ -1,3 +1,10 @@
+
+@php
+	// print_r('<pre>');
+	// 	print_r($type);
+	// print_r('</pre>');
+@endphp
+
 <section class="form section" data-aos="fade-up">
 
 	<div class="form__inner">

@@ -232,6 +232,23 @@ klarna-placement {
 			}
 		}
 
+		.nosepads-container {
+			margin: 30px 0 0 0;
+
+			a {
+				@include hoverline($brand--primary);
+
+				font-size: 14px;
+				letter-spacing: 0.5px;
+				border-bottom: 1px solid $brand--primary;
+				transition: $transition;
+
+				&:hover {
+					border-bottom: 1px solid transparent;
+				}
+			}
+		}
+
 		.sku_wrapper {
 			display: none;
 		}

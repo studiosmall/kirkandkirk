@@ -5380,6 +5380,23 @@ img {
   }
 }
 
+/* line 136, resources/assets/styles/common/_global.scss */
+
+.message__inner {
+  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 300px;
+}
+
+@media (min-width: 900px) {
+  /* line 136, resources/assets/styles/common/_global.scss */
+
+  .message__inner {
+    padding: 0 50px;
+  }
+}
+
 /**
  * Button
  */
@@ -8338,26 +8355,57 @@ klarna-placement .container {
 
 /* line 235, resources/assets/styles/components/_single-product.scss */
 
+.single-product .product .nosepads-container,
+.single-data .product .nosepads-container {
+  margin: 30px 0 0 0;
+}
+
+/* line 238, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .nosepads-container a,
+.single-data .product .nosepads-container a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #000;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 246, resources/assets/styles/components/_single-product.scss */
+
+.single-product .product .nosepads-container a:hover,
+.single-data .product .nosepads-container a:hover {
+  border-bottom: 1px solid transparent;
+}
+
+/* line 252, resources/assets/styles/components/_single-product.scss */
+
 .single-product .product .sku_wrapper,
 .single-data .product .sku_wrapper {
   display: none;
 }
 
-/* line 239, resources/assets/styles/components/_single-product.scss */
+/* line 256, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product a.reset_variations,
 .single-data .product a.reset_variations {
   display: none !important;
 }
 
-/* line 243, resources/assets/styles/components/_single-product.scss */
+/* line 260, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .quantity,
 .single-data .product .quantity {
   display: none !important;
 }
 
-/* line 247, resources/assets/styles/components/_single-product.scss */
+/* line 264, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .threesixty,
 .single-data .product .threesixty {
@@ -8373,7 +8421,7 @@ klarna-placement .container {
   min-height: 500px;
 }
 
-/* line 254, resources/assets/styles/components/_single-product.scss */
+/* line 271, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container,
 .single-data .product #container.wc360-container {
@@ -8385,7 +8433,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 254, resources/assets/styles/components/_single-product.scss */
+  /* line 271, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container,
   .single-data .product #container.wc360-container {
@@ -8393,7 +8441,7 @@ klarna-placement .container {
   }
 }
 
-/* line 264, resources/assets/styles/components/_single-product.scss */
+/* line 281, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container .spinner,
 .single-data .product #container.wc360-container .spinner {
@@ -8401,7 +8449,7 @@ klarna-placement .container {
   background-color: transparent;
 }
 
-/* line 269, resources/assets/styles/components/_single-product.scss */
+/* line 286, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container .spinner span,
 .single-data .product #container.wc360-container .spinner span {
@@ -8416,7 +8464,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 269, resources/assets/styles/components/_single-product.scss */
+  /* line 286, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container .spinner span,
   .single-data .product #container.wc360-container .spinner span {
@@ -8424,7 +8472,7 @@ klarna-placement .container {
   }
 }
 
-/* line 276, resources/assets/styles/components/_single-product.scss */
+/* line 293, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary,
 .single-data .product .summary {
@@ -8437,7 +8485,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 276, resources/assets/styles/components/_single-product.scss */
+  /* line 293, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary,
   .single-data .product .summary {
@@ -8445,7 +8493,7 @@ klarna-placement .container {
   }
 }
 
-/* line 290, resources/assets/styles/components/_single-product.scss */
+/* line 307, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .posted_in a,
 .single-data .product .summary .posted_in a {
@@ -8465,7 +8513,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 290, resources/assets/styles/components/_single-product.scss */
+  /* line 307, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .posted_in a,
   .single-data .product .summary .posted_in a {
@@ -8473,7 +8521,7 @@ klarna-placement .container {
   }
 }
 
-/* line 298, resources/assets/styles/components/_single-product.scss */
+/* line 315, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary h1.product_title,
 .single-data .product .summary h1.product_title {
@@ -8487,7 +8535,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 298, resources/assets/styles/components/_single-product.scss */
+  /* line 315, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title,
   .single-data .product .summary h1.product_title {
@@ -8496,7 +8544,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 298, resources/assets/styles/components/_single-product.scss */
+  /* line 315, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title,
   .single-data .product .summary h1.product_title {
@@ -8504,7 +8552,7 @@ klarna-placement .container {
   }
 }
 
-/* line 306, resources/assets/styles/components/_single-product.scss */
+/* line 323, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .price,
 .single-data .product .summary .price {
@@ -8521,7 +8569,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 306, resources/assets/styles/components/_single-product.scss */
+  /* line 323, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price,
   .single-data .product .summary .price {
@@ -8530,7 +8578,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 306, resources/assets/styles/components/_single-product.scss */
+  /* line 323, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price,
   .single-data .product .summary .price {
@@ -8538,35 +8586,35 @@ klarna-placement .container {
   }
 }
 
-/* line 318, resources/assets/styles/components/_single-product.scss */
+/* line 335, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .variations_form,
 .single-data .product .summary .variations_form {
   padding: 10px 0 0 0;
 }
 
-/* line 322, resources/assets/styles/components/_single-product.scss */
+/* line 339, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability,
 .single-data .product .summary .woocommerce-variation-availability {
   margin: 10px 0 0 0;
 }
 
-/* line 326, resources/assets/styles/components/_single-product.scss */
+/* line 343, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.in-stock,
 .single-data .product .summary .woocommerce-variation-availability .stock.in-stock {
   color: #1bae27;
 }
 
-/* line 329, resources/assets/styles/components/_single-product.scss */
+/* line 346, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock,
 .single-data .product .summary .woocommerce-variation-availability .stock.out-of-stock {
   color: #b92828;
 }
 
-/* line 335, resources/assets/styles/components/_single-product.scss */
+/* line 352, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .button,
 .single-data .product .summary .button {
@@ -8606,21 +8654,21 @@ klarna-placement .container {
   background: transparent;
 }
 
-/* line 346, resources/assets/styles/components/_single-product.scss */
+/* line 363, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .cart .quantity,
 .single-data .product .summary .cart .quantity {
   display: none;
 }
 
-/* line 353, resources/assets/styles/components/_single-product.scss */
+/* line 370, resources/assets/styles/components/_single-product.scss */
 
 .single-product .single-product #wl-wrapper.wl-button-wrap,
 .single-data .single-product #wl-wrapper.wl-button-wrap {
   margin: 0 0 5px 0;
 }
 
-/* line 357, resources/assets/styles/components/_single-product.scss */
+/* line 374, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to,
 .single-data .wl-add-to {
@@ -8631,7 +8679,7 @@ klarna-placement .container {
   text-decoration: none;
 }
 
-/* line 360, resources/assets/styles/components/_single-product.scss */
+/* line 377, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to::before,
 .single-data .wl-add-to::before {
@@ -8646,7 +8694,7 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 373, resources/assets/styles/components/_single-product.scss */
+/* line 390, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single,
 .single-data .wl-add-to-single {
@@ -8659,7 +8707,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 383, resources/assets/styles/components/_single-product.scss */
+  /* line 400, resources/assets/styles/components/_single-product.scss */
 
   .single-product .wl-add-to-single:hover::after,
   .single-data .wl-add-to-single:hover::after {
@@ -8669,7 +8717,7 @@ klarna-placement .container {
   }
 }
 
-/* line 389, resources/assets/styles/components/_single-product.scss */
+/* line 406, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single::before,
 .single-data .wl-add-to-single::before {
@@ -8684,7 +8732,7 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 402, resources/assets/styles/components/_single-product.scss */
+/* line 419, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-wrap,
 .single-data #wl-wrapper.wl-button-wrap {
@@ -8694,28 +8742,28 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 409, resources/assets/styles/components/_single-product.scss */
+/* line 426, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper,
 .single-data #wl-wrapper {
   letter-spacing: 0.5px;
 }
 
-/* line 412, resources/assets/styles/components/_single-product.scss */
+/* line 429, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in,
 .single-data #wl-wrapper.wl-button-already-in {
   font-size: 0;
 }
 
-/* line 415, resources/assets/styles/components/_single-product.scss */
+/* line 432, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in .wl-add-link,
 .single-data #wl-wrapper.wl-button-already-in .wl-add-link {
   display: none;
 }
 
-/* line 419, resources/assets/styles/components/_single-product.scss */
+/* line 436, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul,
 .single-data #wl-wrapper.wl-button-already-in ul {
@@ -8724,7 +8772,7 @@ klarna-placement .container {
   padding: 10px 0 0 0;
 }
 
-/* line 425, resources/assets/styles/components/_single-product.scss */
+/* line 442, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a,
 .single-data #wl-wrapper.wl-button-already-in ul li a {
@@ -8737,7 +8785,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 425, resources/assets/styles/components/_single-product.scss */
+  /* line 442, resources/assets/styles/components/_single-product.scss */
 
   .single-product #wl-wrapper.wl-button-already-in ul li a,
   .single-data #wl-wrapper.wl-button-already-in ul li a {
@@ -8745,7 +8793,7 @@ klarna-placement .container {
   }
 }
 
-/* line 433, resources/assets/styles/components/_single-product.scss */
+/* line 450, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a::before,
 .single-data #wl-wrapper.wl-button-already-in ul li a::before {
@@ -8760,7 +8808,7 @@ klarna-placement .container {
   top: -1px;
 }
 
-/* line 450, resources/assets/styles/components/_single-product.scss */
+/* line 467, resources/assets/styles/components/_single-product.scss */
 
 .single-product .eye-size,
 .single-data .eye-size {
@@ -8769,7 +8817,7 @@ klarna-placement .container {
   letter-spacing: 0.5px;
 }
 
-/* line 455, resources/assets/styles/components/_single-product.scss */
+/* line 472, resources/assets/styles/components/_single-product.scss */
 
 .single-product .eye-size span,
 .single-data .eye-size span {
@@ -8777,14 +8825,14 @@ klarna-placement .container {
   letter-spacing: 0.5px;
 }
 
-/* line 461, resources/assets/styles/components/_single-product.scss */
+/* line 478, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes,
 .single-data .woocommerce-product-attributes {
   padding: 0 0 20px 0;
 }
 
-/* line 463, resources/assets/styles/components/_single-product.scss */
+/* line 480, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr,
 .single-data .woocommerce-product-attributes tr {
@@ -8793,7 +8841,7 @@ klarna-placement .container {
   padding: 2px 0;
 }
 
-/* line 468, resources/assets/styles/components/_single-product.scss */
+/* line 485, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
 .single-product .woocommerce-product-attributes tr p,
@@ -8811,7 +8859,7 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 485, resources/assets/styles/components/_single-product.scss */
+/* line 502, resources/assets/styles/components/_single-product.scss */
 
 .single-product .related .products,
 .single-data .related .products {
@@ -8822,27 +8870,27 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 493, resources/assets/styles/components/_single-product.scss */
+/* line 510, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field {
   padding: 30px 0 0 0;
   margin: 0;
 }
 
-/* line 497, resources/assets/styles/components/_single-product.scss */
+/* line 514, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span {
   letter-spacing: 0.5px;
 }
 
-/* line 500, resources/assets/styles/components/_single-product.scss */
+/* line 517, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span input {
   width: auto;
   margin: 0 5px 0 0;
 }
 
-/* line 505, resources/assets/styles/components/_single-product.scss */
+/* line 522, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span label {
   letter-spacing: 0.5px;
@@ -8850,7 +8898,7 @@ klarna-placement .container {
   text-transform: initial;
 }
 
-/* line 514, resources/assets/styles/components/_single-product.scss */
+/* line 531, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8859,7 +8907,7 @@ klarna-placement .container {
   text-align: center;
 }
 
-/* line 520, resources/assets/styles/components/_single-product.scss */
+/* line 537, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;
@@ -9096,9 +9144,10 @@ input[type="submit"] {
 
 .form__container {
   margin: 0 auto;
+  width: 100%;
 }
 
-/* line 22, resources/assets/styles/components/_form.scss */
+/* line 23, resources/assets/styles/components/_form.scss */
 
 .form__message {
   width: 90%;
@@ -9108,20 +9157,20 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 22, resources/assets/styles/components/_form.scss */
+  /* line 23, resources/assets/styles/components/_form.scss */
 
   .form__message {
     width: 50%;
   }
 }
 
-/* line 32, resources/assets/styles/components/_form.scss */
+/* line 33, resources/assets/styles/components/_form.scss */
 
 .form__message p {
   text-align: center;
 }
 
-/* line 38, resources/assets/styles/components/_form.scss */
+/* line 39, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper {
   text-align: center;
@@ -9130,28 +9179,28 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 38, resources/assets/styles/components/_form.scss */
+  /* line 39, resources/assets/styles/components/_form.scss */
 
   .gform_wrapper {
     width: 50%;
   }
 }
 
-/* line 47, resources/assets/styles/components/_form.scss */
+/* line 48, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .validation_message {
   padding: 15px 0 0 0;
   font-style: italic;
 }
 
-/* line 52, resources/assets/styles/components/_form.scss */
+/* line 53, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .validation_error {
   padding: 15px 0;
   font-style: italic;
 }
 
-/* line 57, resources/assets/styles/components/_form.scss */
+/* line 58, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_heading {
   width: 80%;
@@ -9159,7 +9208,7 @@ input[type="submit"] {
   padding: 0 0 40px 0;
 }
 
-/* line 62, resources/assets/styles/components/_form.scss */
+/* line 63, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_heading span {
   font-family: "reader", arial, sans-serif;
@@ -9171,13 +9220,66 @@ input[type="submit"] {
   line-height: 22px;
 }
 
-/* line 73, resources/assets/styles/components/_form.scss */
+/* line 74, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body {
   text-align: center;
 }
 
-/* line 76, resources/assets/styles/components/_form.scss */
+/* line 80, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li.gfmc-column {
+  background-color: #e1e1e1;
+  margin: 0 0 37px 0;
+}
+
+/* line 84, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li.gfmc-column label {
+  margin: 0 0 20px 0;
+}
+
+/* line 88, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li.gfmc-column ul {
+  padding: 30px;
+}
+
+/* line 91, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li.gfmc-column ul li:first-of-type {
+  margin-right: 30px;
+  padding-bottom: 5px;
+}
+
+/* line 98, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li:nth-child(1),
+.gform_wrapper .gform_body #gform_fields_3 li:nth-child(3) {
+  width: 200px;
+  float: left;
+  clear: inherit;
+}
+
+/* line 106, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li:nth-child(2) {
+  width: calc(100% - 230px);
+  float: left;
+  clear: inherit;
+  text-align: left;
+}
+
+/* line 114, resources/assets/styles/components/_form.scss */
+
+.gform_wrapper .gform_body #gform_fields_3 li:nth-child(2) input {
+  border-bottom: 1px solid #979797 !important;
+  padding-left: 0 !important;
+  width: 88%;
+  font-size: 16px;
+}
+
+/* line 124, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body ul {
   list-style: none;
@@ -9185,13 +9287,13 @@ input[type="submit"] {
   padding: 0;
 }
 
-/* line 81, resources/assets/styles/components/_form.scss */
+/* line 129, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body ul li {
   padding: 0 0 20px 0;
 }
 
-/* line 86, resources/assets/styles/components/_form.scss */
+/* line 134, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body label {
   font-family: "reader", arial, sans-serif;
@@ -9207,20 +9309,20 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 86, resources/assets/styles/components/_form.scss */
+  /* line 134, resources/assets/styles/components/_form.scss */
 
   .gform_wrapper .gform_body label {
     font-size: 16px;
   }
 }
 
-/* line 93, resources/assets/styles/components/_form.scss */
+/* line 141, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body label .gfield_required {
   color: #000;
 }
 
-/* line 98, resources/assets/styles/components/_form.scss */
+/* line 146, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body input {
   border-radius: 0;
@@ -9236,7 +9338,7 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 98, resources/assets/styles/components/_form.scss */
+  /* line 146, resources/assets/styles/components/_form.scss */
 
   .gform_wrapper .gform_body input {
     width: 100%;
@@ -9251,13 +9353,13 @@ input[type="submit"] {
   background-color: #e1e1e1;
 }
 
-/* line 106, resources/assets/styles/components/_form.scss */
+/* line 154, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body input:focus {
   outline: 0;
 }
 
-/* line 111, resources/assets/styles/components/_form.scss */
+/* line 159, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body textarea {
   border-radius: 0;
@@ -9274,7 +9376,7 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 111, resources/assets/styles/components/_form.scss */
+  /* line 159, resources/assets/styles/components/_form.scss */
 
   .gform_wrapper .gform_body textarea {
     width: 100%;
@@ -9289,21 +9391,21 @@ input[type="submit"] {
   background-color: #e1e1e1;
 }
 
-/* line 120, resources/assets/styles/components/_form.scss */
+/* line 168, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   /* Edge */
   color: #000;
 }
 
-/* line 124, resources/assets/styles/components/_form.scss */
+/* line 172, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body textarea::-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: #000;
 }
 
-/* line 128, resources/assets/styles/components/_form.scss */
+/* line 176, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body textarea::-webkit-input-placeholder {
   color: #000;
@@ -9317,13 +9419,13 @@ input[type="submit"] {
   color: #000;
 }
 
-/* line 132, resources/assets/styles/components/_form.scss */
+/* line 180, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body textarea:focus {
   outline: 0;
 }
 
-/* line 137, resources/assets/styles/components/_form.scss */
+/* line 185, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .ginput_container_fileupload {
   width: 300px;
@@ -9332,14 +9434,14 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 137, resources/assets/styles/components/_form.scss */
+  /* line 185, resources/assets/styles/components/_form.scss */
 
   .gform_wrapper .gform_body .ginput_container_fileupload {
     width: 253px;
   }
 }
 
-/* line 146, resources/assets/styles/components/_form.scss */
+/* line 194, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .ginput_container_fileupload input[type="file"] {
   text-transform: uppercase;
@@ -9348,7 +9450,7 @@ input[type="submit"] {
   font-weight: 100;
 }
 
-/* line 154, resources/assets/styles/components/_form.scss */
+/* line 202, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .ginput_container_fileupload input::-webkit-file-upload-button {
   background: transparent;
@@ -9360,7 +9462,7 @@ input[type="submit"] {
   font-weight: 500;
 }
 
-/* line 167, resources/assets/styles/components/_form.scss */
+/* line 215, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .gfield_checkbox {
   display: -webkit-box;
@@ -9375,20 +9477,20 @@ input[type="submit"] {
   margin: 15px 0 0 0;
 }
 
-/* line 173, resources/assets/styles/components/_form.scss */
+/* line 221, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .gfield_checkbox li {
   margin: 0 20px;
 }
 
-/* line 176, resources/assets/styles/components/_form.scss */
+/* line 224, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .gfield_checkbox li label {
   display: inline-block;
   margin: 0 0 0 5px;
 }
 
-/* line 181, resources/assets/styles/components/_form.scss */
+/* line 229, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_body .gfield_checkbox li input {
   margin: 0 !important;
@@ -9396,7 +9498,7 @@ input[type="submit"] {
   width: auto;
 }
 
-/* line 191, resources/assets/styles/components/_form.scss */
+/* line 239, resources/assets/styles/components/_form.scss */
 
 .gform_wrapper .gform_footer .gform_button {
   font-family: "reader", arial, sans-serif;
@@ -9421,7 +9523,7 @@ input[type="submit"] {
 }
 
 @media (min-width: 900px) {
-  /* line 191, resources/assets/styles/components/_form.scss */
+  /* line 239, resources/assets/styles/components/_form.scss */
 
   .gform_wrapper .gform_footer .gform_button {
     font-size: 16px;
@@ -11401,7 +11503,7 @@ input[value="search"] {
 /* line 269, resources/assets/styles/components/_filter.scss */
 
 .filter .widget_layered_nav ul.woocommerce-widget-layered-nav-list li.chosen a {
-  border-bottom: 1px solid #000;
+  font-weight: 500;
 }
 
 /* line 274, resources/assets/styles/components/_filter.scss */

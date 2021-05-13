@@ -232,6 +232,33 @@
             "return_format": "object"
         },
         {
+            "key": "field_609cbf728c7a5",
+            "label": "Nosepad Product Link",
+            "name": "nosepad_product_link",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": 1,
+            "return_format": "object"
+        },
+        {
             "key": "field_60626fcedc1bf",
             "label": "Product Review",
             "name": "product_review",
@@ -320,5 +347,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620706798
+    "modified": 1620885529
 }

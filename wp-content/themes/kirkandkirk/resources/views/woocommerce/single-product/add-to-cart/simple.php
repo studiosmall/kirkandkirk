@@ -120,6 +120,18 @@ if ( $product->is_in_stock() ) : ?>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
+		<?php
+			$nosepads   = get_field('nosepad_product_link');
+			$nosepadsID = $nosepads[0]->ID;
+			$nosepadsLink = get_permalink($nosepadsID);
+		?>
+
+		<?php if($nosepads) { ?>
+			<div class="nosepads-container">
+				<a href="<?php echo $nosepadsLink; ?>">Add Nosepads</a>
+			</div>
+		<?php } ?>
+
 		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 
 	</form>

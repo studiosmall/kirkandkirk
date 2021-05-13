@@ -131,3 +131,11 @@ img {
     @include subtitle($brand--primary);
   }
 }
+
+.message {
+  &__inner {
+    @include inner;
+
+    padding-bottom: 300px;
+  }
+}
