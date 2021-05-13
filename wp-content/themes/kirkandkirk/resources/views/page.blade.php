@@ -14,13 +14,13 @@
         @include('partials.about-content-blocks')
         {{-- @include('partials.content-page') --}}
 
-      @endif
+      @else
         <section class="message">
           <div class="message__inner">
             Please sign in to access the Professional Portal
           </div>
         </section>
-      @else
+      @endif
 
       @include('partials.page-header')
       {{-- @include('partials.filter') --}}
