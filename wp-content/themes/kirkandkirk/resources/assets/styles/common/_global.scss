@@ -59,6 +59,16 @@ p {
   }
 }
 
+.single-data {
+  .wrap {
+    padding: 130px 0 0 0;
+
+    @include breakpoint(medium) {
+      padding: 139px 0 0 0;
+    }
+  }
+}
+
 img {
   width: 100%;
   height: auto;

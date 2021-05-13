@@ -5265,14 +5265,28 @@ p {
   }
 }
 
-/* line 62, resources/assets/styles/common/_global.scss */
+/* line 63, resources/assets/styles/common/_global.scss */
+
+.single-data .wrap {
+  padding: 130px 0 0 0;
+}
+
+@media (min-width: 900px) {
+  /* line 63, resources/assets/styles/common/_global.scss */
+
+  .single-data .wrap {
+    padding: 139px 0 0 0;
+  }
+}
+
+/* line 72, resources/assets/styles/common/_global.scss */
 
 img {
   width: 100%;
   height: auto;
 }
 
-/* line 67, resources/assets/styles/common/_global.scss */
+/* line 77, resources/assets/styles/common/_global.scss */
 
 .ico-search {
   display: block;
@@ -5282,7 +5296,7 @@ img {
   height: 16px;
 }
 
-/* line 75, resources/assets/styles/common/_global.scss */
+/* line 85, resources/assets/styles/common/_global.scss */
 
 .ico-heart {
   display: block;
@@ -5292,7 +5306,7 @@ img {
   height: 22px;
 }
 
-/* line 83, resources/assets/styles/common/_global.scss */
+/* line 93, resources/assets/styles/common/_global.scss */
 
 .ico-account {
   display: block;
@@ -5302,7 +5316,7 @@ img {
   height: 15px;
 }
 
-/* line 91, resources/assets/styles/common/_global.scss */
+/* line 101, resources/assets/styles/common/_global.scss */
 
 .ico-basket {
   display: block;
@@ -5312,25 +5326,25 @@ img {
   height: 15px;
 }
 
-/* line 100, resources/assets/styles/common/_global.scss */
+/* line 110, resources/assets/styles/common/_global.scss */
 
 .bg-color__blue {
   background-color: #bfdbe0;
 }
 
-/* line 105, resources/assets/styles/common/_global.scss */
+/* line 115, resources/assets/styles/common/_global.scss */
 
 .alt {
   background-color: #dde2ea;
 }
 
-/* line 109, resources/assets/styles/common/_global.scss */
+/* line 119, resources/assets/styles/common/_global.scss */
 
 .alert {
   padding: 60px 0;
 }
 
-/* line 112, resources/assets/styles/common/_global.scss */
+/* line 122, resources/assets/styles/common/_global.scss */
 
 .alert__inner {
   padding: 0 20px;
@@ -5339,20 +5353,20 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 112, resources/assets/styles/common/_global.scss */
+  /* line 122, resources/assets/styles/common/_global.scss */
 
   .alert__inner {
     padding: 0 50px;
   }
 }
 
-/* line 119, resources/assets/styles/common/_global.scss */
+/* line 129, resources/assets/styles/common/_global.scss */
 
 .about-page .section:nth-of-type(2n) {
   padding-top: 0;
 }
 
-/* line 125, resources/assets/styles/common/_global.scss */
+/* line 135, resources/assets/styles/common/_global.scss */
 
 .woocommerce-error {
   list-style: none;
@@ -5360,7 +5374,7 @@ img {
   padding: 0 0 20px 0;
 }
 
-/* line 130, resources/assets/styles/common/_global.scss */
+/* line 140, resources/assets/styles/common/_global.scss */
 
 .woocommerce-error a {
   font-family: "reader", arial, sans-serif;
@@ -5373,14 +5387,14 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 130, resources/assets/styles/common/_global.scss */
+  /* line 140, resources/assets/styles/common/_global.scss */
 
   .woocommerce-error a {
     font-size: 16px;
   }
 }
 
-/* line 136, resources/assets/styles/common/_global.scss */
+/* line 146, resources/assets/styles/common/_global.scss */
 
 .message__inner {
   padding: 0 20px;
@@ -5390,7 +5404,7 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 136, resources/assets/styles/common/_global.scss */
+  /* line 146, resources/assets/styles/common/_global.scss */
 
   .message__inner {
     padding: 0 50px;
@@ -8021,7 +8035,23 @@ klarna-placement .container {
   }
 }
 
-/* line 32, resources/assets/styles/components/_single-product.scss */
+/* line 30, resources/assets/styles/components/_single-product.scss */
+
+.single-product .woocommerce-breadcrumb a,
+.single-data .woocommerce-breadcrumb a {
+  line-height: 28px;
+}
+
+@media (min-width: 900px) {
+  /* line 30, resources/assets/styles/components/_single-product.scss */
+
+  .single-product .woocommerce-breadcrumb a,
+  .single-data .woocommerce-breadcrumb a {
+    line-height: 15px;
+  }
+}
+
+/* line 39, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product,
 .single-data .product {
@@ -8036,7 +8066,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 32, resources/assets/styles/components/_single-product.scss */
+  /* line 39, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product,
   .single-data .product {
@@ -8044,7 +8074,7 @@ klarna-placement .container {
   }
 }
 
-/* line 38, resources/assets/styles/components/_single-product.scss */
+/* line 45, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .product-images,
 .single-data .product .product-images {
@@ -8052,7 +8082,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 38, resources/assets/styles/components/_single-product.scss */
+  /* line 45, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .product-images,
   .single-data .product .product-images {
@@ -8060,7 +8090,7 @@ klarna-placement .container {
   }
 }
 
-/* line 45, resources/assets/styles/components/_single-product.scss */
+/* line 52, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .product-images__inner,
 .single-data .product .product-images__inner {
@@ -8068,7 +8098,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 45, resources/assets/styles/components/_single-product.scss */
+  /* line 52, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .product-images__inner,
   .single-data .product .product-images__inner {
@@ -8076,7 +8106,7 @@ klarna-placement .container {
   }
 }
 
-/* line 53, resources/assets/styles/components/_single-product.scss */
+/* line 60, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .product-images__360,
 .single-data .product .product-images__360 {
@@ -8090,7 +8120,7 @@ klarna-placement .container {
   display: none;
 }
 
-/* line 59, resources/assets/styles/components/_single-product.scss */
+/* line 66, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .product-images__360 .ico-360,
 .single-data .product .product-images__360 .ico-360 {
@@ -8104,7 +8134,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 59, resources/assets/styles/components/_single-product.scss */
+  /* line 66, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .product-images__360 .ico-360,
   .single-data .product .product-images__360 .ico-360 {
@@ -8112,14 +8142,14 @@ klarna-placement .container {
   }
 }
 
-/* line 76, resources/assets/styles/components/_single-product.scss */
+/* line 83, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .woocommerce-product-gallery__wrapper,
 .single-data .product .woocommerce-product-gallery__wrapper {
   margin: 0;
 }
 
-/* line 81, resources/assets/styles/components/_single-product.scss */
+/* line 88, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .lifestyle,
 .single-data .product .lifestyle {
@@ -8127,7 +8157,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 81, resources/assets/styles/components/_single-product.scss */
+  /* line 88, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .lifestyle,
   .single-data .product .lifestyle {
@@ -8135,7 +8165,7 @@ klarna-placement .container {
   }
 }
 
-/* line 88, resources/assets/styles/components/_single-product.scss */
+/* line 95, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .lifestyle.portrait,
 .single-data .product .lifestyle.portrait {
@@ -8144,7 +8174,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 88, resources/assets/styles/components/_single-product.scss */
+  /* line 95, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .lifestyle.portrait,
   .single-data .product .lifestyle.portrait {
@@ -8152,7 +8182,7 @@ klarna-placement .container {
   }
 }
 
-/* line 98, resources/assets/styles/components/_single-product.scss */
+/* line 105, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .double-image,
 .single-data .product .double-image {
@@ -8168,7 +8198,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 98, resources/assets/styles/components/_single-product.scss */
+  /* line 105, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .double-image,
   .single-data .product .double-image {
@@ -8178,7 +8208,7 @@ klarna-placement .container {
   }
 }
 
-/* line 109, resources/assets/styles/components/_single-product.scss */
+/* line 116, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .double-image .portrait-img,
 .single-data .product .double-image .portrait-img {
@@ -8186,7 +8216,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 109, resources/assets/styles/components/_single-product.scss */
+  /* line 116, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .double-image .portrait-img,
   .single-data .product .double-image .portrait-img {
@@ -8194,14 +8224,14 @@ klarna-placement .container {
   }
 }
 
-/* line 120, resources/assets/styles/components/_single-product.scss */
+/* line 127, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .label,
 .single-data .product .variations_form .variations .label {
   display: none;
 }
 
-/* line 124, resources/assets/styles/components/_single-product.scss */
+/* line 131, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper,
 .single-data .product .variations_form .variations .swatch-wrapper {
@@ -8209,7 +8239,7 @@ klarna-placement .container {
   margin: 0 8px 5px 0;
 }
 
-/* line 128, resources/assets/styles/components/_single-product.scss */
+/* line 135, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper.selected,
 .single-data .product .variations_form .variations .swatch-wrapper.selected {
@@ -8217,7 +8247,7 @@ klarna-placement .container {
   border-radius: 30px;
 }
 
-/* line 133, resources/assets/styles/components/_single-product.scss */
+/* line 140, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .variations_form .variations .swatch-wrapper a,
 .single-data .product .variations_form .variations .swatch-wrapper a {
@@ -8226,7 +8256,7 @@ klarna-placement .container {
   height: 30px !important;
 }
 
-/* line 142, resources/assets/styles/components/_single-product.scss */
+/* line 149, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to,
 .single-data .product .how-to {
@@ -8244,14 +8274,14 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 162, resources/assets/styles/components/_single-product.scss */
+/* line 169, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .how-to:hover,
 .single-data .product .how-to:hover {
   border-bottom: 1px solid transparent;
 }
 
-/* line 167, resources/assets/styles/components/_single-product.scss */
+/* line 174, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours,
 .single-data .product ul.colours {
@@ -8263,21 +8293,21 @@ klarna-placement .container {
   display: flex;
 }
 
-/* line 173, resources/assets/styles/components/_single-product.scss */
+/* line 180, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li,
 .single-data .product ul.colours li {
   margin: 0 10px 0 0;
 }
 
-/* line 178, resources/assets/styles/components/_single-product.scss */
+/* line 185, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a:hover .product-col,
 .single-data .product ul.colours li a:hover .product-col {
   border-color: #000;
 }
 
-/* line 183, resources/assets/styles/components/_single-product.scss */
+/* line 190, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a .product-col,
 .single-data .product ul.colours li a .product-col {
@@ -8291,14 +8321,14 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 191, resources/assets/styles/components/_single-product.scss */
+/* line 198, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product ul.colours li a .product-col.active,
 .single-data .product ul.colours li a .product-col.active {
   border-color: #000;
 }
 
-/* line 199, resources/assets/styles/components/_single-product.scss */
+/* line 206, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share,
 .single-data .product .share {
@@ -8306,7 +8336,7 @@ klarna-placement .container {
   font-size: 14px;
 }
 
-/* line 204, resources/assets/styles/components/_single-product.scss */
+/* line 211, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share.active .share__inner,
 .single-data .product .share.active .share__inner {
@@ -8315,7 +8345,7 @@ klarna-placement .container {
   display: block;
 }
 
-/* line 211, resources/assets/styles/components/_single-product.scss */
+/* line 218, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share__inner,
 .single-data .product .share__inner {
@@ -8324,7 +8354,7 @@ klarna-placement .container {
   display: none;
 }
 
-/* line 216, resources/assets/styles/components/_single-product.scss */
+/* line 223, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share__inner ul,
 .single-data .product .share__inner ul {
@@ -8333,7 +8363,7 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 221, resources/assets/styles/components/_single-product.scss */
+/* line 228, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share__inner ul li,
 .single-data .product .share__inner ul li {
@@ -8341,7 +8371,7 @@ klarna-placement .container {
   letter-spacing: 0.5px;
 }
 
-/* line 228, resources/assets/styles/components/_single-product.scss */
+/* line 235, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .share a,
 .single-data .product .share a {
@@ -8353,14 +8383,14 @@ klarna-placement .container {
   letter-spacing: 0.5px;
 }
 
-/* line 235, resources/assets/styles/components/_single-product.scss */
+/* line 242, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .nosepads-container,
 .single-data .product .nosepads-container {
   margin: 30px 0 0 0;
 }
 
-/* line 238, resources/assets/styles/components/_single-product.scss */
+/* line 245, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .nosepads-container a,
 .single-data .product .nosepads-container a {
@@ -8377,35 +8407,35 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 246, resources/assets/styles/components/_single-product.scss */
+/* line 253, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .nosepads-container a:hover,
 .single-data .product .nosepads-container a:hover {
   border-bottom: 1px solid transparent;
 }
 
-/* line 252, resources/assets/styles/components/_single-product.scss */
+/* line 259, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .sku_wrapper,
 .single-data .product .sku_wrapper {
   display: none;
 }
 
-/* line 256, resources/assets/styles/components/_single-product.scss */
+/* line 263, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product a.reset_variations,
 .single-data .product a.reset_variations {
   display: none !important;
 }
 
-/* line 260, resources/assets/styles/components/_single-product.scss */
+/* line 267, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .quantity,
 .single-data .product .quantity {
   display: none !important;
 }
 
-/* line 264, resources/assets/styles/components/_single-product.scss */
+/* line 271, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .threesixty,
 .single-data .product .threesixty {
@@ -8421,7 +8451,7 @@ klarna-placement .container {
   min-height: 500px;
 }
 
-/* line 271, resources/assets/styles/components/_single-product.scss */
+/* line 278, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container,
 .single-data .product #container.wc360-container {
@@ -8433,7 +8463,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 271, resources/assets/styles/components/_single-product.scss */
+  /* line 278, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container,
   .single-data .product #container.wc360-container {
@@ -8441,7 +8471,7 @@ klarna-placement .container {
   }
 }
 
-/* line 281, resources/assets/styles/components/_single-product.scss */
+/* line 288, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container .spinner,
 .single-data .product #container.wc360-container .spinner {
@@ -8449,7 +8479,7 @@ klarna-placement .container {
   background-color: transparent;
 }
 
-/* line 286, resources/assets/styles/components/_single-product.scss */
+/* line 293, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product #container.wc360-container .spinner span,
 .single-data .product #container.wc360-container .spinner span {
@@ -8464,7 +8494,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 286, resources/assets/styles/components/_single-product.scss */
+  /* line 293, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product #container.wc360-container .spinner span,
   .single-data .product #container.wc360-container .spinner span {
@@ -8472,7 +8502,7 @@ klarna-placement .container {
   }
 }
 
-/* line 293, resources/assets/styles/components/_single-product.scss */
+/* line 300, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary,
 .single-data .product .summary {
@@ -8485,7 +8515,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 293, resources/assets/styles/components/_single-product.scss */
+  /* line 300, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary,
   .single-data .product .summary {
@@ -8493,7 +8523,7 @@ klarna-placement .container {
   }
 }
 
-/* line 307, resources/assets/styles/components/_single-product.scss */
+/* line 314, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .posted_in a,
 .single-data .product .summary .posted_in a {
@@ -8513,7 +8543,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 307, resources/assets/styles/components/_single-product.scss */
+  /* line 314, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .posted_in a,
   .single-data .product .summary .posted_in a {
@@ -8521,7 +8551,7 @@ klarna-placement .container {
   }
 }
 
-/* line 315, resources/assets/styles/components/_single-product.scss */
+/* line 322, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary h1.product_title,
 .single-data .product .summary h1.product_title {
@@ -8535,7 +8565,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 315, resources/assets/styles/components/_single-product.scss */
+  /* line 322, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title,
   .single-data .product .summary h1.product_title {
@@ -8544,7 +8574,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 315, resources/assets/styles/components/_single-product.scss */
+  /* line 322, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary h1.product_title,
   .single-data .product .summary h1.product_title {
@@ -8552,7 +8582,7 @@ klarna-placement .container {
   }
 }
 
-/* line 323, resources/assets/styles/components/_single-product.scss */
+/* line 330, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .price,
 .single-data .product .summary .price {
@@ -8569,7 +8599,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 323, resources/assets/styles/components/_single-product.scss */
+  /* line 330, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price,
   .single-data .product .summary .price {
@@ -8578,7 +8608,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 323, resources/assets/styles/components/_single-product.scss */
+  /* line 330, resources/assets/styles/components/_single-product.scss */
 
   .single-product .product .summary .price,
   .single-data .product .summary .price {
@@ -8586,35 +8616,35 @@ klarna-placement .container {
   }
 }
 
-/* line 335, resources/assets/styles/components/_single-product.scss */
+/* line 342, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .variations_form,
 .single-data .product .summary .variations_form {
   padding: 10px 0 0 0;
 }
 
-/* line 339, resources/assets/styles/components/_single-product.scss */
+/* line 346, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability,
 .single-data .product .summary .woocommerce-variation-availability {
   margin: 10px 0 0 0;
 }
 
-/* line 343, resources/assets/styles/components/_single-product.scss */
+/* line 350, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.in-stock,
 .single-data .product .summary .woocommerce-variation-availability .stock.in-stock {
   color: #1bae27;
 }
 
-/* line 346, resources/assets/styles/components/_single-product.scss */
+/* line 353, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .woocommerce-variation-availability .stock.out-of-stock,
 .single-data .product .summary .woocommerce-variation-availability .stock.out-of-stock {
   color: #b92828;
 }
 
-/* line 352, resources/assets/styles/components/_single-product.scss */
+/* line 359, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .button,
 .single-data .product .summary .button {
@@ -8654,21 +8684,21 @@ klarna-placement .container {
   background: transparent;
 }
 
-/* line 363, resources/assets/styles/components/_single-product.scss */
+/* line 370, resources/assets/styles/components/_single-product.scss */
 
 .single-product .product .summary .cart .quantity,
 .single-data .product .summary .cart .quantity {
   display: none;
 }
 
-/* line 370, resources/assets/styles/components/_single-product.scss */
+/* line 377, resources/assets/styles/components/_single-product.scss */
 
 .single-product .single-product #wl-wrapper.wl-button-wrap,
 .single-data .single-product #wl-wrapper.wl-button-wrap {
   margin: 0 0 5px 0;
 }
 
-/* line 374, resources/assets/styles/components/_single-product.scss */
+/* line 381, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to,
 .single-data .wl-add-to {
@@ -8679,7 +8709,7 @@ klarna-placement .container {
   text-decoration: none;
 }
 
-/* line 377, resources/assets/styles/components/_single-product.scss */
+/* line 384, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to::before,
 .single-data .wl-add-to::before {
@@ -8694,7 +8724,7 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 390, resources/assets/styles/components/_single-product.scss */
+/* line 397, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single,
 .single-data .wl-add-to-single {
@@ -8707,7 +8737,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 400, resources/assets/styles/components/_single-product.scss */
+  /* line 407, resources/assets/styles/components/_single-product.scss */
 
   .single-product .wl-add-to-single:hover::after,
   .single-data .wl-add-to-single:hover::after {
@@ -8717,7 +8747,7 @@ klarna-placement .container {
   }
 }
 
-/* line 406, resources/assets/styles/components/_single-product.scss */
+/* line 413, resources/assets/styles/components/_single-product.scss */
 
 .single-product .wl-add-to-single::before,
 .single-data .wl-add-to-single::before {
@@ -8732,7 +8762,7 @@ klarna-placement .container {
   top: -4px;
 }
 
-/* line 419, resources/assets/styles/components/_single-product.scss */
+/* line 426, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-wrap,
 .single-data #wl-wrapper.wl-button-wrap {
@@ -8742,28 +8772,28 @@ klarna-placement .container {
   padding: 0;
 }
 
-/* line 426, resources/assets/styles/components/_single-product.scss */
+/* line 433, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper,
 .single-data #wl-wrapper {
   letter-spacing: 0.5px;
 }
 
-/* line 429, resources/assets/styles/components/_single-product.scss */
+/* line 436, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in,
 .single-data #wl-wrapper.wl-button-already-in {
   font-size: 0;
 }
 
-/* line 432, resources/assets/styles/components/_single-product.scss */
+/* line 439, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in .wl-add-link,
 .single-data #wl-wrapper.wl-button-already-in .wl-add-link {
   display: none;
 }
 
-/* line 436, resources/assets/styles/components/_single-product.scss */
+/* line 443, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul,
 .single-data #wl-wrapper.wl-button-already-in ul {
@@ -8772,7 +8802,7 @@ klarna-placement .container {
   padding: 10px 0 0 0;
 }
 
-/* line 442, resources/assets/styles/components/_single-product.scss */
+/* line 449, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a,
 .single-data #wl-wrapper.wl-button-already-in ul li a {
@@ -8785,7 +8815,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 442, resources/assets/styles/components/_single-product.scss */
+  /* line 449, resources/assets/styles/components/_single-product.scss */
 
   .single-product #wl-wrapper.wl-button-already-in ul li a,
   .single-data #wl-wrapper.wl-button-already-in ul li a {
@@ -8793,7 +8823,7 @@ klarna-placement .container {
   }
 }
 
-/* line 450, resources/assets/styles/components/_single-product.scss */
+/* line 457, resources/assets/styles/components/_single-product.scss */
 
 .single-product #wl-wrapper.wl-button-already-in ul li a::before,
 .single-data #wl-wrapper.wl-button-already-in ul li a::before {
@@ -8808,7 +8838,7 @@ klarna-placement .container {
   top: -1px;
 }
 
-/* line 467, resources/assets/styles/components/_single-product.scss */
+/* line 474, resources/assets/styles/components/_single-product.scss */
 
 .single-product .eye-size,
 .single-data .eye-size {
@@ -8817,7 +8847,7 @@ klarna-placement .container {
   letter-spacing: 0.5px;
 }
 
-/* line 472, resources/assets/styles/components/_single-product.scss */
+/* line 479, resources/assets/styles/components/_single-product.scss */
 
 .single-product .eye-size span,
 .single-data .eye-size span {
@@ -8825,14 +8855,14 @@ klarna-placement .container {
   letter-spacing: 0.5px;
 }
 
-/* line 478, resources/assets/styles/components/_single-product.scss */
+/* line 485, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes,
 .single-data .woocommerce-product-attributes {
   padding: 0 0 20px 0;
 }
 
-/* line 480, resources/assets/styles/components/_single-product.scss */
+/* line 487, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr,
 .single-data .woocommerce-product-attributes tr {
@@ -8841,7 +8871,7 @@ klarna-placement .container {
   padding: 2px 0;
 }
 
-/* line 485, resources/assets/styles/components/_single-product.scss */
+/* line 492, resources/assets/styles/components/_single-product.scss */
 
 .single-product .woocommerce-product-attributes tr th,
 .single-product .woocommerce-product-attributes tr p,
@@ -8859,7 +8889,7 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 502, resources/assets/styles/components/_single-product.scss */
+/* line 509, resources/assets/styles/components/_single-product.scss */
 
 .single-product .related .products,
 .single-data .related .products {
@@ -8870,27 +8900,27 @@ klarna-placement .container {
   margin: 0;
 }
 
-/* line 510, resources/assets/styles/components/_single-product.scss */
+/* line 517, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field {
   padding: 30px 0 0 0;
   margin: 0;
 }
 
-/* line 514, resources/assets/styles/components/_single-product.scss */
+/* line 521, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span {
   letter-spacing: 0.5px;
 }
 
-/* line 517, resources/assets/styles/components/_single-product.scss */
+/* line 524, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span input {
   width: auto;
   margin: 0 5px 0 0;
 }
 
-/* line 522, resources/assets/styles/components/_single-product.scss */
+/* line 529, resources/assets/styles/components/_single-product.scss */
 
 #nosepads_option_field span label {
   letter-spacing: 0.5px;
@@ -8898,7 +8928,7 @@ klarna-placement .container {
   text-transform: initial;
 }
 
-/* line 531, resources/assets/styles/components/_single-product.scss */
+/* line 538, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message {
   background-color: #f8f8f8;
@@ -8907,7 +8937,7 @@ klarna-placement .container {
   text-align: center;
 }
 
-/* line 537, resources/assets/styles/components/_single-product.scss */
+/* line 544, resources/assets/styles/components/_single-product.scss */
 
 .woocommerce-notices-wrapper .woocommerce-message a {
   display: none;
