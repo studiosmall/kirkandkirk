@@ -70,14 +70,16 @@
   }
 }
 
-.logged-in {
+.logged-in,
+.page-professional-login-data {
   .woocommerce {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    justify-content: center;
 
     @include breakpoint(medium) {
-      width: 60%;
+      width: 70%;
       flex-wrap: nowrap;
     }
 
