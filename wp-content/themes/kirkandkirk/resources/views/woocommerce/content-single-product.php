@@ -236,25 +236,27 @@ if ( post_password_required() ) {
 
 			<div class="featured-products__products slider">
 			<?php foreach($recently as $product) : ?>
-
-					<div class="featured-products__product">
-						<?php
+				<?php
 							//$product  = wc_get_product($product);
 							$currency = get_woocommerce_currency_symbol();
 							$price    = get_post_meta( get_the_ID(), '_regular_price', true);
 							$sale     = get_post_meta( get_the_ID(), '_sale_price', true);
 
-							$image 		= get_the_post_thumbnail_url($product, 'large');
+							$image 		= get_the_post_thumbnail_url($product);
 							$link 		= get_permalink($product);
 							$title 		= get_the_title($product);
 							$fields  	= get_fields($product);
 
 							$textarea  = $fields['textarea'];
 							$colour    = $fields['product_colour'];
+
 						?>
+				<?php if($link) { ?>
+
+					<div class="featured-products__product">
 
 						<a class="link" href="<?php echo $link; ?>"></a>
-						
+
 						<div class="image-container">
 							<img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
 						</div>
@@ -270,6 +272,9 @@ if ( post_password_required() ) {
 						</div>
 
 					</div>
+
+					<?php } ?>
+
 				<?php endforeach ?>
 			</div>
 		</div>
