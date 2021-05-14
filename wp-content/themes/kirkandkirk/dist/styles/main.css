@@ -12420,11 +12420,22 @@ input[value="search"] {
 
 /* line 314, resources/assets/styles/layouts/_header.scss */
 
+.header__buttons .spacer {
+  margin: 0 0 0 10px;
+}
+
+/* line 318, resources/assets/styles/layouts/_header.scss */
+
 .header__buttons a {
+  display: inline-block;
+  position: relative;
+  color: #000;
+  line-height: 15px;
+  text-decoration: none;
   margin: 0 0 0 15px;
 }
 
-/* line 317, resources/assets/styles/layouts/_header.scss */
+/* line 322, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons a.cart-customlocation {
   display: -webkit-box;
@@ -12435,27 +12446,33 @@ input[value="search"] {
   font-size: 15px;
 }
 
-/* line 324, resources/assets/styles/layouts/_header.scss */
+/* line 329, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons a.cart-customlocation span:last-of-type {
   margin: 0 0 0 3px;
 }
 
-/* line 332, resources/assets/styles/layouts/_header.scss */
+/* line 335, resources/assets/styles/layouts/_header.scss */
+
+.header__buttons a.logout {
+  margin: 0 0 0 10px;
+}
+
+/* line 341, resources/assets/styles/layouts/_header.scss */
 
 .header__nav {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 332, resources/assets/styles/layouts/_header.scss */
+  /* line 341, resources/assets/styles/layouts/_header.scss */
 
   .header__nav {
     display: inline-block;
   }
 }
 
-/* line 339, resources/assets/styles/layouts/_header.scss */
+/* line 348, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul {
   padding: 0;
@@ -12469,7 +12486,7 @@ input[value="search"] {
           align-items: center;
 }
 
-/* line 345, resources/assets/styles/layouts/_header.scss */
+/* line 354, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul#menu-navigation-right {
   display: -webkit-inline-box;
@@ -12477,14 +12494,14 @@ input[value="search"] {
   display: inline-flex;
 }
 
-/* line 348, resources/assets/styles/layouts/_header.scss */
+/* line 357, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul#menu-navigation-right li:first-of-type {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 348, resources/assets/styles/layouts/_header.scss */
+  /* line 357, resources/assets/styles/layouts/_header.scss */
 
   .header__nav ul#menu-navigation-right li:first-of-type {
     display: -webkit-inline-box;
@@ -12493,14 +12510,14 @@ input[value="search"] {
   }
 }
 
-/* line 364, resources/assets/styles/layouts/_header.scss */
+/* line 373, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul#menu-navigation-left {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 364, resources/assets/styles/layouts/_header.scss */
+  /* line 373, resources/assets/styles/layouts/_header.scss */
 
   .header__nav ul#menu-navigation-left {
     display: -webkit-inline-box;
@@ -12509,13 +12526,13 @@ input[value="search"] {
   }
 }
 
-/* line 371, resources/assets/styles/layouts/_header.scss */
+/* line 380, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li {
   list-style: none;
 }
 
-/* line 376, resources/assets/styles/layouts/_header.scss */
+/* line 385, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li.current_page_item a::after {
   -webkit-transform: scaleX(1);
@@ -12526,7 +12543,7 @@ input[value="search"] {
           transform-origin: bottom;
 }
 
-/* line 383, resources/assets/styles/layouts/_header.scss */
+/* line 392, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li a {
   display: inline-block;
@@ -12546,13 +12563,13 @@ input[value="search"] {
   transition: 0.3s all ease;
 }
 
-/* line 395, resources/assets/styles/layouts/_header.scss */
+/* line 404, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li a:hover {
   color: #abced0;
 }
 
-/* line 403, resources/assets/styles/layouts/_header.scss */
+/* line 412, resources/assets/styles/layouts/_header.scss */
 
 .header__menu-container {
   display: block;
@@ -12560,7 +12577,7 @@ input[value="search"] {
   cursor: pointer;
 }
 
-/* line 409, resources/assets/styles/layouts/_header.scss */
+/* line 418, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger {
   margin: -3px 2px 0 0;
@@ -12573,20 +12590,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 409, resources/assets/styles/layouts/_header.scss */
+  /* line 418, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger {
     margin: -14px 2px 0 0;
   }
 }
 
-/* line 422, resources/assets/styles/layouts/_header.scss */
+/* line 431, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger:focus {
   outline: 0;
 }
 
-/* line 436, resources/assets/styles/layouts/_header.scss */
+/* line 445, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines {
   display: inline-block;
@@ -12601,7 +12618,7 @@ input[value="search"] {
   position: relative;
 }
 
-/* line 442, resources/assets/styles/layouts/_header.scss */
+/* line 451, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before,
 .header__hamburger .lines::after {
@@ -12622,32 +12639,32 @@ input[value="search"] {
   left: 0;
 }
 
-/* line 450, resources/assets/styles/layouts/_header.scss */
+/* line 459, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before {
   top: 7px;
 }
 
-/* line 453, resources/assets/styles/layouts/_header.scss */
+/* line 462, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::after {
   top: -7px;
 }
 
-/* line 458, resources/assets/styles/layouts/_header.scss */
+/* line 467, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines-button:hover {
   opacity: 1;
 }
 
-/* line 463, resources/assets/styles/layouts/_header.scss */
+/* line 472, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines {
   background: transparent;
   border: 0;
 }
 
-/* line 467, resources/assets/styles/layouts/_header.scss */
+/* line 476, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before,
 .header__hamburger.active .lines::after {
@@ -12658,48 +12675,51 @@ input[value="search"] {
   width: 20px;
 }
 
-/* line 474, resources/assets/styles/layouts/_header.scss */
+/* line 483, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
           transform: rotate3d(0, 0, 1, 45deg);
 }
 
-/* line 478, resources/assets/styles/layouts/_header.scss */
+/* line 487, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
-/* line 485, resources/assets/styles/layouts/_header.scss */
+/* line 494, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container {
   position: relative;
   margin: 0 0 0 15px;
 }
 
-/* line 489, resources/assets/styles/layouts/_header.scss */
+/* line 498, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container a#search-btn {
   margin: 0;
   opacity: 1;
   visibility: visible;
+  position: absolute;
+  top: -8px;
+  right: 0;
 }
 
-/* line 495, resources/assets/styles/layouts/_header.scss */
+/* line 507, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container a#search-btn.hide {
   opacity: 0;
   visibility: hidden;
 }
 
-/* line 502, resources/assets/styles/layouts/_header.scss */
+/* line 514, resources/assets/styles/layouts/_header.scss */
 
 .header__search {
   position: absolute;
   right: 0;
-  top: -10px;
+  top: -16px;
   width: 200px;
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
@@ -12712,17 +12732,18 @@ input[value="search"] {
   transition: 0.3s all ease;
 }
 
-/* line 513, resources/assets/styles/layouts/_header.scss */
+/* line 525, resources/assets/styles/layouts/_header.scss */
 
 .header__search.active {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 527, resources/assets/styles/layouts/_header.scss */
+/* line 539, resources/assets/styles/layouts/_header.scss */
 
 .header__search input {
   width: 100%;
+  border: 0;
   border-bottom: 1px solid #000;
   border-radius: 0;
   padding: 5px 0;
@@ -12733,14 +12754,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 527, resources/assets/styles/layouts/_header.scss */
+  /* line 539, resources/assets/styles/layouts/_header.scss */
 
   .header__search input {
     font-size: 14px;
   }
 }
 
-/* line 541, resources/assets/styles/layouts/_header.scss */
+/* line 554, resources/assets/styles/layouts/_header.scss */
 
 .header__search input::-webkit-input-placeholder {
   color: #000;
@@ -12757,13 +12778,13 @@ input[value="search"] {
   opacity: 1;
 }
 
-/* line 546, resources/assets/styles/layouts/_header.scss */
+/* line 559, resources/assets/styles/layouts/_header.scss */
 
 .header__search input:focus {
   outline: none;
 }
 
-/* line 550, resources/assets/styles/layouts/_header.scss */
+/* line 563, resources/assets/styles/layouts/_header.scss */
 
 .header__search input.search-field__submit {
   border: 0;
@@ -12780,14 +12801,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 550, resources/assets/styles/layouts/_header.scss */
+  /* line 563, resources/assets/styles/layouts/_header.scss */
 
   .header__search input.search-field__submit {
     top: -3px;
   }
 }
 
-/* line 566, resources/assets/styles/layouts/_header.scss */
+/* line 579, resources/assets/styles/layouts/_header.scss */
 
 .header__search input.search-field__submit.active {
   color: #000;
@@ -13739,6 +13760,7 @@ input[value="search"] {
   letter-spacing: 1px;
   margin: 0;
   padding: 0;
+  font-size: 14px;
 }
 
 @media (min-width: 900px) {
@@ -13749,7 +13771,15 @@ input[value="search"] {
   }
 }
 
-/* line 156, resources/assets/styles/layouts/_account.scss */
+@media (min-width: 900px) {
+  /* line 152, resources/assets/styles/layouts/_account.scss */
+
+  .logged-in .woocommerce .woocommerce-MyAccount-content a {
+    font-size: 14px;
+  }
+}
+
+/* line 161, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content h3 {
   font-family: "reader", arial, sans-serif;
@@ -13764,14 +13794,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 156, resources/assets/styles/layouts/_account.scss */
+  /* line 161, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content h3 {
     font-size: 20px;
   }
 }
 
-/* line 162, resources/assets/styles/layouts/_account.scss */
+/* line 167, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content label {
   font-family: "reader", arial, sans-serif;
@@ -13786,20 +13816,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 162, resources/assets/styles/layouts/_account.scss */
+  /* line 167, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content label {
     font-size: 16px;
   }
 }
 
-/* line 168, resources/assets/styles/layouts/_account.scss */
+/* line 173, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content span {
   font-size: 12px;
 }
 
-/* line 172, resources/assets/styles/layouts/_account.scss */
+/* line 177, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input {
   border-radius: 0;
@@ -13812,7 +13842,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 172, resources/assets/styles/layouts/_account.scss */
+  /* line 177, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content input {
     width: 100%;
@@ -13827,13 +13857,13 @@ input[value="search"] {
   background-color: #e1e1e1;
 }
 
-/* line 179, resources/assets/styles/layouts/_account.scss */
+/* line 184, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content fieldset input {
   width: 95%;
 }
 
-/* line 184, resources/assets/styles/layouts/_account.scss */
+/* line 189, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
   padding: 0;
@@ -13843,14 +13873,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 184, resources/assets/styles/layouts/_account.scss */
+  /* line 189, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
     width: 100%;
   }
 }
 
-/* line 193, resources/assets/styles/layouts/_account.scss */
+/* line 198, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
   font-family: "reader", arial, sans-serif;
@@ -13865,21 +13895,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 193, resources/assets/styles/layouts/_account.scss */
+  /* line 198, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
     font-size: 20px;
   }
 }
 
-/* line 199, resources/assets/styles/layouts/_account.scss */
+/* line 204, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table {
   width: 100%;
   text-align: left;
 }
 
-/* line 203, resources/assets/styles/layouts/_account.scss */
+/* line 208, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
   font-family: "reader", arial, sans-serif;
@@ -13892,33 +13922,33 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 203, resources/assets/styles/layouts/_account.scss */
+  /* line 208, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
     font-size: 16px;
   }
 }
 
-/* line 207, resources/assets/styles/layouts/_account.scss */
+/* line 212, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th {
   text-align: left !important;
 }
 
-/* line 211, resources/assets/styles/layouts/_account.scss */
+/* line 216, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td {
   text-align: left !important;
   padding: 10px 0 !important;
 }
 
-/* line 218, resources/assets/styles/layouts/_account.scss */
+/* line 223, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses {
   text-align: left;
 }
 
-/* line 221, resources/assets/styles/layouts/_account.scss */
+/* line 226, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
   font-family: "reader", arial, sans-serif;
@@ -13931,14 +13961,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 221, resources/assets/styles/layouts/_account.scss */
+  /* line 226, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
     font-size: 20px;
   }
 }
 
-/* line 228, resources/assets/styles/layouts/_account.scss */
+/* line 233, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
   font-family: "reader", arial, sans-serif;
@@ -13953,14 +13983,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 228, resources/assets/styles/layouts/_account.scss */
+  /* line 233, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
     font-size: 16px;
   }
 }
 
-/* line 234, resources/assets/styles/layouts/_account.scss */
+/* line 239, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
   border-radius: 0;
@@ -13973,7 +14003,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 234, resources/assets/styles/layouts/_account.scss */
+  /* line 239, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
     width: 100%;

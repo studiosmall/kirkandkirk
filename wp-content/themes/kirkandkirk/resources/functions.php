@@ -557,3 +557,15 @@ add_filter( 'product_type_options', function( $options ) {
 	}
 	return $options;
 } );
+
+
+//
+// Redirect on logout */
+//
+add_action('wp_logout','auto_redirect_after_logout');
+function auto_redirect_after_logout(){
+
+  wp_redirect( home_url() );
+  exit();
+
+}
