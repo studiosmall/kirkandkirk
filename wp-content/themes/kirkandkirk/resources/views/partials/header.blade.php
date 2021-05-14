@@ -84,7 +84,7 @@
         @endif
         <a href="/account"><span class="ico-account"></span></a>
         <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><span class="ico-basket"></span><span><?php echo sprintf ( _n('(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
-        @if ( is_user_logged_in() )
+        @if ( in_array( 'professional', (array) $user->roles ) )
           <span class="spacer">|</span> <a class="logout" href="/account/customer-logout/?_wpnonce=624d7b2cde">Logout</a>
         @endif
 
@@ -102,7 +102,6 @@
         'items_wrap' => '<ul>%3$s</ul>',
         ]) !!}
     @endif
-
 
     @php $user = wp_get_current_user(); @endphp
 
