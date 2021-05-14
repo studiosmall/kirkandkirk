@@ -22,7 +22,7 @@
         </section>
       @endif
 
-    @elseif($type['page_type'] == 'normal')
+    @else
 
       @include('partials.page-header')
       {{-- @include('partials.filter') --}}
