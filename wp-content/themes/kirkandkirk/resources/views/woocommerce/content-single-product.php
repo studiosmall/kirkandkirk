@@ -195,7 +195,9 @@ if ( post_password_required() ) {
 					<?php foreach($instagram['instagram_images'] as $i): ?>
 						<div class="feed__item">
 							<a href="<?php echo $i['image_url'] ?>" target="_bank">
-								<img src="<?php echo $i['image']['url'] ?>" alt="Kirk and Kirk – Instagram">
+								<div class="image-container">
+									<img src="<?php echo $i['image']['url'] ?>" alt="Kirk and Kirk – Instagram">
+								</div>
 							</a>
 						</div>
 					<?php endforeach ?>
@@ -252,7 +254,10 @@ if ( post_password_required() ) {
 						?>
 
 						<a class="link" href="<?php echo $link; ?>"></a>
-						<img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
+						
+						<div class="image-container">
+							<img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
+						</div>
 
 						<div class="featured-products__meta" style="border-color:<?php echo $colour; ?>">
 							<h1><?php echo $title; ?></h1>

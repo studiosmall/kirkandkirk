@@ -4,6 +4,10 @@
     <div class="header__banner--inner">
       <div class="header__currency">
         Currency (£ GBP)
+
+        @php
+          // echo do_shortcode('[wcpbc_country_selector remove_other_countries="1"]');
+        @endphp
       </div>
 
       {{-- <div class="announcement">

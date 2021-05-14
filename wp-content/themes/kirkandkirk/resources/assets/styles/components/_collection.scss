@@ -22,6 +22,20 @@
 		cursor: initial;
     padding: 0;
 		width: 100%;
+
+		.image-container {
+			overflow: hidden;
+		}
+
+		img {
+			transition: $transition;
+		}
+
+		&:hover {
+			img {
+				@include scale;
+			}
+		}
     // margin: 0 30px;
 
 		// @include breakpoint(medium) {

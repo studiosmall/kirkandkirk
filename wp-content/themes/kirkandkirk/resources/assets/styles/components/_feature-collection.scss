@@ -6,7 +6,8 @@
 	height: 86.5vh;
 	text-align: center;
 	position: relative;
-	transition: all ease 0.6s;
+	transition: $transition;
+	overflow: hidden;
 
 	&::before {
 		position: absolute;
@@ -30,22 +31,11 @@
     left: 0;
     z-index: 2;
 
-		&:hover {
-				.feature-collection__bottom a::after {
-					@include breakpoint(medium) {
-						transform: scaleX(1);
-						transform-origin: bottom;
-					}
-				}
-
-			// .feature-collection.grow {
-			// 	transition: all 0.2s ease-in-out;
-
-			// 	&:hover {
-			// 		transform: scale(1.5);
-			// 	}
-			// }
-		}
+		// &:hover {
+		// 	.feature-collection {
+		// 		@include scale;
+		// 	}
+		// }
 	}
 
   &__inner {

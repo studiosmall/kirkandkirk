@@ -6,6 +6,10 @@ input[type="submit"] {
      border-radius: 0;
 }
 
+.gform_ajax_spinner {
+    width: 13px !important;
+}
+
 .form {
     @include section;
 

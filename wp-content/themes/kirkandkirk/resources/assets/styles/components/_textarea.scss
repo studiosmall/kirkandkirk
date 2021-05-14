@@ -4,4 +4,8 @@
 	&__inner {
 		@include inner;
 	}
+
+	a {
+		@include hoverline($brand--primary);
+	}
 }

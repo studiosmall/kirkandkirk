@@ -65,6 +65,10 @@
   // }
 }
 
+@mixin scale {
+	transform: scale(1.05);
+}
+
 @mixin section-padding {
   padding: 15px 0 10px;
   @include breakpoint(medium) {

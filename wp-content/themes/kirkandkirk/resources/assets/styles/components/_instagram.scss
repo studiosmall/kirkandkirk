@@ -24,6 +24,24 @@
 
 		&__item {
 			width: 23%;
+
+			a {
+				&:hover {
+					img {
+						@include scale;
+					}
+				}
+			}
+
+			.image-container {
+				overflow: hidden;
+				width: 100%;
+				height: 98%;
+
+				img {
+					transition: $transition;
+				}
+			}
 		}
 	}
 }

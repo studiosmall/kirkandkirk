@@ -4,6 +4,11 @@
 	// .woocommerce-breadcrumb {
 	// 	display: none;
 	// }
+	padding: 0;
+
+	@include breakpoint(medium) {
+		padding: 0;
+	}
 
 	.woocommerce-products-header {
 		display: none;

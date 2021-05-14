@@ -49,7 +49,7 @@ if ( ! empty( $breadcrumb ) ) {
 
 		if(!empty($color)){
 			echo '<span class="product-colour">';
-				echo ' &mdash; ';
+				echo ' – ';
 				echo $color;
 			echo '</span>';
 		}

@@ -19,7 +19,9 @@
           @endphp
 
           <a class="link" href="{{ $link }}"></a>
-          <img src="{{ $image }}"  alt="{{ $title }}">
+          <div class="image-container">
+            <img src="{{ $image }}"  alt="{{ $title }}">
+          </div>
 
           <div class="featured-products__meta" style="border-color:{{ $colour }};">
             <h1>{{ $title }}</h1>

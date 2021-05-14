@@ -1,0 +1,55 @@
+.portrait-images {
+	padding: 0;
+
+	&__row {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+
+		@include breakpoint(medium) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__link {
+		width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+	}
+
+	&__col {
+		width: 100%;
+		background-size: cover;
+		background-position: 50% 0;
+		height: 400px;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+		transition: $transition;
+
+		@include breakpoint(medium) {
+			width: 100%;
+			height: calc(100vh - 144px);
+		}
+	}
+
+	.image-container {
+		overflow: hidden;
+		width: 50%;
+		height: 100%;
+
+		@include breakpoint(medium) {
+			width: 100%;
+		}
+
+		&:hover {
+			.portrait-images__col {
+				@include scale;
+			}
+		}
+	}
+}

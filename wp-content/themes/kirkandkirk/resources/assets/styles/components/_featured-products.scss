@@ -51,7 +51,7 @@
 		// 	flex-wrap: nowrap;
 		// }
     cursor: grab;
-
+		
 		a {
 			outline: none;
 
@@ -80,14 +80,19 @@
 		}
 
 		&:hover {
-			.featured-products__meta {
-				//border-width: 3px;
-				//border-color: transparent !important;
+			img {
+				@include scale;
 			}
 		}
 
 		a {
 			width: 100%;
+
+			&:hover {
+				img {
+					@include scale;
+				}
+			}
 		}
 
 		a.link {
@@ -98,6 +103,20 @@
 			left: 0;
 			z-index: 2;
 			cursor: grab;
+
+			&:hover {
+				img {
+					@include scale;
+				}
+			}
+		}
+
+		.image-container {
+			overflow: hidden;
+
+			img {
+				transition: $transition;
+			}
 		}
 	}
 

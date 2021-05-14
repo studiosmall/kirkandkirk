@@ -181,6 +181,77 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_609e0a36f13d1": {
+                    "key": "layout_609e0a36f13d1",
+                    "name": "portrait_images",
+                    "label": "Portrait Images",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_609e0a44f13d2",
+                            "label": "Images",
+                            "name": "images",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 2,
+                            "max": 2,
+                            "layout": "row",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_609e0a5ff13d3",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_609e0a6af13d4",
+                                    "label": "URL Link",
+                                    "name": "url_link",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6050433facc41": {
                     "key": "layout_6050433facc41",
                     "name": "feature_collection",
@@ -905,6 +976,32 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_609ddbfdc9423": {
+                    "key": "layout_609ddbfdc9423",
+                    "name": "video",
+                    "label": "Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_609ddc01c9424",
+                            "label": "Vimeo Video URL",
+                            "name": "vimeo_embed_url",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Layout",
@@ -947,5 +1044,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620619612
+    "modified": 1620970116
 }

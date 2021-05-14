@@ -81,6 +81,17 @@
       flex-wrap: nowrap;
     }
 
+    &.widget {
+      width: 100%;
+      flex-wrap: wrap;
+      display: block;
+      @include breakpoint(medium) {
+        width: 100%;
+        flex-wrap: wrap;
+        display: block;
+      }
+    }
+
     button {
       @include button();
 

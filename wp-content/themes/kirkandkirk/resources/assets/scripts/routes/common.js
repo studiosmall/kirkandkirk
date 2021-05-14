@@ -358,5 +358,11 @@ export default {
       });
 
 
+      if($('.filter__container').length) {
+        if (window.location.href.indexOf('filter_') > -1) {
+          $('.filter__container, .filter__title').addClass('active');
+        }
+      }
+
   },
 };
