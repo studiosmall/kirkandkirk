@@ -1020,6 +1020,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "views\/about-page.blade.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "views\/collection-page.blade.php"
             }
         ]
     ],
@@ -1044,5 +1049,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620970116
+    "modified": 1621226347
 }

@@ -7,7 +7,7 @@ trait ContentBlocks
   // get content_blocks
   function content_blocks() {
     global $post;
-      
+
     $content_blocks = get_field('content_blocks');
     $content_block = array();
 
