@@ -583,3 +583,54 @@ function iconic_bypass_logout_confirmation() {
 }
 
 add_action( 'template_redirect', 'iconic_bypass_logout_confirmation' );
+
+
+
+// function juditmatyus_availability( $availability, $product ){
+//     // Change "x in stock" text to "Only x left"
+//     $new_availability_text = 'Low Stock (' . str_replace("in stock", ")", $availability['availability']);
+//     $availability['availability'] = $new_availability_text;
+
+//    // Change "out of stock" text to "Sold Out"
+//     if( $availability['class'] == 'out-of-stock' ){
+//       $availability['availability'] = 'Sold Out';
+//     }
+//     return $availability;
+// }
+// add_filter( 'woocommerce_get_availability', 'juditmatyus_availability', 10, 2 );
+
+
+// add_filter( 'woocommerce_get_availability', 'custom_get_availability', 1, 2);
+
+// function custom_get_availability( $availability, $_product ) {
+//   global $product;
+//   $stock = $product->get_stock_quantity();
+
+//   if($stock <= 5){
+//     if ($_product->is_in_stock() ) $availability['availability'] = __('Low Stock (fewer than ' . $stock . ')', 'woocommerce');
+//   }
+
+//   return $availability;
+// }
+
+// add_filter( 'woocommerce_get_availability_text', 'bbloomer_custom_get_availability_text', 99, 2 );
+// function bbloomer_custom_get_availability_text( $availability, $product ) {
+//     $stock = $product->get_stock_quantity();
+//     if ( $product->is_in_stock() && $stock < 5 ) {
+//         if ($stock == 1) {
+//             $verb = "is";
+//         } else {
+//             $verb = "are";
+//         }
+//         $availability = "Low Stock (fewer than " . $stock . ")";
+//         //$availability = "Low Stock (fewer than " . $verb . " " . $stock . ")";
+//     }
+//     return $availability;
+// }
+
+// add_filter('woocommerce_get_availability', 'availability_filter_func');
+// function availability_filter_func($availability)
+// {
+// $availability['availability'] = str_ireplace('In stock', '', $availability['availability']);
+// return $availability;
+// }

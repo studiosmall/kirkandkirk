@@ -131,6 +131,7 @@ if ( post_password_required() ) {
 		add_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart',50);
 		add_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing',60);
 
+
 		// add_action( 'woocommerce_after_add_to_cart_button', array(  $GLOBALS['Product_Addon_Display'], 'display' ), 40 );
 		// add_action( 'woocommerce_before_add_to_cart_button', array(  $GLOBALS['Product_Addon_Display'], 'totals' ), 50 );
 

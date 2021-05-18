@@ -10,33 +10,37 @@
 
 			@if($articles['articles'])
 
-				<div class="articles__sizer"></div>
+				{{-- <div class="articles__sizer"></div> --}}
 
 				@foreach( $articles['articles'] as $article )
 
 					{{-- <div class="articles__card" data-aos="fade-up"> --}}
-					<div class="articles__card">
+					<div class="articles__card" data-aos="fade-up">
 						<span class="articles__line" style="border-color: {{ $article['colour'] }};"></span>
 
-						<div class="articles__image {{ $article['border'] }}">
-							<img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
-						</div>
+						<div class="articles__card--inner">
+							<div class="articles__image {{ $article['border'] }}">
+								<img src="{{ $article['image'] }}" alt="{{ $article['title'] }}">
+							</div>
 
-						<h3>MEET</h3>
-						<h2>{{ $article['title'] }}</h2>
+							<h3>MEET</h3>
+							<h2>{{ $article['title'] }}</h2>
 
-						<div class="articles__text">
+							<div class="articles__text">
 
-							<p>
-								{!! $article['textarea'] !!}
+								<p>
+									{!! $article['textarea'] !!}
+								</p>
 
-								@if($article['readmore'])
-									<span class="moretext">{!! $article['readmore'] !!}</span>
+									@if($article['readmore'])
+										{{-- <span class="moretext">{!! $article['readmore'] !!}</span> --}}
 
-									<a class="moreless-button" href="#">Read More</a>
-								@endif
-							</p>
+										{{-- <a class="moreless-button" href="#">Read More</a> --}}
+										<a class="more" href="#">Read More</a>
+									@endif
 
+
+							</div>
 						</div>
 					</div>
 

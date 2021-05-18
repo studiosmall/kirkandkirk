@@ -235,38 +235,38 @@ export default {
 
     var $grid = $('.articles__items');
 
-    function updateMasonry() {
-      var $containerHeight = $(window).width();
+    // function updateMasonry() {
+    //   var $containerHeight = $(window).width();
 
-      console.log($containerHeight);
+    //   console.log($containerHeight);
 
-      if ($containerHeight >= 819) {
+    //   if ($containerHeight >= 819) {
 
-        // var $grid = $('.articles__items').imagesLoaded( function() {
-          $grid.masonry({
-            itemSelector: '.articles__card',
-            percentPosition: true,
-            columnWidth: '.articles__sizer',
-            gutter: 40,
-          });
-          console.log('enable');
-        // });
-      } else {
-        $grid.masonry();
-        $grid.masonry('destroy');
-        console.log('destroy');
-      }
-    }
+    //     // var $grid = $('.articles__items').imagesLoaded( function() {
+    //       $grid.masonry({
+    //         itemSelector: '.articles__card',
+    //         percentPosition: true,
+    //         columnWidth: '.articles__sizer',
+    //         gutter: 40,
+    //       });
+    //       console.log('enable');
+    //     // });
+    //   } else {
+    //     $grid.masonry();
+    //     $grid.masonry('destroy');
+    //     console.log('destroy');
+    //   }
+    // }
 
     if($('.articles__items').length) {
 
-      $(document).ready(function () {
-        updateMasonry();
+      // $(document).ready(function () {
+      //   updateMasonry();
 
-        $(window).resize(function() {
-            updateMasonry();
-        });
-      });
+      //   $(window).resize(function() {
+      //       updateMasonry();
+      //   });
+      // });
 
       $(document).on('click', '.moreless-button', function(e){
       // $('.moreless-button').on('click', function (e) {

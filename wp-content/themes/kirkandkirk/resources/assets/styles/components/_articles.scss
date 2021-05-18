@@ -1,7 +1,12 @@
 .articles {
 	@include section;
 
-	background-color: $bg-alt;
+	padding: 0 0 35px 0;
+
+	@include breakpoint(medium) {
+    padding: 0 0 35px 0;
+	}
+	// background-color: $bg-alt;
 
 	&__inner {
 		@include inner;
@@ -54,6 +59,13 @@
 		letter-spacing: 1px;
 	}
 
+	&__items {
+		display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+	}
+
 	&__sizer,
 	&__card {
 		width: 100%;
@@ -66,44 +78,47 @@
 	}
 
 	&__card {
-		float: left;
-		padding: 0 0 60px 0;
+		background: #F0F0F0;
+		width: 100%;
+		margin: 0 0 50px 0;
+		padding: 0;
 
 		@include breakpoint(medium) {
-			padding: 600px 0 150px 0;
+			margin: 0 0 50px 0;
+			width: 31%;
 		}
 
-		&:nth-child(odd) {
-			padding: 0 0 60px 0;
+		// &:nth-child(odd) {
+		// 	padding: 0 0 60px 0;
 
-			@include breakpoint(medium) {
-				padding: 150px 0 150px 0;
-			}
-		}
+		// 	@include breakpoint(medium) {
+		// 		padding: 150px 0 150px 0;
+		// 	}
+		// }
 
-		&:nth-child(even) {
-			padding: 0 0 60px 0;
+		// &:nth-child(even) {
+		// 	padding: 0 0 60px 0;
 
-			@include breakpoint(medium) {
-				padding: 0 0 150px 0;
-			}
-		}
+		// 	@include breakpoint(medium) {
+		// 		padding: 0 0 150px 0;
+		// 	}
+		// }
 
-		&:nth-child(3) {
-			padding: 0 0 60px 0;
+		// &:nth-child(3) {
+		// 	padding: 0 0 60px 0;
 
-			@include breakpoint(medium) {
-				padding: 600px 0 150px 0;
-			}
-		}
+		// 	@include breakpoint(medium) {
+		// 		padding: 600px 0 150px 0;
+		// 	}
+		// }
 
-		&:last-of-type {
-			padding: 0 0 60px 0;
+		// &:last-of-type {
+		// 	padding: 0 0 60px 0;
 
-			@include breakpoint(medium) {
-				padding: 125px 0 250px 0;
-			}
-		}
+		// 	@include breakpoint(medium) {
+		// 		padding: 125px 0 250px 0;
+		// 	}
+		// }
 
 		// &:nth-child(2) {
 		// 	padding: 0;
@@ -113,11 +128,19 @@
 		// 	padding: 0;
 		// }
 
+		&--inner {
+			padding: 0 24px 24px 24px;
+		}
+
 		h2 {
 			@include title($brand--primary);
 
 			padding-top: 0;
 			margin-top: 0;
+
+			@include breakpoint(medium) {
+				font-size: 16px;
+			}
 		}
 
 		h3 {
@@ -127,19 +150,38 @@
 			font-weight: 100;
 			margin-top: 0;
 			margin-bottom: 5px;
-			font-size: 14px;
+			font-size: 12px;
 
 			@include breakpoint(medium) {
-				font-size: 16px;
+				font-size: 12px;
 			}
 		}
 
 		p {
 			font-family: $font--body;
-			font-size: 14px;
+			font-size: 12px;
 			letter-spacing: 0.75px;
 			text-align: left;
 			line-height: 18px;
+		}
+
+		.more {
+			@include button;
+
+			display: block;
+			margin: 25px 0 0 0;
+			text-decoration: none;
+			background-color: $brand--primary;
+			color: $brand--white;
+			font-size: 12px;
+			font-weight: 500;
+			width: 138px;
+			padding: 12px 10px 10px 10px;
+
+			@include breakpoint(medium) {
+				font-size: 12px;
+				padding: 12px 10px 10px 10px;
+			}
 		}
 	}
 
@@ -147,7 +189,7 @@
 		margin: 0 0 35px 0;
 
 		&.border {
-			padding: 0 53px 0 53px;
+			padding: 0 83px 0 83px;
 		}
 
 		img {
