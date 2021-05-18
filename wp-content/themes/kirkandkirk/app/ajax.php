@@ -56,27 +56,27 @@ function kirkandkirk_more_articles() {
 
           <div class="articles__card">
 						<span class="articles__line" style="border-color: <?= $article['colour']; ?>"></span>
+            <div class="articles__card--inner">
+              <div class="articles__image <?= $article['border']; ?>">
+                <img src="<?= $article['image']; ?>" alt="<?= $article['title']; ?>">
+              </div>
 
-						<div class="articles__image <?= $article['border']; ?>">
-							<img src="<?= $article['image']; ?>" alt="<?= $article['title']; ?>">
-						</div>
+              <h3>MEET</h3>
+              <h2><?= $article['title']; ?></h2>
 
-						<h3>MEET</h3>
-						<h2><?= $article['title']; ?></h2>
+              <div class="articles__text">
 
-						<div class="articles__text">
+                <p>
+                  <?= $article['textarea']; ?>
+                </p>
 
-							<p>
-                <?= $article['textarea']; ?>
+                  <?php if($article['readmore']) : ?>
 
-                <?php if($article['readmore']) : ?>
-									<span class="moretext"><?= $article['readmore']; ?></span>
+                    <a class="more" href="#">Read More</a>
+                  <?php endif; ?>
 
-									<a class="moreless-button" href="#">Read More</a>
-                <?php endif; ?>
-							</p>
-
-						</div>
+              </div>
+            </div>
 					</div>
 
       <?php
