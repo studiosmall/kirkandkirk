@@ -1,0 +1,194 @@
+.collaborations {
+	@include section;
+
+	padding: 0 0 35px 0;
+
+	@include breakpoint(medium) {
+    padding: 0 0 35px 0;
+	}
+	// background-color: $bg-alt;
+
+	&__inner {
+		@include inner;
+	}
+
+	&__more {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		padding: 30px 0;
+
+		a {
+			@include hoverline($brand--primary);
+
+			font-family: $font--body;
+			font-size: 18px;
+			letter-spacing: 0.86px;
+
+			&.disabled {
+				opacity: 0.5;
+				cursor: initial;
+			}
+		}
+	}
+
+	&__line {
+		display: inline-block;
+		width: 100%;
+		border-top: 6px solid #000;
+		margin: 0 0 20px 0;
+	}
+
+	/* clear fix */
+	&::after {
+			content: "";
+			display: block;
+			clear: both;
+	}
+
+	.moretext {
+		display: none;
+	}
+
+	.moreless-button {
+		@include hoverline($brand--primary);
+
+		text-transform: uppercase;
+		margin: 6px 0 0 0;
+		display: block;
+		letter-spacing: 1px;
+	}
+
+	&__items {
+		display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+	}
+
+	&__sizer,
+	&__card {
+		width: 100%;
+		padding: 0;
+
+		@include breakpoint(medium) {
+			padding: 0 0 35px 0;
+			width: calc((100% - 100px) / 3);
+		}
+	}
+
+	&__card {
+		background: #F0F0F0;
+		width: 100%;
+		margin: 0 0 50px 0;
+		padding: 0;
+
+		@include breakpoint(medium) {
+			margin: 0 0 50px 0;
+			width: 48.5%;
+		}
+
+		&--inner {
+			padding: 0 24px 24px 24px;
+		}
+
+		h2 {
+			@include title($brand--primary);
+
+			padding-top: 0;
+			margin-top: 0;
+			text-decoration: none;
+
+			@include breakpoint(medium) {
+				font-size: 16px;
+			}
+		}
+
+		h3 {
+			font-family: $font--body;
+			color: $brand--primary;
+			letter-spacing: 1.5px;
+			font-weight: 100;
+			margin-top: 0;
+			margin-bottom: 5px;
+			font-size: 12px;
+
+			@include breakpoint(medium) {
+				font-size: 12px;
+			}
+		}
+
+		p {
+			font-family: $font--body;
+			font-size: 12px;
+			letter-spacing: 0.75px;
+			text-align: left;
+			line-height: 18px;
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+		}
+
+		.more {
+			@include button;
+
+			display: block;
+			margin: 25px 0 0 0;
+			text-decoration: none;
+			background-color: $brand--primary;
+			color: $brand--white;
+			font-size: 12px;
+			font-weight: 500;
+			width: 138px;
+			padding: 12px 10px 10px 10px;
+
+			@include breakpoint(medium) {
+				font-size: 12px;
+				padding: 12px 10px 10px 10px;
+			}
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		margin: 0 0 35px 0;
+		height: 343px;
+
+		a {
+			width: 100%;
+		}
+
+		&.border {
+			padding: 0 27px 0 27px;
+
+			@include breakpoint(medium) {
+				padding: 0 77px 0 77px;
+			}
+		}
+
+		&:hover {
+			.bg-image {
+				@include scale;
+			}
+		}
+
+		.bg-image {
+			height: 343px;
+			width: 100%;
+			display: block;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			display: inline-block;
+			transition: $transition;
+		}
+
+		// img {
+		// 	transition: $transition;
+		// 	display: block;
+		// 	width: 100%;
+		// }
+	}
+}
