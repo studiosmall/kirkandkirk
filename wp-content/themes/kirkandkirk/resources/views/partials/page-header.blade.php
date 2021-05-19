@@ -1,5 +1,10 @@
 <div class="page-header">
   <div class="page-header__inner">
-    <h1>{!! App::title() !!}</h1>
+    @if(is_single())
+    <h1>STORIES – Meet</h1>
+    @else
+      <h1>{!! App::title() !!}</h1>
+    @endif
+
   </div>
 </div>

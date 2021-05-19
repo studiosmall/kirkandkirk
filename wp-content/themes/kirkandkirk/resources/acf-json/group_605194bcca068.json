@@ -47,9 +47,9 @@
         },
         {
             "key": "field_60767eb35a2d0",
-            "label": "Read More Text",
+            "label": "Full Text",
             "name": "read_more_text",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "Leave blank if not required",
             "required": 0,
             "conditional_logic": 0,
@@ -59,10 +59,151 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "maxlength": 600,
-            "rows": 6,
-            "new_lines": "br"
+            "tabs": "visual",
+            "toolbar": "very_simple",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_60a4668b6c1a2",
+            "label": "Image",
+            "name": "image",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Image",
+            "sub_fields": [
+                {
+                    "key": "field_60a4669b6c1a3",
+                    "label": "Layout",
+                    "name": "layout",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "landscape": "Landscape",
+                        "portrait": "Portrait"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "landscape",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_60a466bb6c1a4",
+                    "label": "Landscape",
+                    "name": "landscape",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60a4669b6c1a3",
+                                "operator": "==",
+                                "value": "landscape"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_60a466cd6c1a5",
+                    "label": "Portrait",
+                    "name": "portrait",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60a4669b6c1a3",
+                                "operator": "==",
+                                "value": "portrait"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_60a466e16c1a6",
+                    "label": "Portrait",
+                    "name": "portrait_right",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60a4669b6c1a3",
+                                "operator": "==",
+                                "value": "portrait"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -95,5 +236,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618457096
+    "modified": 1621388090
 }

@@ -62,7 +62,9 @@ function kirkandkirk_more_articles() {
               </div>
 
               <h3>MEET</h3>
-              <h2><?= $article['title']; ?></h2>
+              <a href="<?= $article['slug']; ?>">
+                <h2><?= $article['title']; ?></h2>
+              </a>
 
               <div class="articles__text">
 
@@ -72,7 +74,7 @@ function kirkandkirk_more_articles() {
 
                   <?php if($article['readmore']) : ?>
 
-                    <a class="more" href="#">Read More</a>
+                    <a class="more" href="<?= $article['slug']; ?>">Read More</a>
                   <?php endif; ?>
 
               </div>

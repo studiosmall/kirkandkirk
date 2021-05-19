@@ -24,7 +24,9 @@
 							</div>
 
 							<h3>MEET</h3>
-							<h2>{{ $article['title'] }}</h2>
+							<a href="{{ $article['slug'] }}">
+								<h2>{{ $article['title'] }}</h2>
+							</a>
 
 							<div class="articles__text">
 
@@ -36,7 +38,7 @@
 										{{-- <span class="moretext">{!! $article['readmore'] !!}</span> --}}
 
 										{{-- <a class="moreless-button" href="#">Read More</a> --}}
-										<a class="more" href="#">Read More</a>
+										<a class="more" href="{{ $article['slug'] }}">Read More</a>
 									@endif
 
 

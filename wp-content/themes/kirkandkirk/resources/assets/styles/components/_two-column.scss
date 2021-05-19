@@ -13,9 +13,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		flex-direction: column-reverse;
 
 		@include breakpoint(medium) {
 			flex-wrap: nowrap;
+			flex-direction: row;
 		}
 	}
 
@@ -23,7 +25,15 @@
 		width: 100%;
 
 		@include breakpoint(medium) {
-			width: 48%;
+			width: 43%;
+		}
+
+		&:first-of-type {
+			width: 100%;
+
+			@include breakpoint(medium) {
+				width: 53%;
+			}
 		}
 	}
 

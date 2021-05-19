@@ -137,6 +137,7 @@
 
 			padding-top: 0;
 			margin-top: 0;
+			text-decoration: none;
 
 			@include breakpoint(medium) {
 				font-size: 16px;
@@ -163,6 +164,11 @@
 			letter-spacing: 0.75px;
 			text-align: left;
 			line-height: 18px;
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
 		}
 
 		.more {
