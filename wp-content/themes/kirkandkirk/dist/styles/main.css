@@ -10883,18 +10883,30 @@ input[type="submit"] {
 /* line 194, resources/assets/styles/components/_articles.scss */
 
 .articles__image {
+  overflow: hidden;
   margin: 0 0 35px 0;
 }
 
-/* line 197, resources/assets/styles/components/_articles.scss */
+/* line 198, resources/assets/styles/components/_articles.scss */
 
 .articles__image.border {
-  padding: 0 83px 0 83px;
+  padding: 0 20% 0 20%;
 }
 
-/* line 201, resources/assets/styles/components/_articles.scss */
+/* line 203, resources/assets/styles/components/_articles.scss */
+
+.articles__image:hover img {
+  -webkit-transform: scale(1.05);
+       -o-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* line 208, resources/assets/styles/components/_articles.scss */
 
 .articles__image img {
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
   display: block;
   width: 100%;
 }

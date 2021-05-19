@@ -192,13 +192,21 @@
 	}
 
 	&__image {
+		overflow: hidden;
 		margin: 0 0 35px 0;
 
 		&.border {
-			padding: 0 83px 0 83px;
+			padding: 0 20% 0 20%;
+		}
+
+		&:hover {
+			img {
+				@include scale;
+			}
 		}
 
 		img {
+			transition: $transition;
 			display: block;
 			width: 100%;
 		}

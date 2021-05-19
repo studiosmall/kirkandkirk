@@ -58,7 +58,9 @@ function kirkandkirk_more_articles() {
 						<span class="articles__line" style="border-color: <?= $article['colour']; ?>"></span>
             <div class="articles__card--inner">
               <div class="articles__image <?= $article['border']; ?>">
-                <img src="<?= $article['image']; ?>" alt="<?= $article['title']; ?>">
+                <a href="<?= $article['slug']; ?>">
+                  <img src="<?= $article['image']; ?>" alt="<?= $article['title']; ?>">
+                </a>
               </div>
 
               <h3>MEET</h3>
