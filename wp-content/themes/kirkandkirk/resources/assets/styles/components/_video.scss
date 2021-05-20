@@ -1,3 +1,11 @@
+.front-page-data {
+    .video.section {
+        &:first-of-type {
+            padding-top: 140px;
+        }
+    }
+}
+
 .video {
     @include section;
 

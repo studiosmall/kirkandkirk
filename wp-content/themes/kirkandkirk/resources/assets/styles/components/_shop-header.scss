@@ -63,9 +63,11 @@
 	text-transform: uppercase;
 	padding: 20px 0;
 	font-weight: 500;
+	font-size: 14px;
 
 	@include breakpoint(medium) {
 		padding: 20px 0 0 0;
+		font-size: 14px;
 	}
 
 	a {
@@ -74,6 +76,11 @@
 
 		text-transform: uppercase;
 		font-weight: 500;
+		font-size: 14px;
+
+		@include breakpoint(medium) {
+			font-size: 14px;
+		}
 	}
 }
 

@@ -1,4 +1,4 @@
-<section class="spotify bg-color-{!! $c['background_image'] !!}">
+<section class="spotify" style="background-color: {!! $c['background_colour'] !!};">
   <div class="spotify__inner">
 
     <div class="spotify__row">

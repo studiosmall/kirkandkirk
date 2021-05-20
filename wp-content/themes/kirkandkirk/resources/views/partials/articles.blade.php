@@ -16,7 +16,7 @@
 
 					{{-- <div class="articles__card" data-aos="fade-up"> --}}
 					<div class="articles__card" data-aos="fade-up">
-						<span class="articles__line" style="border-color: {{ $article['colour'] }};"></span>
+						{{-- <span class="articles__line" style="border-color: {{ $article['colour'] }};"></span> --}}
 
 						<div class="articles__card--inner">
 							<div class="articles__image {{ $article['border'] }}">

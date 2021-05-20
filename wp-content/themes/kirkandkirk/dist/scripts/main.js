@@ -2145,7 +2145,7 @@ Router.prototype.loadEvents = function loadEvents () {
     if($('.woocommerce-breadcrumb a').length) {
       var $first = $('.woocommerce-breadcrumb a').first();
       if($($first).text() == 'Optical') {
-        $($first).attr('href','/shop/optical/');
+        $($first).attr('href','/collections/optical/');
 
         // setTimeout(function() {
         //     $($first).addClass('hello');

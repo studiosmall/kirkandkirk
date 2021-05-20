@@ -55,38 +55,43 @@ if ( post_password_required() ) {
 			<span class="ico-360"></span>
 		</div>
 
+
 		<?php
-			$image_type      = get_field('lifestyle_image_layout');
-		
-
-
-			$image 					 = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' );
-
-			$lifestyle_image = get_field('lifestyle_image');
-			$height 			   = $lifestyle_image['height'];
-			$width  				 = $lifestyle_image['width'];
+			$lifestyleImages = get_field('images');
 		?>
 
-		<?php if($image_type == 'single') { ?>
+		<?php if($lifestyleImages) { ?>
+			<?php foreach($lifestyleImages as $item) : ?>
 
-			<?php if($lifestyle_image['url']) { ?>
-				<div class="lifestyle <?php if($width >= $height ) { echo 'landscape'; } else { echo 'portrait'; } ?>">
-					<img src="<?php echo $lifestyle_image['url']; ?>" alt="<?php echo $lifestyle_image['title']; ?>">
-				</div>
-			<?php } ?>
+				<?php
+					$type            = $item['image_type'];
 
-		<?php } elseif($image_type == 'double') { ?>
-			<?php
-				$double_image    = get_field('double'); 
-				$portrait_image  = get_field('portrait_image'); 
+					$lifestyleImage  = $item['image'];
+					$height 			   = $lifestyleImage['height'];
+					$width  				 = $lifestyleImage['width'];
+				?>
 
-			?>
+				<?php if($type == 'single') { ?>
 
-			<div class="double-image">
-				<?php foreach($double_image as $image) : ?>
-					<img class="portrait-img" src="<?php echo $image['portrait_image']; ?>">
+					<?php if($lifestyleImage) { ?>
+						<div class="lifestyle <?php if($width >= $height ) { echo 'landscape'; } else { echo 'portrait'; } ?>">
+							<img src="<?php echo $lifestyleImage['url']; ?>" alt="<?php echo $lifestyleImage['title']; ?>">
+						</div>
+					<?php } ?>
+
+				<?php } elseif($type == 'double') { ?>
+					<?php
+						$doubleImage    = $item['double'];
+					?>
+
+					<div class="double-image">
+						<?php foreach($doubleImage as $images) : ?>
+							<img class="portrait-img" src="<?php echo $images['portrait_image']; ?>">
+						<?php endforeach ?>
+					</div>
+				<?php } ?>
+
 				<?php endforeach ?>
-			</div>
 		<?php } ?>
 
 		<?php //if($image) { ?>

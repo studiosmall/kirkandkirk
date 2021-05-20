@@ -44,8 +44,8 @@ if ( ! empty( $breadcrumb ) ) {
 	}
 
 	if (is_product()){
-		//$color = get_field('product_colour_name');
-		$color = $product->get_attribute('pa_colour');
+		$color = get_field('product_colour_name');
+		//$color = $product->get_attribute('pa_colour');
 
 		if(!empty($color)){
 			echo '<span class="product-colour">';

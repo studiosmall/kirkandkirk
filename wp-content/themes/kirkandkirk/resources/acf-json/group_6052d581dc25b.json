@@ -56,10 +56,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_609351e67bee1",
-            "label": "Lifestyle Image Layout",
-            "name": "lifestyle_image_layout",
-            "type": "radio",
+            "key": "field_60a49d715b56f",
+            "label": "Images",
+            "name": "images",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -68,90 +68,58 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "single": "Single",
-                "double": "Double"
-            },
-            "allow_null": 0,
-            "other_choice": 0,
-            "default_value": "single",
-            "layout": "horizontal",
-            "return_format": "value",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_60752d7c9655b",
-            "label": "Lifestyle Image",
-            "name": "lifestyle_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_609351e67bee1",
-                        "operator": "==",
-                        "value": "single"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_609352347bee2",
-            "label": "Double",
-            "name": "double",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_609351e67bee1",
-                        "operator": "==",
-                        "value": "double"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
             "collapsed": "",
-            "min": 2,
-            "max": 2,
-            "layout": "table",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
             "button_label": "Add Image",
             "sub_fields": [
                 {
-                    "key": "field_609352607bee3",
-                    "label": "Portrait Image",
-                    "name": "portrait_image",
-                    "type": "image",
+                    "key": "field_60a49db95b570",
+                    "label": "Image Type",
+                    "name": "image_type",
+                    "type": "radio",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "url",
+                    "choices": {
+                        "single": "Single",
+                        "double": "Double"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "single",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_60a49dfa5b571",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60a49db95b570",
+                                "operator": "==",
+                                "value": "single"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
                     "preview_size": "medium",
                     "library": "all",
                     "min_width": "",
@@ -161,6 +129,59 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_60a49e475b572",
+                    "label": "Double",
+                    "name": "double",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_60a49db95b570",
+                                "operator": "==",
+                                "value": "double"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 2,
+                    "max": 2,
+                    "layout": "row",
+                    "button_label": "Add Image",
+                    "sub_fields": [
+                        {
+                            "key": "field_60a49e475b573",
+                            "label": "Portrait Image",
+                            "name": "portrait_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -229,33 +250,6 @@
             ],
             "min": "",
             "max": "",
-            "return_format": "object"
-        },
-        {
-            "key": "field_609cbf728c7a5",
-            "label": "Nosepad Product Link",
-            "name": "nosepad_product_link",
-            "type": "relationship",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [
-                "product"
-            ],
-            "taxonomy": "",
-            "filters": [
-                "search"
-            ],
-            "elements": [
-                "featured_image"
-            ],
-            "min": "",
-            "max": 1,
             "return_format": "object"
         },
         {
@@ -347,5 +341,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620885529
+    "modified": 1621483883
 }
