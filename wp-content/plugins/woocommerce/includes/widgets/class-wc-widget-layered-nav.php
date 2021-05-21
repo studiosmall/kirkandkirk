@@ -523,7 +523,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 
 						if($type == 'pa_shape') {
 							$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '"><span class="shape-graphic '. $name .' "></span>' . esc_html( $term->name ) . '</a>';
-						} elseif($type == 'pa_colour') {
+						} elseif($type == 'pa_color') {
 							$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '"><span class="colour-graphic '. $name .' "></span>' . esc_html( $term->name ) . '</a>';
 						} else {
 							$term_html = '<a rel="nofollow" href="' . esc_url( $link ) . '">' . esc_html( $term->name ) . '</a>';
@@ -540,7 +540,7 @@ class WC_Widget_Layered_Nav extends WC_Widget {
 
 						if($type == 'pa_shape') {
 							$term_html = '<span class="none shape-graphic '. $name .' "></span><span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
-						} elseif($type == 'pa_colour') {
+						} elseif($type == 'pa_color') {
 							$term_html = '<span class="none colour-graphic '. $name .' "></span><span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
 						} else {
 							$term_html = '<span class="none">' . esc_html( $term->name ) . '</span>';  // StudioSmall updated
