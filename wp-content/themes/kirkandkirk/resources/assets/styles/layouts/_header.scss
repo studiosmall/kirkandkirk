@@ -319,7 +319,8 @@
 			@include hoverline($brand--primary);
       margin: 0 0 0 15px;
 
-			&.cart-customlocation {
+			&.cart-customlocation,
+			&.your-class-name {
 				display: flex;
 				color: $brand--primary;
 				text-decoration: none;

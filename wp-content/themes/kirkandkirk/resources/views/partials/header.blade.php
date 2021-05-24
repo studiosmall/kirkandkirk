@@ -25,7 +25,7 @@
         $user = wp_get_current_user();
       @endphp
 
-      @if ( in_array( 'professional', (array) $user->roles ) )
+      @if ( in_array( 'optician', (array) $user->roles ) )
         <span class="professional">PROFESSIONAL ACCOUNT</span>
       @else
         <div class="announcement">
@@ -88,14 +88,19 @@
           </form>
 
         </div>
-        @if (!in_array( 'professional', (array) $user->roles ) )
+        @if (!in_array( 'optician', (array) $user->roles ) )
           <a href="/wishlists"><span class="ico-heart"></span></a>
         @endif
+
         <a href="/account"><span class="ico-account"></span></a>
-        <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><span class="ico-basket"></span><span><?php echo sprintf ( _n('(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
-        @if ( in_array( 'professional', (array) $user->roles ) )
+
+        @if (current_user_can('optician'))
+          @php if ( dynamic_sidebar('hb_common_right_widget') ) : else : endif; @endphp
           <span class="spacer">|</span> <a class="logout" href="/account/customer-logout/?_wpnonce=624d7b2cde">Logout</a>
+        @else
+          <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><span class="ico-basket"></span><span><?php echo sprintf ( _n('(%d)', '(%d)', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
         @endif
+
 
 	    </div>
 	  </div>
@@ -114,7 +119,7 @@
 
     @php $user = wp_get_current_user(); @endphp
 
-    @if ( in_array( 'professional', (array) $user->roles ) )
+    @if ( in_array( 'optician', (array) $user->roles ) )
 
     @if (has_nav_menu('professional_centre_navigation'))
       {!! wp_nav_menu(

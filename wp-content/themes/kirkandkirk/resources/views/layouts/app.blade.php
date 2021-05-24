@@ -4,7 +4,7 @@
 
   @php $user = wp_get_current_user(); @endphp
 
-  @if ( in_array( 'professional', (array) $user->roles ) )
+  @if ( in_array( 'optician', (array) $user->roles ) )
     @php $user = 'professional-user'; @endphp
   @endif
 

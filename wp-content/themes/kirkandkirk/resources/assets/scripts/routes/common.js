@@ -208,7 +208,7 @@ export default {
     }
 
     if($('.wc360').length) {
-      console.log('yes');
+      // console.log('yes');
       setTimeout(
         function() {
           $('.product-images__360').css('display', 'flex');
@@ -363,6 +363,148 @@ export default {
           $('.filter__container, .filter__title').addClass('active');
         }
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        $('.optician_variable_add_to_cart_button').on('click', function() {
+          console.log('clicked');
+
+            //let variation_id = $('input.variation_id').val();
+            let variation_id = $(this).val();
+            console.log(variation_id);
+
+            if (variation_id != 0) {
+                let $form_selector = $('form.variations_form');
+                let formdata = getFormData($form_selector);
+                //let formdata = getFormData(variation_id);
+
+                  console.log(formdata);
+                  alert('fired');
+
+                $.ajax({
+                    type: 'POST',
+                    // url: MyAjax.ajaxurl,
+                    url: window.siteOptions.ajaxurl,
+                    data: {
+                        'action': 'hb_optician_add_to_cart_data',
+                        'formdata': formdata,
+                    },
+                    success: function(result) {
+                        console.log('aa=>' + result);
+                        window.location.href = result;
+                    },
+                    error: function(xhr, resp, text) {
+                        console.log(xhr, resp, text);
+                    },
+                });
+            } else {
+                alert('Please select some product options before adding this product to your cart.');
+            }
+        });
+
+        $('.optician_remove_item').on('click', function() {
+            let variation_id = $(this).data('variation_id');
+            let variation_title = $(this).data('variation_title');  // eslint-disable-line no-unused-vars
+            /*alert(variation_id);*/
+            $.ajax({
+                type: 'POST',
+                // url: MyAjax.ajaxurl,
+                url: window.siteOptions.ajaxurl,
+                data: {
+                    'action': 'hb_optician_remove_item',
+                    'variation_id': variation_id,
+                },
+                success: function(result) {
+                    console.log('aa=>' + result);
+                    window.location.href = result;
+                },
+                error: function(xhr, resp, text) {
+                    console.log(xhr, resp, text);
+                },
+            });
+        });
+    
+        $('.optician-checkout-button').on('click', function() {
+            let references = [];
+            $('form.woocommerce-otician-cart-form textarea#reference ')
+                .each(function() {
+                    let current_value = $(this).val();
+                    references.push(current_value);
+                });
+    
+            let name_of_store = $('form.woocommerce-otician-cart-form #js_name_of_store').val();
+            let ordernote = $('form.woocommerce-otician-cart-form textarea#js_ordernote ').val();
+            $.ajax({
+                type: 'POST',
+                // url: MyAjax.ajaxurl,
+                url: window.siteOptions.ajaxurl,
+                data: {
+                    'action': 'hb_optician_checkout_order',
+                    references,
+                    ordernote,
+                    name_of_store,
+                },
+                success: function(result) {
+                    console.log('mail=>' + result);
+                    window.location.href = result;
+                },
+                error: function(xhr, resp, text) {
+                    console.log(xhr, resp, text);
+                },
+            });
+        });
+
+        function getFormData($form) {
+            let unindexed_array = $form.serializeArray();
+            let indexed_array = {};
+
+            $.map(unindexed_array, function(n, i) { // eslint-disable-line no-unused-vars
+                indexed_array[n['name']] = n['value'];
+            });
+    
+            return indexed_array;
+        }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   },
 };

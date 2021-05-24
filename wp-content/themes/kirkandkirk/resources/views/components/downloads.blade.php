@@ -1,12 +1,12 @@
-<section class="downloads section" data-aos="fade-up">
-  <div class="downloads__inner">
+<section class="downloads-section section" data-aos="fade-up">
+  <div class="downloads-section__inner">
 
-    <div class="downloads__items">
+    <div class="downloads-section__items">
       @if($c['download'])
 
         @foreach($c['download'] as $download)
 
-            <div class="downloads__item">
+            <div class="downloads-section__item">
 
               <a href="{{ $download['file'] }}" download>
                 <img src="{{ $download['thumbnail_image']['url'] }}">

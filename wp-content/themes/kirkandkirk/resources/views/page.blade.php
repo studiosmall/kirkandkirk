@@ -3,9 +3,9 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
 
-    @if($type['page_type'] == 'professional')
+    @if($type['page_type'] == 'optician')
 
-      @if( in_array( 'professional', (array) $type['user']->roles ) )
+      @if( in_array( 'optician', (array) $type['user']->roles ) )
 
         @include('partials.page-header')
         {{-- @include('partials.filter') --}}

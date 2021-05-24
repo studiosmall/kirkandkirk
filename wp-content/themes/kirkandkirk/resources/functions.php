@@ -60,6 +60,10 @@ array_map(function ($file) use ($sage_error) {
     }
 }, ['helpers', 'setup', 'filters', 'admin', 'ajax']);
 
+
+/// ADDED FROM OLD SITE
+include(get_stylesheet_directory().'/acf-userDynamic-role.php');
+
 /**
  * Here's what's happening with these hooks:
  * 1. WordPress initially detects theme in themes/sage/resources
@@ -539,7 +543,7 @@ add_filter( 'product_type_selector', 'remove_product_types' );
 function remove_product_types( $types ){
     unset( $types['grouped'] );
     unset( $types['external'] );
-    unset( $types['variable'] );
+    //unset( $types['variable'] );
     return $types;
 }
 
@@ -634,3 +638,325 @@ add_action( 'template_redirect', 'iconic_bypass_logout_confirmation' );
 // $availability['availability'] = str_ireplace('In stock', '', $availability['availability']);
 // return $availability;
 // }
+
+
+
+
+
+///// Optician START
+//////////////////////////////////
+
+/* Optician custom add to cart ajax function */
+function hb_optician_add_to_cart_data_callback()
+{
+    $user_id = get_current_user_id();
+    $product_data = $_POST['formdata'];
+    $cart_products_data = array();
+    /*echo $user_id;print_r($product_data);*/
+
+    $optician_cart_data = get_user_meta($user_id, 'optician_cart_data', true);
+    $optician_cart_data_array = unserialize($optician_cart_data);
+
+    if (!empty($optician_cart_data_array[0])) {
+        $cart_products_data = $optician_cart_data_array;
+    }
+    if (array_search($product_data['variation_id'], array_column($cart_products_data, 'variation_id')) === false) {
+        array_push($cart_products_data, $product_data);
+    } else {
+        $search_key = hb_search_for_variation_id($product_data['variation_id'], $cart_products_data, array());
+        /*echo "ss=>";print_r($search_key);*/
+        if (!empty($search_key)) {
+            $cart_products_data[$search_key]['quantity'] = intval($cart_products_data[$search_key]['quantity']) + intval($product_data['quantity']);
+            // if( isset( $product_data['optician_left'] ) ){
+            //     $cart_products_data[$search_key]['optician_left'] = $product_data['optician_left'];
+            // }
+            /*else{
+                unset( $cart_products_data[$search_key]['optician_left'] );
+            }*/
+            // if( isset( $product_data['optician_right'] ) ){
+            //     $cart_products_data[$search_key]['optician_right'] = $product_data['optician_right'];
+            // }
+            /*else{
+                unset( $cart_products_data[$search_key]['optician_right'] );
+            }*/
+        }
+    }
+    $optician_cart_data_array = $cart_products_data;
+    update_user_meta($user_id, 'optician_cart_data', serialize($optician_cart_data_array));
+    echo get_permalink($product_data['product_id']) . '?optician_add_item='.$product_data['variation_id'];
+    die();
+}
+add_action("wp_ajax_hb_optician_add_to_cart_data", "hb_optician_add_to_cart_data_callback");
+
+/* Get already exist variation id */
+function hb_search_for_variation_id($search_value, $array, $id_path)
+{
+    if (!empty($array[0])) {
+        // Iterating over main array
+        foreach ($array as $key1 => $val1) {
+            $temp_path = $id_path;
+
+            // Adding current key to search path
+            array_push($temp_path, $key1);
+
+            // Check if this value is an array
+            // with atleast one element
+            if (is_array($val1) and count($val1)) {
+                // Iterating over the nested array
+                foreach ($val1 as $key2 => $val2) {
+                    if ($val2 == $search_value) {
+                        // Adding current key to search path
+                        array_push($temp_path, $key2);
+
+                        return $temp_path[0];
+                        // return join(" a--> ", $temp_path);
+                    }
+                }
+            }
+            /*elseif($val1 == $search_value) {
+                return join(" b--> ", $temp_path);
+            } */
+        }
+    }
+    return null;
+}
+
+/* Remove item in optician cart */
+function hb_optician_remove_item_callback()
+{
+    $cart_products_data = array();
+    $user_id = get_current_user_id();
+    $variation_id = $_POST['variation_id'];
+
+    $optician_cart_data = get_user_meta($user_id, 'optician_cart_data', true);
+    $optician_cart_data_array = unserialize($optician_cart_data);
+    /*echo "remove_ajax_response=><pre>";
+    print_r($optician_cart_data_array);
+    echo "</pre>";*/
+    if (!empty($optician_cart_data_array[0])) {
+        $cart_products_data = $optician_cart_data_array;
+    }
+
+    $search_key = hb_search_for_variation_id($variation_id, $cart_products_data, array());
+    unset($cart_products_data[$search_key]);
+
+    $optician_cart_data_array = array_values(array_filter($cart_products_data));
+    
+    update_user_meta($user_id, 'optician_cart_data', serialize($optician_cart_data_array));
+    /*if( count($cart_products_data) > 0 ){
+        echo "remove_item";
+    }else{
+        echo "remove_all";
+    }*/
+    echo esc_url(wc_get_cart_url()) . "?optician_remove_item=$variation_id";
+    die();
+}
+add_action("wp_ajax_hb_optician_remove_item", "hb_optician_remove_item_callback");
+
+require_once 'hbMiniCart.php';
+
+// register Hb_Mini_Cart widget
+function register_hb_mini_cart()
+{
+    register_widget('Hb_Mini_Cart');
+}
+if (current_user_can('optician') || is_admin()) {
+    add_action('widgets_init', 'register_hb_mini_cart');
+}
+
+/* Place optician order */
+function hb_optician_checkout_order_callback()
+{
+    $headers = $optician_cart_data_array = array();
+    $cart_content = '';
+    $references = $_POST['references'];
+    $name_of_store = $_POST['name_of_store'];
+    $ordernote = $_POST['ordernote'];
+    $user_id = get_current_user_id();
+    $current_user = wp_get_current_user();
+    $optician_email = $current_user->user_email;
+    $optician_name = $current_user->display_name;
+    $admin_email = get_option("admin_email");
+    $blog_name = get_bloginfo("name");
+
+    $headers[] = "From: $blog_name <$admin_email>";
+    $headers[] = "Bcc: rowan@studiosmall.com";
+    // $headers[] = "Bcc: karen@kirkandkirk.com";
+    // $headers[] = "Bcc: karen@kirkandkirk.com";
+    $headers[] = "Content-Type: text/html; charset=UTF-8";
+
+    $optician_cart_data = get_user_meta($user_id, 'optician_cart_data', true);
+    $optician_cart_data_array = unserialize($optician_cart_data);
+    /*echo "optician_mail_ajax_response=><pre>";
+    print_r($optician_cart_data_array);
+    echo "</pre>";*/
+    $cart_content .= "<html><body style='margin:0;'>";
+    $cart_content .= '<table style="width: 600px; margin: 0 auto; ">
+        <tr>
+            <td style="width: 100%">
+                <p>Hello '.$optician_name.',<br /></p>
+                <p>Thank you for placing an Order we`ll be reaching out to you soon.<br /></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%">
+              <table cellspacing="0" style=" width:100%; border: 1px solid rgba(0,0,0,.1); text-align: left; border-collapse: separate; border-radius: 5px">
+            <thead>
+                <tr>
+                    <th style=" font-weight: 700; padding: 9px 12px; line-height: 1.5em;">&nbsp;</th>
+                    <th style=" font-weight: 700; padding: 9px 12px; line-height: 1.5em;">'.__('Product', 'woocommerce').'</th>
+                    <th style=" font-weight: 700; padding: 9px 12px; line-height: 1.5em;">'.__('Quantity', 'woocommerce').'</th>
+                    <th style=" font-weight: 700; padding: 9px 12px; line-height: 1.5em;">'.__('Reference', 'woocommerce').'</th>
+                </tr>
+            </thead>
+            <tbody>';
+    if (!empty($optician_cart_data_array[0])) {
+        foreach ($optician_cart_data_array as $cart_item_key => $cart_item) {
+            $product_id = $cart_item['product_id'];
+            $variation_id = $cart_item['variation_id'];
+            $variation_title = get_the_title($variation_id);
+            $variation_title = $variation_title ? $variation_title : '';
+            $attachment_id = get_post_meta($variation_id, '_thumbnail_id', true);
+            $_product = wc_get_product($product_id);
+
+            if ($_product && $_product->exists()) {
+                $product_permalink = get_permalink($variation_id);
+                $cart_content .= '<tr>
+                    <td style=" font-weight: 400; padding: 9px 12px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">';
+                $thumbnail = wp_get_attachment_image($attachment_id, array(40, 40));
+
+                if (! $product_permalink) {
+                    $cart_content .= $thumbnail;
+                } else {
+                    $cart_content .= '<a href="'.esc_url($product_permalink).'">'.$thumbnail.'</a>';
+                }
+                $cart_content .= '</td>
+                    <td style=" font-weight: 400; padding: 9px 12px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">';
+                if (! $product_permalink) {
+                    $cart_content .= wp_kses_post($variation_title);
+                } else {
+                    $cart_content .= wp_kses_post(sprintf('<a href="%s" style="text-decoration: none; color: #000;">%s</a>', esc_url($product_permalink), $variation_title));
+                }
+                $cart_content .= '</td>';
+                //     <td style=" font-weight: 400; padding: 9px 12px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">';
+                // $temples_arr = array();
+                // if (isset($cart_item['optician_left'])) {
+                //     array_push($temples_arr, $cart_item['optician_left']);
+                // }
+                // if (isset($cart_item['optician_right'])) {
+                //     array_push($temples_arr, $cart_item['optician_right']);
+                // }
+                // $temples = implode(", ", $temples_arr);
+                // if (!isset($cart_item['optician_left']) && !isset($cart_item['optician_right'])) {
+                //     $temples = __('Frame(s)', 'woocommerce');
+                // }
+
+                // $cart_content .= $temples;
+                // $cart_content .= '</td>
+                    $cart_content .= '<td style=" font-weight: 400; padding: 9px 12px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">'.$cart_item['quantity'].'</td>';
+                $cart_content .= '<td style=" font-weight: 400; padding: 9px 12px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">'.$references[$cart_item_key].'</td>
+                    </tr>';
+            }
+        }
+        $cart_content .= '</table>
+            </td>
+        </tr>
+        </tbody>
+        </table>';
+        $cart_content .= '<div style=" font-weight: 400; padding: 9px 55px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);"> '.__(' Name of Store: ' ).$name_of_store.'</div>';
+        $cart_content .= '<div style=" font-weight: 400; padding: 9px 55px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">'.__('Order Note: ' ).$ordernote.'</div>';
+        $cart_content .='</body>
+    </html>';
+
+        $result = wp_mail($optician_email, "Order placed successfully!", $cart_content, $headers);
+        if ($result) {
+            /*echo "mail send!";*/
+            if (! delete_user_meta($user_id, 'optician_cart_data')) {
+                $delete_failed = "Ooops! Error while deleting cart content!";
+            }
+            echo home_url('/optician-thankyou/');
+        } else {
+            /*echo "mail sending failed!";*/
+            echo esc_url(wc_get_cart_url()) . '?optician_placeorder=false';
+        }
+    }
+    die();
+}
+add_action("wp_ajax_hb_optician_checkout_order", "hb_optician_checkout_order_callback");
+
+
+
+/*Notice after Add to cart product */
+add_action('woocommerce_before_single_product', 'wc_add_to_cart_message_html_optician', 10);
+function wc_add_to_cart_message_html_optician()
+{
+    if (isset($_GET['optician_add_item']) && $_GET['optician_add_item'] != '') {
+        $variation_title = get_the_title($_GET['optician_add_item']);
+        $message = "<a href='".esc_url(wc_get_cart_url())."' tabindex='1' class='button wc-forward'>View cart</a> $variation_title has been added to your cart.";
+        wc_print_notice($message, 'notice');
+    }
+}
+
+/* Notice after remove optiocian cart item */
+add_action('woocommerce_before_cart', 'after_remove_optician_item_notification');
+function after_remove_optician_item_notification()
+{
+    if (isset($_GET['optician_remove_item']) && $_GET['optician_remove_item'] != '') {
+        $variation_title = get_the_title($_GET['optician_remove_item']);
+        $message = "$variation_title removed!";
+        wc_print_notice($message, 'notice');
+    }
+}
+
+/* Notice after failed optiocian order */
+add_action('woocommerce_before_cart', 'after_failed_optiocian_order_notification');
+function after_failed_optiocian_order_notification()
+{
+    if (isset($_GET['optician_placeorder']) && $_GET['optician_placeorder'] == 'false') {
+        $message = "Order can't be placed due to some reason! Please contact admin.";
+        wc_print_notice($message, 'error');
+    }
+}
+
+/* Remove out of stock label for optician */
+function sww_wc_remove_variation_stock_display($data)
+{
+    if (current_user_can('optician')) {
+        unset($data['availability_html']);
+    }
+    return $data;
+}
+add_filter('woocommerce_available_variation', 'sww_wc_remove_variation_stock_display', 99);
+
+add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
+function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user_id, $blogname ) {
+$user = new WP_User($user_id);
+$user_login = stripslashes($user->user_login);
+$user_email = stripslashes($user->user_email);
+$key = wp_generate_password( 20, false );
+$link=site_url("wp-login.php?action=rp&key=$key&login=" .rawurlencode($user->user_login), 'login');
+$link_login=site_url('wp-login.php');
+do_action( 'retrieve_password_key', $user->user_login, $key );
+
+global $wpdb;
+if ( empty( $wp_hasher ) ) {
+require_once ABSPATH . WPINC . '/class-phpass.php';
+$wp_hasher = new PasswordHash( 8, true );
+}
+$hashed = time() . ':' . $wp_hasher->HashPassword( $key );
+$wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user->user_login ) );
+
+$wp_new_user_notification_email['message'] = '';
+$wp_new_user_notification_email['message'] .= sprintf(__('Username: %s'), $user->user_login) . "\r\n".'<br>';
+$wp_new_user_notification_email['message'] .= __('To set your password, visit the following address:') ."<br/><br/>";
+
+$wp_new_user_notification_email['message'] .=" <a href=".$link.">Click here<br/></a>";
+$wp_new_user_notification_email['message'] .= "<br/>OR <br/>";
+$wp_new_user_notification_email['message'] .="<br><a href='".$link_login."'>Click here for login</a>";
+
+
+
+$wp_new_user_notification_email['subject'] =  __('Login Details ');
+$wp_new_user_notification_email['headers'] = 'Content-Type: text/html; charset=UTF-8';
+return $wp_new_user_notification_email;
+}

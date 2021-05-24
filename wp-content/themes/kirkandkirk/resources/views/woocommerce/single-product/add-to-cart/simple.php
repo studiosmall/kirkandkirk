@@ -115,18 +115,46 @@ if ( $product->is_in_stock() ) : ?>
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 		<?php
+		
+    if (current_user_can('optician')) {
+        ?>
+        <div class="quantity row">
+            <label>Quantity</label>
+            <input type="number" id="optician-quantity" class="qty optician-qty" name="quantity" min="1" max="999" value="1" />
+        </div>
+        <!-- <div class="temples row">
+            <label>Temples</label>
+            <p>
+                <input type="checkbox" id="optician-left" class="input-checkbox" name="optician_left" value="Left" /> Left
+            </p>
+            <p>
+                <input type="checkbox" id="optician-right" class="input-checkbox" name="optician_right" value="Right" /> Right
+            </p>
+        </div> -->
+
+            <button type="button" value="<?php echo esc_attr( $product->get_id() ); ?>" class="optician_variable_add_to_cart_button button alt"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
+
+        <?php
+		echo 'Yes Opt';
+
+    } else {
+
+
+		
 			// $nosepads   = get_field('nosepad_product_link');
 			// $nosepadsID = $nosepads[0]->ID;
 			// $nosepadsLink = get_permalink($nosepadsID);
-		?>
+		
 
-		<?php if($nosepads) { ?>
+	  if($nosepads) { ?>
 			<!-- <div class="nosepads-container">
 				<a href="<?php //echo $nosepadsLink; ?>">Add Nosepads</a>
 			</div> -->
 		<?php } ?>
 
 		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+
+		<?php } ?>
 
 	</form>
 
@@ -135,5 +163,7 @@ if ( $product->is_in_stock() ) : ?>
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
 
 <?php endif; ?>
+
+
 
 
