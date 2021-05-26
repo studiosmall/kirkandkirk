@@ -87,11 +87,13 @@ the readme will list any important changes.
 
                                 <div class="collection-products__meta" style="border-color:{{ $colour }};">
                                   <h1>{{ $title }}</h1>
-                                  <?php if($sale) : ?>
-                                  <span><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></span>
-                                  <?php elseif($price) : ?>
-                                    <span><?php echo $currency; echo $price; ?></span>
-                                  <?php endif; ?>
+                                  <?php if (!current_user_can('optician')) { ?>
+                                    <?php if($sale) : ?>
+                                    <span><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></span>
+                                    <?php elseif($price) : ?>
+                                      <span><?php echo $currency; echo $price; ?></span>
+                                    <?php endif; ?>
+                                  <?php } ?>
                                 </div>
 
                               </div>

@@ -37,7 +37,7 @@ global $product;
 	);
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
-	
+
 	?>
 
 <?php if (current_user_can('optician')) {

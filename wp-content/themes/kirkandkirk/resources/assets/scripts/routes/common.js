@@ -371,10 +371,48 @@ export default {
 
 
 
+        $('.optician_single_add_to_cart_button').on('click', function() {
 
+          console.log('in her');
 
+            //let variation_id = $('input.variation_id').val();
+            let variation_id = $(this).val();
 
+            if (variation_id != 0) {
+                //let $form_selector = $('form.variations_form');
+                //let formdata = getFormData($form_selector);
+                //let formdata = getFormData(variation_id);
 
+                //console.log(formdata);
+
+                //let formdata = {'attribute_pa_color':'reds-pinks','quantity':'1','wlid':'','add-to-wishlist-type':'variable','wl_from_single_product':'1','add-to-cart':'305','product_id':'305','variation_id':'305'};
+                let formdata = {'quantity':'1','wl_from_single_product':'1','add-to-cart':variation_id,'product_id':variation_id,'variation_id':variation_id};
+
+                console.log(formdata);
+
+                $.ajax({
+                    type: 'POST',
+                    // url: MyAjax.ajaxurl,
+                    url: window.siteOptions.ajaxurl,
+                    data: {
+                        'action': 'hb_optician_single_add_to_cart_data',
+                        'formdata': formdata,
+                    },
+                    success: function(result) {
+                        console.log('aa=>' + result);
+
+                       //throw new Error(formdata);
+
+                        window.location.href = result;   // eslint-disable-line  no-unreachable
+                    },
+                    error: function(xhr, resp, text) {
+                        console.log(xhr, resp, text);
+                    },
+                });
+            } else {
+                alert('Please select some product options before adding this product to your cart.');
+            }
+        });
 
 
         $('.optician_variable_add_to_cart_button').on('click', function() {
@@ -389,8 +427,9 @@ export default {
                 let formdata = getFormData($form_selector);
                 //let formdata = getFormData(variation_id);
 
+                  console.log('here');
                   console.log(formdata);
-                  alert('fired');
+
 
                 $.ajax({
                     type: 'POST',
@@ -402,7 +441,10 @@ export default {
                     },
                     success: function(result) {
                         console.log('aa=>' + result);
-                        window.location.href = result;
+
+                        throw new Error(formdata);
+
+                        window.location.href = result;   // eslint-disable-line  no-unreachable
                     },
                     error: function(xhr, resp, text) {
                         console.log(xhr, resp, text);
@@ -472,7 +514,7 @@ export default {
             $.map(unindexed_array, function(n, i) { // eslint-disable-line no-unused-vars
                 indexed_array[n['name']] = n['value'];
             });
-    
+
             return indexed_array;
         }
   

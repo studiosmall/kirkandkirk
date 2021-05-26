@@ -25,7 +25,8 @@ if ( ! $product->is_purchasable() ) {
 
 if ( $product->is_in_stock() ) : ?>
 
-	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+
+<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 
 <?php
@@ -78,64 +79,58 @@ if ( $product->is_in_stock() ) : ?>
 
 		?>
 
-		<div class="how-to__container">
-			<a class="how-to" href="/faqs">FAQs</a>
-		</div>
 
-		<?php
-			$url_ID = get_the_ID();
-		?>
-		<div class="share">
-			<a id="share-icons" href="#">Share</a>
-				<div class="share__inner">
-					<ul>
-						<li>
-							<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink($url_ID); ?>" target="_blank">
-								Facebook
-							</a>
-						</li>
-						<!-- <li>
-							<a href="//pinterest.com/pin/create/link/?url=<?php// the_permalink($url_ID); ?>&amp;description=<?php// the_title(); ?>" target="_blank">Pinterest</a>
-						</li> -->
+		<?php if (!current_user_can('optician')) { ?>
+			<div class="how-to__container">
+				<a class="how-to" href="/faqs">FAQs</a>
+			</div>
 
-						<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true">Pinterest</a>
-						<li>
-							<a href="https://twitter.com/intent/tweet
-?url=http%3A%2F%2F<?php the_permalink($url_ID); ?>%2F
-&text=<?php the_title($url_ID); ?>" target="_blank">
-								Twitter
-							</a>
-						</li>
-					</ul>
-				</div>
-		</div>
+			<?php
+				$url_ID = get_the_ID();
+			?>
+			<div class="share">
+				<a id="share-icons" href="#">Share</a>
+					<div class="share__inner">
+						<ul>
+							<li>
+								<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink($url_ID); ?>" target="_blank">
+									Facebook
+								</a>
+							</li>
+							<!-- <li>
+								<a href="//pinterest.com/pin/create/link/?url=<?php// the_permalink($url_ID); ?>&amp;description=<?php// the_title(); ?>" target="_blank">Pinterest</a>
+							</li> -->
+
+							<a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark" data-pin-custom="true">Pinterest</a>
+							<li>
+								<a href="https://twitter.com/intent/tweet
+	?url=http%3A%2F%2F<?php the_permalink($url_ID); ?>%2F
+	&text=<?php the_title($url_ID); ?>" target="_blank">
+									Twitter
+								</a>
+							</li>
+						</ul>
+					</div>
+			</div>
+
+		<?php } ?>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_quantity' ); ?>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 
 		<?php
-		
+
     if (current_user_can('optician')) {
         ?>
         <div class="quantity row">
             <label>Quantity</label>
             <input type="number" id="optician-quantity" class="qty optician-qty" name="quantity" min="1" max="999" value="1" />
         </div>
-        <!-- <div class="temples row">
-            <label>Temples</label>
-            <p>
-                <input type="checkbox" id="optician-left" class="input-checkbox" name="optician_left" value="Left" /> Left
-            </p>
-            <p>
-                <input type="checkbox" id="optician-right" class="input-checkbox" name="optician_right" value="Right" /> Right
-            </p>
-        </div> -->
 
-            <button type="button" value="<?php echo esc_attr( $product->get_id() ); ?>" class="optician_variable_add_to_cart_button button alt"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
+        <button type="button" value="<?php echo esc_attr( $product->get_id() ); ?>" class="optician_single_add_to_cart_button button alt"><?php echo esc_html($product->single_add_to_cart_text()); ?></button>
 
         <?php
-		echo 'Yes Opt';
 
     } else {
 

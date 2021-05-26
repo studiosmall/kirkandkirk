@@ -122,6 +122,19 @@
 		@include breakpoint(medium) {
 			display: initial;
 		}
+
+		.wc-price-based-country {
+			select {
+				background-color: transparent;
+				border: 0;
+				width: 155px;
+				letter-spacing: 0.6px;
+
+				&:focus {
+					outline: none;
+				}
+			}
+		}
 	}
 
 	&__find {

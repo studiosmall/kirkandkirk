@@ -646,6 +646,56 @@ add_action( 'template_redirect', 'iconic_bypass_logout_confirmation' );
 ///// Optician START
 //////////////////////////////////
 
+/* Optician Single custom add to cart ajax function */
+function hb_optician_single_add_to_cart_data_callback()
+{
+    $user_id = get_current_user_id();
+    $product_data = $_POST['formdata'];
+    $cart_products_data = array();
+    /*echo $user_id;print_r($product_data);*/
+
+    // var_dump($product_data);
+    // var_dump($product_data['product_id']);
+    // var_dump('hello');
+    //var_dump($product_data);
+
+    $optician_cart_data = get_user_meta($user_id, 'optician_cart_data', true);
+    $optician_cart_data_array = unserialize($optician_cart_data);
+
+    //var_dump($optician_cart_data_array);
+
+    if (!empty($optician_cart_data_array[0])) {
+        $cart_products_data = $optician_cart_data_array;
+    }
+    if (array_search($product_data['variation_id'], array_column($cart_products_data, 'variation_id')) === false) {
+        array_push($cart_products_data, $product_data);
+    } else {
+        $search_key = hb_search_for_variation_id($product_data['variation_id'], $cart_products_data, array());
+        /*echo "ss=>";print_r($search_key);*/
+        if (!empty($search_key)) {
+            $cart_products_data[$search_key]['quantity'] = intval($cart_products_data[$search_key]['quantity']) + intval($product_data['quantity']);
+            // if( isset( $product_data['optician_left'] ) ){
+            //     $cart_products_data[$search_key]['optician_left'] = $product_data['optician_left'];
+            // }
+            /*else{
+                unset( $cart_products_data[$search_key]['optician_left'] );
+            }*/
+            // if( isset( $product_data['optician_right'] ) ){
+            //     $cart_products_data[$search_key]['optician_right'] = $product_data['optician_right'];
+            // }
+            /*else{
+                unset( $cart_products_data[$search_key]['optician_right'] );
+            }*/
+        }
+    }
+    $optician_cart_data_array = $cart_products_data;
+    update_user_meta($user_id, 'optician_cart_data', serialize($optician_cart_data_array));
+    echo get_permalink($product_data['product_id']) . '?optician_add_item='.$product_data['variation_id'];
+    die();
+}
+add_action("wp_ajax_hb_optician_single_add_to_cart_data", "hb_optician_single_add_to_cart_data_callback");
+
+
 /* Optician custom add to cart ajax function */
 function hb_optician_add_to_cart_data_callback()
 {
@@ -654,8 +704,13 @@ function hb_optician_add_to_cart_data_callback()
     $cart_products_data = array();
     /*echo $user_id;print_r($product_data);*/
 
+    //var_dump($product_data['product_id']);
+    var_dump($product_data);
+
     $optician_cart_data = get_user_meta($user_id, 'optician_cart_data', true);
     $optician_cart_data_array = unserialize($optician_cart_data);
+
+   // var_dump($optician_cart_data_array);
 
     if (!empty($optician_cart_data_array[0])) {
         $cart_products_data = $optician_cart_data_array;
@@ -741,7 +796,7 @@ function hb_optician_remove_item_callback()
     unset($cart_products_data[$search_key]);
 
     $optician_cart_data_array = array_values(array_filter($cart_products_data));
-    
+
     update_user_meta($user_id, 'optician_cart_data', serialize($optician_cart_data_array));
     /*if( count($cart_products_data) > 0 ){
         echo "remove_item";

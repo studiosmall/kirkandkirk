@@ -8,10 +8,8 @@
   <div class="header__banner" @php if($options['colours']['footer_colour']) { @endphp style="background-color: rgba({!! $options['colours']['banner_colour'] !!})" @php } @endphp>
     <div class="header__banner--inner">
       <div class="header__currency">
-        Currency (£ GBP)
-
         @php
-          // echo do_shortcode('[wcpbc_country_selector remove_other_countries="1"]');
+          echo do_shortcode('[wcpbc_country_selector remove_other_countries="1"]');
         @endphp
       </div>
 
@@ -44,9 +42,11 @@
       @endif
 
       <div class="header__find">
+        <?php if (!current_user_can('optician')) : ?>
         <a href="/retailers">
           Find a Store
         </a>
+        <?php endif; ?>
       </div>
     </div>
   </div>

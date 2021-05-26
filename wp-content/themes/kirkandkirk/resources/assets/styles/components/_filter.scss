@@ -48,6 +48,11 @@
 
 		cursor: pointer;
 		font-weight: 500;
+		font-size: 14px;
+
+		@include breakpoint(medium) {
+			font-size: 14px;
+		}
 
 		&.active {
 			.plus {
@@ -64,7 +69,7 @@
 			&::after {
 				content: "\002B";
 				display: inline-block;
-				font-size: 23px;
+				font-size: 19px;
 				font-weight: 100;
 				vertical-align: middle;
 				color: $brand--primary;
@@ -252,6 +257,11 @@
 
 			margin: 30px 0 10px 0;
 			font-weight: 500;
+			font-size: 14px;
+
+			@include breakpoint(medium) {
+				font-size: 14px;
+			}
 		}
 
 		ul.woocommerce-widget-layered-nav-list {
