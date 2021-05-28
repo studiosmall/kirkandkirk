@@ -26,6 +26,39 @@
     .woocommerce-cart-form {
       padding: 100px 0 0 0;
 
+      .name_of_store {
+        span.msg {
+          display: none;
+        }
+      }
+
+      .profession-order-note {
+        padding: 20px 0 0 0;
+
+        .msg {
+          display: inline-block;
+          width: 100%;
+          padding: 0 0 5px 0;
+        }
+
+        textarea {
+          width: 95%;
+          padding: 5px;
+          margin: 15px 0 0 0;
+          width: calc(100% - 13px);
+        }
+      }
+
+      input.input-text {
+        width: calc(100% - 22px);
+        background: #fff;
+        border-color: #777;
+
+        &:focus {
+          border-color: #777;
+        }
+      }
+
       .shop_table {
         width: 100%;
 

@@ -30,7 +30,7 @@ if ( in_array( 'optician', (array) $user->roles ) ) {
         print_r($optician_cart_data_array);
         echo "</pre>";*/
         ?>
-        <form class="woocommerce-otician-cart-form" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
+        <form class="woocommerce-cart-form woocommerce-otician-cart-form" action="<?php echo esc_url(wc_get_cart_url()); ?>" method="post">
         <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
             <thead>
                 <tr>
