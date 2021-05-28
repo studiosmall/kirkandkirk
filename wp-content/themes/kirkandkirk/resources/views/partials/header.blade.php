@@ -8,8 +8,10 @@
   <div class="header__banner" @php if($options['colours']['footer_colour']) { @endphp style="background-color: rgba({!! $options['colours']['banner_colour'] !!})" @php } @endphp>
     <div class="header__banner--inner">
       <div class="header__currency">
+        <span>Currency:</span>
+
         @php
-          echo do_shortcode('[wcpbc_country_selector remove_other_countries="1"]');
+          echo do_shortcode('[wcpbc_currency_switcher currency_display_style="{symbol} {code}" remove_other_countries="1"]');
         @endphp
       </div>
 

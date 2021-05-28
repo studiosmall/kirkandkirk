@@ -120,14 +120,19 @@
 		@include banner-title($brand--primary);
 
 		@include breakpoint(medium) {
-			display: initial;
+			display: flex;
+			align-items: center;
+			line-height: 18px;
+		}
+
+		span {
+			padding: 0 5px 0 0;
 		}
 
 		.wc-price-based-country {
 			select {
 				background-color: transparent;
 				border: 0;
-				width: 155px;
 				letter-spacing: 0.6px;
 
 				&:focus {

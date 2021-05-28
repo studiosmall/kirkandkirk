@@ -12810,26 +12810,37 @@ input[value="search"] {
   /* line 116, resources/assets/styles/layouts/_header.scss */
 
   .header__currency {
-    display: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 18px;
   }
 }
 
-/* line 127, resources/assets/styles/layouts/_header.scss */
+/* line 128, resources/assets/styles/layouts/_header.scss */
+
+.header__currency span {
+  padding: 0 5px 0 0;
+}
+
+/* line 133, resources/assets/styles/layouts/_header.scss */
 
 .header__currency .wc-price-based-country select {
   background-color: transparent;
   border: 0;
-  width: 155px;
   letter-spacing: 0.6px;
 }
 
-/* line 133, resources/assets/styles/layouts/_header.scss */
+/* line 138, resources/assets/styles/layouts/_header.scss */
 
 .header__currency .wc-price-based-country select:focus {
   outline: none;
 }
 
-/* line 140, resources/assets/styles/layouts/_header.scss */
+/* line 145, resources/assets/styles/layouts/_header.scss */
 
 .header__find {
   width: 20%;
@@ -12842,7 +12853,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 140, resources/assets/styles/layouts/_header.scss */
+  /* line 145, resources/assets/styles/layouts/_header.scss */
 
   .header__find {
     font-size: 12px;
@@ -12850,14 +12861,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 140, resources/assets/styles/layouts/_header.scss */
+  /* line 145, resources/assets/styles/layouts/_header.scss */
 
   .header__find {
     display: initial;
   }
 }
 
-/* line 152, resources/assets/styles/layouts/_header.scss */
+/* line 157, resources/assets/styles/layouts/_header.scss */
 
 .header__logo-container {
   width: 100%;
@@ -12867,7 +12878,7 @@ input[value="search"] {
   transition: 0.2s all ease;
 }
 
-/* line 159, resources/assets/styles/layouts/_header.scss */
+/* line 164, resources/assets/styles/layouts/_header.scss */
 
 .header__left {
   width: calc((100%) / 2);
@@ -12882,26 +12893,26 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 159, resources/assets/styles/layouts/_header.scss */
+  /* line 164, resources/assets/styles/layouts/_header.scss */
 
   .header__left {
     width: calc((100%) / 2);
   }
 }
 
-/* line 168, resources/assets/styles/layouts/_header.scss */
+/* line 173, resources/assets/styles/layouts/_header.scss */
 
 .header__left ul {
   margin: 0;
 }
 
-/* line 170, resources/assets/styles/layouts/_header.scss */
+/* line 175, resources/assets/styles/layouts/_header.scss */
 
 .header__left ul li {
   margin-right: 26px;
 }
 
-/* line 176, resources/assets/styles/layouts/_header.scss */
+/* line 181, resources/assets/styles/layouts/_header.scss */
 
 .header__logo {
   -webkit-transition: 0.2s all ease;
@@ -12912,7 +12923,7 @@ input[value="search"] {
   margin: 0;
 }
 
-/* line 193, resources/assets/styles/layouts/_header.scss */
+/* line 198, resources/assets/styles/layouts/_header.scss */
 
 .header__right {
   width: calc((100% - 150px) / 2);
@@ -12930,26 +12941,26 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 193, resources/assets/styles/layouts/_header.scss */
+  /* line 198, resources/assets/styles/layouts/_header.scss */
 
   .header__right {
     width: calc((100% - 156px) / 2);
   }
 }
 
-/* line 202, resources/assets/styles/layouts/_header.scss */
+/* line 207, resources/assets/styles/layouts/_header.scss */
 
 .header__right ul {
   margin: 0;
 }
 
-/* line 204, resources/assets/styles/layouts/_header.scss */
+/* line 209, resources/assets/styles/layouts/_header.scss */
 
 .header__right ul li {
   margin-left: 26px;
 }
 
-/* line 210, resources/assets/styles/layouts/_header.scss */
+/* line 215, resources/assets/styles/layouts/_header.scss */
 
 .header__mobile-menu {
   display: inline-block;
@@ -12968,20 +12979,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 210, resources/assets/styles/layouts/_header.scss */
+  /* line 215, resources/assets/styles/layouts/_header.scss */
 
   .header__mobile-menu {
     display: none;
   }
 }
 
-/* line 226, resources/assets/styles/layouts/_header.scss */
+/* line 231, resources/assets/styles/layouts/_header.scss */
 
 .header__mobile-menu:focus {
   outline: none;
 }
 
-/* line 231, resources/assets/styles/layouts/_header.scss */
+/* line 236, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger {
   margin: 0;
@@ -12995,13 +13006,13 @@ input[value="search"] {
   margin-top: -5px;
 }
 
-/* line 242, resources/assets/styles/layouts/_header.scss */
+/* line 247, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger:focus {
   outline: 0;
 }
 
-/* line 261, resources/assets/styles/layouts/_header.scss */
+/* line 266, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines {
   display: inline-block;
@@ -13017,7 +13028,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 261, resources/assets/styles/layouts/_header.scss */
+  /* line 266, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger .lines {
     width: 32px;
@@ -13025,7 +13036,7 @@ input[value="search"] {
   }
 }
 
-/* line 267, resources/assets/styles/layouts/_header.scss */
+/* line 272, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before,
 .header__hamburger .lines::after {
@@ -13047,7 +13058,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 267, resources/assets/styles/layouts/_header.scss */
+  /* line 272, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger .lines::before,
   .header__hamburger .lines::after {
@@ -13056,48 +13067,48 @@ input[value="search"] {
   }
 }
 
-/* line 277, resources/assets/styles/layouts/_header.scss */
+/* line 282, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before {
   top: 7px;
 }
 
 @media (min-width: 900px) {
-  /* line 277, resources/assets/styles/layouts/_header.scss */
+  /* line 282, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger .lines::before {
     top: 8px;
   }
 }
 
-/* line 284, resources/assets/styles/layouts/_header.scss */
+/* line 289, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::after {
   top: -7px;
 }
 
 @media (min-width: 900px) {
-  /* line 284, resources/assets/styles/layouts/_header.scss */
+  /* line 289, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger .lines::after {
     top: -8px;
   }
 }
 
-/* line 292, resources/assets/styles/layouts/_header.scss */
+/* line 297, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines-button:hover {
   opacity: 1;
 }
 
-/* line 297, resources/assets/styles/layouts/_header.scss */
+/* line 302, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines {
   background: transparent;
   border: 0;
 }
 
-/* line 301, resources/assets/styles/layouts/_header.scss */
+/* line 306, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before,
 .header__hamburger.active .lines::after {
@@ -13109,7 +13120,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 301, resources/assets/styles/layouts/_header.scss */
+  /* line 306, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger.active .lines::before,
   .header__hamburger.active .lines::after {
@@ -13117,21 +13128,21 @@ input[value="search"] {
   }
 }
 
-/* line 311, resources/assets/styles/layouts/_header.scss */
+/* line 316, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
           transform: rotate3d(0, 0, 1, 45deg);
 }
 
-/* line 315, resources/assets/styles/layouts/_header.scss */
+/* line 320, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
-/* line 322, resources/assets/styles/layouts/_header.scss */
+/* line 327, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons {
   display: -webkit-box;
@@ -13145,13 +13156,13 @@ input[value="search"] {
           justify-content: flex-end;
 }
 
-/* line 327, resources/assets/styles/layouts/_header.scss */
+/* line 332, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons .spacer {
   margin: 0 0 0 10px;
 }
 
-/* line 331, resources/assets/styles/layouts/_header.scss */
+/* line 336, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons a {
   display: inline-block;
@@ -13162,7 +13173,7 @@ input[value="search"] {
   margin: 0 0 0 15px;
 }
 
-/* line 335, resources/assets/styles/layouts/_header.scss */
+/* line 340, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons a.cart-customlocation,
 .header__buttons a.your-class-name {
@@ -13174,34 +13185,34 @@ input[value="search"] {
   font-size: 15px;
 }
 
-/* line 343, resources/assets/styles/layouts/_header.scss */
+/* line 348, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons a.cart-customlocation span:last-of-type,
 .header__buttons a.your-class-name span:last-of-type {
   margin: 0 0 0 3px;
 }
 
-/* line 349, resources/assets/styles/layouts/_header.scss */
+/* line 354, resources/assets/styles/layouts/_header.scss */
 
 .header__buttons a.logout {
   margin: 0 0 0 10px;
 }
 
-/* line 355, resources/assets/styles/layouts/_header.scss */
+/* line 360, resources/assets/styles/layouts/_header.scss */
 
 .header__nav {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 355, resources/assets/styles/layouts/_header.scss */
+  /* line 360, resources/assets/styles/layouts/_header.scss */
 
   .header__nav {
     display: inline-block;
   }
 }
 
-/* line 362, resources/assets/styles/layouts/_header.scss */
+/* line 367, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul {
   padding: 0;
@@ -13215,7 +13226,7 @@ input[value="search"] {
           align-items: center;
 }
 
-/* line 368, resources/assets/styles/layouts/_header.scss */
+/* line 373, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul#menu-navigation-right {
   display: -webkit-inline-box;
@@ -13223,14 +13234,14 @@ input[value="search"] {
   display: inline-flex;
 }
 
-/* line 371, resources/assets/styles/layouts/_header.scss */
+/* line 376, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul#menu-navigation-right li:first-of-type {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 371, resources/assets/styles/layouts/_header.scss */
+  /* line 376, resources/assets/styles/layouts/_header.scss */
 
   .header__nav ul#menu-navigation-right li:first-of-type {
     display: -webkit-inline-box;
@@ -13239,14 +13250,14 @@ input[value="search"] {
   }
 }
 
-/* line 387, resources/assets/styles/layouts/_header.scss */
+/* line 392, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul#menu-navigation-left {
   display: none;
 }
 
 @media (min-width: 900px) {
-  /* line 387, resources/assets/styles/layouts/_header.scss */
+  /* line 392, resources/assets/styles/layouts/_header.scss */
 
   .header__nav ul#menu-navigation-left {
     display: -webkit-inline-box;
@@ -13255,13 +13266,13 @@ input[value="search"] {
   }
 }
 
-/* line 394, resources/assets/styles/layouts/_header.scss */
+/* line 399, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li {
   list-style: none;
 }
 
-/* line 399, resources/assets/styles/layouts/_header.scss */
+/* line 404, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li.current_page_item a::after {
   -webkit-transform: scaleX(1);
@@ -13272,7 +13283,7 @@ input[value="search"] {
           transform-origin: bottom;
 }
 
-/* line 406, resources/assets/styles/layouts/_header.scss */
+/* line 411, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li a {
   display: inline-block;
@@ -13292,13 +13303,13 @@ input[value="search"] {
   transition: 0.3s all ease;
 }
 
-/* line 418, resources/assets/styles/layouts/_header.scss */
+/* line 423, resources/assets/styles/layouts/_header.scss */
 
 .header__nav ul li a:hover {
   color: #abced0;
 }
 
-/* line 426, resources/assets/styles/layouts/_header.scss */
+/* line 431, resources/assets/styles/layouts/_header.scss */
 
 .header__menu-container {
   display: block;
@@ -13306,7 +13317,7 @@ input[value="search"] {
   cursor: pointer;
 }
 
-/* line 432, resources/assets/styles/layouts/_header.scss */
+/* line 437, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger {
   margin: -3px 2px 0 0;
@@ -13319,20 +13330,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 432, resources/assets/styles/layouts/_header.scss */
+  /* line 437, resources/assets/styles/layouts/_header.scss */
 
   .header__hamburger {
     margin: -14px 2px 0 0;
   }
 }
 
-/* line 445, resources/assets/styles/layouts/_header.scss */
+/* line 450, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger:focus {
   outline: 0;
 }
 
-/* line 459, resources/assets/styles/layouts/_header.scss */
+/* line 464, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines {
   display: inline-block;
@@ -13347,7 +13358,7 @@ input[value="search"] {
   position: relative;
 }
 
-/* line 465, resources/assets/styles/layouts/_header.scss */
+/* line 470, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before,
 .header__hamburger .lines::after {
@@ -13368,32 +13379,32 @@ input[value="search"] {
   left: 0;
 }
 
-/* line 473, resources/assets/styles/layouts/_header.scss */
+/* line 478, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::before {
   top: 7px;
 }
 
-/* line 476, resources/assets/styles/layouts/_header.scss */
+/* line 481, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines::after {
   top: -7px;
 }
 
-/* line 481, resources/assets/styles/layouts/_header.scss */
+/* line 486, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger .lines-button:hover {
   opacity: 1;
 }
 
-/* line 486, resources/assets/styles/layouts/_header.scss */
+/* line 491, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines {
   background: transparent;
   border: 0;
 }
 
-/* line 490, resources/assets/styles/layouts/_header.scss */
+/* line 495, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before,
 .header__hamburger.active .lines::after {
@@ -13404,28 +13415,28 @@ input[value="search"] {
   width: 20px;
 }
 
-/* line 497, resources/assets/styles/layouts/_header.scss */
+/* line 502, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
           transform: rotate3d(0, 0, 1, 45deg);
 }
 
-/* line 501, resources/assets/styles/layouts/_header.scss */
+/* line 506, resources/assets/styles/layouts/_header.scss */
 
 .header__hamburger.active .lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
           transform: rotate3d(0, 0, 1, -45deg);
 }
 
-/* line 508, resources/assets/styles/layouts/_header.scss */
+/* line 513, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container {
   position: relative;
   margin: 0 0 0 15px;
 }
 
-/* line 512, resources/assets/styles/layouts/_header.scss */
+/* line 517, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container a#search-btn {
   margin: 0;
@@ -13436,14 +13447,14 @@ input[value="search"] {
   right: 0;
 }
 
-/* line 521, resources/assets/styles/layouts/_header.scss */
+/* line 526, resources/assets/styles/layouts/_header.scss */
 
 .header__search-container a#search-btn.hide {
   opacity: 0;
   visibility: hidden;
 }
 
-/* line 528, resources/assets/styles/layouts/_header.scss */
+/* line 533, resources/assets/styles/layouts/_header.scss */
 
 .header__search {
   position: absolute;
@@ -13461,14 +13472,14 @@ input[value="search"] {
   transition: 0.3s all ease;
 }
 
-/* line 539, resources/assets/styles/layouts/_header.scss */
+/* line 544, resources/assets/styles/layouts/_header.scss */
 
 .header__search.active {
   opacity: 1;
   visibility: visible;
 }
 
-/* line 553, resources/assets/styles/layouts/_header.scss */
+/* line 558, resources/assets/styles/layouts/_header.scss */
 
 .header__search input {
   width: 100%;
@@ -13483,14 +13494,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 553, resources/assets/styles/layouts/_header.scss */
+  /* line 558, resources/assets/styles/layouts/_header.scss */
 
   .header__search input {
     font-size: 14px;
   }
 }
 
-/* line 568, resources/assets/styles/layouts/_header.scss */
+/* line 573, resources/assets/styles/layouts/_header.scss */
 
 .header__search input::-webkit-input-placeholder {
   color: #000;
@@ -13507,13 +13518,13 @@ input[value="search"] {
   opacity: 1;
 }
 
-/* line 573, resources/assets/styles/layouts/_header.scss */
+/* line 578, resources/assets/styles/layouts/_header.scss */
 
 .header__search input:focus {
   outline: none;
 }
 
-/* line 577, resources/assets/styles/layouts/_header.scss */
+/* line 582, resources/assets/styles/layouts/_header.scss */
 
 .header__search input.search-field__submit {
   border: 0;
@@ -13530,14 +13541,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 577, resources/assets/styles/layouts/_header.scss */
+  /* line 582, resources/assets/styles/layouts/_header.scss */
 
   .header__search input.search-field__submit {
     top: -3px;
   }
 }
 
-/* line 593, resources/assets/styles/layouts/_header.scss */
+/* line 598, resources/assets/styles/layouts/_header.scss */
 
 .header__search input.search-field__submit.active {
   color: #000;
