@@ -92,9 +92,8 @@
         </div>
         @if (!in_array( 'optician', (array) $user->roles ) )
           <a href="/wishlists"><span class="ico-heart"></span></a>
+          <a href="/account"><span class="ico-account"></span></a>
         @endif
-
-        <a href="/account"><span class="ico-account"></span></a>
 
         @if (current_user_can('optician'))
           @php if ( dynamic_sidebar('hb_common_right_widget') ) : else : endif; @endphp

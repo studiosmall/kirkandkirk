@@ -8,11 +8,11 @@
 
             <div class="downloads-section__item">
 
-              <a href="{{ $download['file'] }}" download>
+              <a href="{{ $download['file'] }}" target="_blank">
                 <img src="{{ $download['thumbnail_image']['url'] }}">
               </a>
 
-              <a href="{{ $download['file'] }}" download>
+              <a href="{{ $download['file'] }}" target="_blank">
                 <h3>
                   {!! $download['title'] !!}
                 </h3>

@@ -1015,3 +1015,49 @@ $wp_new_user_notification_email['subject'] =  __('Login Details ');
 $wp_new_user_notification_email['headers'] = 'Content-Type: text/html; charset=UTF-8';
 return $wp_new_user_notification_email;
 }
+
+
+// /**
+//  * Optician extra menu item
+//  */
+add_filter ( 'woocommerce_account_menu_items', 'wptips_customize_account_menu_items' );
+function wptips_customize_account_menu_items( $menu_items ){
+     // Add new Custom URL in My Account Menu 
+    $new_menu_item = array('contact-us'=>'Order');  // Define a new array with cutom URL slug and menu label text
+    $new_menu_item_position=2; // Define Position at which the New URL has to be inserted
+    
+    array_splice( $menu_items, ($new_menu_item_position-1), 0, $new_menu_item );
+    return $menu_items;
+}
+// point the endpoint to a custom URL
+add_filter( 'woocommerce_get_endpoint_url', 'wptips_custom_woo_endpoint', 10, 2 );
+function wptips_custom_woo_endpoint( $url, $endpoint ){
+    $siteurl = site_url(''); 
+    if( $endpoint == 'contact-us' ) {
+        $url = ''. $siteurl . '/collections/optical'; // Your custom URL to add to the My Account menu
+    }
+    return $url;
+}
+
+
+// /**
+//  * Optician 
+//  */
+// function my_login_redirect( $redirect_to, $request, $user ) {
+//     //is there a user to check?
+//     global $user;
+//     if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+
+//         if ( in_array( 'optician', $user->roles ) ) {
+//             // redirect them to the default place
+//             $data_login = get_option('axl_jsa_login_wid_setup');
+
+//             return get_permalink($data_login[0]);
+//         } else {
+//             return home_url();
+//         }
+//     } else {
+//         return $redirect_to;
+//     }
+// }
+// add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );

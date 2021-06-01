@@ -25,4 +25,11 @@
   .page-header {
     //background-color: #c0c7c2 !important;
   }
+
+  .woocommerce-MyAccount-navigation {
+    .woocommerce-MyAccount-navigation-link--orders,
+    .woocommerce-MyAccount-navigation-link--account-wishlists {
+      display: none !important;
+    }
+  }
 }

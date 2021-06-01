@@ -948,7 +948,7 @@
                                     "key": "field_6098b13fd436e",
                                     "label": "File",
                                     "name": "file",
-                                    "type": "file",
+                                    "type": "url",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -957,11 +957,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "url",
-                                    "library": "all",
-                                    "min_size": "",
-                                    "max_size": "",
-                                    "mime_types": ""
+                                    "default_value": "",
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -1184,5 +1181,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621478137
+    "modified": 1622526321
 }
