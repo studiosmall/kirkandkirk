@@ -19,18 +19,28 @@
   .page-header {
     background-color: #f8f8f8 !important;
   }
-}
-
-.professional-login,
-.professional-user {
-  .page-header {
-    //background-color: #c0c7c2 !important;
-  }
 
   .woocommerce-MyAccount-navigation {
     .woocommerce-MyAccount-navigation-link--orders,
-    .woocommerce-MyAccount-navigation-link--account-wishlists {
+    .woocommerce-MyAccount-navigation-link--account-wishlists,
+    .woocommerce-MyAccount-navigation-link--downloads {
       display: none !important;
     }
   }
 }
+
+.account {
+  .woocommerce-MyAccount-navigation {
+    .woocommerce-MyAccount-navigation-link--1,
+    .woocommerce-MyAccount-navigation-link--0 {
+      display: none !important;
+    }
+  }
+}
+
+// .professional-login,
+// .professional-user {
+//   .page-header {
+//     //background-color: #c0c7c2 !important;
+//   }
+// }

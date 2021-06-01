@@ -5211,7 +5211,7 @@ body.archive {
   background-color: #fff;
 }
 
-/* line 30, resources/assets/styles/common/_global.scss */
+/* line 34, resources/assets/styles/common/_global.scss */
 
 p {
   color: #000;
@@ -5222,7 +5222,7 @@ p {
   margin-top: 0;
 }
 
-/* line 39, resources/assets/styles/common/_global.scss */
+/* line 43, resources/assets/styles/common/_global.scss */
 
 .inner {
   padding: 0 20px;
@@ -5231,14 +5231,14 @@ p {
 }
 
 @media (min-width: 900px) {
-  /* line 39, resources/assets/styles/common/_global.scss */
+  /* line 43, resources/assets/styles/common/_global.scss */
 
   .inner {
     padding: 0 50px;
   }
 }
 
-/* line 46, resources/assets/styles/common/_global.scss */
+/* line 50, resources/assets/styles/common/_global.scss */
 
 .about .wrap,
 .home .wrap,
@@ -5246,7 +5246,7 @@ p {
   padding: 0 0 0 0;
 }
 
-/* line 51, resources/assets/styles/common/_global.scss */
+/* line 55, resources/assets/styles/common/_global.scss */
 
 .wrap {
   -webkit-box-flex: 1;
@@ -5259,35 +5259,35 @@ p {
 }
 
 @media (min-width: 900px) {
-  /* line 51, resources/assets/styles/common/_global.scss */
+  /* line 55, resources/assets/styles/common/_global.scss */
 
   .wrap {
     padding: 136px 0 0 0;
   }
 }
 
-/* line 64, resources/assets/styles/common/_global.scss */
+/* line 68, resources/assets/styles/common/_global.scss */
 
 .single-data .wrap {
   padding: 130px 0 0 0;
 }
 
 @media (min-width: 900px) {
-  /* line 64, resources/assets/styles/common/_global.scss */
+  /* line 68, resources/assets/styles/common/_global.scss */
 
   .single-data .wrap {
     padding: 139px 0 0 0;
   }
 }
 
-/* line 73, resources/assets/styles/common/_global.scss */
+/* line 77, resources/assets/styles/common/_global.scss */
 
 img {
   width: 100%;
   height: auto;
 }
 
-/* line 78, resources/assets/styles/common/_global.scss */
+/* line 82, resources/assets/styles/common/_global.scss */
 
 .ico-search {
   display: block;
@@ -5297,7 +5297,7 @@ img {
   height: 16px;
 }
 
-/* line 86, resources/assets/styles/common/_global.scss */
+/* line 90, resources/assets/styles/common/_global.scss */
 
 .ico-heart {
   display: block;
@@ -5307,7 +5307,7 @@ img {
   height: 22px;
 }
 
-/* line 94, resources/assets/styles/common/_global.scss */
+/* line 98, resources/assets/styles/common/_global.scss */
 
 .ico-account {
   display: block;
@@ -5317,7 +5317,7 @@ img {
   height: 15px;
 }
 
-/* line 102, resources/assets/styles/common/_global.scss */
+/* line 106, resources/assets/styles/common/_global.scss */
 
 .ico-basket {
   display: block;
@@ -5327,25 +5327,25 @@ img {
   height: 15px;
 }
 
-/* line 111, resources/assets/styles/common/_global.scss */
+/* line 115, resources/assets/styles/common/_global.scss */
 
 .bg-color__blue {
   background-color: #bfdbe0;
 }
 
-/* line 116, resources/assets/styles/common/_global.scss */
+/* line 120, resources/assets/styles/common/_global.scss */
 
 .alt {
   background-color: #dde2ea;
 }
 
-/* line 120, resources/assets/styles/common/_global.scss */
+/* line 124, resources/assets/styles/common/_global.scss */
 
 .alert {
   padding: 60px 0;
 }
 
-/* line 123, resources/assets/styles/common/_global.scss */
+/* line 127, resources/assets/styles/common/_global.scss */
 
 .alert__inner {
   padding: 0 20px;
@@ -5354,20 +5354,20 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 123, resources/assets/styles/common/_global.scss */
+  /* line 127, resources/assets/styles/common/_global.scss */
 
   .alert__inner {
     padding: 0 50px;
   }
 }
 
-/* line 130, resources/assets/styles/common/_global.scss */
+/* line 134, resources/assets/styles/common/_global.scss */
 
 .about-page .section:nth-of-type(2n) {
   padding-top: 0;
 }
 
-/* line 136, resources/assets/styles/common/_global.scss */
+/* line 140, resources/assets/styles/common/_global.scss */
 
 .woocommerce-error {
   list-style: none;
@@ -5375,7 +5375,7 @@ img {
   padding: 0 0 20px 0;
 }
 
-/* line 141, resources/assets/styles/common/_global.scss */
+/* line 145, resources/assets/styles/common/_global.scss */
 
 .woocommerce-error a {
   font-family: "reader", arial, sans-serif;
@@ -5388,14 +5388,14 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 141, resources/assets/styles/common/_global.scss */
+  /* line 145, resources/assets/styles/common/_global.scss */
 
   .woocommerce-error a {
     font-size: 16px;
   }
 }
 
-/* line 147, resources/assets/styles/common/_global.scss */
+/* line 151, resources/assets/styles/common/_global.scss */
 
 .message__inner {
   padding: 0 20px;
@@ -5405,7 +5405,7 @@ img {
 }
 
 @media (min-width: 900px) {
-  /* line 147, resources/assets/styles/common/_global.scss */
+  /* line 151, resources/assets/styles/common/_global.scss */
 
   .message__inner {
     padding: 0 50px;
@@ -14099,12 +14099,21 @@ input[value="search"] {
   background-color: #f8f8f8 !important;
 }
 
-/* line 31, resources/assets/styles/layouts/_professional-login.scss */
+/* line 24, resources/assets/styles/layouts/_professional-login.scss */
 
 .professional-login .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--orders,
 .professional-login .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--account-wishlists,
+.professional-login .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--downloads,
 .professional-user .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--orders,
-.professional-user .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--account-wishlists {
+.professional-user .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--account-wishlists,
+.professional-user .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--downloads {
+  display: none !important;
+}
+
+/* line 34, resources/assets/styles/layouts/_professional-login.scss */
+
+.account .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--1,
+.account .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--0 {
   display: none !important;
 }
 
@@ -14306,10 +14315,11 @@ input[value="search"] {
   color: #000;
 }
 
-/* line 75, resources/assets/styles/layouts/_account.scss */
+/* line 76, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce,
-.page-professional-login-data .woocommerce {
+.page-professional-login-data .woocommerce,
+.woocommerce-account .woocommerce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14322,20 +14332,22 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 75, resources/assets/styles/layouts/_account.scss */
+  /* line 76, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce,
-  .page-professional-login-data .woocommerce {
+  .page-professional-login-data .woocommerce,
+  .woocommerce-account .woocommerce {
     width: 70%;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
 }
 
-/* line 86, resources/assets/styles/layouts/_account.scss */
+/* line 87, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce.widget,
-.page-professional-login-data .woocommerce.widget {
+.page-professional-login-data .woocommerce.widget,
+.woocommerce-account .woocommerce.widget {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -14343,10 +14355,11 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 86, resources/assets/styles/layouts/_account.scss */
+  /* line 87, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce.widget,
-  .page-professional-login-data .woocommerce.widget {
+  .page-professional-login-data .woocommerce.widget,
+  .woocommerce-account .woocommerce.widget {
     width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -14354,10 +14367,11 @@ input[value="search"] {
   }
 }
 
-/* line 97, resources/assets/styles/layouts/_account.scss */
+/* line 98, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce button,
-.page-professional-login-data .woocommerce button {
+.page-professional-login-data .woocommerce button,
+.woocommerce-account .woocommerce button {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14381,10 +14395,11 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 97, resources/assets/styles/layouts/_account.scss */
+  /* line 98, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce button,
-  .page-professional-login-data .woocommerce button {
+  .page-professional-login-data .woocommerce button,
+  .woocommerce-account .woocommerce button {
     font-size: 16px;
   }
 }
@@ -14392,7 +14407,8 @@ input[value="search"] {
 /* line 23, resources/assets/styles/components/_forms.scss */
 
 .logged-in .woocommerce button:hover,
-.page-professional-login-data .woocommerce button:hover {
+.page-professional-login-data .woocommerce button:hover,
+.woocommerce-account .woocommerce button:hover {
   border: 1px solid #abced0;
   background: #abced0;
   color: #000;
@@ -14401,49 +14417,55 @@ input[value="search"] {
 /* line 29, resources/assets/styles/components/_forms.scss */
 
 .logged-in .woocommerce button:focus,
-.page-professional-login-data .woocommerce button:focus {
+.page-professional-login-data .woocommerce button:focus,
+.woocommerce-account .woocommerce button:focus {
   outline: none;
 }
 
-/* line 103, resources/assets/styles/layouts/_account.scss */
+/* line 104, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation {
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  /* line 103, resources/assets/styles/layouts/_account.scss */
+  /* line 104, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation {
     width: 30%;
   }
 }
 
-/* line 110, resources/assets/styles/layouts/_account.scss */
+/* line 111, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 115, resources/assets/styles/layouts/_account.scss */
+/* line 116, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li {
   text-align: left;
   margin: 0 10px 10px 10px;
   display: inline-block;
 }
 
 @media (min-width: 900px) {
-  /* line 115, resources/assets/styles/layouts/_account.scss */
+  /* line 116, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li {
     text-align: left;
     display: block;
     margin: 0 0 10px 0;
@@ -14451,25 +14473,28 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 126, resources/assets/styles/layouts/_account.scss */
+  /* line 127, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li:last-of-type {
     margin: 30px 0 0 0;
   }
 }
 
-/* line 133, resources/assets/styles/layouts/_account.scss */
+/* line 134, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li.is-active a {
   border-bottom: 1px solid #000;
 }
 
-/* line 138, resources/assets/styles/layouts/_account.scss */
+/* line 139, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li a {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li a,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14484,25 +14509,28 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 138, resources/assets/styles/layouts/_account.scss */
+  /* line 139, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li a {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li a,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a {
     font-size: 16px;
   }
 }
 
-/* line 144, resources/assets/styles/layouts/_account.scss */
+/* line 145, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-navigation ul li a:hover,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li a:hover {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-navigation ul li a:hover,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a:hover {
   border-bottom: 1px solid #000;
 }
 
-/* line 152, resources/assets/styles/layouts/_account.scss */
+/* line 153, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14514,34 +14542,38 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 152, resources/assets/styles/layouts/_account.scss */
+  /* line 153, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content {
     font-size: 16px;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 152, resources/assets/styles/layouts/_account.scss */
+  /* line 153, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content {
     width: 70%;
   }
 }
 
-/* line 161, resources/assets/styles/layouts/_account.scss */
+/* line 162, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-info,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-info {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-info,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-info {
   padding: 0;
 }
 
-/* line 165, resources/assets/styles/layouts/_account.scss */
+/* line 166, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content a,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content a {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content a,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content a {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14553,27 +14585,30 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 165, resources/assets/styles/layouts/_account.scss */
+  /* line 166, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content a,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content a {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content a,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content a {
     font-size: 16px;
   }
 }
 
 @media (min-width: 900px) {
-  /* line 165, resources/assets/styles/layouts/_account.scss */
+  /* line 166, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content a,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content a {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content a,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content a {
     font-size: 14px;
   }
 }
 
-/* line 174, resources/assets/styles/layouts/_account.scss */
+/* line 175, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content h3,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content h3 {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content h3,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content h3 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
@@ -14586,18 +14621,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 174, resources/assets/styles/layouts/_account.scss */
+  /* line 175, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content h3,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content h3 {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content h3,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content h3 {
     font-size: 20px;
   }
 }
 
-/* line 180, resources/assets/styles/layouts/_account.scss */
+/* line 181, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content label,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content label {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content label,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content label {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14610,25 +14647,28 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 180, resources/assets/styles/layouts/_account.scss */
+  /* line 181, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content label,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content label {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content label,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content label {
     font-size: 16px;
   }
 }
 
-/* line 186, resources/assets/styles/layouts/_account.scss */
+/* line 187, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content span,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content span {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content span,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content span {
   font-size: 12px;
 }
 
-/* line 190, resources/assets/styles/layouts/_account.scss */
+/* line 191, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content input {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content input,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content input {
   border-radius: 0;
   width: 90%;
   border: 0;
@@ -14639,10 +14679,11 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 190, resources/assets/styles/layouts/_account.scss */
+  /* line 191, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content input,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content input {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content input,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content input {
     width: 100%;
   }
 }
@@ -14650,23 +14691,26 @@ input[value="search"] {
 /* line 170, resources/assets/styles/common/_mixins.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content input:focus,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content input:focus {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content input:focus,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content input:focus {
   outline: none;
   border: 0;
   background-color: #e1e1e1;
 }
 
-/* line 197, resources/assets/styles/layouts/_account.scss */
+/* line 198, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content fieldset input,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content fieldset input {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content fieldset input,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content fieldset input {
   width: 95%;
 }
 
-/* line 202, resources/assets/styles/layouts/_account.scss */
+/* line 203, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
   padding: 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -14674,18 +14718,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 202, resources/assets/styles/layouts/_account.scss */
+  /* line 203, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper {
     width: 100%;
   }
 }
 
-/* line 211, resources/assets/styles/layouts/_account.scss */
+/* line 212, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
@@ -14698,26 +14744,29 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 211, resources/assets/styles/layouts/_account.scss */
+  /* line 212, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper h2 {
     font-size: 20px;
   }
 }
 
-/* line 217, resources/assets/styles/layouts/_account.scss */
+/* line 218, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table {
   width: 100%;
   text-align: left;
 }
 
-/* line 221, resources/assets/styles/layouts/_account.scss */
+/* line 222, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14728,40 +14777,45 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 221, resources/assets/styles/layouts/_account.scss */
+  /* line 222, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table h2 {
     font-size: 16px;
   }
 }
 
-/* line 225, resources/assets/styles/layouts/_account.scss */
+/* line 226, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table th {
   text-align: left !important;
 }
 
-/* line 229, resources/assets/styles/layouts/_account.scss */
+/* line 230, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content #wl-wrapper table td {
   text-align: left !important;
   padding: 10px 0 !important;
 }
 
-/* line 236, resources/assets/styles/layouts/_account.scss */
+/* line 237, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses {
   text-align: left;
 }
 
-/* line 239, resources/assets/styles/layouts/_account.scss */
+/* line 240, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-size: 18px;
@@ -14772,18 +14826,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 239, resources/assets/styles/layouts/_account.scss */
+  /* line 240, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-Addresses h3 {
     font-size: 20px;
   }
 }
 
-/* line 246, resources/assets/styles/layouts/_account.scss */
+/* line 247, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
   font-family: "reader", arial, sans-serif;
   color: #000;
   font-weight: 100;
@@ -14796,18 +14852,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 246, resources/assets/styles/layouts/_account.scss */
+  /* line 247, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields label {
     font-size: 16px;
   }
 }
 
-/* line 252, resources/assets/styles/layouts/_account.scss */
+/* line 253, resources/assets/styles/layouts/_account.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
   border-radius: 0;
   width: 90%;
   border: 0;
@@ -14818,10 +14876,11 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 252, resources/assets/styles/layouts/_account.scss */
+  /* line 253, resources/assets/styles/layouts/_account.scss */
 
   .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input,
-  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
+  .page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input,
+  .woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input {
     width: 100%;
   }
 }
@@ -14829,7 +14888,8 @@ input[value="search"] {
 /* line 170, resources/assets/styles/common/_mixins.scss */
 
 .logged-in .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus,
-.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus {
+.page-professional-login-data .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus,
+.woocommerce-account .woocommerce .woocommerce-MyAccount-content .woocommerce-address-fields input:focus {
   outline: none;
   border: 0;
   background-color: #e1e1e1;

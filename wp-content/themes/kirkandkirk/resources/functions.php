@@ -1039,6 +1039,26 @@ function wptips_custom_woo_endpoint( $url, $endpoint ){
     return $url;
 }
 
+add_filter ( 'woocommerce_account_menu_items', 'download_customize_account_menu_items' );
+function download_customize_account_menu_items( $menu_items ){
+     // Add new Custom URL in My Account Menu 
+    $new_menu_item = array('downloads'=>'Downloads');  // Define a new array with cutom URL slug and menu label text
+    $new_menu_item_position=3; // Define Position at which the New URL has to be inserted
+    
+    array_splice( $menu_items, ($new_menu_item_position-1), 0, $new_menu_item );
+    return $menu_items;
+}
+// point the endpoint to a custom URL
+add_filter( 'woocommerce_get_endpoint_url', 'download_custom_woo_endpoint', 10, 2 );
+function download_custom_woo_endpoint( $url, $endpoint ){
+    $siteurl = site_url(''); 
+    if( $endpoint == 'downloads' ) {
+        $url = ''. $siteurl . '/downloads'; // Your custom URL to add to the My Account menu
+    }
+    return $url;
+}
+
+
 
 // /**
 //  * Optician 
