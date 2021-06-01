@@ -14099,10 +14099,12 @@ input[value="search"] {
   background-color: #f8f8f8 !important;
 }
 
-/* line 30, resources/assets/styles/layouts/_professional-login.scss */
+/* line 31, resources/assets/styles/layouts/_professional-login.scss */
 
 .professional-login .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--orders,
-.professional-login .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--account-wishlists {
+.professional-login .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--account-wishlists,
+.professional-user .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--orders,
+.professional-user .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link--account-wishlists {
   display: none !important;
 }
 
