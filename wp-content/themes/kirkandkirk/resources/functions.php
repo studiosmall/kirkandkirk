@@ -1096,6 +1096,6 @@ add_filter( 'woocommerce_account_menu_items', 'custom_my_account_menu_items' );
 add_filter( 'loop_shop_per_page', 'wc_redefine_products_per_page', 9999 );
 
 function wc_redefine_products_per_page( $per_page ) {
-  $per_page = 9;
+  $per_page = 9999;
   return $per_page;
 }
