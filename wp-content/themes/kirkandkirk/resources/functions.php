@@ -1089,3 +1089,15 @@ add_filter( 'woocommerce_account_menu_items', 'custom_my_account_menu_items' );
 //     }
 // }
 // add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 999 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options -> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 3;
+  return $cols;
+}
