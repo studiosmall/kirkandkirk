@@ -2089,6 +2089,10 @@ Router.prototype.loadEvents = function loadEvents () {
 
     //let lastScrollTop = 0;
 
+    if (window.location.href.indexOf('#optician') > -1) { // etc
+      $('.off-canvas, body, .header__hamburger').addClass('active');
+    }
+
     __WEBPACK_IMPORTED_MODULE_0_aos___default.a.init({
       duration: 1000, // values from 0 to 3000, with step 50ms
       offset: -40,

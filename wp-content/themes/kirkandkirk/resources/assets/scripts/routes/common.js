@@ -16,6 +16,10 @@ export default {
 
     //let lastScrollTop = 0;
 
+    if (window.location.href.indexOf('#optician') > -1) { // etc
+      $('.off-canvas, body, .header__hamburger').addClass('active');
+    }
+
     AOS.init({
       duration: 1000, // values from 0 to 3000, with step 50ms
       offset: -40,

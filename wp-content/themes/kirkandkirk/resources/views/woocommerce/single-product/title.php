@@ -41,15 +41,16 @@ global $product;
 
 	$theTitle = get_the_title();
 
-	if (str_contains($theTitle, '–')) { 
-    $newTitle = substr($theTitle, 0, strpos($theTitle, '–'));
-	} else {
-		$newTitle = get_the_title();
-	}
+	// if (str_contains($theTitle, '–')) { 
+  //   $newTitle = substr($theTitle, 0, strpos($theTitle, '–'));
+	// } else {
+	// 	$newTitle = get_the_title();
+	// }
 ?>
 
 <h1 class="product_title entry-title">
-	<?php echo $newTitle; ?>
+	<?php //echo $newTitle; ?>
+	<?php echo $theTitle; ?>
 </h1>
 
 <?php // the_title( '<h1 class="product_title entry-title">', '</h1>' );
