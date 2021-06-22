@@ -41,8 +41,8 @@ global $product;
 
 	$theTitle = get_the_title();
 
-	if (str_contains($theTitle, '-')) { 
-    $newTitle = substr($theTitle, 0, strpos($theTitle, '-'));
+	if (str_contains($theTitle, '–')) { 
+    $newTitle = substr($theTitle, 0, strpos($theTitle, '–'));
 	} else {
 		$newTitle = get_the_title();
 	}
