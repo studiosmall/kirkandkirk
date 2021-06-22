@@ -1139,21 +1139,19 @@ function wc_redefine_products_per_page( $per_page ) {
 // }
 
 
-function my_login_redirect( $redirect_to, $request, $user ) {
-    //is there a user to check?
-    global $user;
-    if ( isset( $user->roles ) && is_array( $user->roles ) ) {
+function my_login_redirect( $url, $request, $user ){
 
-        if ( in_array( 'optician', $user->roles ) ) {
-            // redirect them to the default place
-            $data_login = get_option('axl_jsa_login_wid_setup');
-
-            return home_url();
-        } else {
-            return home_url();
-        }
-    } else {
-        return $redirect_to;
-    }
+	if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+	
+                /*check your roles,customize according to you conditions*/
+		if( $user->has_cap( 'administrator') or $user->has_cap( 'author')) { 
+			$url = admin_url();
+		} 
+		else 
+		{
+			$url = home_url('/custom-page /');
+		}
+		
+	}
+	return $url;
 }
-add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
