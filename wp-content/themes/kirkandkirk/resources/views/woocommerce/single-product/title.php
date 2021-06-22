@@ -37,4 +37,19 @@ global $product;
 
 <?php //echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted_in">' . _n( '', '', count( $product->get_category_ids() ), 'woocommerce' ) . ' ', '</span>' ); ?>
 
-<?php the_title( '<h1 class="product_title entry-title">', '</h1>' );
+<?php
+
+	$theTitle = get_the_title();
+
+	if (str_contains($theTitle, '-')) { 
+    $newTitle = substr($theTitle, 0, strpos($theTitle, '-'));
+	} else {
+		$newTitle = get_the_title();
+	}
+?>
+
+<h1 class="product_title entry-title">
+	<?php echo $newTitle; ?>
+</h1>
+
+<?php // the_title( '<h1 class="product_title entry-title">', '</h1>' );

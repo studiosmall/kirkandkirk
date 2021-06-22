@@ -1099,3 +1099,41 @@ function wc_redefine_products_per_page( $per_page ) {
   $per_page = 9999;
   return $per_page;
 }
+
+
+/**
+ * Show the product title in the product loop. By default this is an H2.
+ */
+// function action_woocommerce_shop_loop_item_title() {
+//     // Removes a function from a specified action hook.
+//     remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+    
+//     $theTitle = get_the_title();
+
+// 	if (str_contains($theTitle, '-')) { 
+//     $newTitle = substr($theTitle, 0, strpos($theTitle, '-'));
+// 	} else {
+// 		$newTitle = get_the_title();
+// 	}
+
+
+//     echo '<h2 class="fuck' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+// }
+// add_action( 'woocommerce_shop_loop_item_title', 'action_woocommerce_shop_loop_item_title', 9 );
+
+// remove_action( 'woocommerce_shop_loop_item_title','woocommerce_template_loop_product_title', 10 );
+// add_action('woocommerce_shop_loop_item_title', 'abChangeProductsTitle', 10 );
+// function abChangeProductsTitle() {
+    
+//     $theTitle = get_the_title();
+
+// 	if (strpos($theTitle, '-')) { 
+//         $newTitle = substr($theTitle, 0, strpos($theTitle, '-'));
+//         echo '<h2 class="woocommerce-loop-product__title">' . $newTitle . '</h2>';
+//         echo 'here 1';
+// 	} else {
+// 		$newTitle = get_the_title();
+//         echo '<h2 class="woocommerce-loop-product__title">' . $newTitle . '</h2>';
+//         echo 'here 2';
+// 	}
+// }
