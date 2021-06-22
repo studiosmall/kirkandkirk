@@ -45,7 +45,16 @@
 }
 
 .woocommerce-info {
-	padding: 60px 0 120px 0;
+	// padding: 20px 0 20px 0;
+	// text-align: center;
+	background-color: #f8f8f8;
+	padding: 20px 0;
+	// margin: 10px 0 15px;
+	text-align: center;
+
+	a {
+		color: $brand--primary;
+	}
 }
 
 .term-new-arrivals {

@@ -9130,10 +9130,18 @@ klarna-placement .container {
 /* line 47, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info {
-  padding: 60px 0 120px 0;
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
 }
 
-/* line 52, resources/assets/styles/components/_collection.scss */
+/* line 55, resources/assets/styles/components/_collection.scss */
+
+.woocommerce-info a {
+  color: #000;
+}
+
+/* line 61, resources/assets/styles/components/_collection.scss */
 
 .term-new-arrivals .woocommerce-products-header {
   display: none;
