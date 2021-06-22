@@ -3,6 +3,30 @@
     "title": "Product",
     "fields": [
         {
+            "key": "field_60d15d9515e68",
+            "label": "Parent Product",
+            "name": "parent_product",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "no": "No",
+                "yes": "Yes"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "no",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6052d5856b817",
             "label": "Product Colour",
             "name": "product_colour",
@@ -341,5 +365,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621483883
+    "modified": 1624333764
 }

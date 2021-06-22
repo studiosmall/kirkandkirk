@@ -18,16 +18,20 @@ the readme will list any important changes.
 
 @section('content')
 
+  @php
+    $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+  @endphp
+
 
   @if(is_product_category('optical'))
-
+  
+  yes optical
     {{-- Fix for filters --}}
     @if (strpos($_SERVER['REQUEST_URI'], "optical/?") !== false)
 
       @include('partials.woocommerce-layout');
 
     @else
-
 
     <div class="breadcrumb-container">
       <?php woocommerce_breadcrumb();?>
