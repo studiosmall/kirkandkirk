@@ -1139,19 +1139,15 @@ function wc_redefine_products_per_page( $per_page ) {
 // }
 
 
-function my_login_redirect( $url, $request, $user ){
 
-	if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
-	
-                /*check your roles,customize according to you conditions*/
-		if( $user->has_cap( 'administrator') or $user->has_cap( 'author')) { 
-			$url = admin_url();
-		} 
-		else 
-		{
-			$url = home_url('/custom-page /');
-		}
-		
-	}
-	return $url;
-}
+function cm_redirect_users_by_role() {
+ 
+    $current_user   = wp_get_current_user();
+    $role_name      = $current_user->roles[0];
+ 
+    if ( 'optician' === $role_name ) {
+        wp_redirect( 'http://yoursite.com/dashboard' );
+    } // if
+ 
+} // cm_redirect_users_by_role
+add_action( 'admin_init', 'cm_redirect_users_by_role' );
