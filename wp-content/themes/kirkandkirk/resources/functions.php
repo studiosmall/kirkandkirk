@@ -1143,7 +1143,7 @@ function add_login_check()
 {
     if (is_user_logged_in()) {
         if (is_page(1340)){
-            wp_redirect('mydomain.com/my-member-area/');
+            wp_redirect('/#optician');
             exit; 
         }
     }
