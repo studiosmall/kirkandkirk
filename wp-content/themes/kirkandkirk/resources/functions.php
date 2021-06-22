@@ -1139,15 +1139,14 @@ function wc_redefine_products_per_page( $per_page ) {
 // }
 
 
+function add_login_check()
+{
+    if (is_user_logged_in()) {
+        if (is_page(1340)){
+            wp_redirect('mydomain.com/my-member-area/');
+            exit; 
+        }
+    }
+}
 
-function cm_redirect_users_by_role() {
- 
-    $current_user   = wp_get_current_user();
-    $role_name      = $current_user->roles[0];
- 
-    if ( 'optician' === $role_name ) {
-        wp_redirect( 'http://yoursite.com/dashboard' );
-    } // if
- 
-} // cm_redirect_users_by_role
-add_action( 'admin_init', 'cm_redirect_users_by_role' );
+add_action('wp', 'add_login_check');
