@@ -333,6 +333,8 @@ klarna-placement {
 			h1.product_title {
 				@include title($brand--primary);
 
+				text-transform: capitalize;
+
 				@include breakpoint(medium) {
 					font-size: 30px;
 				}
