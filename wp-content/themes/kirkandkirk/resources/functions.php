@@ -617,31 +617,32 @@ add_action( 'template_redirect', 'iconic_bypass_logout_confirmation' );
 //   return $availability;
 // }
 
-add_filter( 'woocommerce_get_availability_text', 'bbloomer_custom_get_availability_text', 99, 2 );
-function bbloomer_custom_get_availability_text( $availability, $product ) {
-    
-    $stock = $product->get_stock_quantity();
-    if ( $product->is_in_stock() && $stock < 5 ) {
-        if ($stock == 1) {
-            $verb = "is";
-        } else {
-            $verb = "are";
-        }
-        $availability = "Low Stock (fewer than " . $stock . ")";
-        //$availability = "Low Stock (fewer than " . $verb . " " . $stock . ")";
-    } else {
-        $availability = "";
-    }
-
-    return $availability;
-}
-
 // add_filter('woocommerce_get_availability', 'availability_filter_func');
 // function availability_filter_func($availability)
 // {
 // $availability['availability'] = str_ireplace('In stock', '', $availability['availability']);
 // return $availability;
 // }
+
+// add_filter( 'woocommerce_get_availability_text', 'bbloomer_custom_get_availability_text', 99, 2 );
+// function bbloomer_custom_get_availability_text( $availability, $product ) {
+    
+//     $stock = $product->get_stock_quantity();
+//     if ( $product->is_in_stock() && $stock < 5 ) {
+//         if ($stock == 1) {
+//             $verb = "is";
+//         } else {
+//             $verb = "are";
+//         }
+//         $availability = "Low Stock (fewer than " . $stock . ")";
+//         //$availability = "Low Stock (fewer than " . $verb . " " . $stock . ")";
+//     } else {
+//         $availability = "";
+//     }
+
+//     return $availability;
+// }
+
 
 add_filter('body_class', 'custom_outofstock_class');
 
