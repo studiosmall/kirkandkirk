@@ -6303,7 +6303,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 60px 0 0;
@@ -6473,7 +6473,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 60px 0 0;
@@ -6694,7 +6694,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 60px 0 0;
@@ -6948,7 +6948,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 60px 20px 0;
@@ -7109,7 +7109,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   text-transform: uppercase;
@@ -7360,7 +7360,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 60px 0 0;
@@ -7716,7 +7716,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 60px 0 0;
@@ -7908,7 +7908,7 @@ span.professional {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   text-transform: uppercase;
@@ -8654,7 +8654,7 @@ klarna-placement .container {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
 }
@@ -10803,7 +10803,7 @@ input[type="submit"] {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   padding-top: 0;
@@ -12446,7 +12446,7 @@ input[value="search"] {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   padding-top: 0;
@@ -14628,7 +14628,7 @@ input[value="search"] {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   margin: 0 0 20px 0;
@@ -14751,7 +14751,7 @@ input[value="search"] {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
   width: 100%;
@@ -14835,7 +14835,7 @@ input[value="search"] {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
 }
@@ -15828,7 +15828,7 @@ input[value="search"] {
   color: #000;
   font-size: 18px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: initial;
   padding: 0;
   font-weight: 500;
 }
