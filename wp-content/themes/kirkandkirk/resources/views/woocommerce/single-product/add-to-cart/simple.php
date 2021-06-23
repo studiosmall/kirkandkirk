@@ -23,7 +23,7 @@ if ( ! $product->is_purchasable() ) {
 	return;
 }
 
-?>
+if ( $product->is_in_stock() ) : ?>
 
 
 <?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
@@ -63,8 +63,6 @@ if ( ! $product->is_purchasable() ) {
 	<div class="eye-size">
 		<?php if($eye_size) { ?><span>Eye size:</span> 	<?php echo $eye_size; } ?><?php if($bridge) { ?>, <span>Bridge:</span> <?php echo $bridge; } ?>
 	</div>
-
-
 
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
@@ -149,11 +147,14 @@ if ( ! $product->is_purchasable() ) {
 			</div> -->
 		<?php } ?>
 
-		<?php if ( $product->is_in_stock() ) : ?>
-			<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
-		<?php else : ?>
-			<button disabled type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt out-of-stock">Out of Stock</button>
-		<?php endif; ?>
+		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+
+		<!-- <?php //if ( $product->is_in_stock() ) : ?>
+			<button type="submit" name="add-to-cart" value="<?php //echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php //echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		<?php //else : ?>
+			<button disabled type="submit" name="add-to-cart" value="<?php //echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt out-of-stock">Out of Stock</button>
+		<?php// endif; ?> -->
+
 
 		<?php } ?>
 
@@ -162,6 +163,8 @@ if ( ! $product->is_purchasable() ) {
   <?php echo wc_get_stock_html($product ); // WPCS: XSS ok. ?>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+
+<?php endif; ?>
 
 
 
