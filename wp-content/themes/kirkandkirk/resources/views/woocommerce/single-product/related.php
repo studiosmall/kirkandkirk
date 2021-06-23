@@ -19,6 +19,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// print_r('<pre>');
+// 	print_r($related_products);
+// print_r('</pre>');
+
 if ( $related_products ) : ?>
 
 	<section class="featured-products related">
@@ -29,7 +33,7 @@ if ( $related_products ) : ?>
 		if ( $heading ) :
 			?>
 			<div class="title__inner">
-				<h2><?php echo esc_html( $heading ); ?></h2>
+				<h2><?php //echo esc_html( $heading ); ?></h2>
 			</div>
 		<?php endif; ?>
 
@@ -37,9 +41,10 @@ if ( $related_products ) : ?>
 
 			<div class="featured-products__products slider">
 
-				<?php foreach ( $related_products as $related_product ) : ?>
+				<?php foreach ( $related_products as $index => $related_product ) : ?>
 
 						<?php
+
 						$post_object = get_post( $related_product->get_id() );
 
 						setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found

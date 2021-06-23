@@ -275,73 +275,6 @@
             "min": "",
             "max": "",
             "return_format": "object"
-        },
-        {
-            "key": "field_60626fcedc1bf",
-            "label": "Product Review",
-            "name": "product_review",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "row",
-            "button_label": "Add Review",
-            "sub_fields": [
-                {
-                    "key": "field_60626fd9dc1c0",
-                    "label": "Stars",
-                    "name": "stars",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "one": "One",
-                        "two": "Two",
-                        "three": "Three",
-                        "four": "Four",
-                        "five": "Five"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value",
-                    "save_other_choice": 0
-                },
-                {
-                    "key": "field_60627005dc1c1",
-                    "label": "Review",
-                    "name": "review",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "new_lines": "br"
-                }
-            ]
         }
     ],
     "location": [
@@ -365,5 +298,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624333764
+    "modified": 1624425734
 }

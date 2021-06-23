@@ -251,6 +251,73 @@
             ]
         },
         {
+            "key": "field_60d2c441e7c49",
+            "label": "Reviews",
+            "name": "product_review",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Review",
+            "sub_fields": [
+                {
+                    "key": "field_60d2c45be7c4a",
+                    "label": "Stars",
+                    "name": "stars",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "one": "One",
+                        "two": "Two",
+                        "three": "Three",
+                        "four": "Four",
+                        "five": "Five"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "five",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_60d2c486e7c4b",
+                    "label": "Review",
+                    "name": "review",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
             "key": "field_60628e0daeed9",
             "label": "Instagram",
             "name": "instagram",
@@ -346,5 +413,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1620095612
+    "modified": 1624425627
 }

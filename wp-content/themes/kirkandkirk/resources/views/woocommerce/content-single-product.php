@@ -151,7 +151,7 @@ if ( post_password_required() ) {
 </div>
 
 <?php
-	$review = get_field('product_review');
+	$review = get_field('product_review', 'option');
 	$instagram = get_field('instagram', 'option');
 ?>
 
