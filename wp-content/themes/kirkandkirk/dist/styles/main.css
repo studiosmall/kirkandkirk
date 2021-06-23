@@ -8078,13 +8078,6 @@ klarna-placement .container {
   padding: 10px 0 0 0 !important;
 }
 
-/* line 18, resources/assets/styles/components/_single-product.scss */
-
-body.out-of-stock #wl-wrapper,
-body.out-of-stock .share {
-  display: none !important;
-}
-
 /* line 25, resources/assets/styles/components/_single-product.scss */
 
 .single-product,

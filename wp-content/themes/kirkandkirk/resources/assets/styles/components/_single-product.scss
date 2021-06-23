@@ -13,14 +13,14 @@ klarna-placement {
 	}
 }
 
-body {
-	&.out-of-stock {
-		#wl-wrapper,
-		.share {
-			display: none !important;
-		}
-	}
-}
+// body {
+// 	&.out-of-stock {
+// 		#wl-wrapper,
+// 		.share {
+// 			display: none !important;
+// 		}
+// 	}
+// }
 
 .single-product,
 .single-data {
