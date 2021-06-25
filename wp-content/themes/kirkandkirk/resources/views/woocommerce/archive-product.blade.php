@@ -24,6 +24,7 @@ the readme will list any important changes.
 
 
   @if(is_product_category('optical'))
+  
     {{-- Fix for filters --}}
     @if (strpos($_SERVER['REQUEST_URI'], "optical/?") !== false)
 
