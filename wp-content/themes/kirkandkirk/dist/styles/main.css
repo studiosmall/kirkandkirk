@@ -7275,13 +7275,14 @@ span.professional {
 .featured-products__meta h2 {
   font-family: "reader", arial, sans-serif;
   color: #000;
+  text-transform: capitalize;
   font-size: 16px;
   letter-spacing: 0.86px;
   font-weight: 500;
   margin: 0;
 }
 
-/* line 152, resources/assets/styles/components/_featured-products.scss */
+/* line 153, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__meta span,
 .featured-products__meta .price {
@@ -7298,7 +7299,7 @@ span.professional {
 }
 
 @media (min-width: 900px) {
-  /* line 152, resources/assets/styles/components/_featured-products.scss */
+  /* line 153, resources/assets/styles/components/_featured-products.scss */
 
   .featured-products__meta span,
   .featured-products__meta .price {
@@ -7307,7 +7308,7 @@ span.professional {
 }
 
 @media (min-width: 900px) {
-  /* line 152, resources/assets/styles/components/_featured-products.scss */
+  /* line 153, resources/assets/styles/components/_featured-products.scss */
 
   .featured-products__meta span,
   .featured-products__meta .price {
@@ -7315,20 +7316,20 @@ span.professional {
   }
 }
 
-/* line 165, resources/assets/styles/components/_featured-products.scss */
+/* line 166, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__meta .add_to_cart_button {
   display: none;
 }
 
-/* line 170, resources/assets/styles/components/_featured-products.scss */
+/* line 171, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__bottom {
   width: 100%;
   padding: 60px 0 0 0;
 }
 
-/* line 174, resources/assets/styles/components/_featured-products.scss */
+/* line 175, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__bottom--inner {
   padding: 0 20px;
@@ -7346,14 +7347,14 @@ span.professional {
 }
 
 @media (min-width: 900px) {
-  /* line 174, resources/assets/styles/components/_featured-products.scss */
+  /* line 175, resources/assets/styles/components/_featured-products.scss */
 
   .featured-products__bottom--inner {
     padding: 0 50px;
   }
 }
 
-/* line 182, resources/assets/styles/components/_featured-products.scss */
+/* line 183, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__bottom h3 {
   font-family: "reader", arial, sans-serif;
@@ -7364,17 +7365,18 @@ span.professional {
   padding: 0;
   font-weight: 500;
   margin: 0 60px 0 0;
+  text-transform: capitalize;
 }
 
 @media (min-width: 900px) {
-  /* line 182, resources/assets/styles/components/_featured-products.scss */
+  /* line 183, resources/assets/styles/components/_featured-products.scss */
 
   .featured-products__bottom h3 {
     font-size: 20px;
   }
 }
 
-/* line 188, resources/assets/styles/components/_featured-products.scss */
+/* line 190, resources/assets/styles/components/_featured-products.scss */
 
 .featured-products__bottom a {
   display: inline-block;
@@ -7389,47 +7391,48 @@ span.professional {
   letter-spacing: 1px;
   margin: 0;
   padding: 0;
+  text-transform: capitalize;
 }
 
 @media (min-width: 900px) {
-  /* line 188, resources/assets/styles/components/_featured-products.scss */
+  /* line 190, resources/assets/styles/components/_featured-products.scss */
 
   .featured-products__bottom a {
     font-size: 16px;
   }
 }
 
-/* line 197, resources/assets/styles/components/_featured-products.scss */
+/* line 200, resources/assets/styles/components/_featured-products.scss */
 
 .slider .slick-slide {
   padding: 0 40px 0 0;
 }
 
-/* line 200, resources/assets/styles/components/_featured-products.scss */
+/* line 203, resources/assets/styles/components/_featured-products.scss */
 
 .slider .slick-slide:focus {
   outline: none;
 }
 
-/* line 204, resources/assets/styles/components/_featured-products.scss */
+/* line 207, resources/assets/styles/components/_featured-products.scss */
 
 .slider .slick-dots {
   bottom: -40px;
 }
 
-/* line 207, resources/assets/styles/components/_featured-products.scss */
+/* line 210, resources/assets/styles/components/_featured-products.scss */
 
 .slider .slick-dots li {
   margin: 0 1px;
 }
 
-/* line 212, resources/assets/styles/components/_featured-products.scss */
+/* line 215, resources/assets/styles/components/_featured-products.scss */
 
 .slider .slick-dots li.slick-active button::before {
   opacity: 1;
 }
 
-/* line 219, resources/assets/styles/components/_featured-products.scss */
+/* line 222, resources/assets/styles/components/_featured-products.scss */
 
 .slider .slick-dots li button::before {
   color: #abced0;
@@ -7437,7 +7440,7 @@ span.professional {
   font-size: 13px;
 }
 
-/* line 229, resources/assets/styles/components/_featured-products.scss */
+/* line 232, resources/assets/styles/components/_featured-products.scss */
 
 .recently {
   padding-bottom: 110px;
