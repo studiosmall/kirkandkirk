@@ -15462,8 +15462,7 @@ input[value="search"] {
 
 /* line 81, resources/assets/styles/layouts/_checkout.scss */
 
-.woocommerce-checkout .woocommerce .select2-container--default .select2-selection--single .select2-selection__rendered,
-.woocommerce-checkout .woocommerce .select2-container--default .select2-selection--single {
+.woocommerce-checkout .woocommerce .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: #444;
   line-height: 28px;
   background-color: #e1e1e1;
@@ -15472,7 +15471,7 @@ input[value="search"] {
   border-radius: 0;
 }
 
-/* line 91, resources/assets/styles/layouts/_checkout.scss */
+/* line 90, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_comments {
   width: 90%;
@@ -15483,33 +15482,33 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 91, resources/assets/styles/layouts/_checkout.scss */
+  /* line 90, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout .woocommerce #order_comments {
     width: 90%;
   }
 }
 
-/* line 102, resources/assets/styles/layouts/_checkout.scss */
+/* line 101, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_comments:focus {
   outline: none;
   border: 0;
 }
 
-/* line 109, resources/assets/styles/layouts/_checkout.scss */
+/* line 108, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table {
   width: 100%;
 }
 
-/* line 112, resources/assets/styles/layouts/_checkout.scss */
+/* line 111, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .product-name {
   text-align: left;
 }
 
-/* line 116, resources/assets/styles/layouts/_checkout.scss */
+/* line 115, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .variation-Nosepadoption {
   text-transform: none;
@@ -15517,7 +15516,7 @@ input[value="search"] {
   margin: 0;
 }
 
-/* line 122, resources/assets/styles/layouts/_checkout.scss */
+/* line 121, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .cart-subtotal {
   text-align: left;
@@ -15526,7 +15525,7 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 129, resources/assets/styles/layouts/_checkout.scss */
+/* line 128, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .order-total {
   text-align: left;
@@ -15534,13 +15533,13 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 135, resources/assets/styles/layouts/_checkout.scss */
+/* line 134, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout .woocommerce #order_review .shop_table .product-total {
   text-align: right;
 }
 
-/* line 142, resources/assets/styles/layouts/_checkout.scss */
+/* line 141, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout #place_order {
   color: #fff;
@@ -15574,7 +15573,7 @@ input[value="search"] {
   background: transparent;
 }
 
-/* line 146, resources/assets/styles/layouts/_checkout.scss */
+/* line 145, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
   border-radius: 0;
@@ -15587,7 +15586,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 146, resources/assets/styles/layouts/_checkout.scss */
+  /* line 145, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 100%;
@@ -15603,14 +15602,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 146, resources/assets/styles/layouts/_checkout.scss */
+  /* line 145, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 90%;
   }
 }
 
-/* line 156, resources/assets/styles/layouts/_checkout.scss */
+/* line 155, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout textarea {
   border-radius: 0;
@@ -15623,7 +15622,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 156, resources/assets/styles/layouts/_checkout.scss */
+  /* line 155, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout textarea {
     width: 100%;
@@ -15639,14 +15638,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 156, resources/assets/styles/layouts/_checkout.scss */
+  /* line 155, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout textarea {
     width: 90%;
   }
 }
 
-/* line 166, resources/assets/styles/layouts/_checkout.scss */
+/* line 165, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input {
   width: 90%;
@@ -15656,21 +15655,21 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 166, resources/assets/styles/layouts/_checkout.scss */
+  /* line 165, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout input {
     width: 90%;
   }
 }
 
-/* line 176, resources/assets/styles/layouts/_checkout.scss */
+/* line 175, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout input:focus {
   outline: none;
   border: 0;
 }
 
-/* line 182, resources/assets/styles/layouts/_checkout.scss */
+/* line 181, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout select {
   width: 90%;
@@ -15680,45 +15679,45 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 182, resources/assets/styles/layouts/_checkout.scss */
+  /* line 181, resources/assets/styles/layouts/_checkout.scss */
 
   .woocommerce-checkout select {
     width: 90%;
   }
 }
 
-/* line 192, resources/assets/styles/layouts/_checkout.scss */
+/* line 191, resources/assets/styles/layouts/_checkout.scss */
 
 .woocommerce-checkout select:focus {
   outline: none;
   border: 0;
 }
 
-/* line 199, resources/assets/styles/layouts/_checkout.scss */
+/* line 198, resources/assets/styles/layouts/_checkout.scss */
 
 #payment {
   padding: 100px 0 0 0;
 }
 
-/* line 202, resources/assets/styles/layouts/_checkout.scss */
+/* line 201, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper {
   padding: 50px 0 0;
 }
 
-/* line 205, resources/assets/styles/layouts/_checkout.scss */
+/* line 204, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text {
   line-height: 17px;
 }
 
-/* line 208, resources/assets/styles/layouts/_checkout.scss */
+/* line 207, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p {
   font-size: 12px;
 }
 
-/* line 211, resources/assets/styles/layouts/_checkout.scss */
+/* line 210, resources/assets/styles/layouts/_checkout.scss */
 
 #payment .woocommerce-terms-and-conditions-wrapper .woocommerce-privacy-policy-text p a {
   display: inline-block;
@@ -15729,7 +15728,7 @@ input[value="search"] {
   text-decoration: underline;
 }
 
-/* line 222, resources/assets/styles/layouts/_checkout.scss */
+/* line 221, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul {
   list-style: none;
@@ -15737,19 +15736,19 @@ input[value="search"] {
   padding: 0;
 }
 
-/* line 227, resources/assets/styles/layouts/_checkout.scss */
+/* line 226, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li {
   margin: 0 0 30px 0;
 }
 
-/* line 230, resources/assets/styles/layouts/_checkout.scss */
+/* line 229, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li input {
   width: auto;
 }
 
-/* line 234, resources/assets/styles/layouts/_checkout.scss */
+/* line 233, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li label {
   font-weight: 500;
@@ -15757,7 +15756,7 @@ input[value="search"] {
   text-transform: capitalize;
 }
 
-/* line 239, resources/assets/styles/layouts/_checkout.scss */
+/* line 238, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li label img {
   margin: 0 0 0 10px;
@@ -15765,38 +15764,38 @@ input[value="search"] {
   float: right;
 }
 
-/* line 247, resources/assets/styles/layouts/_checkout.scss */
+/* line 246, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li.payment_method_kco label {
   font-weight: 500;
 }
 
-/* line 250, resources/assets/styles/layouts/_checkout.scss */
+/* line 249, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li.payment_method_kco label img {
   margin: 0 0 0 10px;
   width: 100px;
 }
 
-/* line 259, resources/assets/styles/layouts/_checkout.scss */
+/* line 258, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li .payment_box fieldset {
   border: 1px solid #000;
 }
 
-/* line 263, resources/assets/styles/layouts/_checkout.scss */
+/* line 262, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li .payment_box label {
   margin: 0 0 10px 0;
 }
 
-/* line 267, resources/assets/styles/layouts/_checkout.scss */
+/* line 266, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .woocommerce-checkout-payment ul li .payment_box input {
   width: 90%;
 }
 
-/* line 276, resources/assets/styles/layouts/_checkout.scss */
+/* line 275, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox {
   padding: 0 0 30px 0;
@@ -15804,19 +15803,19 @@ input[value="search"] {
   width: 100%;
 }
 
-/* line 281, resources/assets/styles/layouts/_checkout.scss */
+/* line 280, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox input {
   width: auto;
 }
 
-/* line 285, resources/assets/styles/layouts/_checkout.scss */
+/* line 284, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox span {
   text-transform: initial;
 }
 
-/* line 289, resources/assets/styles/layouts/_checkout.scss */
+/* line 288, resources/assets/styles/layouts/_checkout.scss */
 
 #order_review .place-order label.woocommerce-form__label-for-checkbox a {
   display: inline-block;
