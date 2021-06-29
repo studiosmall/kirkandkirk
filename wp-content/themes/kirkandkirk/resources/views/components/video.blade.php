@@ -20,7 +20,7 @@
 			//$iframe = str_replace($src, $new_src, $iframe);
 	@endphp
 
-		<div class="plyr__video-embed">
+		<div class="plyr__video-embed" id="player">
 			<iframe
 				src="{!! $new_src !!}?autoplay=true"
 				allowfullscreen

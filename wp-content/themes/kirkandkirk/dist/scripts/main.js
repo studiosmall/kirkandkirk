@@ -2266,7 +2266,7 @@ Router.prototype.loadEvents = function loadEvents () {
     //
     // Video
     if($('.video').length ) {
-      var player 	= new __WEBPACK_IMPORTED_MODULE_3_plyr___default.a('#player', { // eslint-disable-line no-unused-vars
+      var player 	= new __WEBPACK_IMPORTED_MODULE_3_plyr___default.a('.plyr__video-embed', { // eslint-disable-line no-unused-vars
 				muted: true,
 			});
 

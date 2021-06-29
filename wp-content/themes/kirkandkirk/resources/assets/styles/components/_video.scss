@@ -11,6 +11,10 @@
 
     &__inner {
         @include inner;
+
+        .plyr__video-embed {
+            position: relative;
+        }
     }
 
 	.plyr--full-ui.plyr--video .plyr__control--overlaid {

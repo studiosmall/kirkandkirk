@@ -9203,7 +9203,13 @@ klarna-placement .container {
   }
 }
 
-/* line 16, resources/assets/styles/components/_video.scss */
+/* line 15, resources/assets/styles/components/_video.scss */
+
+.video__inner .plyr__video-embed {
+  position: relative;
+}
+
+/* line 20, resources/assets/styles/components/_video.scss */
 
 .video .plyr--full-ui.plyr--video .plyr__control--overlaid {
   height: 70px;
@@ -9219,7 +9225,7 @@ klarna-placement .container {
           align-items: center;
 }
 
-/* line 24, resources/assets/styles/components/_video.scss */
+/* line 28, resources/assets/styles/components/_video.scss */
 
 .video .plyr__control--overlaid {
   background: var(--plyr-video-control-background-hover, var(--plyr-color-main, var(--plyr-color-main, #000)));
@@ -9241,7 +9247,7 @@ klarna-placement .container {
   z-index: 2;
 }
 
-/* line 44, resources/assets/styles/components/_video.scss */
+/* line 48, resources/assets/styles/components/_video.scss */
 
 .video .plyr--video .plyr__control.plyr__tab-focus,
 .video .plyr--video .plyr__control:hover,
@@ -9250,7 +9256,7 @@ klarna-placement .container {
   color: var(--plyr-video-control-color-hover, #fff);
 }
 
-/* line 52, resources/assets/styles/components/_video.scss */
+/* line 56, resources/assets/styles/components/_video.scss */
 
 .video .plyr--video.plyr--hide-controls .plyr__controls {
   opacity: 1;
@@ -9261,7 +9267,7 @@ klarna-placement .container {
 }
 
 @media (min-width: 900px) {
-  /* line 52, resources/assets/styles/components/_video.scss */
+  /* line 56, resources/assets/styles/components/_video.scss */
 
   .video .plyr--video.plyr--hide-controls .plyr__controls {
     opacity: 0;
@@ -9273,7 +9279,7 @@ klarna-placement .container {
 }
 
 @media screen and (max-width: 500px) {
-  /* line 66, resources/assets/styles/components/_video.scss */
+  /* line 70, resources/assets/styles/components/_video.scss */
 
   .plyr .plyr__controls button[data-plyr=pip],
   .plyr .plyr__controls button[data-plyr=mute],
@@ -9281,7 +9287,7 @@ klarna-placement .container {
     display: block;
   }
 
-  /* line 71, resources/assets/styles/components/_video.scss */
+  /* line 75, resources/assets/styles/components/_video.scss */
 
   .plyr--video.plyr--hide-controls .plyr__controls {
     opacity: 1;

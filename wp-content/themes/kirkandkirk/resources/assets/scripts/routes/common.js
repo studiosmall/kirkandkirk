@@ -194,7 +194,7 @@ export default {
     //
     // Video
     if($('.video').length ) {
-      const player 	= new Plyr('#player', { // eslint-disable-line no-unused-vars
+      const player 	= new Plyr('.plyr__video-embed', { // eslint-disable-line no-unused-vars
 				muted: true,
 			});
 
