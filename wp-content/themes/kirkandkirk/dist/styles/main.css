@@ -8346,7 +8346,7 @@ klarna-placement .container {
   color: #000;
   line-height: 15px;
   text-decoration: none;
-  margin: 0 0 30px 0;
+  margin: 30px 0;
   border-bottom: 1px solid transparent;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -8367,7 +8367,7 @@ klarna-placement .container {
 .single-product .product ul.colours,
 .single-data .product ul.colours {
   list-style: none;
-  margin: 0;
+  margin: 30px 0 0 0;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8982,7 +8982,7 @@ klarna-placement .container {
 
 .single-product .woocommerce-product-attributes,
 .single-data .woocommerce-product-attributes {
-  padding: 0 0 20px 0;
+  padding: 0;
 }
 
 /* line 521, resources/assets/styles/components/_single-product.scss */
