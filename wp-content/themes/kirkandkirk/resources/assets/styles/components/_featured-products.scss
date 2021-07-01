@@ -11,6 +11,10 @@
 	position: relative;
 	background-color: $brand--white;
 
+	a.product_type_simple {
+		display: none;
+	}
+
 	&__link {
 		width: 100%;
     height: 100%;

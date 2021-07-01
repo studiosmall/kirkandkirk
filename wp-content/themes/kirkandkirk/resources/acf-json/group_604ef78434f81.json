@@ -231,6 +231,89 @@
                                     "mime_types": ""
                                 },
                                 {
+                                    "key": "field_60dd6338a59c3",
+                                    "label": "Enable Text",
+                                    "name": "text",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "enable": "Enable",
+                                        "disable": "Disable"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "disable",
+                                    "layout": "horizontal",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_60dd636ba59c5",
+                                    "label": "Text Position",
+                                    "name": "footer_text_position",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60dd6338a59c3",
+                                                "operator": "==",
+                                                "value": "enable"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "center": "Center",
+                                        "left": "Left"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "center",
+                                    "layout": "horizontal",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_60dd635ba59c4",
+                                    "label": "Text",
+                                    "name": "footer_text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60dd6338a59c3",
+                                                "operator": "==",
+                                                "value": "enable"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "new_lines": "wpautop"
+                                },
+                                {
                                     "key": "field_609e0a6af13d4",
                                     "label": "URL Link",
                                     "name": "url_link",
@@ -1181,5 +1264,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1622526321
+    "modified": 1625121704
 }

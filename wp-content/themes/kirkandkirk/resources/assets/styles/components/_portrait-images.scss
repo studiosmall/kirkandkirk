@@ -37,6 +37,58 @@
 		}
 	}
 
+	&__bottom {
+		position: relative;
+    left: 0;
+		bottom: 33px;
+    display: flex;
+    justify-content: center;
+		width: calc(100% - 40px);
+		padding: 0 20px;
+
+		@include breakpoint(medium) {
+			position: absolute;
+			bottom: 33px;
+			width: calc(100% - 60px);
+    	padding: 0 30px;
+		}
+
+    &.left {
+      justify-content: flex-start;
+
+      p {
+        text-align: left;
+        max-width: 100%;
+
+        @include breakpoint(medium) {
+          max-width: 65%;
+        }
+      }
+    }
+
+    p {
+      max-width: 800px;
+      width: 100%;
+      color: $brand--white;
+      font-family: $font--body;
+			font-size: 14px;
+			font-weight: 500;
+      letter-spacing: 0.75px;
+      text-align: center;
+      line-height: 20px;
+
+			@include breakpoint(medium) {
+				font-size: 16px;
+				line-height: 22px;
+			}
+
+      &:last-of-type {
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
 	.image-container {
 		overflow: hidden;
 		width: 50%;
@@ -48,7 +100,7 @@
 
 		&:hover {
 			.portrait-images__col {
-				@include scale;
+				// @include scale;
 			}
 		}
 	}

@@ -7,6 +7,15 @@
           @if($image['url_link'])
             <a class="portrait-images__link" href="{{ $image['url_link'] }}"></a>
           @endif
+
+          @if( $image['text'] == 'enable')
+            <div class="portrait-images__bottom">
+              <div class="portrait-images__bottom @if($image['footer_text_position'] == 'left') left @endif" data-aos="fade-up">
+                {!! $image['footer_text'] !!}
+              </div>
+            </div>
+          @endif
+
         </div>
       </div>
     @endforeach

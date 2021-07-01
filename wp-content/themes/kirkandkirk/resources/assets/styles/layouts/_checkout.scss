@@ -68,7 +68,8 @@
       width: 94%;
     }
 
-    #billing_country_field {
+    #billing_country_field,
+    #billing_state_field {
       width: 93%;
 
       .select2-selection {
@@ -108,12 +109,20 @@
       }
     }
 
+    // .cart_item {
+    //   .cart_item {
+    //     letter-spacing: initial;
+    //   }
+    // }
+
     #order_review {
       .shop_table {
         width: 100%;
 
         .product-name {
           text-align: left;
+          padding-bottom: 10px;
+          letter-spacing: 1px;
         }
 
         .variation-Nosepadoption {
@@ -123,20 +132,28 @@
         }
 
         .cart-subtotal {
+          border-top: 1px solid $brand--primary;
           text-align: left;
-          padding-top: 20px;
-          display: inline-block;
-          width: 100%;
+          margin-top: 40px;
+          padding-top: 10px;
+          width: 137%;
+          display: flex;
+          justify-content: space-between;
+          letter-spacing: 1px;
         }
 
         .order-total {
+          padding-top: 10px;
           text-align: left;
-          display: inline-block;
-          width: 100%;
+          width: 137%;
+          display: flex;
+          justify-content: space-between;
+          letter-spacing: 1px;
         }
 
         .product-total {
           text-align: right;
+          letter-spacing: 1px;
         }
       }
     }
@@ -200,7 +217,7 @@
 }
 
 #payment {
-  padding: 100px 0 0 0;
+  padding: 60px 0 0 0;
 
   .woocommerce-terms-and-conditions-wrapper {
     padding: 50px 0 0;
@@ -277,9 +294,10 @@
 
   .place-order {
     label.woocommerce-form__label-for-checkbox {
-      padding: 0 0 30px 0;
+      padding: 10px 0 30px 0;
       display: inline-block;
       width: 100%;
+      font-size: 12px;
 
       input {
         width: auto;
@@ -295,4 +313,8 @@
       }
     }
   }
+}
+
+.woocommerce-NoticeGroup {
+  padding: 20px 0 0 0;
 }
