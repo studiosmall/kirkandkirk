@@ -32,3 +32,11 @@
 	</div>
 
 </section>
+
+
+{{-- 
+<section class="video section">
+	<div class="video__inner">
+  	<div data-type="youtube" data-video-id="bTqVqk7FSmY"></div>
+	</div>
+</section> --}}

@@ -2074,7 +2074,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
 
 
-
+ // eslint-disable-line
 
 
 //import '../vendor/masonry.pkgd.js';
@@ -2266,21 +2266,38 @@ Router.prototype.loadEvents = function loadEvents () {
     //
     // Video
     if($('.video').length ) {
-      var player 	= new __WEBPACK_IMPORTED_MODULE_3_plyr___default.a('.plyr__video-embed', { // eslint-disable-line no-unused-vars
-				muted: true,
-			});
+      
+        // This is the bare minimum JavaScript. You can opt to pass no arguments to setup.
+      // e.g. just plyr.setup(); and leave it at that if you have no need for events
+      var player = new __WEBPACK_IMPORTED_MODULE_3_plyr___default.a.setup('.plyr__video-embed', {  // eslint-disable-line
+        // Output to console
+        debug: false,
+        muted: true,
+      });
+      
+      
+      // const player 	= new Plyr('.plyr__video-embed', { // eslint-disable-line no-unused-vars
+			// 	muted: true,
+			// });
 
+      // console.log('yes');
+      // console.log(player);
+      // console.log('yes');
 
-      //auto play video on scroll
-      $(document).on( 'scroll', function(){
-        if ($('.plyr__video-embed').visible(true)) {
-          // The element is visible, do something
-         player.play(); // eslint-disable-line no-undef
+      //document.querySelectorAll('.video')[0].player.play();
 
-        } else {
-          player.pause();
-        }
-      })
+      if ($('body').hasClass('front-page-data')) {
+        //auto play video on scroll
+        $(document).on( 'scroll', function(){
+          if ($('.plyr--video').visible(true)) {
+            // The element is visible, do something
+            player[0].play(); // eslint-disable-line no-undef
+
+          } else {
+            player[0].pause();
+          }
+        })   
+      }
     }
 
     if($('.wc360').length) {
