@@ -331,6 +331,9 @@ klarna-placement {
 			}
 
 			.posted_in {
+				padding: 0 0 20px 0;
+				display: block;
+
 				a {
 					@include hoverline($brand--primary);
 					@include subtitle($brand--primary);
@@ -343,6 +346,7 @@ klarna-placement {
 				@include title($brand--primary);
 
 				text-transform: capitalize;
+				margin: 0 0 20px 0;
 
 				@include breakpoint(medium) {
 					font-size: 30px;
