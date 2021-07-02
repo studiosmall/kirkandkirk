@@ -217,6 +217,10 @@ klarna-placement {
 		.stock {
 			color: #b92828;
 			font-size: 13px;
+
+			&.out-of-stock {
+				display: none;
+			}
 		}
 
 		.share {
