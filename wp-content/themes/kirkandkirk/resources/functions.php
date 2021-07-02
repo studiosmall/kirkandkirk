@@ -864,7 +864,7 @@ function hb_optician_checkout_order_callback()
     $cart_content .= '<table style="width: 600px; margin: 0 auto; ">
         <tr>
             <td style="width: 100% margin-top: 50px;">
-                <p style="margin-top: 0;"><img src="https://kirkstaging.wpengine.com/wp-content/uploads/2021/07/k-and-k-logo-1.png" alt="Kirk &amp; Kirk" style="border: none; display: inline-block; font-size: 14px; font-weight: bold; height: auto; outline: none; text-decoration: none; text-transform: capitalize; vertical-align: middle; margin-left: 0; margin-right: 0; max-width: 200px;"></p>
+                <p style="margin-top: 50px; margin-bottom: 50px;"><img src="https://kirkstaging.wpengine.com/wp-content/uploads/2021/07/k-and-k-logo-1.png" alt="Kirk &amp; Kirk" style="border: none; display: inline-block; font-size: 14px; font-weight: bold; height: auto; outline: none; text-decoration: none; text-transform: capitalize; vertical-align: middle; margin-left: 0; margin-right: 0; max-width: 200px;"></p>
                 <p>Hello '.$optician_name.',<br /></p>
                 <p>Thank you for placing an Order we`ll be reaching out to you soon.<br /><br /><br /></p>
             </td>
@@ -933,9 +933,8 @@ function hb_optician_checkout_order_callback()
             </td>
         </tr>
         <tr>
-        <td style="width: 100%">
-            <p>Hello '.$optician_name.',<br /></p>
-                <p>Thank you for placing an Order we`ll be reaching out to you soon.<br /><br /><br /></p>
+            <td style="width: 100%">
+            <p><br /><br /><br /></p>
             </td>
         </tr>
         </tbody>
