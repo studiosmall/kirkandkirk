@@ -863,9 +863,10 @@ function hb_optician_checkout_order_callback()
     $cart_content .= "<html><body style='margin:0;'>";
     $cart_content .= '<table style="width: 600px; margin: 0 auto; ">
         <tr>
-            <td style="width: 100%">
+            <td style="width: 100% margin-top: 50px;">
+                <p style="margin-top: 0;"><img src="https://kirkstaging.wpengine.com/wp-content/uploads/2021/07/k-and-k-logo-1.png" alt="Kirk &amp; Kirk" style="border: none; display: inline-block; font-size: 14px; font-weight: bold; height: auto; outline: none; text-decoration: none; text-transform: capitalize; vertical-align: middle; margin-left: 0; margin-right: 0; max-width: 200px;"></p>
                 <p>Hello '.$optician_name.',<br /></p>
-                <p>Thank you for placing an Order we`ll be reaching out to you soon.<br /></p>
+                <p>Thank you for placing an Order we`ll be reaching out to you soon.<br /><br /><br /></p>
             </td>
         </tr>
         <tr>
@@ -893,7 +894,7 @@ function hb_optician_checkout_order_callback()
                 $product_permalink = get_permalink($variation_id);
                 $cart_content .= '<tr>
                     <td style=" font-weight: 400; padding: 9px 12px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);">';
-                $thumbnail = wp_get_attachment_image($attachment_id, array(40, 40));
+                $thumbnail = wp_get_attachment_image($attachment_id, array(60, 40));
 
                 if (! $product_permalink) {
                     $cart_content .= $thumbnail;
@@ -931,6 +932,12 @@ function hb_optician_checkout_order_callback()
         $cart_content .= '</table>
             </td>
         </tr>
+        <tr>
+        <td style="width: 100%">
+            <p>Hello '.$optician_name.',<br /></p>
+                <p>Thank you for placing an Order we`ll be reaching out to you soon.<br /><br /><br /></p>
+            </td>
+        </tr>
         </tbody>
         </table>';
         $cart_content .= '<div style=" font-weight: 400; padding: 9px 55px; line-height: 1.5em; border-top: 1px solid rgba(0,0,0,.1);"> '.__(' Name of Store: ' ).$name_of_store.'</div>';
@@ -938,7 +945,7 @@ function hb_optician_checkout_order_callback()
         $cart_content .='</body>
     </html>';
 
-        $result = wp_mail($optician_email, "Order placed successfully!", $cart_content, $headers);
+        $result = wp_mail($optician_email, "Kirk and Kirk – Order placed successfully!", $cart_content, $headers);
         if ($result) {
             /*echo "mail send!";*/
             if (! delete_user_meta($user_id, 'optician_cart_data')) {

@@ -158,7 +158,6 @@ if ( ! $product->is_purchasable() ) {
 			<button disabled type="submit" name="add-to-cart" value="<?php //echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt out-of-stock">Out of Stock</button>
 		<?php endif; ?>
 
-
 		<?php } ?>
 
 	</form>

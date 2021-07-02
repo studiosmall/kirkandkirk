@@ -9177,9 +9177,10 @@ klarna-placement .container {
 
 .products li .image-container {
   overflow: hidden;
+  position: relative;
 }
 
-/* line 30, resources/assets/styles/components/_collection.scss */
+/* line 31, resources/assets/styles/components/_collection.scss */
 
 .products li img {
   -webkit-transition: 0.3s all ease;
@@ -9187,7 +9188,7 @@ klarna-placement .container {
   transition: 0.3s all ease;
 }
 
-/* line 35, resources/assets/styles/components/_collection.scss */
+/* line 36, resources/assets/styles/components/_collection.scss */
 
 .products li:hover img {
   -webkit-transform: scale(1.05);
@@ -9195,13 +9196,13 @@ klarna-placement .container {
           transform: scale(1.05);
 }
 
-/* line 45, resources/assets/styles/components/_collection.scss */
+/* line 46, resources/assets/styles/components/_collection.scss */
 
 .products li a.product_type_simple {
   display: none;
 }
 
-/* line 51, resources/assets/styles/components/_collection.scss */
+/* line 52, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info {
   background-color: #f8f8f8;
@@ -9209,13 +9210,13 @@ klarna-placement .container {
   text-align: center;
 }
 
-/* line 59, resources/assets/styles/components/_collection.scss */
+/* line 60, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info a {
   color: #000;
 }
 
-/* line 65, resources/assets/styles/components/_collection.scss */
+/* line 66, resources/assets/styles/components/_collection.scss */
 
 .term-new-arrivals .woocommerce-products-header {
   display: none;
@@ -14509,8 +14510,8 @@ input[value="search"] {
   .page-professional-login-data .woocommerce,
   .woocommerce-account .woocommerce {
     width: 70%;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -15080,26 +15081,32 @@ input[value="search"] {
 
 /* line 8, resources/assets/styles/layouts/_cart.scss */
 
+.woocommerce-cart .return-to-shop {
+  display: none;
+}
+
+/* line 12, resources/assets/styles/layouts/_cart.scss */
+
 .woocommerce-cart .woocommerce {
   width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 900px) {
-  /* line 8, resources/assets/styles/layouts/_cart.scss */
+  /* line 12, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce {
     width: 70%;
   }
 }
 
-/* line 16, resources/assets/styles/layouts/_cart.scss */
+/* line 20, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce p.cart-empty {
   padding: 60px 0 30px 0;
 }
 
-/* line 21, resources/assets/styles/layouts/_cart.scss */
+/* line 25, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .return-to-shop a {
   display: inline-block;
@@ -15109,25 +15116,25 @@ input[value="search"] {
   text-decoration: none;
 }
 
-/* line 26, resources/assets/styles/layouts/_cart.scss */
+/* line 30, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form {
   padding: 100px 0 0 0;
 }
 
-/* line 30, resources/assets/styles/layouts/_cart.scss */
+/* line 34, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .name_of_store span.msg {
   display: none;
 }
 
-/* line 35, resources/assets/styles/layouts/_cart.scss */
+/* line 39, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .profession-order-note {
   padding: 20px 0 0 0;
 }
 
-/* line 38, resources/assets/styles/layouts/_cart.scss */
+/* line 42, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .profession-order-note .msg {
   display: inline-block;
@@ -15135,7 +15142,7 @@ input[value="search"] {
   padding: 0 0 5px 0;
 }
 
-/* line 44, resources/assets/styles/layouts/_cart.scss */
+/* line 48, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .profession-order-note textarea {
   width: 95%;
@@ -15144,7 +15151,7 @@ input[value="search"] {
   width: calc(100% - 13px);
 }
 
-/* line 52, resources/assets/styles/layouts/_cart.scss */
+/* line 56, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form input.input-text {
   width: calc(100% - 22px);
@@ -15152,19 +15159,19 @@ input[value="search"] {
   border-color: #777;
 }
 
-/* line 57, resources/assets/styles/layouts/_cart.scss */
+/* line 61, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form input.input-text:focus {
   border-color: #777;
 }
 
-/* line 62, resources/assets/styles/layouts/_cart.scss */
+/* line 66, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table {
   width: 100%;
 }
 
-/* line 66, resources/assets/styles/layouts/_cart.scss */
+/* line 70, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-remove,
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table thead .product-thumbnail,
@@ -15177,7 +15184,7 @@ input[value="search"] {
   font-weight: 100;
 }
 
-/* line 79, resources/assets/styles/layouts/_cart.scss */
+/* line 83, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-remove,
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-thumbnail,
@@ -15190,26 +15197,26 @@ input[value="search"] {
   text-transform: uppercase;
 }
 
-/* line 90, resources/assets/styles/layouts/_cart.scss */
+/* line 94, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-thumbnail {
   padding: 20px 0;
 }
 
-/* line 94, resources/assets/styles/layouts/_cart.scss */
+/* line 98, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-subtotal,
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-quantity {
   text-align: right;
 }
 
-/* line 100, resources/assets/styles/layouts/_cart.scss */
+/* line 104, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .quantity input {
   width: 30px;
 }
 
-/* line 106, resources/assets/styles/layouts/_cart.scss */
+/* line 110, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-remove a {
   font-family: "reader", arial, sans-serif;
@@ -15224,20 +15231,20 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 106, resources/assets/styles/layouts/_cart.scss */
+  /* line 110, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-remove a {
     font-size: 16px;
   }
 }
 
-/* line 114, resources/assets/styles/layouts/_cart.scss */
+/* line 118, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-name {
   text-align: left;
 }
 
-/* line 116, resources/assets/styles/layouts/_cart.scss */
+/* line 120, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-name a {
   font-family: "reader", arial, sans-serif;
@@ -15251,14 +15258,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 116, resources/assets/styles/layouts/_cart.scss */
+  /* line 120, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .product-name a {
     font-size: 16px;
   }
 }
 
-/* line 123, resources/assets/styles/layouts/_cart.scss */
+/* line 127, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table .variation-Nosepadoption {
   text-transform: none;
@@ -15266,14 +15273,14 @@ input[value="search"] {
   margin: 0;
 }
 
-/* line 129, resources/assets/styles/layouts/_cart.scss */
+/* line 133, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions {
   margin: 10px 0;
   text-align: right;
 }
 
-/* line 133, resources/assets/styles/layouts/_cart.scss */
+/* line 137, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button {
   font-family: "reader", arial, sans-serif;
@@ -15299,7 +15306,7 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 133, resources/assets/styles/layouts/_cart.scss */
+  /* line 137, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .woocommerce-cart-form .shop_table td.actions .button {
     font-size: 16px;
@@ -15320,27 +15327,27 @@ input[value="search"] {
   outline: none;
 }
 
-/* line 142, resources/assets/styles/layouts/_cart.scss */
+/* line 146, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item td {
   padding: 15px 15px;
   border-top: 1px solid #000;
 }
 
-/* line 147, resources/assets/styles/layouts/_cart.scss */
+/* line 151, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .woocommerce-cart-form__cart-item td.product-thumbnail img {
   max-width: 200px;
 }
 
-/* line 155, resources/assets/styles/layouts/_cart.scss */
+/* line 159, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals {
   width: 50%;
   float: right;
 }
 
-/* line 159, resources/assets/styles/layouts/_cart.scss */
+/* line 163, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
   font-family: "reader", arial, sans-serif;
@@ -15358,14 +15365,14 @@ input[value="search"] {
 }
 
 @media (min-width: 900px) {
-  /* line 159, resources/assets/styles/layouts/_cart.scss */
+  /* line 163, resources/assets/styles/layouts/_cart.scss */
 
   .woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
     font-size: 16px;
   }
 }
 
-/* line 168, resources/assets/styles/layouts/_cart.scss */
+/* line 172, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals h2 {
   text-align: right;
@@ -15374,14 +15381,14 @@ input[value="search"] {
   font-size: 16px;
 }
 
-/* line 177, resources/assets/styles/layouts/_cart.scss */
+/* line 181, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .cart-subtotal th,
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .order-total th {
   font-weight: 100;
 }
 
-/* line 182, resources/assets/styles/layouts/_cart.scss */
+/* line 186, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .shop_table {
   text-align: right;
@@ -15389,25 +15396,25 @@ input[value="search"] {
   padding: 0 0 20px 0;
 }
 
-/* line 187, resources/assets/styles/layouts/_cart.scss */
+/* line 191, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .shop_table .tbody {
   float: right;
 }
 
-/* line 192, resources/assets/styles/layouts/_cart.scss */
+/* line 196, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals .order-total {
   width: 100%;
 }
 
-/* line 197, resources/assets/styles/layouts/_cart.scss */
+/* line 201, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout {
   text-align: right;
 }
 
-/* line 200, resources/assets/styles/layouts/_cart.scss */
+/* line 204, resources/assets/styles/layouts/_cart.scss */
 
 .woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout .checkout-button {
   color: #fff;
