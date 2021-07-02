@@ -154,3 +154,14 @@ img {
     padding-bottom: 300px;
   }
 }
+
+.onsale {
+  @include subtitle($brand--primary);
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background: #c7dce0;
+  padding: 7px 15px;
+}

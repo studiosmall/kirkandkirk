@@ -5412,6 +5412,32 @@ img {
   }
 }
 
+/* line 158, resources/assets/styles/common/_global.scss */
+
+.onsale {
+  font-family: "reader", arial, sans-serif;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background: #c7dce0;
+  padding: 7px 15px;
+}
+
+@media (min-width: 900px) {
+  /* line 158, resources/assets/styles/common/_global.scss */
+
+  .onsale {
+    font-size: 16px;
+  }
+}
+
 /**
  * Button
  */
@@ -9153,7 +9179,13 @@ klarna-placement .container {
           transform: scale(1.05);
 }
 
-/* line 47, resources/assets/styles/components/_collection.scss */
+/* line 45, resources/assets/styles/components/_collection.scss */
+
+.products li a.product_type_simple {
+  display: none;
+}
+
+/* line 51, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info {
   background-color: #f8f8f8;
@@ -9161,13 +9193,13 @@ klarna-placement .container {
   text-align: center;
 }
 
-/* line 55, resources/assets/styles/components/_collection.scss */
+/* line 59, resources/assets/styles/components/_collection.scss */
 
 .woocommerce-info a {
   color: #000;
 }
 
-/* line 61, resources/assets/styles/components/_collection.scss */
+/* line 65, resources/assets/styles/components/_collection.scss */
 
 .term-new-arrivals .woocommerce-products-header {
   display: none;

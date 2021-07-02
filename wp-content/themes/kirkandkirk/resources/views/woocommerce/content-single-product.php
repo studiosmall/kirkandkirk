@@ -152,7 +152,6 @@ if ( post_password_required() ) {
 
 <?php
 	$review = get_field('product_review', 'option');
-	$instagram = get_field('instagram', 'option');
 ?>
 
 	<?php if($review) { ?>
@@ -192,7 +191,31 @@ if ( post_password_required() ) {
 		</section>
 	<?php } ?>
 
-	<?php if($instagram['instagram_images']) { ?>
+	<?php 
+		$instagram = get_field('instagram', 'option');
+		$productInstagram = get_field('instagram');
+	?>
+
+	<?php if($productInstagram['instagram_images']) { ?>
+		<section class="instagram">
+			<div class="instagram__inner">
+				<h3>Latest on Instagram</h3>
+
+				<div class="feed">
+					<?php foreach($productInstagram['instagram_images'] as $i): ?>
+						<div class="feed__item">
+							<a href="<?php echo $i['image_url'] ?>" target="_bank">
+								<div class="image-container">
+									<img src="<?php echo $i['image']['url'] ?>" alt="Kirk and Kirk – Instagram">
+								</div>
+							</a>
+						</div>
+					<?php endforeach ?>
+				</div>
+			</div>
+		</section>
+	<?php } elseif($instagram['instagram_images']) { ?>
+
 		<section class="instagram">
 			<div class="instagram__inner">
 				<h3>Latest on Instagram</h3>
@@ -210,6 +233,10 @@ if ( post_password_required() ) {
 				</div>
 			</div>
 		</section>
+	
+	<?php } else { ?>
+
+
 	<?php } ?>
 
 	<?php
