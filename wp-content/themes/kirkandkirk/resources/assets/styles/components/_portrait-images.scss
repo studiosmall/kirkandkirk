@@ -38,9 +38,9 @@
 	}
 
 	&__bottom {
-		position: relative;
+    position: absolute;
     left: 0;
-		bottom: 33px;
+    bottom: 15px;
     display: flex;
     justify-content: center;
 		width: calc(100% - 40px);

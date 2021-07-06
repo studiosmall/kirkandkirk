@@ -10125,10 +10125,13 @@ input[type="submit"] {
 .instagram .feed__item .image-container {
   overflow: hidden;
   width: 100%;
-  height: 98%;
+  height: 21vw;
+  max-height: 313px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-/* line 41, resources/assets/styles/components/_instagram.scss */
+/* line 43, resources/assets/styles/components/_instagram.scss */
 
 .instagram .feed__item .image-container img {
   -webkit-transition: 0.3s all ease;
@@ -10461,9 +10464,9 @@ input[type="submit"] {
 /* line 40, resources/assets/styles/components/_portrait-images.scss */
 
 .portrait-images__bottom {
-  position: relative;
+  position: absolute;
   left: 0;
-  bottom: 33px;
+  bottom: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
