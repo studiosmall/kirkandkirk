@@ -2,10 +2,12 @@
   @php
     $image 		= get_the_post_thumbnail_url($story, 'large');
     $title 		= get_the_title($story);
+    $link 		= get_permalink($story);
     $fields  	= get_fields($story);
 
-    $textarea  = $fields['textarea'];
-    $colour    = $fields['colour']; 
+    $textarea       = $fields['textarea'];
+    $readTextarea   = $fields['read_more_text'];
+    $colour         = $fields['colour']; 
   @endphp
 
   <section class="feature-story">
@@ -29,7 +31,12 @@
 
             <p>{!! $textarea !!}</p>
 
-            <a href="/stories">Read more stories</a>
+            @if($readTextarea)
+              <a href="/stories">Read more stories</a>
+            @else
+              <a href="{{ $link }}">Read more</a>
+            @endif
+            
 
           </div>
 
