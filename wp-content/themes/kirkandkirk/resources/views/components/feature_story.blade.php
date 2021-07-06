@@ -32,7 +32,7 @@
             <p>{!! $textarea !!}</p>
 
             @if($readTextarea)
-              <a href="{{ $link }}">Read more</a>
+              <a href="{{ $link }}">Read full story</a>
             @else
               <a href="/stories">Read more stories</a>
             @endif
