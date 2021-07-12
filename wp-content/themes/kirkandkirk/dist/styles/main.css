@@ -8215,7 +8215,7 @@ klarna-placement .container {
 
   .single-product .product .product-images__inner,
   .single-data .product .product-images__inner {
-    padding: 0 10% 0 0;
+    padding: 0 10% 75px 0;
   }
 }
 
@@ -8274,7 +8274,7 @@ klarna-placement .container {
 
   .single-product .product .lifestyle,
   .single-data .product .lifestyle {
-    margin: 60px 0;
+    margin: 60px 0 0 0;
   }
 }
 
@@ -8317,7 +8317,7 @@ klarna-placement .container {
   .single-data .product .double-image {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    margin: 60px 0;
+    margin: 60px 0 0 0;
   }
 }
 
