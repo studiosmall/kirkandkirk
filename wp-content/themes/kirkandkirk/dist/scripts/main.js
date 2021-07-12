@@ -2322,7 +2322,8 @@ Router.prototype.loadEvents = function loadEvents () {
     }
 
     if($('.single-product-data, .single-product').length) {
-      var similar$1 = $('.recently .flickity-slider li').size();
+      var similar$1 = $('.recently .flickity-slider .featured-products__product').size();
+      console.log(similar$1 + 'the size');
 
       if(similar$1 >= 1) {
         $('.recently').css('opacity', '1');

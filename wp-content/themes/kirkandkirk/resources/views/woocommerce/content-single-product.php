@@ -256,10 +256,12 @@ if ( post_password_required() ) {
 	$shortcode 	  = do_shortcode('[recently_viewed_products]');
 	$recently 	  = explode(',', $shortcode);
 	$num_recently = count($recently);
+		
+	print_r($shortcode);
 
 ?>
 
-<?php //if(($num_recently >= 3)) { ?>
+<?php if(($num_recently >= 2)) { ?>
 	<section class="featured-products recently" style="opacity: 0;">
 		<div class="featured-products__inner">
 
@@ -312,7 +314,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 	</section>
-<?php //} ?>
+<?php } ?>
 
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
