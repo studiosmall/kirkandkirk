@@ -1171,3 +1171,19 @@ function add_login_check()
 }
 
 add_action('wp', 'add_login_check');
+
+
+/**
+ * Remove Zoom Effect on WooCommerce Product Image 
+ *
+ * @param $html, $post_id 
+ *
+ * @return $function 
+ */
+
+function njengah_remove_zoom_effect_product_image( $html, $post_id ) {
+	
+    $post_thumbnail_id = get_post_thumbnail_id( $post_id );
+    return get_the_post_thumbnail( $post_thumbnail_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
+}
+add_filter('woocommerce_single_product_image_thumbnail_html', 'njengah_remove_zoom_effect_product_image', 10, 2);

@@ -121,7 +121,7 @@ the readme will list any important changes.
 
         // No value.
         else :
-            // Do something...
+            echo 'Do something...';
 
         endif;
 
@@ -132,6 +132,8 @@ the readme will list any important changes.
   @else
 
     @include('partials.woocommerce-layout');
+
+    Else;
 
   @endif
 
