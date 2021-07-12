@@ -236,6 +236,19 @@ export default {
         }, 1000);
     }
 
+    //
+    // Show similar product on single product 
+    if($('.single-product-data, .single-product').length) {
+      let similar = $('.featured-products .flickity-slider li').size();
+
+      if(similar >= 1) {
+        $('.featured-products').css('display', 'block');
+      } else {
+        $('.featured-products').css('display', 'none');
+      }
+      
+    }
+
     if($('.filter').length) {
       $('.filter__title').on('click', function(e){
         e.preventDefault();

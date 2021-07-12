@@ -33,7 +33,7 @@ if ( $related_products ) : ?>
 		if ( $heading ) :
 			?>
 			<div class="title__inner">
-				<h2><?php //echo esc_html( $heading ); ?></h2>
+				<h2><?php echo esc_html( $heading ); ?></h2>
 			</div>
 		<?php endif; ?>
 
