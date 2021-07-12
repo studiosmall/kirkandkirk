@@ -251,10 +251,10 @@ export default {
 
     if($('.single-product-data, .single-product').length) {
       let similar = $('.recently .flickity-slider .featured-products__product').size();
-      console.log(similar + 'the size');
+      console.log(similar + ' size');
 
       if(similar >= 1) {
-        $('.recently').css('opacity', '1');
+        //
       } else {
         $('.recently').css('display', 'none');
       }
