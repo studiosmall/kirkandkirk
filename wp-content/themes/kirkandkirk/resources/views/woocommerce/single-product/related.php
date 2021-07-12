@@ -25,17 +25,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="featured-products related" style="display: none;">
+	<section class="featured-products related" style="opacity: 0;">
 		<div class="featured-products__inner">
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'SIMILAR STYLES', 'woocommerce' ) );
 
-		if ( $heading ) :
+
 			?>
 			<div class="title__inner">
 				<h2><?php echo esc_html( $heading ); ?></h2>
 			</div>
-		<?php endif; ?>
 
 		<?php //woocommerce_product_loop_start(); ?>
 

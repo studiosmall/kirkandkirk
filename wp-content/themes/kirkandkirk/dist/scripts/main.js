@@ -2311,12 +2311,23 @@ Router.prototype.loadEvents = function loadEvents () {
     //
     // Show similar product on single product 
     if($('.single-product-data, .single-product').length) {
-      var similar = $('.featured-products .flickity-slider li').size();
+      var similar = $('.related .flickity-slider li').size();
 
-      if(similar >= 1) {
-        $('.featured-products').css('display', 'block');
+      if(similar >= 2) {
+        $('.related').css('opacity', '1');
       } else {
-        $('.featured-products').css('display', 'none');
+        $('.related').css('display', 'none');
+      }
+      
+    }
+
+    if($('.single-product-data, .single-product').length) {
+      var similar$1 = $('.recently .flickity-slider li').size();
+
+      if(similar$1 >= 1) {
+        $('.recently').css('opacity', '1');
+      } else {
+        $('.recently').css('display', 'none');
       }
       
     }

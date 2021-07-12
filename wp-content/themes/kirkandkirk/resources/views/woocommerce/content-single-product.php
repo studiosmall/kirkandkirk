@@ -260,7 +260,7 @@ if ( post_password_required() ) {
 ?>
 
 <?php //if(($num_recently >= 3)) { ?>
-	<section class="featured-products recently">
+	<section class="featured-products recently" style="opacity: 0;">
 		<div class="featured-products__inner">
 
 			<div class="title__inner">

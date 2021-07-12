@@ -242,7 +242,7 @@ export default {
       let similar = $('.related .flickity-slider li').size();
 
       if(similar >= 2) {
-        $('.related').css('display', 'block');
+        $('.related').css('opacity', '1');
       } else {
         $('.related').css('display', 'none');
       }
@@ -252,8 +252,8 @@ export default {
     if($('.single-product-data, .single-product').length) {
       let similar = $('.recently .flickity-slider li').size();
 
-      if(similar >= 2) {
-        $('.recently').css('display', 'block');
+      if(similar >= 1) {
+        $('.recently').css('opacity', '1');
       } else {
         $('.recently').css('display', 'none');
       }
