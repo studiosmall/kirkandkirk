@@ -239,12 +239,23 @@ export default {
     //
     // Show similar product on single product 
     if($('.single-product-data, .single-product').length) {
-      let similar = $('.featured-products .flickity-slider li').size();
+      let similar = $('.related .flickity-slider li').size();
 
-      if(similar >= 1) {
-        $('.featured-products').css('display', 'block');
+      if(similar >= 2) {
+        $('.related').css('display', 'block');
       } else {
-        $('.featured-products').css('display', 'none');
+        $('.related').css('display', 'none');
+      }
+      
+    }
+
+    if($('.single-product-data, .single-product').length) {
+      let similar = $('.recently .flickity-slider li').size();
+
+      if(similar >= 2) {
+        $('.recently').css('display', 'block');
+      } else {
+        $('.recently').css('display', 'none');
       }
       
     }
