@@ -16004,6 +16004,24 @@ input[value="search"] {
   padding: 20px 0 0 0;
 }
 
+/* line 322, resources/assets/styles/layouts/_checkout.scss */
+
+.about_paypal {
+  display: none;
+}
+
+/* line 326, resources/assets/styles/layouts/_checkout.scss */
+
+.payment_box {
+  margin: 15px 0 0 0;
+}
+
+/* line 329, resources/assets/styles/layouts/_checkout.scss */
+
+.payment_box p {
+  font-size: 12px;
+}
+
 /* line 1, resources/assets/styles/layouts/_wishlist.scss */
 
 #wl-wrapper {

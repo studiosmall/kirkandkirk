@@ -36,7 +36,6 @@
             @else
               <a href="/stories">Read more stories</a>
             @endif
-            
 
           </div>
 
