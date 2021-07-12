@@ -241,12 +241,14 @@ export default {
     if($('.single-product-data, .single-product').length) {
       let similar = $('.related .flickity-slider li').size();
 
+      console.log(similar + ' related');
+
       if(similar >= 2) {
-        $('.related').css('opacity', '1');
+        //
       } else {
         $('.related').css('display', 'none');
       }
-      
+
     }
 
     if($('.single-product-data, .single-product').length) {

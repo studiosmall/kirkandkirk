@@ -511,7 +511,7 @@ function custom_product_data_tabs( $tabs ) {
   // unset( $tabs['general'] );
   //unset( $tabs['inventory'] );
   //unset( $tabs['shipping'] );
-  unset( $tabs['linked_product'] );
+  //unset( $tabs['linked_product'] );
   //unset( $tabs['attribute'] );
  // unset( $tabs['variations'] );
  // unset( $tabs['advanced'] );

@@ -251,7 +251,6 @@ if ( post_password_required() ) {
 	?>
 
 
-
 <?php
 
 	$shortcode 	  = do_shortcode('[recently_viewed_products]');
