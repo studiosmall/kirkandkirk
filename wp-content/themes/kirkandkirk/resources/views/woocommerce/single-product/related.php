@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="featured-products related">
+	<section class="featured-products related" style="display: none;">
 		<div class="featured-products__inner">
 		<?php
 		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'SIMILAR STYLES', 'woocommerce' ) );

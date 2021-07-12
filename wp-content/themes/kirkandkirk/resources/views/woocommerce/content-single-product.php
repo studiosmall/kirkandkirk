@@ -259,7 +259,7 @@ if ( post_password_required() ) {
 
 ?>
 
-<?php if(($num_recently >= 3)) { ?>
+<?php //if(($num_recently >= 3)) { ?>
 	<section class="featured-products recently">
 		<div class="featured-products__inner">
 
@@ -312,7 +312,7 @@ if ( post_password_required() ) {
 			</div>
 		</div>
 	</section>
-<?php } ?>
+<?php //} ?>
 
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
