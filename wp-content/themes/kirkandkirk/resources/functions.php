@@ -176,7 +176,7 @@ function bbloomer_recently_viewed_shortcode() {
    $viewed_products = array_reverse( array_filter( array_map( 'absint', $viewed_products ) ) );
 
    if ( empty( $viewed_products ) ) return;
-//    $title = '<div class="title__inner"><h2>Recently Viewed</h2></div>';
+   $title = '<div class="title__inner"><h2>Recently Viewed</h2></div>';
    $product_ids = implode( ",", $viewed_products );
    return do_shortcode("$product_ids");
 }
