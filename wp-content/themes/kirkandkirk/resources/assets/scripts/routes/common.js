@@ -250,7 +250,8 @@ export default {
     }
 
     if($('.single-product-data, .single-product').length) {
-      let similar = $('.recently .flickity-slider li').size();
+      let similar = $('.recently .flickity-slider .featured-products__product').size();
+      console.log(similar + 'the size');
 
       if(similar >= 1) {
         $('.recently').css('opacity', '1');
