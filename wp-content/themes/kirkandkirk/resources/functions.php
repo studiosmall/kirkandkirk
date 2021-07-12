@@ -164,24 +164,6 @@ function wcs_360_image_size_output() {
     return 'shop_single';
 }
 
-/**
- * @snippet       [recently_viewed_products] Shortcode - WooCommerce
- * @compatible    WooCommerce 3.6.2
- */
-
-add_shortcode( 'recently_viewed_products', 'bbloomer_recently_viewed_shortcode' );
-
-function bbloomer_recently_viewed_shortcode() {
-   $viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', wp_unslash( $_COOKIE['woocommerce_recently_viewed'] ) ) : array();
-   $viewed_products = array_reverse( array_filter( array_map( 'absint', $viewed_products ) ) );
-
-   if ( empty( $viewed_products ) ) return;
-   $title = '<div class="title__inner"><h2>Recently Viewed</h2></div>';
-   $product_ids = implode( ",", $viewed_products );
-   return do_shortcode("$product_ids");
-}
-
-
 
 add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
 function my_toolbars( $toolbars )
@@ -1187,3 +1169,21 @@ function njengah_remove_zoom_effect_product_image( $html, $post_id ) {
     return get_the_post_thumbnail( $post_thumbnail_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
 }
 add_filter('woocommerce_single_product_image_thumbnail_html', 'njengah_remove_zoom_effect_product_image', 10, 2);
+
+
+/**
+ * @snippet       [recently_viewed_products] Shortcode - WooCommerce
+ * @compatible    WooCommerce 3.6.2
+ */
+
+add_shortcode( 'recently_viewed_products', 'bbloomer_recently_viewed_shortcode' );
+
+function bbloomer_recently_viewed_shortcode() {
+   $viewed_products = ! empty( $_COOKIE['woocommerce_recently_viewed'] ) ? (array) explode( '|', wp_unslash( $_COOKIE['woocommerce_recently_viewed'] ) ) : array();
+   $viewed_products = array_reverse( array_filter( array_map( 'absint', $viewed_products ) ) );
+
+   if ( empty( $viewed_products ) ) return;
+   $title = '<div class="title__inner"><h2>Recently Viewed</h2></div>';
+   $product_ids = implode( ",", $viewed_products );
+   return do_shortcode("$product_ids");
+}

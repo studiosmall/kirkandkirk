@@ -253,13 +253,14 @@ if ( post_password_required() ) {
 
 
 <?php
+
 	$shortcode 	  = do_shortcode('[recently_viewed_products]');
 	$recently 	  = explode(',', $shortcode);
 	$num_recently = count($recently);
 		
-	print_r($shortcode);
-
+	//echo do_shortcode('[woocommerce_recently_viewed_products]');
 ?>
+
 
 <?php if(($num_recently >= 2)) { ?>
 	<section class="featured-products recently" style="opacity: 0;">
