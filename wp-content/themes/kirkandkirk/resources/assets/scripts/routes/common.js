@@ -189,10 +189,9 @@ export default {
       freeScroll: true,
     });
   });
-  
 
 
-    //
+     //
     // Show similar product on single product 
     if($('.single-product-data, .single-product').length) {
       let similar = $('.related .flickity-slider li').size();
@@ -200,7 +199,9 @@ export default {
       console.log(similar + ' related');
 
       if(similar >= 2) {
-       //
+       
+        console.log('resize fired recently') 
+        $('.recently-slider').resize();
      
       } else {
         $('.related').css('display', 'none');
@@ -209,20 +210,12 @@ export default {
     }
 
     if($('.single-product-data, .single-product').length) {
-
-      $('.related-slider').flickity({
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true,
-        freeScroll: true,
-      });
-
       let similar = $('.recently .flickity-slider .featured-products__product').size();
       console.log(similar + ' size');
 
       if(similar >= 1) {
-      
-        $('.related-slider').resize();
+        
+        //
 
       } else {
         $('.recently').css('display', 'none');

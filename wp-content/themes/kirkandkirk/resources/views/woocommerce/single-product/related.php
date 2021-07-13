@@ -126,7 +126,7 @@ if ($r->have_posts()) {
 			</div>
 
         <?php //woocommerce_product_loop_start(); ?>
-					<div class="featured-products__products related-slider">
+					<div class="featured-products__products slider related-slider">
             <?php while ($r->have_posts()) : $r->the_post(); global $product; ?>
 
                 <?php wc_get_template_part( 'content', 'product' ); ?>

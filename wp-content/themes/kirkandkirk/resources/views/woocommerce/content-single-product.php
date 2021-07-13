@@ -269,7 +269,7 @@ if ( post_password_required() ) {
 				<h2>Recently viewed</h2>
 			</div>
 
-			<div class="featured-products__products slider">
+			<div class="featured-products__products slider recently-slider">
 			<?php foreach($recently as $product) : ?>
 				<?php
 							//$product  = wc_get_product($product);
