@@ -77,13 +77,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( is_singular('product') ) {
 global $post;
+
 // get categories
 $terms = wp_get_post_terms( $post->ID, 'product_cat' );
 foreach ( $terms as $term ) $cats_array[] = $term->term_id;
+
 $query_args = array( 
 	'orderby' => 'rand', 
 	'post__not_in' => array( $post->ID ), 
-	'posts_per_page' => 24, 
+	'posts_per_page' => 99, 
 	//'no_found_rows' => 1, 
 	'post_status' => 'publish', 
 	'post_type' => 'product', 
@@ -99,7 +101,8 @@ $query_args = array(
 			'terms'       => array(61,49),
 			'operator'    => 'NOT IN'
 		)
-));
+	)
+);
 
 $r = new WP_Query($query_args);
 if ($r->have_posts()) { 
@@ -134,7 +137,6 @@ if ($r->have_posts()) {
 
     </div>
 </section>
-
 <?php
 
 wp_reset_query();
