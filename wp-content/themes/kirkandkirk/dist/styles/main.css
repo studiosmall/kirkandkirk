@@ -5501,6 +5501,25 @@ input:focus {
   background-color: #e1e1e1;
 }
 
+/* line 44, resources/assets/styles/components/_forms.scss */
+
+.gform_confirmation_message {
+  text-align: center;
+  line-height: 1.4em;
+  padding: 50px 0 0 0;
+  border-top: 1px solid;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  /* line 44, resources/assets/styles/components/_forms.scss */
+
+  .gform_confirmation_message {
+    width: 50%;
+  }
+}
+
 /* line 1, resources/assets/styles/components/_off-canvas.scss */
 
 .off-canvas {

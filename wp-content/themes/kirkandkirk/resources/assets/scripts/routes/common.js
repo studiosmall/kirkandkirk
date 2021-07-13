@@ -256,7 +256,16 @@ export default {
       console.log(similar + ' size');
 
       if(similar >= 1) {
-        //
+      
+        // init new Flickity
+        console.log('fire re-init');
+        // creates a node list of all carousels on the same page
+        const $carousels = document.querySelectorAll('.slider');
+
+        $carousels.forEach($carousel => {
+          $carousel.flickity();
+        });
+
       } else {
         $('.recently').css('display', 'none');
       }
@@ -411,11 +420,6 @@ export default {
           $('.filter__container, .filter__title').addClass('active');
         }
       }
-
-
-
-
-
 
 
 

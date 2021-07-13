@@ -40,3 +40,16 @@ label {
 input {
   @include input;
 }
+
+.gform_confirmation_message {
+  text-align: center;
+  line-height: 1.4em;
+  padding: 50px 0 0 0;
+  border-top: 1px solid;
+  width: 90%;
+  margin: 0 auto;
+
+  @include breakpoint(medium) {
+    width: 50%;
+  }
+}

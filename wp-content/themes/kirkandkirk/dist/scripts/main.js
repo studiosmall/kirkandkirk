@@ -2328,7 +2328,16 @@ Router.prototype.loadEvents = function loadEvents () {
       console.log(similar$1 + ' size');
 
       if(similar$1 >= 1) {
-        //
+      
+        // init new Flickity
+        console.log('fire re-init');
+        // creates a node list of all carousels on the same page
+        var $carousels = document.querySelectorAll('.slider');
+
+        $carousels.forEach(function ($carousel) {
+          $carousel.flickity();
+        });
+
       } else {
         $('.recently').css('display', 'none');
       }
@@ -2483,11 +2492,6 @@ Router.prototype.loadEvents = function loadEvents () {
           $('.filter__container, .filter__title').addClass('active');
         }
       }
-
-
-
-
-
 
 
 
