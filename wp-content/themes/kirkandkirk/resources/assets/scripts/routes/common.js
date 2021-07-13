@@ -260,10 +260,10 @@ export default {
         // init new Flickity
         console.log('fire re-init');
         // creates a node list of all carousels on the same page
-        const $carousels = document.querySelectorAll('.slider');
+        const carousels = document.querySelectorAll('.slider');
 
-        $carousels.forEach($carousel => {
-          $carousel.flickity();
+        carousels.forEach(carousel => {
+          carousel.flickity();
         });
 
       } else {

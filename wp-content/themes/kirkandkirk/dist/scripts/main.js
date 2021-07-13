@@ -2332,10 +2332,10 @@ Router.prototype.loadEvents = function loadEvents () {
         // init new Flickity
         console.log('fire re-init');
         // creates a node list of all carousels on the same page
-        var $carousels = document.querySelectorAll('.slider');
+        var carousels$1 = document.querySelectorAll('.slider');
 
-        $carousels.forEach(function ($carousel) {
-          $carousel.flickity();
+        carousels$1.forEach(function (carousel) {
+          carousel.flickity();
         });
 
       } else {
