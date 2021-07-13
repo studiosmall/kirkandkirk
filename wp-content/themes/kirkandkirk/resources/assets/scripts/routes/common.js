@@ -189,6 +189,46 @@ export default {
       freeScroll: true,
     });
   });
+  
+
+
+    //
+    // Show similar product on single product 
+    if($('.single-product-data, .single-product').length) {
+      let similar = $('.related .flickity-slider li').size();
+
+      console.log(similar + ' related');
+
+      if(similar >= 2) {
+       //
+     
+      } else {
+        $('.related').css('display', 'none');
+      }
+
+    }
+
+    if($('.single-product-data, .single-product').length) {
+
+      $('.related-slider').flickity({
+        prevNextButtons: false,
+        pageDots: false,
+        wrapAround: true,
+        freeScroll: true,
+      });
+
+      let similar = $('.recently .flickity-slider .featured-products__product').size();
+      console.log(similar + ' size');
+
+      if(similar >= 1) {
+      
+        $('.related-slider').resize();
+
+      } else {
+        $('.recently').css('display', 'none');
+      }
+      
+    }
 
 
     //
@@ -236,35 +276,7 @@ export default {
         }, 1000);
     }
 
-    //
-    // Show similar product on single product 
-    if($('.single-product-data, .single-product').length) {
-      let similar = $('.related .flickity-slider li').size();
 
-      console.log(similar + ' related');
-
-      if(similar >= 2) {
-       //
-     
-      } else {
-        $('.related').css('display', 'none');
-      }
-
-    }
-
-    if($('.single-product-data, .single-product').length) {
-      let similar = $('.recently .flickity-slider .featured-products__product').size();
-      console.log(similar + ' size');
-
-      if(similar >= 1) {
-      
-        $('.related-slider').resize();
-
-      } else {
-        $('.recently').css('display', 'none');
-      }
-      
-    }
 
     if($('.filter').length) {
       $('.filter__title').on('click', function(e){
