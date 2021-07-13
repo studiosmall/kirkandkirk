@@ -288,7 +288,7 @@ if ( post_password_required() ) {
 						?>
 				<?php if($link) { ?>
 
-			
+					<div class="featured-products__product">
 
 						<a class="link" href="<?php echo $link; ?>"></a>
 
@@ -304,7 +304,7 @@ if ( post_password_required() ) {
 								<span><?php echo $currency; echo $price; ?></span>
 							<?php endif; ?>
 
-		
+						</div>
 
 					</div>
 
