@@ -2316,7 +2316,11 @@ Router.prototype.loadEvents = function loadEvents () {
       console.log(similar + ' related');
 
       if(similar >= 2) {
-        //
+       
+     // init new Flickity
+      console.log('fire re-init');
+      $('.slider').resize();
+     
       } else {
         $('.related').css('display', 'none');
       }
@@ -2331,12 +2335,7 @@ Router.prototype.loadEvents = function loadEvents () {
       
         // init new Flickity
         console.log('fire re-init');
-        // creates a node list of all carousels on the same page
-        var carousels$1 = document.querySelectorAll('.slider');
-
-        carousels$1.forEach(function (carousel) {
-          carousel.flickity();
-        });
+        $('.slider').resize();
 
       } else {
         $('.recently').css('display', 'none');

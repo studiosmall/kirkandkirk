@@ -244,7 +244,11 @@ export default {
       console.log(similar + ' related');
 
       if(similar >= 2) {
-        //
+       
+     // init new Flickity
+      console.log('fire re-init');
+      $('.slider').resize();
+     
       } else {
         $('.related').css('display', 'none');
       }
@@ -259,12 +263,7 @@ export default {
       
         // init new Flickity
         console.log('fire re-init');
-        // creates a node list of all carousels on the same page
-        const carousels = document.querySelectorAll('.slider');
-
-        carousels.forEach(carousel => {
-          carousel.flickity();
-        });
+        $('.slider').resize();
 
       } else {
         $('.recently').css('display', 'none');
