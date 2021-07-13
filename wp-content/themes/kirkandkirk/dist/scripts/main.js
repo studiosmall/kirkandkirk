@@ -2316,10 +2316,7 @@ Router.prototype.loadEvents = function loadEvents () {
       console.log(similar + ' related');
 
       if(similar >= 2) {
-       
-     // init new Flickity
-      console.log('fire re-init');
-      $('.slider').resize();
+       //
      
       } else {
         $('.related').css('display', 'none');
@@ -2333,9 +2330,7 @@ Router.prototype.loadEvents = function loadEvents () {
 
       if(similar$1 >= 1) {
       
-        // init new Flickity
-        console.log('fire re-init');
-        $('.slider').resize();
+        $('.related-slider').resize();
 
       } else {
         $('.recently').css('display', 'none');

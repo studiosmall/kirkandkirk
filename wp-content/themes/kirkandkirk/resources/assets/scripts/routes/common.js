@@ -244,10 +244,7 @@ export default {
       console.log(similar + ' related');
 
       if(similar >= 2) {
-       
-     // init new Flickity
-      console.log('fire re-init');
-      $('.slider').resize();
+       //
      
       } else {
         $('.related').css('display', 'none');
@@ -261,9 +258,7 @@ export default {
 
       if(similar >= 1) {
       
-        // init new Flickity
-        console.log('fire re-init');
-        $('.slider').resize();
+        $('.related-slider').resize();
 
       } else {
         $('.recently').css('display', 'none');
