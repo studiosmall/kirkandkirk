@@ -2271,9 +2271,11 @@ Router.prototype.loadEvents = function loadEvents () {
       console.log(similar + ' related');
 
       if(similar >= 2) {
-       
-        console.log('resize fired recently') 
-        $('.recently-slider').resize();
+        setTimeout(
+          function() {
+            console.log('resize fired recently') 
+            $('.recently-slider').resize();
+          }, 1000);
      
       } else {
         $('.related').css('display', 'none');
