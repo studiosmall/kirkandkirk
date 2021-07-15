@@ -4,240 +4,242 @@
 	}
 }
 
-.single-product,
-.single-data {
-	.featured-products {
-		@include section;
-	
+// .single-product,
+// .single-data {
+
+// }
+
+.featured-products {
+	@include section;
+
+	width: 100%;
+	position: relative;
+	background-color: $brand--white;
+
+	a.product_type_simple {
+		display: none;
+	}
+
+	&__link {
 		width: 100%;
-		position: relative;
-		background-color: $brand--white;
-	
-		a.product_type_simple {
-			display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+		&:hover {
+				.feature-collection__bottom a::after {
+					@include breakpoint(medium) {
+						transform: scaleX(1);
+						transform-origin: bottom;
+					}
+				}
 		}
+	}
+
+	.title {
+		&__inner {
+			@include inner;
+
+			h2 {
+
+				@include title($brand--primary);
+
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__products {
+		// display: flex;
+    // justify-content: space-between;
+		// flex-wrap: wrap;
+
+		// @include breakpoint(medium) {
+		// 	flex-wrap: nowrap;
+		// }
+    cursor: grab;
+		
+		a {
+			outline: none;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__product {
+		width: 70%;
+		position: relative;
+		padding: 0 20px;
+		cursor: grab;
+
+		@include breakpoint(medium) {
+			width: 31%;
+		}
+
+		@include breakpoint(x-large) {
+			width: 25%;
+		}
+
+		@include breakpoint(xx-large) {
+			width: 25%;
+		}
+
+		&.product {
+			padding: 0 20px;
 	
-		&__link {
+			@include breakpoint(medium) {
+				padding: 0 20px;
+			}
+		}
+
+		&:hover {
+			img {
+				@include scale;
+			}
+		}
+
+		a {
+			width: 100%;
+
+			&:hover {
+				img {
+					@include scale;
+				}
+			}
+		}
+
+		a.link {
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
 			z-index: 2;
-	
-			&:hover {
-					.feature-collection__bottom a::after {
-						@include breakpoint(medium) {
-							transform: scaleX(1);
-							transform-origin: bottom;
-						}
-					}
-			}
-		}
-	
-		.title {
-			&__inner {
-				@include inner;
-	
-				h2 {
-	
-					@include title($brand--primary);
-	
-					text-transform: uppercase;
-				}
-			}
-		}
-	
-		&__products {
-			// display: flex;
-			// justify-content: space-between;
-			// flex-wrap: wrap;
-	
-			// @include breakpoint(medium) {
-			// 	flex-wrap: nowrap;
-			// }
 			cursor: grab;
-			
-			a {
-				outline: none;
-	
-				&:focus {
-					outline: none;
-				}
-			}
-		}
-	
-		&__product {
-			width: 70%;
-			position: relative;
-			padding: 0 20px;
-			cursor: grab;
-	
-			@include breakpoint(medium) {
-				width: 31%;
-			}
-	
-			@include breakpoint(x-large) {
-				width: 25%;
-			}
-	
-			@include breakpoint(xx-large) {
-				width: 25%;
-			}
-	
-			&.product {
-				padding: 0 20px;
-		
-				@include breakpoint(medium) {
-					padding: 0 20px;
-				}
-			}
-	
+
 			&:hover {
 				img {
 					@include scale;
 				}
 			}
-	
-			a {
-				width: 100%;
-	
-				&:hover {
-					img {
-						@include scale;
-					}
-				}
-			}
-	
-			a.link {
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 2;
-				cursor: grab;
-	
-				&:hover {
-					img {
-						@include scale;
-					}
-				}
-			}
-	
-			.image-container {
-				overflow: hidden;
-	
-				img {
-					transition: $transition;
-				}
-			}
 		}
-	
-		&__meta {
-			display: flex;
-			justify-content: space-between;
-			padding: 0 0 5px 0;
-			border-bottom: 5px solid $brand--primary;
-			width: 100%;
-			height: 28px;
-			transition: $transition;
-	
-			a {
-				text-decoration: none;
-			}
-	
-			.woocommerce-loop-product__link {
-				width: 100%;
-				display: flex;
-				justify-content: space-between;
-			}
-	
-			h1,
-			h2 {
-				font-family: $font--heading;
-				color: $brand--primary;
-				text-transform: capitalize;
-				font-size: 16px;
-				letter-spacing: 0.86px;
-				font-weight: 500;
-				margin: 0;
-			}
-	
-			span,
-			.price {
-				@include subtitle($brand--primary);
-	
-				line-height: initial;
-				text-decoration: none;
-				font-size: 16px;
-	
-				@include breakpoint(medium) {
-					font-size: 16px;
-				}
-			}
-	
-			.add_to_cart_button {
-				display: none;
-			}
-		}
-	
-		&__bottom {
-			width: 100%;
-			padding: 60px 0 0 0;
-	
-			&--inner {
-				@include inner;
-	
-				display: flex;
-				justify-content: flex-start;
-				align-items: center;
-			}
-	
-			h3 {
-				@include title($brand--primary);
-	
-				margin: 0 60px 0 0;
-				text-transform: capitalize;
-			}
-	
-			a {
-				@include hoverline($brand--primary);
-	
-				@include subtitle($brand--primary);
-				text-transform: capitalize;
+
+		.image-container {
+			overflow: hidden;
+
+			img {
+				transition: $transition;
 			}
 		}
 	}
-	
-	.slider {
-		.slick-slide {
-			padding: 0 40px 0 0;
-	
-			&:focus {
-				outline: none;
+
+	&__meta {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 0 5px 0;
+		border-bottom: 5px solid $brand--primary;
+		width: 100%;
+		height: 28px;
+		transition: $transition;
+
+		a {
+			text-decoration: none;
+		}
+
+		.woocommerce-loop-product__link {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		h1,
+		h2 {
+			font-family: $font--heading;
+			color: $brand--primary;
+			text-transform: capitalize;
+			font-size: 16px;
+			letter-spacing: 0.86px;
+			font-weight: 500;
+			margin: 0;
+		}
+
+		span,
+		.price {
+			@include subtitle($brand--primary);
+
+			line-height: initial;
+			text-decoration: none;
+			font-size: 16px;
+
+			@include breakpoint(medium) {
+				font-size: 16px;
 			}
 		}
-		.slick-dots {
-			bottom: -40px;
-	
-			li {
-				margin: 0 1px;
-	
-				&.slick-active {
-					button {
-						&::before {
-							opacity: 1;
-						}
-					}
-				}
-	
+
+		.add_to_cart_button {
+			display: none;
+		}
+	}
+
+  &__bottom {
+		width: 100%;
+		padding: 60px 0 0 0;
+
+		&--inner {
+			@include inner;
+
+			display: flex;
+    	justify-content: flex-start;
+    	align-items: center;
+		}
+
+    h3 {
+			@include title($brand--primary);
+
+			margin: 0 60px 0 0;
+			text-transform: capitalize;
+    }
+
+		a {
+			@include hoverline($brand--primary);
+
+			@include subtitle($brand--primary);
+			text-transform: capitalize;
+		}
+  }
+}
+
+.slider {
+	.slick-slide {
+    padding: 0 40px 0 0;
+
+		&:focus {
+			outline: none;
+		}
+	}
+	.slick-dots {
+    bottom: -40px;
+
+		li {
+			margin: 0 1px;
+
+			&.slick-active {
 				button {
 					&::before {
-						color: #abced0;
-						opacity: 0.5;
-						font-size: 13px;
+						opacity: 1;
 					}
+				}
+			}
+
+			button {
+				&::before {
+					color: #abced0;
+					opacity: 0.5;
+					font-size: 13px;
 				}
 			}
 		}
