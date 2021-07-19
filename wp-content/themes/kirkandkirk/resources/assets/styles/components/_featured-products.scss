@@ -51,6 +51,24 @@
 		}
 	}
 
+	&.related {
+		.featured-products__product {
+			padding: 0 20px;
+
+			@include breakpoint(medium) {
+				padding: 0 20px;
+			}
+		}
+	}
+
+	.product {
+    padding: 0;
+
+		@include breakpoint(medium) {
+			padding: 0;
+		}
+	}
+
 	&__products {
 		// display: flex;
     // justify-content: space-between;
