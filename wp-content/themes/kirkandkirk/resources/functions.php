@@ -1187,3 +1187,30 @@ function bbloomer_recently_viewed_shortcode() {
    $product_ids = implode( ",", $viewed_products );
    return do_shortcode("$product_ids");
 }
+
+
+add_filter( 'init', 'update_sku', 10, 1);
+
+    function update_sku( $sku ){
+
+        $args = array(
+                'post_type' => 'product',
+                'posts_per_page' => 999
+                );
+        $i=0;
+        $loop = new WP_Query( $args );
+
+        if ( $loop->have_posts() ) {
+            while ( $loop->have_posts() ) : $loop->the_post();
+
+                $random_sku = mt_rand(100000, 999999);
+
+                update_post_meta($loop->post->ID,'_sku',$random_sku);
+
+                $i++;
+            endwhile;
+        } else {
+            echo __( 'No products found' );
+        }
+        wp_reset_postdata();
+    }
