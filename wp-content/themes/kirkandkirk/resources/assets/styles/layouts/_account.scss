@@ -259,3 +259,38 @@
     }
   }
 }
+
+.wl-form {
+  label {
+    font-family: $font--heading;
+    color: #000;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+  }
+
+  .wl-rad-table {
+    padding: 15px 0 0 15px;
+  }
+
+  input {
+    @include input;
+
+    &:focus {
+      border: 1px solid #e1e1e1;
+    }
+  }
+
+  textarea {
+    @include input;
+    height: 50px;
+
+    &:focus {
+      border: 1px solid #e1e1e1;
+    }
+  }
+}
