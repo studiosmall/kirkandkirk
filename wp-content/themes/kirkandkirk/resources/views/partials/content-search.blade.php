@@ -20,7 +20,9 @@
   @endphp
 
   <a class="link" href="{{ get_permalink() }}"></a>
-  <img src="<?php echo $image; ?>"  alt="{!! get_the_title() !!}">
+  <div class="image-container">
+    <img src="<?php echo $image; ?>"  alt="{!! get_the_title() !!}">
+  </div>
 
   <div class="featured-products__meta" style="border-color:<?php echo $colour; ?>">
     <h1>{!! get_the_title() !!}</h1>

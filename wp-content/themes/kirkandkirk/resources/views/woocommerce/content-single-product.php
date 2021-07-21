@@ -292,7 +292,7 @@ if ( post_password_required() ) {
 						?>
 
 				<?php if($product == $currentID) { ?>
-					
+
 				<?php } else { ?>
 					<?php if($link) { ?>
 						<div class="featured-products__product">
