@@ -3,6 +3,42 @@
 
 	&__inner {
 		@include inner;
+
+		color: $brand--primary;
+		font-size: 14px;
+		letter-spacing: 0.5px;
+		text-align: left;
+		line-height: 18px;
+		margin-top: 0;
+
+		h1 {
+			font-family: $font--heading;
+			font-size: 18px;
+			font-weight: 500;
+			color: #000;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+
+		a {
+			border-bottom: 1px solid #000;
+			transition: $transition;
+
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+		}
+	}
+
+	ul {
+		li {
+			color: $brand--primary;
+			font-size: 14px;
+			letter-spacing: 0.5px;
+			text-align: left;
+			line-height: 18px;
+			margin-top: 0;
+		}
 	}
 
 	a {

@@ -10829,6 +10829,12 @@ input[type="submit"] {
   padding: 0 20px;
   max-width: 1440px;
   margin: 0 auto;
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  line-height: 18px;
+  margin-top: 0;
 }
 
 @media (min-width: 900px) {
@@ -10839,7 +10845,44 @@ input[type="submit"] {
   }
 }
 
-/* line 8, resources/assets/styles/components/_textarea.scss */
+/* line 14, resources/assets/styles/components/_textarea.scss */
+
+.textarea__inner h1 {
+  font-family: "reader", arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* line 23, resources/assets/styles/components/_textarea.scss */
+
+.textarea__inner a {
+  border-bottom: 1px solid #000;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+/* line 27, resources/assets/styles/components/_textarea.scss */
+
+.textarea__inner a:hover {
+  border-bottom: 1px solid transparent;
+}
+
+/* line 34, resources/assets/styles/components/_textarea.scss */
+
+.textarea ul li {
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  line-height: 18px;
+  margin-top: 0;
+}
+
+/* line 44, resources/assets/styles/components/_textarea.scss */
 
 .textarea a {
   display: inline-block;
