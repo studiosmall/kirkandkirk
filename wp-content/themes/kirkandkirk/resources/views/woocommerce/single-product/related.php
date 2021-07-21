@@ -82,14 +82,17 @@ global $post;
 $terms = wp_get_post_terms( $post->ID, 'product_cat' );
 foreach ( $terms as $term ) $cats_array[] = $term->term_id;
 
-$query_args = array( 
-	'orderby' => 'rand', 
-	'post__not_in' => array( $post->ID ), 
-	'posts_per_page' => 99, 
-	//'no_found_rows' => 1, 
-	'post_status' => 'publish', 
-	'post_type' => 'product', 
+array_splice($cats_array, array_search(22, $cats_array ), 1);
+
+$query_args = array(
+	'orderby' => 'rand',
+	'post__not_in' => array( $post->ID ),
+	'posts_per_page' => 99,
+	//'no_found_rows' => 1,
+	'post_status' => 'publish',
+	'post_type' => 'product',
 	'tax_query' => array(
+		'relation' => 'AND',
 		array(
 			'taxonomy' => 'product_cat',
 			'field' => 'id',
@@ -105,21 +108,21 @@ $query_args = array(
 );
 
 $r = new WP_Query($query_args);
-if ($r->have_posts()) { 
-	
+if ($r->have_posts()) {
+
 	// print_r('<pre>');
-	// print_r($r);
+	// print_r($cats_array);
 	// print_r('</pre>');
 
-	//print_r($cats_array);	
+	// print_r($cats_array);
 	// $test = get_the_category_by_ID(22);
 	// echo $test;
-	
+
 	?>
 
 <section class="featured-products related">
 		<div class="featured-products__inner">
-  
+
 
 			<div class="title__inner">
 				<h2>SIMILAR STYLES</h2>
