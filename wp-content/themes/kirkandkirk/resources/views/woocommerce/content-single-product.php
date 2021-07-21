@@ -256,8 +256,12 @@ if ( post_password_required() ) {
 	$shortcode 	  = do_shortcode('[recently_viewed_products]');
 	$recently 	  = explode(',', $shortcode);
 	$num_recently = count($recently);
-		
+
 	//echo do_shortcode('[woocommerce_recently_viewed_products]');
+
+
+	$currentID = get_the_ID();
+
 ?>
 
 
@@ -269,13 +273,14 @@ if ( post_password_required() ) {
 				<h2>Recently viewed</h2>
 			</div>
 
+
 			<div class="featured-products__products slider recently-slider">
 			<?php foreach($recently as $product) : ?>
 				<?php
 							//$product  = wc_get_product($product);
 							$currency = get_woocommerce_currency_symbol();
-							$price    = get_post_meta( get_the_ID(), '_regular_price', true);
-							$sale     = get_post_meta( get_the_ID(), '_sale_price', true);
+							$price    = get_post_meta( $product, '_regular_price', true);
+							$sale     = get_post_meta( $product, '_sale_price', true);
 
 							$image 		= get_the_post_thumbnail_url($product);
 							$link 		= get_permalink($product);
@@ -284,31 +289,34 @@ if ( post_password_required() ) {
 
 							$textarea  = $fields['textarea'];
 							$colour    = $fields['product_colour'];
-
 						?>
-				<?php if($link) { ?>
 
-					<div class="featured-products__product">
+				<?php if($product == $currentID) { ?>
+					
+				<?php } else { ?>
+					<?php if($link) { ?>
+						<div class="featured-products__product">
 
-						<a class="link" href="<?php echo $link; ?>"></a>
+							<a class="link" href="<?php echo $link; ?>"></a>
 
-						<div class="image-container">
-							<img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
+							<div class="image-container">
+								<img src="<?php echo $image; ?>"  alt="<?php echo $title; ?>">
+							</div>
+
+							<div class="featured-products__meta" style="border-color:<?php echo $colour; ?>">
+								<h1><?php echo $title; ?></h1>
+								<?php if($sale) : ?>
+									<span><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></span>
+								<?php elseif($price) : ?>
+									<span><?php echo $currency; echo $price; ?></span>
+								<?php endif; ?>
+
+							</div>
+
 						</div>
 
-						<div class="featured-products__meta" style="border-color:<?php echo $colour; ?>">
-							<h1><?php echo $title; ?></h1>
-							<?php if($sale) : ?>
-								<span><del><?php echo $currency; echo $price; ?></del> <?php echo $currency; echo $sale; ?></span>
-							<?php elseif($price) : ?>
-								<span><?php echo $currency; echo $price; ?></span>
-							<?php endif; ?>
-
-						</div>
-
-					</div>
-
-					<?php } ?>
+						<?php } ?>
+				<?php } ?>
 
 				<?php endforeach ?>
 			</div>
